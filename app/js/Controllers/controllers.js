@@ -46,7 +46,7 @@ theatreControllers.controller('contactsCtrl', ['$scope',
     }
 ]);
 
-theatreControllers.controller('tarnslateCtrl', ['$scope', '$translate', function($scope, $translate) {
+theatreControllers.controller('translateCtrl', ['$scope', '$translate', function($scope, $translate) {
     $scope.transl = function(lng) {
         $translate.use(lng);
     };
