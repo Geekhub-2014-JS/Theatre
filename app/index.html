@@ -1,18 +1,64 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="theatre">
 <head>
   <meta charset="utf-8">
-  <title>myApp Template</title>
+  <base href="/">
+  <title>Theatre</title>
   <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 
 <div class="container">
-  <div ng-view ></div>
+  <br>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" ui-sref="home">Theatre logo Театр Шевченка</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+        <ul class="nav navbar-nav">
+          <li ui-sref-active="active">
+            <a ui-sref="poster">Афіша</a>
+          </li>
+          <li ui-sref-active="active">
+            <a ui-sref="repertoire">Репертуар</a>
+          </li>
+          <li ui-sref-active="active">
+            <a ui-sref="news">Новини</a>
+          </li>
+          <li ui-sref-active="active">
+            <a ui-sref="about">Про театр</a>
+          </li>
+          <li ui-sref-active="active">
+            <a ui-sref="persons">Персоналії</a>
+          </li>
+          <li ui-sref-active="active">
+            <a ui-sref="contacts">Контакти</a>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <div ui-view ></div>
+
+  <footer>
+    <p class="text-center">This is footer</p>
+  </footer>
 </div>
 
 <script src="vendors/jquery/dist/jquery.js"></script>
+<script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="vendors/angular/angular.js"></script>
 <script src="vendors/angular-ui-router/release/angular-ui-router.min.js"></script>
 
