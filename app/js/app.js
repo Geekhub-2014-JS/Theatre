@@ -2,4 +2,4 @@
 
 /* App Module */
 
-var myApp = angular.module('theatre', ['ui.router', 'theatreServices', 'theatreControllers', 'theatreRoutes']);
+var theatreApp = angular.module('theatre', ['ui.router', 'theatreServices', 'theatreControllers', 'theatreRoutes']);
