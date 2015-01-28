@@ -1,10 +1,13 @@
 {
-  "logo_menu": "Театр Шевченка",
-  "home_menu": "додому",
-  "poster_menu": "Афіша",
-  "repertoire_menu": "Репертуар",
-  "news_menu": "Новини",
-  "about_menu": "Про театр",
-  "persons_menu": "Персоналії",
-  "contacts_menu": "Контакти"
+  "menu": {
+      "logo": "Театр Шевченка",
+      "home": "додому",
+      "poster": "Афіша",
+      "repertoire": "Репертуар",
+      "news": "Новини",
+      "about": "Про театр",
+      "persons": "Персоналії",
+      "contacts": "Контакти"
+  },
+  "key": "value"
 }

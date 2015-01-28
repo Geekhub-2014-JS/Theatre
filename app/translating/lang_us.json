@@ -1,10 +1,13 @@
 {
-  "logo_menu": "Theater of Taras Shevchenko",
-  "home_menu": "home",
-  "poster_menu": "Poster",
-  "repertoire_menu": "Repertoire",
-  "news_menu": "News",
-  "about_menu": "About theater",
-  "persons_menu": "Persons",
-  "contacts_menu": "Contacts"
+  "menu": {
+    "logo": "Theater of Taras Shevchenko",
+    "home": "home",
+    "poster": "Poster",
+    "repertoire": "Repertoire",
+    "news": "News",
+    "about": "About theater",
+    "persons": "Persons",
+    "contacts": "Contacts"
+  },
+  "key": "value"
 }
