@@ -14,7 +14,7 @@ theatreApp.config(['$translateProvider', function($translateProvider) {
     $translateProvider.useLocalStorage();
 }]);
 
-theatreApp.controller('mainCtrl', ['$scope', '$translate', function($scope, $translate) {
+theatreApp.controller('tarnslateCtrl', ['$scope', '$translate', function($scope, $translate) {
     $scope.transl = function(lng) {
         $translate.use(lng);
     };
