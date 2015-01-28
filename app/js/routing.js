@@ -10,37 +10,37 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                 .state('home', {
                     url: "/",
                     templateUrl: "views/HomePage/home.html",
-                    controller: 'homeCtrl'
+                    controller: 'HomeCtrl'
                 })
                 .state('poster', {
                     url: "/poster",
                     templateUrl: "views/Poster/poster.html",
-                    controller: 'posterCtrl'
+                    controller: 'PosterCtrl'
                 })
                 .state('repertoire', {
                     url: "/repertoire",
                     templateUrl: "views/Repertoire/repertoire.html",
-                    controller: 'repertoireCtrl'
+                    controller: 'RepertoireCtrl'
                 })
                 .state('news', {
                     url: "/news",
                     templateUrl: "views/News/news.html",
-                    controller: 'newsCtrl'
+                    controller: 'NewsCtrl'
                 })
                 .state('about', {
                     url: "/about",
                     templateUrl: "views/About/about.html",
-                    controller: "aboutCtrl"
+                    controller: "AboutCtrl"
                 })
                 .state('persons', {
                     url: "/persons",
                     templateUrl: "views/Persons/persons.html",
-                    controller: 'personsCtrl'
+                    controller: 'PersonsCtrl'
                 })
                 .state('contacts', {
                     url: "/contacts",
                     templateUrl: "views/Contacts/contacts.html",
-                    controller: "contactsCtrl"
+                    controller: "ContactsCtrl"
                 });
 
             $locationProvider.html5Mode(true);
