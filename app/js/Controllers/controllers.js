@@ -45,9 +45,3 @@ theatreControllers.controller('contactsCtrl', ['$scope',
         $scope.info = 'Hello from contacts controller'
     }
 ]);
-
-theatreControllers.controller('translateCtrl', ['$scope', '$translate', function($scope, $translate) {
-    $scope.transl = function(lng) {
-        $translate.use(lng);
-    };
-}]);
