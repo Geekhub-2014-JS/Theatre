@@ -45,5 +45,3 @@ theatreControllers.controller('contactsCtrl', ['$scope',
         $scope.info = 'Hello from contacts controller'
     }
 ]);
-
-
