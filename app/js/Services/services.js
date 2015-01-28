@@ -2,4 +2,4 @@
 
 /* Services */
 
-var myAppServices = angular.module('myAppServices', []);
+var theatreServices = angular.module('theatreServices', []);
