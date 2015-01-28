@@ -13,9 +13,3 @@ theatreApp.config(['$translateProvider', function($translateProvider) {
     $translateProvider.preferredLanguage('ua');
     $translateProvider.useLocalStorage();
 }]);
-
-theatreApp.controller('tarnslateCtrl', ['$scope', '$translate', function($scope, $translate) {
-    $scope.transl = function(lng) {
-        $translate.use(lng);
-    };
-}]);
