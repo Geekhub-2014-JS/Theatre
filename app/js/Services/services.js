@@ -12,6 +12,7 @@ theatreServices
                 return $http.post(api_url + url, data)
                     .success(function(response){
                         return response.data || [];
+// TODO: нужно оттестить, возможно нужно так: return response || [];
                     })
                     .error(function(error){
                         return error;
@@ -26,6 +27,7 @@ theatreServices
                 return $http.get(api_url + url)
                     .success(function(response) {
                         return response.data || [];
+// TODO: нужно оттестить, возможно нужно так: return response || [];
                     })
                     .error(function(error){
                         return error;
