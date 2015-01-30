@@ -5,16 +5,15 @@
 var theatreServices = angular.module('theatreServices', []);
 
 theatreServices
-    .constant('api_url', 'http://api.theatre.pp.ua/')
+    .constant('api_url', '/backend/')
     .factory('apiPost', ['$http', 'api_url',
-        function($http, api_url){
-            return function(url, data) {
+        function ($http, api_url) {
+            return function (url, data) {
                 return $http.post(api_url + url, data)
-                    .success(function(response){
-                        return response.data || [];
-// TODO: нужно оттестить, возможно нужно так: return response || [];
+                    .success(function (response) {
+                        return response || [];
                     })
-                    .error(function(error){
+                    .error(function (error) {
                         return error;
                     })
                     ;
@@ -22,17 +21,35 @@ theatreServices
         }
     ])
     .factory('apiGet', ['$http', 'api_url',
-        function($http, api_url) {
-            return function(url) {
+        function ($http, api_url) {
+            return function (url) {
                 return $http.get(api_url + url)
-                    .success(function(response) {
-                        return response.data || [];
-// TODO: нужно оттестить, возможно нужно так: return response || [];
+                    .success(function (response) {
+                        return response || [];
                     })
-                    .error(function(error){
+                    .error(function (error) {
                         return error;
                     })
                     ;
             }
         }
-    ]);
+    ])
+
+
+    .factory('personsService', ['$http', 'apiGet', function ($http, apiGet) {
+        var persons = [];
+        apiGet('persons.json').then(function (response) {
+            persons = response.data || [];
+            return response;
+        });
+
+        var factory = {
+            getAllPersons: function () {
+                return persons;
+            },
+            getPerson: function(id){
+                return persons[id];
+            }
+        };
+        return factory;
+    }]);

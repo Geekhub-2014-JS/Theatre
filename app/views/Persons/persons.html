@@ -1,4 +1,9 @@
-<br>
+<div class="image-container" ng-style="{'border' : '1px solid black', 'width': '70%' , 'height': '400px'}">
+    Картинка
+</div>
+<h2>{{'persons.actors' | translate}}</h2>
+    <li ng-repeat="person in persons()">
+        <a ui-sref="personsDetails({id:$index})">{{person.name}}</a>
+    </li>
+</div>
 
-<h2>Persons page</h2>
-{{ info }}

@@ -2,4 +2,4 @@
 
 /* Controllers */
 
-var theatreControllers = angular.module('theatreControllers', ['about','contacts', 'home','news', 'person', 'poster', 'repertoire']);
+var theatreControllers = angular.module('theatreControllers', ['about','contacts', 'home','news', 'person', 'poster', 'repertoire','persons.detailCtrl']);

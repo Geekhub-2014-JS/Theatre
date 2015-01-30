@@ -1,6 +1,5 @@
-angular.module('person',[])
-    .controller('PersonsCtrl', ['$scope',
-    function($scope){
-        $scope.info = 'Hello from persons controller'
+angular.module('person', [])
+    .controller('PersonsCtrl', ['$scope', 'personsService', function ($scope, personsService) {
+        $scope.persons = personsService.getAllPersons;
     }
-]);
+    ]);

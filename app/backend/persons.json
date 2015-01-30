@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Анастасия Асеева",
+    "since": 2001,
+    "education": "test",
+    "roles": "testRole"
+  },
+  {
+    "name": "Дмитрий Асташевич",
+    "since": 2005,
+    "education": "test",
+    "roles": "testRole"
+  },
+  {
+    "name": "Константин Белошапка",
+    "since": 1995,
+    "education": "test",
+    "roles": "testRole"
+  },
+  {
+    "name": "Наталия Винокурова",
+    "since": 2011,
+    "education": "test",
+    "roles": "testRole"
+  },
+  {
+    "name": "Лилия Гайсина",
+    "since": 2014,
+    "education": "test",
+    "roles": "testRosssssle"
+  }
+]

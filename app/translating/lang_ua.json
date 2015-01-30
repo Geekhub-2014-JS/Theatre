@@ -9,5 +9,8 @@
       "persons": "Персоналії",
       "contacts": "Контакти"
   },
+  "persons": {
+    "actors" : "Актори театру"
+  },
   "key": "value"
 }
