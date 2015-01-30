@@ -37,9 +37,9 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                 templateUrl: "views/Persons/persons.html",
                 controller: 'PersonsCtrl'
             })
-            .state('personsDetails', {
+            .state('personDetails', {
                 url: '/persons/{id:[0-9]{1,4}}',
-                templateUrl: "views/Persons/person.details.html",
+                templateUrl: "../views/Persons/details.html",
                 controller: 'PersonsDetailCtrl'
             })
             .state('contacts', {

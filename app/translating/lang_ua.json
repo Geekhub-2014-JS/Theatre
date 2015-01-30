@@ -10,7 +10,10 @@
       "contacts": "Контакти"
   },
   "persons": {
-    "actors" : "Актори театру"
+    "actors" : "Актори театру",
+    "education" : "Освіта",
+    "since" : "У театрі працює з",
+    "roles" : "Ролі"
   },
   "key": "value"
 }
