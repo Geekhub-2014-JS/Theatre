@@ -40,7 +40,12 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
             .state('personDetails', {
                 url: '/persons/{id:[0-9]{1,4}}',
                 templateUrl: "../views/Persons/details.html",
-                controller: 'PersonsDetailCtrl'
+                controller: 'PersonsDetailCtrl',
+                //TODO Understand how it works
+                resolve: {
+                    persons: ['personsService', function (personsService) {
+                    }]
+                }
             })
             .state('contacts', {
                 url: "/contacts",
