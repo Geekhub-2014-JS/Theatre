@@ -1,6 +1,6 @@
 angular.module('poster',['ui.calendar'])
-    .controller('PosterCtrl', ['$scope', 'uiCalendarConfig', 'theatreServices',
-    function($scope, uiCalendarConfig, theatreServices){
+    .controller('PosterCtrl', ['$scope', 'uiCalendarConfig', 'apiGet', '$http',
+    function($scope, uiCalendarConfig, apiGet, $http){
 
         //$scope.events = [
         //    {title: 'Момент 2',                 start: '2015-01-31 15:25',  allDay: false, price: '155 грн.'},
@@ -15,8 +15,18 @@ angular.module('poster',['ui.calendar'])
         //    //{title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://google.com/'}
         //];
 
-        $scope.events = theatreServices.apiGet('2015-01.json');
-        $scope.eventSources = [$scope.events];
+        //$scope.events = apiGet('2015-01.json');
+
+        $http.get('backend/2015-01.json').success(function(data){
+                $scope.events = data;
+                console.dir('from get ' + JSON.parse(data));
+            }).error(function(error){
+               console.log(error);
+            });
+
+        //console.dir($scope.events);
+        //$scope.eventSources = [$scope.events];
+        $scope.eventSources = [];
 
         $scope.uiConfig = {
             calendar: {
@@ -42,7 +52,8 @@ angular.module('poster',['ui.calendar'])
             $scope.calendar.fullCalendar('prev');
             $scope.events = [];
             var d = moment($scope.calendar.fullCalendar('getView').start).format('YYYY-MM');
-            $scope.events = theatreServices.apiGet(d + '.json');
+            $scope.events = apiGet(d + '.json');
+            console.log($scope.events.value.data);
             console.log('Date is p: ' + d);
         };
 
@@ -50,7 +61,8 @@ angular.module('poster',['ui.calendar'])
             $scope.calendar.fullCalendar('next');
             $scope.events = [];
             var d = moment($scope.calendar.fullCalendar('getView').start).format('YYYY-MM');
-            $scope.events = theatreServices.apiGet(d + '.json');
+            $scope.events = apiGet(d + '.json');
+            console.log($scope.events);
             console.log('Date is s: ' + d);
 
         };
