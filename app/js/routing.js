@@ -43,7 +43,7 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                     controller: "ContactsCtrl"
                 });
 
-            $locationProvider.html5Mode(true);
+            //$locationProvider.html5Mode(true);
         }
     )
 ;

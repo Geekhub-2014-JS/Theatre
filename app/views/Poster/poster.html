@@ -1,4 +1,7 @@
 <br>
 
-<h2>Poster page</h2>
-{{ info }}
+<input type="button" ng-click="pred()" value="<-">
+<span> {{ curMonth }} </span>
+<input type="button" ng-click="sled()" value="->">
+
+<div ui-calendar="uiConfig.calendar" ng-model="eventSources" calendar-watch-event="extraEventSignature" calendar="calendar"></div>
