@@ -48,7 +48,11 @@ theatreServices
                 return persons;
             },
             getPerson: function(id){
-                return persons[id];
+                var person;
+                persons.forEach(function(pers){
+                    if(pers.id == id){person = pers; return false;}
+                });
+                return person;
             }
         };
         return factory;
