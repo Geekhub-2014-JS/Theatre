@@ -1,6 +1,12 @@
 <h2>Person detail</h2>
-<div class="image-container" ng-style="{'border' : '1px solid black', 'width': '70%' , 'height': '300px', 'margin': '25px auto'}">
-    Слайдер
+<div ng-controller="SliderCtrl" class="image-container" ng-show="images">
+    <div ng-repeat="(i,image) in images" ng-show="i == slideIndex" ng-style="{'overflow':'hidden'}">
+        <img ng-src="{{image}}">
+    </div>
+    <button ng-click="next()">Next</button>
+    <button ng-click="prev()">Previous</button>
+    <button ng-click="play()">play</button>
+    <button ng-click="stop()">stop</button>
 </div>
 
 <table class="table table-bordered">

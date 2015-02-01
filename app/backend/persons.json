@@ -4,7 +4,15 @@
     "name": "Анастасия Асеева",
     "since": 2001,
     "education": "test",
-    "roles": "testRole"
+    "roles": "testRole",
+    "images": [
+      "http://placekitten.com/601/300",
+      "http://placekitten.com/602/300",
+      "http://placekitten.com/603/300",
+      "http://placekitten.com/604/300",
+      "http://placekitten.com/605/300",
+      "http://placekitten.com/606/300"
+    ]
   },
   {
     "id": 2,
