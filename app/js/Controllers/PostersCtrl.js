@@ -1,6 +1,6 @@
 angular.module('poster',['ui.calendar'])
-    .controller('PosterCtrl', ['$scope', 'uiCalendarConfig', 'apiGet', '$http',
-    function($scope, uiCalendarConfig, apiGet, $http){
+    .controller('PosterCtrl', ['$scope', '$http', 'posters', 'apiGet',
+    function($scope, $http, posters, apiGet){
 
         //$scope.events = [
         //    {title: 'Момент 2',                 start: '2015-01-31 15:25',  allDay: false, price: '155 грн.'},
@@ -15,18 +15,22 @@ angular.module('poster',['ui.calendar'])
         //    //{title: 'Click for Google',start: new Date(y, m, 28),end: new Date(y, m, 29),url: 'http://google.com/'}
         //];
 
-        //$scope.events = apiGet('2015-01.json');
+        //$scope.eventSources = [];
 
-        $http.get('backend/2015-01.json').success(function(data){
-                $scope.events = data;
-                console.dir('from get ' + JSON.parse(data));
-            }).error(function(error){
-               console.log(error);
-            });
+        $scope.events = [];
+        $http.get('backend/2015-02.json').success(function(data) {
+            for(var i=0;i<data.length;i++) {
+                $scope.events.push({
+                    title: data[i].title,
+                    allDay: false,
+                    start: data[i].start,
+                    price: data[i].price
 
-        //console.dir($scope.events);
-        //$scope.eventSources = [$scope.events];
-        $scope.eventSources = [];
+                });
+            }
+        });
+
+        $scope.eventSources = [$scope.events];
 
         $scope.uiConfig = {
             calendar: {
@@ -50,22 +54,48 @@ angular.module('poster',['ui.calendar'])
 
         $scope.pred = function(){
             $scope.calendar.fullCalendar('prev');
-            $scope.events = [];
+            var events = [];
             var d = moment($scope.calendar.fullCalendar('getView').start).format('YYYY-MM');
-            $scope.events = apiGet(d + '.json');
-            console.log($scope.events.value.data);
+            var  data = apiGet(d + '.json');
+            for(var i=0;i<data.length;i++) {
+                events.push({
+                    title: data[i].title,
+                    allDay: false,
+                    start: data[i].start,
+                    price: data[i].price
+
+                });
+            }
+            //$scope.calendar.fullCalendar('addEventSource', events);
+            $scope.eventSources.push(events);
             console.log('Date is p: ' + d);
         };
 
         $scope.sled = function(){
             $scope.calendar.fullCalendar('next');
-            $scope.events = [];
+            var events = [];
             var d = moment($scope.calendar.fullCalendar('getView').start).format('YYYY-MM');
-            $scope.events = apiGet(d + '.json');
-            console.log($scope.events);
+            var  data = apiGet(d + '.json');
+            for(var i=0;i<data.length;i++) {
+                events.push({
+                    title: data[i].title,
+                    allDay: false,
+                    start: data[i].start,
+                    price: data[i].price
+
+                });
+            }
+            $scope.eventSources.push(events);
+            //$scope.calendar.fullCalendar('addEventSource', events);
             console.log('Date is s: ' + d);
 
         };
+
+        $scope.reloadc = function() {
+            //$scope.events.slice(0, $scope.events.length);
+            $scope.calendar.fullCalendar('refetchEvents');
+            $scope.calendar.fullCalendar('render');
+        }
 
     }
 ]);
