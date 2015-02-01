@@ -17,7 +17,7 @@ textarea                       { vertical-align:top; }
 input[type=submit]             { cursor:pointer; }
 img               { border:0; }
 table                          { border-collapse:collapse; border-spacing:0; }
-a:link, a:visited              { font:12px Tahoma, sans-serif; color:#000; text-decoration:underline; }
+a:link, a:visited              { font:15px 'Times New Roman', sans-serif; color:#000; text-decoration:underline; }
 a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------DEFAULT CLASSES------------------------------*/
@@ -53,7 +53,14 @@ a:hover                        { text-decoration:none; }
 /*-------------------------------------CONTENT--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .repertoire .performance-block {
-
+    display: inline-block;
+    width: 100px;
+    height: 150px;
+    margin: 20px;
+    text-align: center;
+}
+.repertoire .performance-block img {
+    width: 100%;
 }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------SIDEBAR--------------------------------------*/
