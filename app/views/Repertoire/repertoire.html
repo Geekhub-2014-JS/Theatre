@@ -1,4 +1,10 @@
-<br>
+<div class="repertoire">
+    <h2>Repertoire</h2>
+    <ul>
+        <li ng-repeat="performance in repertoire()" class="performance-block">
+            <img ng-src="#" alt="{{performance.title}}"/>
+            <a ui-sref="singlePerformance({performanceId: performance.id})">{{performance.title}}</a>
+        </li>
+    </ul>
+</div>
 
-<h2>Repertoire page</h2>
-{{ info }}

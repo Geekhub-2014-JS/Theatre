@@ -5,14 +5,14 @@
 var theatreServices = angular.module('theatreServices', []);
 
 theatreServices
-    .constant('api_url', 'http://api.theatre.pp.ua/')
+    //.constant('api_url', 'http://api.theatre.pp.ua/')
+    .constant('api_url', '/backend/')
     .factory('apiPost', ['$http', 'api_url',
         function($http, api_url){
             return function(url, data) {
                 return $http.post(api_url + url, data)
                     .success(function(response){
-                        return response.data || [];
-// TODO: нужно оттестить, возможно нужно так: return response || [];
+                        return response || [];
                     })
                     .error(function(error){
                         return error;
@@ -26,8 +26,7 @@ theatreServices
             return function(url) {
                 return $http.get(api_url + url)
                     .success(function(response) {
-                        return response.data || [];
-// TODO: нужно оттестить, возможно нужно так: return response || [];
+                        return response || [];
                     })
                     .error(function(error){
                         return error;
@@ -35,4 +34,30 @@ theatreServices
                     ;
             }
         }
-    ]);
+    ])
+
+
+    .factory('repertoireService', ['$http', 'apiGet', function ($http, apiGet) {
+        var performances = [];
+        apiGet('performances.json').then(function (response) {
+            performances = response.data || [];
+            return response;
+        });
+        var factory = {
+            getRepertoire: function () {
+                return performances;
+            },
+            getSinglePerformance: function(id){
+                var performance;
+                performances.forEach(function(play){
+                    if(play.id == id){
+                        performance = play;
+                        return false;
+                    }
+                });
+                return performance;
+            }
+        };
+        return factory;
+   }]);
+

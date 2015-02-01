@@ -1,6 +1,11 @@
 angular.module('repertoire',[])
-    .controller('RepertoireCtrl', ['$scope',
-    function($scope){
-        $scope.info = 'Hello from repertoire controller'
-    }
-]);
+    .controller('RepertoireCtrl', ['$scope', 'repertoireService',
+        function($scope, repertoireService){
+            $scope.repertoire = repertoireService.getRepertoire;
+        }
+    ])
+    .controller('SinglePerformanceCtrl', ['$scope', 'repertoireService', '$stateParams',
+        function ($scope, repertoireService, $stateParams) {
+            $scope.performance = repertoireService.getSinglePerformance($stateParams.performanceId);
+        }
+    ]);

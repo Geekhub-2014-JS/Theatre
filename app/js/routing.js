@@ -22,6 +22,11 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                     templateUrl: "views/Repertoire/repertoire.html",
                     controller: 'RepertoireCtrl'
                 })
+                .state('singlePerformance', {
+                    url: '/:performanceId',
+                    templateUrl: "../views/performance.html",
+                    controller: 'SinglePerformanceCtrl'
+                })
                 .state('news', {
                     url: "/news",
                     templateUrl: "views/News/news.html",
