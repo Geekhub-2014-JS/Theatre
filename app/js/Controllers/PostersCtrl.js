@@ -10,7 +10,6 @@ angular.module('poster',[])
 
         $http.get('backend/2015-02.json').success(function(data){
             $scope.eve2 = data;
-            console.log(data);
         })
     }
 ]);
