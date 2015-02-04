@@ -1,12 +1,32 @@
 <h2>Person detail</h2>
-<div ng-controller="SliderCtrl" class="image-container" ng-show="images">
-    <div ng-repeat="(i,image) in images" ng-show="i == slideIndex" ng-style="{'overflow':'hidden'}">
-        <img ng-src="{{image}}">
+<style>
+    #slides_control > div {
+        max-width: 1000px;
+        max-height: 400px;
+        margin: 0 auto;
+    }
+
+    img {
+        margin: auto;
+    }
+
+    #slides_control {
+        margin: 25px auto;
+    }
+</style>
+
+
+<div ng-controller="PersonsSliderCtrl" id="slides_control">
+    <div>
+        <carousel interval="interval">
+            <slide ng-repeat="slide in slides" active="slide.active">
+                <img ng-src="{{slide.image}}">
+                <div class="carousel-caption">
+                    <h4>{{slide.text}}</h4>
+                </div>
+            </slide>
+        </carousel>
     </div>
-    <button ng-click="next()">Next</button>
-    <button ng-click="prev()">Previous</button>
-    <button ng-click="play()">play</button>
-    <button ng-click="stop()">stop</button>
 </div>
 
 <table class="table table-bordered">
@@ -14,7 +34,7 @@
         <td colspan="2">{{person.name}}</td>
     </tr>
     <tr>
-        <td>{{'persons.since' | translate}} </td>
+        <td>{{'persons.since' | translate}}</td>
         <td>{{person.since}} року</td>
     </tr>
     <tr>
@@ -22,7 +42,7 @@
         <td>{{person.education}}</td>
     </tr>
     <tr>
-        <td>{{'persons.roles' | translate}}: </td>
+        <td>{{'persons.roles' | translate}}:</td>
         <td>{{person.roles}}</td>
     </tr>
 

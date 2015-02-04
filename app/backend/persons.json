@@ -4,14 +4,24 @@
     "name": "Анастасия Асеева",
     "since": 2001,
     "education": "test",
-    "roles": "testRole",
+    "roles": "Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor sit amet, consectetur adipisicing elit",
     "images": [
-      "http://placekitten.com/601/300",
-      "http://placekitten.com/602/300",
-      "http://placekitten.com/603/300",
-      "http://placekitten.com/604/300",
-      "http://placekitten.com/605/300",
-      "http://placekitten.com/606/300"
+      {
+        "image": "http://lorempixel.com/1000/400",
+        "text": "sometext"
+      },
+      {
+        "image": "http://lorempixel.com/1001/400",
+        "text": "sometext"
+      },
+      {
+        "image": "http://lorempixel.com/1000/401",
+        "text": "sometext"
+      },
+      {
+        "image": "http://lorempixel.com/1001/401",
+        "text": "sometext"
+      }
     ]
   },
   {
@@ -19,28 +29,88 @@
     "name": "Дмитрий Асташевич",
     "since": 2005,
     "education": "test",
-    "roles": "testRole"
+    "roles": "testRole",
+    "images": [
+    {
+      "image": "http://lorempixel.com/1000/400",
+      "text": "sometext"
+    },
+    {
+      "image": "http://lorempixel.com/1001/400",
+      "text": "sometext"
+    },
+    {
+      "image": "http://lorempixel.com/1000/401",
+      "text": "sometext"
+    },
+    {
+      "image": "http://lorempixel.com/1001/401",
+      "text": "sometext"
+    }
+  ]
   },
   {
     "id": 3,
     "name": "Константин Белошапка",
     "since": 1995,
     "education": "test",
-    "roles": "testRole"
+    "roles": "testRole",
+    "images": [
+      {
+        "image": "http://lorempixel.com/1000/400",
+        "text": "sometext"
+      },
+      {
+        "image": "http://lorempixel.com/1001/400",
+        "text": "sometext"
+      },
+      {
+        "image": "http://lorempixel.com/1000/401",
+        "text": "sometext"
+      },
+      {
+        "image": "http://lorempixel.com/1001/401",
+        "text": "sometext"
+      }
+    ]
   },
   {
     "id": 4,
     "name": "Наталия Винокурова",
     "since": 2011,
     "education": "test",
-    "roles": "testRole"
+    "roles": "testRole",
+    "images": [
+      {
+        "image": "http://lorempixel.com/1000/400",
+        "text": "sometext"
+      },
+      {
+        "image": "http://lorempixel.com/1001/400",
+        "text": "sometext"
+      },
+      {
+        "image": "http://lorempixel.com/1000/401",
+        "text": "sometext"
+      }
+    ]
   },
   {
     "id": 5,
     "name": "Лилия Гайсина",
     "since": 2014,
     "education": "test",
-    "roles": "testRosssssle"
+    "roles": "testRosssssle",
+    "images": [
+      {
+        "image": "http://lorempixel.com/1000/400",
+        "text": "sometext"
+      },
+      {
+        "image": "http://lorempixel.com/1001/400",
+        "text": "sometext"
+      }
+    ]
   },
   {
     "id": 6,

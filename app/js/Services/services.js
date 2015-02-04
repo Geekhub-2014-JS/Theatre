@@ -43,7 +43,7 @@ theatreServices
             return response;
         });
 
-        var factory = {
+        return {
             getAllPersons: function () {
                 return persons;
             },
@@ -55,5 +55,4 @@ theatreServices
                 return person;
             }
         };
-        return factory;
     }]);
