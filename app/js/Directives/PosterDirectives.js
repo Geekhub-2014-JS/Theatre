@@ -15,4 +15,16 @@ angular.module('posterDirectives', [])
 
             }
         }
-    }]);
+    }]).
+    directive('switchCalendarDate', function(){
+        return {
+            restrict: "E",
+            templateURL: "views/Persons/Directives/thCalendar.html",
+            scope: {},
+            link: function(scope, element, attrs) {
+                var now = new Date();
+                var year = now.getFullYear();
+                var month = now.getMonth();
+            }
+        }
+    });
