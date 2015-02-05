@@ -1,18 +1,22 @@
 
 angular.module('posterDirectives', [])
-    .directive('thCalendarZ', ['apiGet', function(apiGet){
+    .directive('thCalendar', ['apiGet', function(apiGet){
         return {
             restrict: 'E',
-            templateUrl: "views/Poster/Directives/thCalendar.html",
+            templateUrl: "views/Poster/Directives/thCalendarView.html",
             scope: {
-                month: "=",
-                year: "="
+                month: "&",
+                year: "&"
             },
             link: function(scope, element, attrs){
 
-                apiGet('2014-11.json').success(function(data){
-                    scope.evz = data;
-                });
+
+                console.log('th ' + scope.year);
+                console.log('th ' + scope.month);
+                //
+                //apiGet('2014-11.json').success(function(data){
+                //    scope.evz = data;
+                //});
 
             }
         }
@@ -20,19 +24,19 @@ angular.module('posterDirectives', [])
     .directive('swc', function(){
         return {
             restrict: "E",
-            templateURL: "views/Poster/Directives/switchCalDate.html",
+            templateURL: "views/Poster/Directives/switchCalDateView.html",
             scope: {},
-            replace: true,
             link: function(scope, element, attrs) {
                 scope.tt = "Yura";
-                scope.now = new Date();
-                scope.year = scope.now.getFullYear();
-                scope.month = (scope.now.getMonth() + 1);
+                //scope.now = new Date();
+                //scope.year = scope.now.getFullYear();
+                //scope.month = (scope.now.getMonth() + 1);
 
-                //console.log(scope.now);
-                //console.log(scope.year);
-                //console.log(scope.month);
+                scope.year = 'year from dir';
+                scope.month = 'month from dir';
 
+                console.log(scope.year);
+                console.log(scope.month);
 
                 //scope.nextMonth = function() {
                 //
