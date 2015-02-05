@@ -23,8 +23,8 @@ angular.module('poster',[])
         //});
         //  ******   GOOD   ***********
 
-        $scope.month = 'Month from ctrl';
-        $scope.year = 'Year from ctrl';
+        //$scope.month = 'Month from ctrl';
+        //$scope.year = 'Year from ctrl';
 
 
         //

@@ -5,8 +5,8 @@ angular.module('posterDirectives', [])
             restrict: 'E',
             templateUrl: "views/Poster/Directives/thCalendarView.html",
             scope: {
-                month: "&",
-                year: "&"
+                month: "=",
+                year: "="
             },
             link: function(scope, element, attrs){
 
@@ -21,10 +21,10 @@ angular.module('posterDirectives', [])
             }
         }
     }])
-    .directive('swc', function(){
+    .directive('swc', [function(){
         return {
             restrict: "E",
-            templateURL: "views/Poster/Directives/switchCalDateView.html",
+            templateUrl: "views/Poster/Directives/switchCalDateView.html",
             scope: {},
             link: function(scope, element, attrs) {
                 scope.tt = "Yura";
@@ -43,7 +43,7 @@ angular.module('posterDirectives', [])
                 //}
             }
         }
-    })
+    }])
     .directive('habra', function($compile) {
         return {
             //template:"<input ng-model='hello'>{{hello}}",
