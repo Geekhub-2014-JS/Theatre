@@ -1,6 +1,8 @@
 angular.module('poster',[])
-    .controller('PosterCtrl', ['$scope', '$http', 'apiGet', '$q',
-    function($scope, $http, apiGet, $q){
+    .controller('PosterCtrl', ['$scope', '$http', 'apiGet', '$q', '$stateParams', '$translate',
+    function($scope, $http, apiGet, $q, $stateParams, $translate){
+
+        $translate.use($stateParams.locale);
 
         //  ******   GOOD   ***********
         //var deferred = $q.defer();

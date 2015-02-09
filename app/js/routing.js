@@ -3,7 +3,7 @@
 /* ui-routing */
 
 angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
-    .config(
+    .config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
         function($stateProvider, $urlRouterProvider, $locationProvider) {
             $urlRouterProvider.otherwise("/");
             $stateProvider
@@ -47,5 +47,5 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                 requireBase: false
             });
         }
-    )
+    ])
 ;

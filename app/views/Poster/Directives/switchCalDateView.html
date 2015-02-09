@@ -1,8 +1,17 @@
-    switch
+<ol class="breadcrumb">
+    <li>
+        <a ui-sref="home">{{ 'menu.home' | translate }}</a>
+    </li>
+    <li class="active">{{'menu.poster' | translate}}</li>
+</ol>
+<div class="text-center">
+    <span class="poster-on">{{'poster.poster_on' | translate}}</span>
+    <a href="#" class="btn btn-default btn-sm" ng-click="prevMonth()"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>
+    <span class="poster-month-name">{{monthName | translate}}</span>
+    <span class="poster-year">{{year}}</span>
+    <a href="#" class="btn btn-default btn-sm" ng-click="nextMonth()"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
+</div>
+<br>
 
-    {{tt}}
-    year = {{year}} <br>
-    month = {{month}} <br>
-
-
-<th-calendar month="month" year="year"></th-calendar>
+<th-poster-calendar monthl="month" yearl="year"></th-poster-calendar>
+<!--<th-poster-calendar monthl="11" yearl="2014"></th-poster-calendar>-->

@@ -37,7 +37,7 @@
 </head>
 <body>
 
-<div style="width: 300px; margin-left: 500px; margin-top: 100px;">
+<div style="width: 300px;">
     <table id="calendar2">
         <thead>
             <tr><td>‹<td colspan="5"><td>›<tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
@@ -50,6 +50,9 @@
     function Calendar2(id, year, month) {
 
         var dd = [5, 13, 20];
+        console.log('---------------------------');
+        console.log('inp year=' + year);
+        console.log('inp month=' + month);
 
         var Dlast = new Date(year,month+1,0).getDate(),
             D = new Date(year,month,Dlast),
@@ -57,6 +60,11 @@
             DNfirst = new Date(D.getFullYear(),D.getMonth(),1).getDay(),
             calendar = '<tr>',
             monthN = ["Январь","Февраль","Март","Апрель","Май","Июнь","Июль","Август","Сентябрь","Октябрь","Ноябрь","Декабрь"];
+console.log('Dlast=' + Dlast);
+console.log('D=' + D);
+console.log('DNlast=' + DNlast);
+console.log('DNfirst=' + DNfirst);
+        console.log('---------------------------');
 
         if (DNfirst != 0) {
 
@@ -82,8 +90,6 @@
                 }
             }
 
-//            if (i instanceof dd)
-
             if (new Date(D.getFullYear(),D.getMonth(),i).getDay() == 0) {
                 calendar += '<tr>';  //  воскресенье
             }
@@ -95,12 +101,12 @@
         document.querySelector('#'+id+' thead td:nth-child(2)').innerHTML = monthN[D.getMonth()] +' '+ D.getFullYear();
         document.querySelector('#'+id+' thead td:nth-child(2)').dataset.month = D.getMonth();
         document.querySelector('#'+id+' thead td:nth-child(2)').dataset.year = D.getFullYear();
-        if (document.querySelectorAll('#'+id+' tbody tr').length < 6) {  // чтобы при перелистывании месяцев не "подпрыгивала" вся страница, добавляется ряд пустых клеток. Итог: всегда 6 строк для цифр
-            document.querySelector('#'+id+' tbody').innerHTML += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
-        }
+//        if (document.querySelectorAll('#'+id+' tbody tr').length < 6) {  // чтобы при перелистывании месяцев не "подпрыгивала" вся страница, добавляется ряд пустых клеток. Итог: всегда 6 строк для цифр
+//            document.querySelector('#'+id+' tbody').innerHTML += '<tr><td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;<td>&nbsp;';
+//        }
     }
 //    Calendar2("calendar2", new Date().getFullYear(), new Date().getMonth());
-    Calendar2("calendar2", 2014, 01);
+    Calendar2("calendar2", 2015, 01);
     // переключатель минус месяц
     document.querySelector('#calendar2 thead tr:nth-child(1) td:nth-child(1)').onclick = function() {
         Calendar2("calendar2", document.querySelector('#calendar2 thead td:nth-child(2)').dataset.year, parseFloat(document.querySelector('#calendar2 thead td:nth-child(2)').dataset.month)-1);
