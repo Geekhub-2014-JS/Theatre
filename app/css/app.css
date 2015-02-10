@@ -36,6 +36,6 @@
     color: rgb(231, 140, 92);
 }
 #calendar2 tbody td.today {
-    background: rgb(220, 0, 0);
-    color: #fff;
+    border: solid 2px rgb(220, 0, 0);
+    color: rgb(50, 50, 50);
 }
