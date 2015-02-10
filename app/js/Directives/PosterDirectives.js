@@ -18,7 +18,7 @@ angular.module('posterDirectives', [])
                         if (el.day === day && el.month === (month + 1)) {
                             templ = templ + "<div class='th-calendar-poster-item'><span class='th-calendar-poster-descr'>" +
                             el.description + "</span><span class='th-calendar-poster-link'><a href='#' class='btn btn-default btn-xs' >link</a></span>" +
-                            "<span class='th-calendar-poster-date'>" + (el.day < 10 ? "0"+el.day:el.day) + "." + (el.month < 10 ? "0"+el.month:el.month + "." + el.year) + "</span><span class='th-calendar-poster-price'>" + el.price + "</span></div>";
+                            "<span class='th-calendar-poster-date'>" + (el.day < 10 ? "0"+el.day:el.day) + "." + (el.month < 10 ? "0"+el.month:el.month) + "." + el.year + "</span><span class='th-calendar-poster-price'>" + el.price + "</span></div>";
                         }
                     });
 
