@@ -1,6 +1,33 @@
-[
-  {"title": "hhgf",              "start": "2014-12-11 15:25",  "allDay": false, "price": "155 грн."},
-  {"title": "jjjjjjjf",          "start": "2014-12-25 10:05",  "allDay": false, "price": "107 грн."},
-  {"title": "kkkkkkkkkkkkkkkkя", "start": "2014-12-13 19:10",  "allDay": false, "price": "22 uhy" },
-  {"title": "lllllllllllllll",   "start": "2014-12-29 12:40",  "allDay": false, "price": "10 грн.", "url": "http://google.com"}
+[{
+  "month": 12,
+  "day": 13,
+  "year": 2014,
+  "time": "16:40",
+  "poster": "picture url",
+  "description": "qwerty 1",
+  "id": 15,
+  "price": "45"
+},
+  {
+    "month": 12,
+    "day": 15,
+    "year": 2014,
+    "time": "14:00",
+    "poster": "picture url",
+    "description": "qwerty 3",
+    "id": 14,
+    "price": "50"
+
+  },
+  {
+    "month": 12,
+    "day": 22,
+    "year": 2014,
+    "time": "18:00",
+    "poster": "picture url",
+    "description": "qwerty 2",
+    "id": 18,
+    "price": "60"
+
+  }
 ]

@@ -14,9 +14,11 @@
 #calendar2 thead tr:nth-child(1) td:nth-child(2) {
     color: rgb(50, 50, 50);
 }
-/*#calendar2 thead tr:nth-child(1) td:nth-child(1):hover, #calendar2 thead tr:nth-child(1) td:nth-child(3):hover {*/
-    /*cursor: pointer;*/
-/*}*/
+#calendar2 thead th {
+    width: 14%;
+    max-width: 14%;
+    text-align: center;
+}
 #calendar2 tbody tr {
     height: 100px;
     border-top: 1px solid rgba(0, 0, 0, 0.60);

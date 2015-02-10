@@ -1,7 +1,7 @@
 [{
-  "month": 11,
-  "day": 2,
-  "year": 2014,
+  "month": 1,
+  "day": 3,
+  "year": 2015,
   "time": "16:40",
   "poster": "picture url",
   "description": "qwerty 1",
@@ -9,9 +9,9 @@
   "price": "45"
 },
   {
-    "month": 11,
-    "day": 7,
-    "year": 2014,
+    "month": 1,
+    "day": 5,
+    "year": 2015,
     "time": "14:00",
     "poster": "picture url",
     "description": "qwerty 3",
@@ -20,9 +20,9 @@
 
   },
   {
-    "month": 11,
-    "day": 20,
-    "year": 2014,
+    "month": 1,
+    "day": 5,
+    "year": 2015,
     "time": "18:00",
     "poster": "picture url",
     "description": "qwerty 2",
