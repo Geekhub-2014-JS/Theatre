@@ -1,13 +1,20 @@
 angular.module('person',['ui.bootstrap'])
-    .controller('PersonsCtrl', ['$scope', 'personsService', function ($scope, personsService) {
-        $scope.persons = personsService.getAllPersons;
+    .controller('PersonsCtrl', ['$scope', 'personsService','apiGet', function ($scope, personsService) {
+        personsService.getAllPersons().then(function(data){
+            $scope.persons = data;
+        });
     }
     ])
     .controller('PersonsDetailCtrl', ['$scope', 'personsService', '$stateParams', function ($scope, personsService, $stateParams) {
-        $scope.person = personsService.getPerson($stateParams.id);
+        $scope.promise = personsService.getPerson($stateParams.id).then(function(data){
+            $scope.person = data;
+            return data;
+        });
     }
     ])
     .controller('PersonsSliderCtrl', function($scope) {
         $scope.interval = 4000;
-        $scope.slides = $scope.person.images || [];
+        $scope.promise.then(function(data){
+           $scope.slides = data.images;
+        });
     });

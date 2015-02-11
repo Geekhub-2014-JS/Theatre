@@ -1,0 +1,25 @@
+{
+  "id": 2,
+  "name": "Дмитрий Асташевич",
+  "since": 2005,
+  "education": "test",
+  "roles": "testRole",
+  "images": [
+    {
+      "image": "http://lorempixel.com/1000/400",
+      "text": "sometext"
+    },
+    {
+      "image": "http://lorempixel.com/1001/400",
+      "text": "sometext"
+    },
+    {
+      "image": "http://lorempixel.com/1000/401",
+      "text": "sometext"
+    },
+    {
+      "image": "http://lorempixel.com/1001/401",
+      "text": "sometext"
+    }
+  ]
+}

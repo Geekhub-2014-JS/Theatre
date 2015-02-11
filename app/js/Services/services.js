@@ -29,30 +29,35 @@ theatreServices
                     })
                     .error(function (error) {
                         return error;
-                    })
-                    ;
+                    });
             }
         }
     ])
 
 
-    .factory('personsService', ['$http', 'apiGet', function ($http, apiGet) {
-        var persons = [];
-        apiGet('persons.json').then(function (response) {
-            persons = response.data || [];
-            return response;
-        });
-
+    .factory('personsService', ['$http', 'apiGet', '$q', function ($http, apiGet, $q) {
         return {
             getAllPersons: function () {
-                return persons;
+                var deferred = $q.defer();
+                apiGet('/persons/all.json')
+                    .success(function (data) {
+                    deferred.resolve(data);
+                })
+                    .error(function (data, status) {
+                        deferred.reject(status);
+                    });
+                return deferred.promise;
             },
             getPerson: function(id){
-                var person;
-                persons.forEach(function(pers){
-                    if(pers.id == id){person = pers; return false;}
-                });
-                return person;
+                var deferred = $q.defer();
+                apiGet('/persons/' + id + '.json')
+                    .success(function (data) {
+                        deferred.resolve(data);
+                    })
+                    .error(function (data, status) {
+                        deferred.reject(status);
+                    });
+                return deferred.promise;
             }
         };
     }]);

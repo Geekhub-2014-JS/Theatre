@@ -1,0 +1,25 @@
+{
+  "id": 41,
+  "name": "Анастасия Асеева",
+  "since": 2001,
+  "education": "test",
+  "roles": "Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+  "images": [
+    {
+      "image": "http://lorempixel.com/1000/400",
+      "text": "sometext"
+    },
+    {
+      "image": "http://lorempixel.com/1001/400",
+      "text": "sometext"
+    },
+    {
+      "image": "http://lorempixel.com/1000/401",
+      "text": "sometext"
+    },
+    {
+      "image": "http://lorempixel.com/1001/401",
+      "text": "sometext"
+    }
+  ]
+}

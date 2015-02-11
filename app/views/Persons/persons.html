@@ -3,7 +3,7 @@
 </div>
 <h2>{{'persons.actors' | translate}}</h2>
 <ul>
-    <li class="list-group-item col-xs-6 col-sm-4" ng-repeat="person in persons()">
+    <li class="list-group-item col-xs-6 col-sm-4" ng-repeat="person in persons">
         <a ui-sref="personDetails({id: person.id})">{{person.name}}</a>
     </li>
 </ul>
