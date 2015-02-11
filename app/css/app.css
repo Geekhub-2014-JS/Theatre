@@ -1,2 +1,14 @@
 /* app css stylesheet */
+#slides_control > div {
+    max-width: 1000px;
+    max-height: 400px;
+    margin: 0 auto;
+}
 
+img {
+    margin: auto;
+}
+
+#slides_control {
+    margin: 25px auto;
+}
