@@ -1,0 +1,33 @@
+[{
+  "month": 11,
+  "day": 2,
+  "year": 2014,
+  "time": "16:40",
+  "poster": "picture url",
+  "description": "qwerty 1",
+  "id": 15,
+  "price": "45"
+},
+  {
+    "month": 11,
+    "day": 7,
+    "year": 2014,
+    "time": "14:00",
+    "poster": "picture url",
+    "description": "qwerty 3",
+    "id": 14,
+    "price": "50"
+
+  },
+  {
+    "month": 11,
+    "day": 20,
+    "year": 2014,
+    "time": "18:00",
+    "poster": "picture url",
+    "description": "qwerty 2",
+    "id": 18,
+    "price": "60"
+
+  }
+]

@@ -16,7 +16,7 @@ theatreServices
                     .error(function (error) {
                         return error;
                     })
-                    ;
+                ;
             }
         }
     ])
