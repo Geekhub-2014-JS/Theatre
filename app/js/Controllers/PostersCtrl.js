@@ -1,8 +1,6 @@
 angular.module('poster',[])
-    .controller('PosterCtrl', ['$scope', '$http', 'apiGet', '$q', '$stateParams', '$translate',
-    function($scope, $http, apiGet, $q, $stateParams, $translate){
-
-        $translate.use($stateParams.locale);
+    .controller('PosterCtrl', ['$scope', 'apiGet', '$q',
+    function($scope, apiGet, $q){
 
         //  ******   GOOD   ***********
         //var deferred = $q.defer();
@@ -25,18 +23,9 @@ angular.module('poster',[])
         //});
         //  ******   GOOD   ***********
 
-        //$scope.month = 'Month from ctrl';
-        //$scope.year = 'Year from ctrl';
-
-
-        //
-        //
         //apiGet('2015-01.json').success(function(data){
         //    $scope.eve1 = data;
         //});
-        //
-        //$http.get('backend/2015-02.json').success(function(data){
-        //    $scope.eve2 = data;
-        //})
+
     }
 ]);
