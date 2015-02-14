@@ -21,31 +21,42 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" ui-sref="home">Theatre logo {{ 'menu.logo' | translate }}</a>
+        <a class="navbar-brand" ui-sref="app.home">Theatre logo {{ 'menu.logo' | translate }}</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
         <ul class="nav navbar-nav">
           <li ui-sref-active="active">
-            <a ui-sref="poster">{{ 'menu.poster' | translate }}</a>
+            <a ui-sref="app.poster">{{ 'menu.poster' | translate }}</a>
           </li>
           <li ui-sref-active="active">
-            <a ui-sref="repertoire">{{ 'menu.repertoire' | translate }}</a>
+            <a ui-sref="app.repertoire">{{ 'menu.repertoire' | translate }}</a>
           </li>
           <li ui-sref-active="active">
-            <a ui-sref="news">{{ 'menu.news' | translate }}</a>
+            <a ui-sref="app.news">{{ 'menu.news' | translate }}</a>
           </li>
           <li ui-sref-active="active">
-            <a ui-sref="about">{{ 'menu.about' | translate }}</a>
+            <a ui-sref="app.about">{{ 'menu.about' | translate }}</a>
           </li>
           <li ui-sref-active="active">
-            <a ui-sref="persons">{{ 'menu.persons' | translate }}</a>
+            <a ui-sref="app.persons">{{ 'menu.persons' | translate }}</a>
           </li>
           <li ui-sref-active="active">
-            <a ui-sref="contacts">{{ 'menu.contacts' | translate }}</a>
+            <a ui-sref="app.contacts">{{ 'menu.contacts' | translate }}</a>
           </li>
         </ul>
+        <div ng-controller="translateCtrl">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ 'translId' | translate }} <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#" ng-click="chLocale('ua')">UA</a></li>
+                    <li><a href="#" ng-click="chLocale('en')">EN</a></li>
+                </ul>
+            </li>
+        </ul>
+        </div>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
@@ -57,7 +68,7 @@
   </footer>
 </div>
 
-<script src="vendors/jquery/dist/jquery.js"></script>
+<script src="vendors/jquery/dist/jquery.min.js"></script>
 <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="vendors/angular/angular.js"></script>
 <script src="vendors/angular-ui-router/release/angular-ui-router.min.js"></script>
@@ -66,10 +77,12 @@
 <script src="vendors/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
 <script src="vendors/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
 <script src="vendors/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+<script src="vendors/moment/moment.js"></script>
 
 <script src="js/post_patch.js"></script>
 <script src="js/app.js"></script>
 <script src="js/routing.js"></script>
+<script src="js/Controllers/controllers.js"></script>
 <script src="js/Controllers/AboutCtrl.js"></script>
 <script src="js/Controllers/ContactsCtrl.js"></script>
 <script src="js/Controllers/HomeCtrl.js"></script>
@@ -77,8 +90,8 @@
 <script src="js/Controllers/PersonsCtrl.js"></script>
 <script src="js/Controllers/PostersCtrl.js"></script>
 <script src="js/Controllers/RepertoireCtrl.js"></script>
-<script src="js/Controllers/controllers.js"></script>
 <script src="js/Directives/directives.js"></script>
+<script src="js/Directives/PosterDirectives.js"></script>
 <script src="js/Services/services.js"></script>
 <script src="js/Animations/animations.js"></script>
 <script src="js/Filters/filters.js"></script>
