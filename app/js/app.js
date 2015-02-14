@@ -5,7 +5,7 @@
 var theatreApp = angular.module('theatre', [
                                             'ui.router',
                                             'theatreServices',
-                                            'theatreControllers', '' +
+                                            'theatreControllers',
                                             'theatreRoutes',
                                             'pascalprecht.translate',
                                             'ngCookies',
