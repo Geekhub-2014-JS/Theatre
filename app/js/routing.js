@@ -5,39 +5,44 @@
 angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
     .config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
         function($stateProvider, $urlRouterProvider, $locationProvider) {
-            $urlRouterProvider.otherwise("/");
+            $urlRouterProvider.otherwise("/ua/");
             $stateProvider
-                .state('home', {
+                .state('app',{
+                    abstract: true,
+                    url: '/{locale}',
+                    template: '<ui-view/>'
+                })
+                .state('app.home', {
                     url: "/",
                     templateUrl: "views/HomePage/home.html",
                     controller: 'HomeCtrl'
                 })
-                .state('poster', {
+                .state('app.poster', {
                     url: "/poster",
                     templateUrl: "views/Poster/poster.html",
                     controller: 'PosterCtrl'
                 })
-                .state('repertoire', {
+                .state('app.repertoire', {
                     url: "/repertoire",
                     templateUrl: "views/Repertoire/repertoire.html",
                     controller: 'RepertoireCtrl'
                 })
-                .state('news', {
+                .state('app.news', {
                     url: "/news",
                     templateUrl: "views/News/news.html",
                     controller: 'NewsCtrl'
                 })
-                .state('about', {
+                .state('app.about', {
                     url: "/about",
                     templateUrl: "views/About/about.html",
                     controller: "AboutCtrl"
                 })
-                .state('persons', {
+                .state('app.persons', {
                     url: "/persons",
                     templateUrl: "views/Persons/persons.html",
                     controller: 'PersonsCtrl'
                 })
-                .state('contacts', {
+                .state('app.contacts', {
                     url: "/contacts",
                     templateUrl: "views/Contacts/contacts.html",
                     controller: "ContactsCtrl"
