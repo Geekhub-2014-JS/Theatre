@@ -37,10 +37,11 @@
       "Sunday": "Неділя"
   },
   "persons": {
-    "actors" : "Актори театру",
-    "education" : "Освіта",
-    "since" : "У театрі працює з",
-    "roles" : "Ролі"
+    "actors": "Актори театру",
+    "aboutActor": "Про актора",
+    "education": "Освіта",
+    "since": "У театрі працює з",
+    "roles": "Ролі"
   },
   "key": "value"
 }

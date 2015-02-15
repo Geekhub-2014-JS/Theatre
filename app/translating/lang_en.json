@@ -36,6 +36,12 @@
     "Saturday": "Saturday",
     "Sunday": "Sunday"
   },
-
+  "persons": {
+    "actors": "Actors",
+    "aboutActor": "About actor",
+    "education": "Education",
+    "since": "Work in theatre ",
+    "roles": "Roles"
+  },
   "key": "value"
 }

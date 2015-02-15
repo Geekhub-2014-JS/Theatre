@@ -44,7 +44,7 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                 })
                 .state('app.personDetails', {
                     url: '/persons/{id:[0-9]{1,4}}',
-                    templateUrl: "../views/Persons/details.html",
+                    templateUrl: "views/Persons/details.html",
                     controller: 'PersonsDetailCtrl'
                 })
                 .state('app.contacts', {
