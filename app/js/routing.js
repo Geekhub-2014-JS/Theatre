@@ -23,7 +23,7 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                     controller: 'RepertoireCtrl'
                 })
                 .state('singlePerformance', {
-                    url: '/:performanceId',
+                    url: '/performance/:slug',
                     templateUrl: "../views/performance.html",
                     controller: 'SinglePerformanceCtrl'
                 })

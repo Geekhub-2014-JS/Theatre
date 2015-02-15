@@ -1,9 +1,9 @@
 <div class="repertoire">
     <h2>Repertoire</h2>
     <ul>
-        <li ng-repeat="performance in repertoire()" class="performance-block">
+        <li ng-repeat="performance in repertoire" class="performance-block">
             <img ng-src="#" alt="{{performance.title}}"/>
-            <a ui-sref="singlePerformance({performanceId: performance.id})">{{performance.title}}</a>
+            <a ui-sref="singlePerformance({slug: performance.slug})">{{performance.title}}</a>
         </li>
     </ul>
 </div>

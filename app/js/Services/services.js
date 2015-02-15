@@ -36,28 +36,21 @@ theatreServices
         }
     ])
 
-
     .factory('repertoireService', ['$http', 'apiGet', function ($http, apiGet) {
-        var performances = [];
-        apiGet('performances.json').then(function (response) {
-            performances = response.data || [];
-            return response;
-        });
         var factory = {
-            getRepertoire: function () {
-                return performances;
-            },
-            getSinglePerformance: function(id){
-                var performance;
-                performances.forEach(function(play){
-                    if(play.id == id){
-                        performance = play;
-                        return false;
-                    }
-                });
-                return performance;
-            }
+
         };
         return factory;
-   }]);
+        }
+    ])
+
+    .factory('singlePerformanceService', ['$http', 'apiGet',
+        function($http, apiGet) {
+            var factory = {
+
+            };
+            return factory;
+        }
+    ])
+;
 
