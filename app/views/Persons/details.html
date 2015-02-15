@@ -1,4 +1,12 @@
-<h2>Person detail</h2>
+<ol class="breadcrumb">
+    <li>
+        <a ui-sref="app.home">{{ 'menu.home' | translate }}</a>
+    </li>
+    <li>
+        <a ui-sref="app.persons">{{ 'menu.persons' | translate }}</a>
+    </li>
+    <li class="active">{{'persons.aboutActor' | translate}}</li>
+</ol>
 <div ng-controller="PersonsSliderCtrl" id="slides_control">
     <div>
         <carousel interval="interval">

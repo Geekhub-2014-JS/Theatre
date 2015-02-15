@@ -1,10 +1,16 @@
+<ol class="breadcrumb">
+    <li>
+        <a ui-sref="app.home">{{ 'menu.home' | translate }}</a>
+    </li>
+    <li class="active">{{'menu.persons' | translate}}</li>
+</ol>
 <div class="image-container" ng-style="{'border' : '1px solid black', 'width': '70%' , 'height': '400px', 'margin': '0 auto'}">
     Картинка
 </div>
 <h2>{{'persons.actors' | translate}}</h2>
 <ul>
     <li class="list-group-item col-xs-6 col-sm-4" ng-repeat="person in persons">
-        <a ui-sref="personDetails({id: person.id})">{{person.name}}</a>
+        <a ui-sref="app.personDetails({id: person.id})">{{person.name}}</a>
     </li>
 </ul>
 <div class="clearfix"></div>
