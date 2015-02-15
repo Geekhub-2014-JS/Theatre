@@ -56,7 +56,7 @@ angular.module('posterDirectives', [])
                     var i = 0;
                     for(i = 1; i <= Dlast; i++) {
                         if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
-                            calendar += '<td class="today">' + '<span class="th-calendar-date">' + i + '</span>';    ///   today
+                            calendar += '<td class="today">' + '<span class="th-calendar-date">' + i + '</span>' + getMonthData(data, month, i);    ///   today
                         }else{
                             if (dd.indexOf(i) != -1) {
                                 calendar += '<td>'  + '<span class="th-calendar-date">' + i  + '</span>' + getMonthData(data, month, i);   //   other days
