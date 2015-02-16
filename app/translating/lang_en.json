@@ -41,7 +41,8 @@
     "aboutActor": "About actor",
     "education": "Education",
     "since": "Work in theatre ",
-    "roles": "Roles"
+    "roles": "Roles",
+    "position" : "Position"
   },
   "key": "value"
 }

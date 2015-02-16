@@ -1,9 +1,10 @@
 {
-  "id": 2,
-  "name": "Дмитрий Асташевич",
-  "since": 2005,
-  "education": "test",
-  "roles": "testRole",
+"first_name": "Сергій",
+"last_name": "Проскурня",
+"middle_name": "Maude",
+"dob": "2015-01-27T23:07:13+0200",
+"position": "Виконуючий обов’язки художнього керівника",
+"slug": "sierghii-proskurnia",
   "images": [
     {
       "image": "http://lorempixel.com/1000/400",

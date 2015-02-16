@@ -41,7 +41,8 @@
     "aboutActor": "Про актора",
     "education": "Освіта",
     "since": "У театрі працює з",
-    "roles": "Ролі"
+    "roles": "Ролі",
+    "position": "Посада"
   },
   "key": "value"
 }

@@ -8,9 +8,10 @@
     Картинка
 </div>
 <h2>{{'persons.actors' | translate}}</h2>
+<span>Filter</span><input type="text" ng-model="actorsFilter">
 <ul>
-    <li class="list-group-item col-xs-6 col-sm-4" ng-repeat="person in persons">
-        <a ui-sref="app.personDetails({id: person.id})">{{person.name}}</a>
+    <li class="list-group-item col-xs-6 col-sm-4" ng-repeat="person in persons | filter: actorsFilter">
+        <a ui-sref="app.personDetails({id: person.slug})">{{person.first_name + " "+ person.middle_name +" " + person.last_name}}</a>
     </li>
 </ul>
 <div class="clearfix"></div>

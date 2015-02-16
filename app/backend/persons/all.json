@@ -1,143 +1,511 @@
-[
-  {
-    "id": 41,
-    "name": "Анастасия Асеева",
-    "since": 2001,
-    "education": "test",
-    "roles": "Lorem ipsum dolor sit amet, consectetur adipisicing elit Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-    "images": [
-      {
-        "image": "http://lorempixel.com/1000/400",
-        "text": "sometext"
-      },
-      {
-        "image": "http://lorempixel.com/1001/400",
-        "text": "sometext"
-      },
-      {
-        "image": "http://lorempixel.com/1000/401",
-        "text": "sometext"
-      },
-      {
-        "image": "http://lorempixel.com/1001/401",
-        "text": "sometext"
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "name": "Дмитрий Асташевич",
-    "since": 2005,
-    "education": "test",
-    "roles": "testRole",
-    "images": [
+{
+  "employees": [
     {
-      "image": "http://lorempixel.com/1000/400",
-      "text": "sometext"
+      "first_name": "Володимир",
+      "last_name": "Осипов",
+      "middle_name": "Adah",
+      "dob": "2002-07-02T01:33:20+0300",
+      "position": "Директор театру",
+      "slug": "volodimir-osipov"
     },
     {
-      "image": "http://lorempixel.com/1001/400",
-      "text": "sometext"
+      "first_name": "Сергій",
+      "last_name": "Проскурня",
+      "middle_name": "Maude",
+      "dob": "2015-01-27T23:07:13+0200",
+      "position": "Виконуючий обов’язки художнього керівника",
+      "slug": "sierghii-proskurnia"
     },
     {
-      "image": "http://lorempixel.com/1000/401",
-      "text": "sometext"
+      "first_name": "Олександр",
+      "last_name": "Павлютін",
+      "middle_name": "Lily",
+      "dob": "1978-05-28T08:09:37+0300",
+      "position": "Режисер-постановник",
+      "slug": "olieksandr-pavliutin"
     },
     {
-      "image": "http://lorempixel.com/1001/401",
-      "text": "sometext"
+      "first_name": "Сергій",
+      "last_name": "Ридванецький",
+      "middle_name": "Gordon",
+      "dob": "2012-03-17T12:53:51+0200",
+      "position": "Головний художник",
+      "slug": "sierghii-ridvaniets-kii"
+    },
+    {
+      "first_name": "Наталія",
+      "last_name": "Ридванецька",
+      "middle_name": "Emory",
+      "dob": "1984-06-13T16:46:22+0400",
+      "position": "Художник по костюмах",
+      "slug": "nataliia-ridvaniets-ka"
+    },
+    {
+      "first_name": "Надія",
+      "last_name": "Нікіфорова",
+      "middle_name": "Shaina",
+      "dob": "2004-08-07T07:09:58+0300",
+      "position": "Художник-постановник",
+      "slug": "nadiia-nikiforova"
+    },
+    {
+      "first_name": "Володимир",
+      "last_name": "Татарінов",
+      "middle_name": "Terry",
+      "dob": "1988-10-29T16:07:20+0300",
+      "position": "Головний балетмейстер",
+      "slug": "volodimir-tatarinov"
+    },
+    {
+      "first_name": "Варвара",
+      "last_name": "Присяжненко",
+      "middle_name": "Samanta",
+      "dob": "2012-05-15T16:12:13+0300",
+      "position": "Керівник літературно-драматичною частиною",
+      "slug": "varvara-prisiazhnienko"
+    },
+    {
+      "first_name": "Олена",
+      "last_name": "Бєлкіна",
+      "middle_name": "Mohammed",
+      "dob": "2013-09-07T18:20:17+0300",
+      "position": "Диригент",
+      "slug": "oliena-bielkina"
+    },
+    {
+      "first_name": "Світлана",
+      "last_name": "Лежненко",
+      "middle_name": "Maximillian",
+      "dob": "1993-05-18T12:27:20+0300",
+      "position": "Концертмейстр",
+      "slug": "svitlana-liezhnienko"
+    },
+    {
+      "first_name": "Галина",
+      "last_name": "Кириченко",
+      "middle_name": "Reta",
+      "dob": "2011-06-22T18:36:56+0300",
+      "position": "Концертмейстр",
+      "slug": "galina-kirichienko"
+    },
+    {
+      "first_name": "Сергій",
+      "last_name": "Бобров",
+      "middle_name": "Clifford",
+      "dob": "1972-09-03T06:07:36+0300",
+      "position": "Актор",
+      "slug": "sierghii-bobrov"
+    },
+    {
+      "first_name": "Наталія",
+      "last_name": "Вігран",
+      "middle_name": "Heath",
+      "dob": "1996-04-27T21:15:15+0300",
+      "position": "Заслужена артистка України",
+      "slug": "nataliia-vighran"
+    },
+    {
+      "first_name": "Марія",
+      "last_name": "Марущак",
+      "middle_name": "Jaquelin",
+      "dob": "2005-12-15T20:49:55+0200",
+      "position": "Актриса",
+      "slug": "mariia-marushchak"
+    },
+    {
+      "first_name": "Юрій",
+      "last_name": "Берлінський",
+      "middle_name": "Betty",
+      "dob": "1984-04-21T09:40:38+0400",
+      "position": "Заслужений артист України",
+      "slug": "iurii-bierlins-kii"
+    },
+    {
+      "first_name": "Світлана",
+      "last_name": "Амеліна",
+      "middle_name": "Wilber",
+      "dob": "1971-07-18T02:25:53+0300",
+      "position": "Актриса",
+      "slug": "svitlana-amielina"
+    },
+    {
+      "first_name": "Анна",
+      "last_name": "Боброва",
+      "middle_name": "Estella",
+      "dob": "2003-10-03T20:28:26+0300",
+      "position": "Актриса",
+      "slug": "anna-bobrova"
+    },
+    {
+      "first_name": "Олена",
+      "last_name": "Брехаря",
+      "middle_name": "Pierce",
+      "dob": "1980-01-09T08:10:05+0300",
+      "position": "Актриса",
+      "slug": "oliena-briekharia"
+    },
+    {
+      "first_name": "Лілія",
+      "last_name": "Бурлакова",
+      "middle_name": "Kathleen",
+      "dob": "1973-11-20T18:10:17+0300",
+      "position": "Актриса",
+      "slug": "liliia-burlakova"
+    },
+    {
+      "first_name": "Оксана",
+      "last_name": "Вовкостріл",
+      "middle_name": "Mohammed",
+      "dob": "1975-05-24T01:21:27+0300",
+      "position": "Актриса",
+      "slug": "oksana-vovkostril"
+    },
+    {
+      "first_name": "Олександр",
+      "last_name": "Гелеверя",
+      "middle_name": "Bennett",
+      "dob": "1984-09-10T19:18:17+0400",
+      "position": "Актор",
+      "slug": "olieksandr-gielievieria"
+    },
+    {
+      "first_name": "Микола",
+      "last_name": "Глазов",
+      "middle_name": "Demetris",
+      "dob": "2001-05-20T05:47:13+0300",
+      "position": "Актор",
+      "slug": "mikola-glazov"
+    },
+    {
+      "first_name": "Ірина",
+      "last_name": "Глазова",
+      "middle_name": "Kaley",
+      "dob": "1989-02-09T19:41:55+0300",
+      "position": "Актриса",
+      "slug": "irina-glazova"
+    },
+    {
+      "first_name": "Наталія",
+      "last_name": "Глазова",
+      "middle_name": "Leora",
+      "dob": "2003-03-12T20:03:18+0200",
+      "position": "Актриса",
+      "slug": "nataliia-glazova"
+    },
+    {
+      "first_name": "Павло",
+      "last_name": "Гончаров",
+      "middle_name": "Kaya",
+      "dob": "1988-09-06T03:14:42+0400",
+      "position": "Актор",
+      "slug": "pavlo-goncharov"
+    },
+    {
+      "first_name": "Юлія",
+      "last_name": "Гребень",
+      "middle_name": "Kelley",
+      "dob": "1994-05-23T10:24:46+0300",
+      "position": "Актриса",
+      "slug": "iuliia-griebien"
+    },
+    {
+      "first_name": "Наталія",
+      "last_name": "Гребень",
+      "middle_name": "Vernice",
+      "dob": "1999-12-13T12:32:08+0200",
+      "position": "Актриса",
+      "slug": "nataliia-griebien"
+    },
+    {
+      "first_name": "Олександр",
+      "last_name": "Гуменний",
+      "middle_name": "Alysson",
+      "dob": "2013-12-02T23:40:09+0200",
+      "position": "Актор",
+      "slug": "olieksandr-gumiennii"
+    },
+    {
+      "first_name": "Юлія",
+      "last_name": "Донська-Гуменна",
+      "middle_name": "Isidro",
+      "dob": "2009-01-23T15:38:12+0200",
+      "position": "Актриса",
+      "slug": "iuliia-dons-ka-gumienna"
+    },
+    {
+      "first_name": "Микола",
+      "last_name": "Зайнчківський",
+      "middle_name": "Cornelius",
+      "dob": "1997-11-21T06:15:51+0200",
+      "position": "Актор",
+      "slug": "mikola-zainchkivs-kii"
+    },
+    {
+      "first_name": "Анжеліна",
+      "last_name": "Іванова",
+      "middle_name": "Ethelyn",
+      "dob": "2011-11-06T04:54:46+0200",
+      "position": "Актриса",
+      "slug": "anzhielina-ivanova"
+    },
+    {
+      "first_name": "Валерій",
+      "last_name": "Кириченко",
+      "middle_name": "Dandre",
+      "dob": "1998-10-11T18:19:25+0300",
+      "position": "Актор",
+      "slug": "valierii-kirichienko"
+    },
+    {
+      "first_name": "Олексій",
+      "last_name": "Клименко",
+      "middle_name": "Elise",
+      "dob": "1998-02-20T08:29:14+0200",
+      "position": "Актор",
+      "slug": "olieksii-klimienko"
+    },
+    {
+      "first_name": "Сергій",
+      "last_name": "Коваленко",
+      "middle_name": "Eula",
+      "dob": "1980-12-02T03:31:58+0300",
+      "position": "Актор",
+      "slug": "sierghii-kovalienko"
+    },
+    {
+      "first_name": "Вікторія",
+      "last_name": "Ковальова",
+      "middle_name": "Naomi",
+      "dob": "1995-11-28T13:19:59+0200",
+      "position": "Актриса",
+      "slug": "viktoriia-koval-ova"
+    },
+    {
+      "first_name": "Віктор",
+      "last_name": "Коломієць",
+      "middle_name": "Madison",
+      "dob": "1992-06-22T05:26:54+0300",
+      "position": "Актор",
+      "slug": "viktor-kolomiiets"
+    },
+    {
+      "first_name": "Михайло",
+      "last_name": "Кондратський",
+      "middle_name": "Pete",
+      "dob": "1972-05-20T14:03:20+0300",
+      "position": "Актор",
+      "slug": "mikhailo-kondrats-kii"
+    },
+    {
+      "first_name": "Надія",
+      "last_name": "Корбут",
+      "middle_name": "Halle",
+      "dob": "1972-09-27T17:04:30+0300",
+      "position": "Актриса",
+      "slug": "nadiia-korbut"
+    },
+    {
+      "first_name": "Тетяна",
+      "last_name": "Крижанівська",
+      "middle_name": "Neva",
+      "dob": "1974-07-21T13:45:38+0300",
+      "position": "Актриса",
+      "slug": "tietiana-krizhanivs-ka"
+    },
+    {
+      "first_name": "Олександр",
+      "last_name": "Кузьменко",
+      "middle_name": "Zelma",
+      "dob": "1980-06-12T09:33:09+0300",
+      "position": "Актриса",
+      "slug": "olieksandr-kuz-mienko"
+    },
+    {
+      "first_name": "Олександр",
+      "last_name": "Кузьмин",
+      "middle_name": "Leanne",
+      "dob": "1991-03-27T06:32:02+0300",
+      "position": "Актор",
+      "slug": "olieksandr-kuz-min"
+    },
+    {
+      "first_name": "Анна",
+      "last_name": "Куриленко",
+      "middle_name": "Louie",
+      "dob": "1991-03-27T14:00:31+0300",
+      "position": "Актриса",
+      "slug": "anna-kurilienko"
+    },
+    {
+      "first_name": "Наталія",
+      "last_name": "Мамалига",
+      "middle_name": "Jayne",
+      "dob": "2014-03-02T13:56:33+0200",
+      "position": "Актриса",
+      "slug": "nataliia-mamaligha"
+    },
+    {
+      "first_name": "Ірина",
+      "last_name": "Маслова",
+      "middle_name": "Elisha",
+      "dob": "1994-11-16T03:49:26+0200",
+      "position": "Актриса",
+      "slug": "irina-maslova"
+    },
+    {
+      "first_name": "Світлана",
+      "last_name": "Москаленко",
+      "middle_name": "Katherine",
+      "dob": "1976-03-09T19:53:53+0300",
+      "position": "Актриса",
+      "slug": "svitlana-moskalienko"
+    },
+    {
+      "first_name": "Наталія",
+      "last_name": "Панекіна",
+      "middle_name": "Mary",
+      "dob": "1994-01-08T04:42:32+0200",
+      "position": "Актриса",
+      "slug": "nataliia-paniekina"
+    },
+    {
+      "first_name": "Наталія",
+      "last_name": "Науменко",
+      "middle_name": "Jeramie",
+      "dob": "1980-12-31T14:06:56+0300",
+      "position": "Актриса",
+      "slug": "nataliia-naumienko"
+    },
+    {
+      "first_name": "Сергій",
+      "last_name": "Пономаренко",
+      "middle_name": "Milton",
+      "dob": "1991-07-20T05:05:53+0300",
+      "position": "Актор",
+      "slug": "sierghii-ponomarienko"
+    },
+    {
+      "first_name": "Олена",
+      "last_name": "Пономаренко",
+      "middle_name": "Linnea",
+      "dob": "1971-03-08T22:11:55+0300",
+      "position": "Актриса",
+      "slug": "oliena-ponomarienko"
+    },
+    {
+      "first_name": "Лідія",
+      "last_name": "Попова",
+      "middle_name": "Norval",
+      "dob": "1974-08-11T01:31:22+0300",
+      "position": "Актриса",
+      "slug": "lidiia-popova"
+    },
+    {
+      "first_name": "Дмитро",
+      "last_name": "Потапчук",
+      "middle_name": "Deion",
+      "dob": "1990-04-13T04:28:09+0400",
+      "position": "Актор",
+      "slug": "dmitro-potapchuk"
+    },
+    {
+      "first_name": "Олександр",
+      "last_name": "Приз",
+      "middle_name": "Ayana",
+      "dob": "2004-10-12T09:05:31+0300",
+      "position": "Актриса",
+      "slug": "olieksandr-priz"
+    },
+    {
+      "first_name": "Юрій",
+      "last_name": "Прокопчук",
+      "middle_name": "Laurie",
+      "dob": "2013-09-29T17:59:28+0300",
+      "position": "Актор",
+      "slug": "iurii-prokopchuk"
+    },
+    {
+      "first_name": "Олександр",
+      "last_name": "Пятківський",
+      "middle_name": "Wilbert",
+      "dob": "1978-03-27T04:42:57+0300",
+      "position": "Актор",
+      "slug": "olieksandr-piatkivs-kii"
+    },
+    {
+      "first_name": "Ольга",
+      "last_name": "Ромодан",
+      "middle_name": "Monroe",
+      "dob": "1978-06-20T04:23:58+0300",
+      "position": "Актриса",
+      "slug": "ol-gha-romodan"
+    },
+    {
+      "first_name": "Любов",
+      "last_name": "Скобель",
+      "middle_name": "Salvatore",
+      "dob": "1981-02-02T15:07:34+0300",
+      "position": "Актриса",
+      "slug": "liubov-skobiel"
+    },
+    {
+      "first_name": "Євген",
+      "last_name": "Скрипніченко",
+      "middle_name": "Lavonne",
+      "dob": "1976-02-27T14:45:28+0300",
+      "position": "Актор",
+      "slug": "ievghien-skripnichienko"
+    },
+    {
+      "first_name": "Людмила",
+      "last_name": "Талах",
+      "middle_name": "Brycen",
+      "dob": "1973-01-30T13:34:32+0300",
+      "position": "Актриса",
+      "slug": "liudmila-talakh"
+    },
+    {
+      "first_name": "Олег",
+      "last_name": "Телятник",
+      "middle_name": "Chyna",
+      "dob": "1980-03-08T09:55:08+0300",
+      "position": "Актор",
+      "slug": "oliegh-tieliatnik"
+    },
+    {
+      "first_name": "Світлана",
+      "last_name": "Терещенко",
+      "middle_name": "Justyn",
+      "dob": "1985-09-13T12:31:13+0400",
+      "position": "Актриса",
+      "slug": "svitlana-tierieshchienko"
+    },
+    {
+      "first_name": "Лілія",
+      "last_name": "Харченко",
+      "middle_name": "Miller",
+      "dob": "1971-08-05T11:17:06+0300",
+      "position": "Актриса",
+      "slug": "liliia-kharchienko"
+    },
+    {
+      "first_name": "Костянтин",
+      "last_name": "Шаєнко",
+      "middle_name": "Damian",
+      "dob": "1973-05-03T22:02:32+0300",
+      "position": "Актор",
+      "slug": "kostiantin-shaienko"
+    },
+    {
+      "first_name": "Катерина",
+      "last_name": "Шакалова",
+      "middle_name": "Rosalyn",
+      "dob": "2006-01-19T19:04:46+0200",
+      "position": "Актриса",
+      "slug": "katierina-shakalova"
     }
-  ]
-  },
-  {
-    "id": 3,
-    "name": "Константин Белошапка",
-    "since": 1995,
-    "education": "test",
-    "roles": "testRole",
-    "images": [
-      {
-        "image": "http://lorempixel.com/1000/400",
-        "text": "sometext"
-      },
-      {
-        "image": "http://lorempixel.com/1001/400",
-        "text": "sometext"
-      },
-      {
-        "image": "http://lorempixel.com/1000/401",
-        "text": "sometext"
-      },
-      {
-        "image": "http://lorempixel.com/1001/401",
-        "text": "sometext"
-      }
-    ]
-  },
-  {
-    "id": 4,
-    "name": "Наталия Винокурова",
-    "since": 2011,
-    "education": "test",
-    "roles": "testRole",
-    "images": [
-      {
-        "image": "http://lorempixel.com/1000/400",
-        "text": "sometext"
-      },
-      {
-        "image": "http://lorempixel.com/1001/400",
-        "text": "sometext"
-      },
-      {
-        "image": "http://lorempixel.com/1000/401",
-        "text": "sometext"
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "name": "Лилия Гайсина",
-    "since": 2014,
-    "education": "test",
-    "roles": "testRosssssle",
-    "images": [
-      {
-        "image": "http://lorempixel.com/1000/400",
-        "text": "sometext"
-      },
-      {
-        "image": "http://lorempixel.com/1001/400",
-        "text": "sometext"
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "name": "Аделина Гизатуллина",
-    "since": 2004,
-    "education": "test",
-    "roles": "testRosssssle"
-  },
-  {
-    "id": 7,
-    "name": "Андрей Злобин",
-    "since": 2014,
-    "education": "test",
-    "roles": "testRosssssle"
-  },
-  {
-    "id": 8,
-    "name": "Нино Кантария",
-    "since": 2014,
-    "education": "test",
-    "roles": "testRosssssle"
-  },
-  {
-    "id": 9,
-    "name": "Виктория Лукина",
-    "since": 2014,
-    "education": "test",
-    "roles": "testRosssssle"
-  }
-]
+  ],
+  "next_page": "false",
+  "previous_page": "false",
+  "page_count": 1
+}

@@ -43,7 +43,7 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                     controller: 'PersonsCtrl'
                 })
                 .state('app.personDetails', {
-                    url: '/persons/{id:[0-9]{1,4}}',
+                    url: '/persons/:id',
                     templateUrl: "views/Persons/details.html",
                     controller: 'PersonsDetailCtrl'
                 })

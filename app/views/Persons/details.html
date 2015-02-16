@@ -22,19 +22,19 @@
 
 <table class="table table-bordered">
     <tr>
-        <td colspan="2">{{person.name}}</td>
+        <td colspan="2">{{person.first_name + " " + person.middle_name + " " + person.last_name}}</td>
+    </tr>
+    <tr>
+        <td>{{'persons.position' | translate}}</td>
+        <td>{{person.position}}</td>
     </tr>
     <tr>
         <td>{{'persons.since' | translate}}</td>
-        <td>{{person.since}} року</td>
-    </tr>
-    <tr>
-        <td>{{'persons.education' | translate}}</td>
-        <td>{{person.education}}</td>
+        <td>{{person.dob | date: "dd/MM/yyyy"}}</td>
     </tr>
     <tr>
         <td>{{'persons.roles' | translate}}:</td>
-        <td>{{person.roles}}</td>
+        <td>{{person.roles}}In progress....</td>
     </tr>
 
 </table>

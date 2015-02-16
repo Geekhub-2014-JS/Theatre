@@ -1,7 +1,8 @@
 angular.module('person',['ui.bootstrap'])
     .controller('PersonsCtrl', ['$scope', 'personsService','apiGet', function ($scope, personsService) {
         personsService.getAllPersons().then(function(data){
-            $scope.persons = data;
+            $scope.persons = data.employees;
+            console.log($scope.persons);
         });
     }
     ])
