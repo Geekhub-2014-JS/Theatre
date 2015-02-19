@@ -1,0 +1,46 @@
+{
+  "translId": "EN",
+  "menu": {
+    "logo": "Theater of Taras Shevchenko",
+    "home": "Home",
+    "poster": "Poster",
+    "repertoire": "Repertoire",
+    "news": "News",
+    "about": "About theater",
+    "persons": "Persons",
+    "contacts": "Contacts"
+  },
+  "performance": {
+    "description": "Description",
+    "team": "Team",
+    "press": "Press"
+  },
+  "poster": {
+    "poster_on": "Poster on"
+  },
+  "month": {
+    "Jan": "January",
+    "Feb": "February",
+    "Mar": "March",
+    "Apr": "April",
+    "May": "May",
+    "Jun": "June",
+    "Jul": "July",
+    "Aug": "August",
+    "Sept": "September",
+    "Oct": "October",
+    "Nov": "November",
+    "Dec": "December"
+  },
+  "day": {
+    "Monday": "Monday",
+    "Tuesday": "Tuesday",
+    "Wednesday": "Wednesday",
+    "Thursday": "Thursday",
+    "Friday": "Friday",
+    "Saturday": "Saturday",
+    "Sunday": "Sunday"
+  },
+
+  "key": "value"
+}

@@ -7,7 +7,7 @@
     <ul>
         <li ng-repeat="performance in repertoire" class="performance-block">
             <img ng-src="#" alt="{{performance.title}}"/>
-            <a ui-sref="singlePerformance({slug: performance.slug})">{{performance.title}}</a>
+            <a ui-sref="app.singlePerformance({slug: performance.slug})">{{performance.title}}</a>
         </li>
     </ul>
 </div>
