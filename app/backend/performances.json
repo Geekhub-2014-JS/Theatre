@@ -1,103 +1,98 @@
-{
-  "performances": [
+[
     {
       "title": "Серед грому і тиші",
       "description": "Вистава присвячена 80-річчю від дня народження Василя Симоненка. Сергій Проскурня. документальна історія",
-      "premiere": "1998-06-02T02:46:46+0300",
-      "slug": "sieried-ghromu-i-tishi"
+      "slug": "sieried-ghromu-i-tishi",
+      "performancePoster": "http://cs614617.vk.me/v614617756/10a6a/zeqE2VFDJdA.jpg"
     },
     {
       "title": "Кайдашева сім'я",
       "description": "Іван Нечуй-Левицький. Трагікомедія на 3 дії. Тривалість вистави 2 год. 35 хв.",
-      "premiere": "2008-03-01T13:52:45+0200",
-      "slug": "kaidashieva-sim-ia"
+      "slug": "kaidashieva-sim-ia",
+      "performancePoster": "http://cs614617.vk.me/v614617756/10a6a/zeqE2VFDJdA.jpg"
     },
     {
       "title": "Сад Гетсиманський",
       "description": "Народна трагедія на 2 дії. Тривалість вистави 2 год. 20 хв. Тривалість вистави 1 год. 50 хв.",
-      "premiere": "2001-07-01T23:52:40+0300",
-      "slug": "sad-gietsimans-kii"
+      "slug": "sad-gietsimans-kii",
+      "performancePoster": "http://cs614617.vk.me/v614617756/10a6a/zeqE2VFDJdA.jpg"
     },
     {
       "title": "Шельменко-денщик",
       "description": "Григорій Квітка-Основ’яненко. Музика Василя Соловйова-Сєдого. Музична комедія на 3 дії.",
-      "premiere": "1986-12-06T18:17:54+0300",
-      "slug": "shiel-mienko-dienshchik"
+      "slug": "shiel-mienko-dienshchik",
+      "performancePoster": "http://cs614617.vk.me/v614617756/10a6a/zeqE2VFDJdA.jpg"
     },
     {
       "title": "Хто в домі господар?",
       "description": "Олексій Коломієць. Травестія на 2 дії за п’єсою «Фараони». Тривалість вистави 2 год. 05 хв.",
-      "premiere": "1974-08-01T20:01:30+0300",
-      "slug": "khto-v-domi-ghospodar"
+      "slug": "khto-v-domi-ghospodar",
+      "performancePoster": "http://cs614617.vk.me/v614617756/10a6a/zeqE2VFDJdA.jpg"
     },
     {
       "title": "За двома зайцями",
       "description": "Михайло Старицький. Комедія на 2 дії. Тривалість вистави 2 год. 15 хв.",
-      "premiere": "1970-11-02T12:30:30+0300",
-      "slug": "za-dvoma-zaitsiami"
+      "slug": "za-dvoma-zaitsiami",
+      "performancePoster": "http://cs614617.vk.me/v614617756/10a6a/zeqE2VFDJdA.jpg"
     },
     {
       "title": "Сватання на Гончарівці",
       "description": "Григорій Квітка-Основ’яненко, Музика Кирила Стеценка. Музична комедія на 2 дії. Тривалість вистави 2 год.",
-      "premiere": "1971-10-15T19:01:35+0300",
-      "slug": "svatannia-na-goncharivtsi"
+      "slug": "svatannia-na-goncharivtsi",
+      "performancePoster": "http://cs614617.vk.me/v614617756/10a6a/zeqE2VFDJdA.jpg"
     },
     {
       "title": "Натюрморт з товстим небожем",
       "description": "Іон Сапдару. Трагікомедія на 2 дії про красу чудовиськ і любов. Тривалість вистави 1 год. 40 хв.",
-      "premiere": "1997-04-24T07:40:16+0300",
-      "slug": "natiurmort-z-tovstim-niebozhiem"
+      "slug": "natiurmort-z-tovstim-niebozhiem",
+      "performancePoster": "http://cs614617.vk.me/v614617756/10a6a/zeqE2VFDJdA.jpg"
     },
     {
       "title": "Мізантроп",
       "description": "Жан-Батіст Мольєр. Маніакальна комедія",
-      "premiere": "1994-04-20T19:37:29+0300",
-      "slug": "mizantrop"
+      "slug": "mizantrop",
+      "performancePoster": "http://cs614617.vk.me/v614617756/10a6a/zeqE2VFDJdA.jpg"
     },
     {
       "title": "Дуже проста історія",
       "description": "Марія Ладо. Притча (вистава йде з одним антрактом). Тривалість вистави 2 год.",
-      "premiere": "1970-08-14T13:32:03+0300",
-      "slug": "duzhie-prosta-istoriia"
+      "slug": "duzhie-prosta-istoriia",
+      "performancePoster": "http://cs614617.vk.me/v614617756/10a6a/zeqE2VFDJdA.jpg"
     },
     {
       "title": "Сканінг",
       "description": "Євген Марковський. Антиутопія",
-      "premiere": "2008-09-24T02:32:48+0300",
-      "slug": "skaningh"
+      "slug": "skaningh",
+      "performancePoster": "http://cs614617.vk.me/v614617756/10a6a/zeqE2VFDJdA.jpg"
     },
     {
       "title": "Назар Стодоля",
       "description": "Тарас Шевченко. Різдвяна містерія-бурлеск. Тривалість вистави 2 год.",
-      "premiere": "1994-11-02T21:38:43+0200",
-      "slug": "nazar-stodolia"
+      "slug": "nazar-stodolia",
+      "performancePoster": "http://cs614617.vk.me/v614617756/10a6a/zeqE2VFDJdA.jpg"
     },
     {
       "title": "Дванадцять місяців або хранителі року",
       "description": "Самуіл Маршак. Музична казка. Тривалість вистави 1 год.",
-      "premiere": "2011-04-02T22:41:26+0300",
-      "slug": "dvanadtsiat-misiatsiv-abo-khranitieli-roku"
+      "slug": "dvanadtsiat-misiatsiv-abo-khranitieli-roku",
+      "performancePoster": "http://cs614617.vk.me/v614617756/10a6a/zeqE2VFDJdA.jpg"
     },
     {
       "title": "Золоте курча",
       "description": "Володимир Орлов. Музична казка на 1 дію. Тривалість вистави 50 хв.",
-      "premiere": "2003-04-23T02:01:16+0300",
-      "slug": "zolotie-kurcha"
+      "slug": "zolotie-kurcha",
+      "performancePoster": "http://cs614617.vk.me/v614617756/10a6a/zeqE2VFDJdA.jpg"
     },
     {
       "title": "Король Дроздобород",
       "description": "Богдан Стельмах. Музична казка на 1 дію. Тривалість вистави 1 год. 10 хв.",
-      "premiere": "2004-06-10T22:59:56+0300",
-      "slug": "korol-drozdoborod"
+      "slug": "korol-drozdoborod",
+      "performancePoster": "http://cs614617.vk.me/v614617756/10a6a/zeqE2VFDJdA.jpg"
     },
     {
       "title": "Дорога до сонця",
       "description": "Аркадій Горін, Едуард Яворський. Музична казка на 1 дію. Тривалість вистави 1 год. 15 хв.",
-      "premiere": "1986-10-26T14:30:10+0300",
-      "slug": "dorogha-do-sontsia"
+      "slug": "dorogha-do-sontsia",
+      "performancePoster": "http://cs614617.vk.me/v614617756/10a6a/zeqE2VFDJdA.jpg"
     }
-  ],
-  "next_page": "false",
-  "previous_page": "false",
-  "page_count": 1
-}
+  ]

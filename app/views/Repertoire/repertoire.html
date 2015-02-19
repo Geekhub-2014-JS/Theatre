@@ -6,7 +6,7 @@
     <h2>{{ 'menu.repertoire' | translate }}</h2>
     <ul>
         <li ng-repeat="performance in repertoire" class="performance-block">
-            <img ng-src="#" alt="{{performance.title}}"/>
+            <img ng-src="{{performance.performancePoster}}" alt="{{performance.title}}"/>
             <a ui-sref="app.singlePerformance({slug: performance.slug})">{{performance.title}}</a>
         </li>
     </ul>

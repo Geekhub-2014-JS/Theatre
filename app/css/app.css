@@ -52,14 +52,19 @@ a:hover                        { text-decoration:none; }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------CONTENT--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
-.repertoire .performance-block {
+.performance-block {
     display: inline-block;
     width: 100px;
     height: 150px;
     margin: 20px;
     text-align: center;
 }
-.repertoire .performance-block img {
+.performance-img .performance-block {
+    display: block;
+    width: 150px;
+    height: 200px;
+}
+.performance-block img {
     width: 100%;
 }
 /*----------------------------------------------------------------------------------*/
