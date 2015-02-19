@@ -2,7 +2,13 @@
 
 /* App Module */
 
-var theatreApp = angular.module('theatre', ['ui.router', 'theatreServices', 'theatreControllers', 'theatreRoutes', 'pascalprecht.translate', 'ngCookies']);
+var theatreApp = angular.module('theatre', [
+    'ui.router',
+    'theatreServices',
+    'theatreControllers',
+    'theatreRoutes',
+    'pascalprecht.translate',
+    'ngCookies']);
 
 theatreApp.config(['$translateProvider', '$httpProvider', function($translateProvider, $httpProvider) {
     $translateProvider.useStaticFilesLoader({

@@ -1,0 +1,40 @@
+<ul class="breadcrumb">
+    <li><a ui-sref="app.home">{{ 'menu.home' | translate }}</a></li>
+    <li><a ui-sref="app.repertoire">{{'menu.repertoire' | translate}}</a></li>
+    <li class="active">{{performance.title}}</li>
+</ul>
+<h2>{{performance.title}}</h2>
+<div class="row">
+    <div class="performance-img col-xs-3"></div>
+    <div class="media-block col-xs-6"></div>
+    <ul class="performance-dates col-xs-3">
+        <li ng-repeat="date in performance.dates">
+            {{date.month}}, {{date.day}}, {{date.year}}, {{date.time}}, {{date.price}}
+        </li>
+    </ul>
+</div>
+
+<div ng-controller="PerfTabsCtrl">
+    <tabset>
+        <tab heading="{{ 'performance.description' | translate }}">
+            {{performance.description}}
+        </tab>
+        <tab heading="{{ 'performance.team' | translate }}">
+            <ul class="performance-actors">
+                <li ng-repeat="member in performance.team">
+                    {{member.title}}
+                    {{member.description}}
+                    <a href="app.personDetails({id: member.employee.slug})">{{member.employee.first_name +  ' ' + member.employee.middle_name + ' ' + member.employee.last_name}}</a>
+                    {{member.employee.position}}
+                </li>
+            </ul>
+        </tab>
+        <tab heading="{{ 'performance.press' | translate }}">
+            <ul class="article-list">
+                <li ng-repeat="article in performance.press">
+                    <a href="{{article.link}}">{{article.title}}</a>
+                </li>
+            </ul>
+        </tab>
+    </tabset>
+</div>

@@ -1,5 +1,9 @@
+<ul class="breadcrumb">
+    <li><a ui-sref="app.home">{{ 'menu.home' | translate }}</a></li>
+    <li class="active">{{'menu.repertoire' | translate}}</li>
+</ul>
 <div class="repertoire">
-    <h2>Repertoire</h2>
+    <h2>{{ 'menu.repertoire' | translate }}</h2>
     <ul>
         <li ng-repeat="performance in repertoire" class="performance-block">
             <img ng-src="#" alt="{{performance.title}}"/>

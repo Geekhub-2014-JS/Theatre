@@ -9,5 +9,10 @@
     "persons": "Persons",
     "contacts": "Contacts"
   },
+  "performance": {
+    "description": "Description",
+    "team": "Team",
+    "press": "Press"
+  },
   "key": "value"
 }

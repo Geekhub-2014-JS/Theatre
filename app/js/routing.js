@@ -24,7 +24,7 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                 })
                 .state('singlePerformance', {
                     url: '/performance/:slug',
-                    templateUrl: "../views/performance.html",
+                    templateUrl: "../views/Performance/performance.html",
                     controller: 'SinglePerformanceCtrl'
                 })
                 .state('news', {

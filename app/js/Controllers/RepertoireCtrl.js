@@ -6,10 +6,4 @@ angular.module('repertoire',[])
             });
         }
     ])
-    .controller('SinglePerformanceCtrl', ['$scope', '$http', 'apiGet', '$stateParams',
-        function ($scope, $http, apiGet, $stateParams) {
-            apiGet($stateParams.slug + '.json').success(function (data) {
-                $scope.performance = data;
-            });
-        }
-    ]);
+    ;

@@ -9,5 +9,10 @@
       "persons": "Персоналії",
       "contacts": "Контакти"
   },
+  "performance": {
+    "description": "Про Спектакль",
+    "team": "Актори та Постановка",
+    "press": "Пресса"
+  },
   "key": "value"
 }
