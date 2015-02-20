@@ -61,11 +61,17 @@ a:hover                        { text-decoration:none; }
 }
 .performance-img .performance-block {
     display: block;
-    width: 150px;
-    height: 200px;
+    width: 100%;
+    max-height: 300px;
+    margin: 0;
 }
 .performance-block img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+/* Image-carousel on performance page */
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    max-height: 300px;
 }
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------SIDEBAR--------------------------------------*/

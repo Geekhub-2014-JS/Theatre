@@ -3,7 +3,7 @@
   "description": "Євген Марковський. Антиутопія",
   "premiere": "2008-09-24T02:32:48+0300",
   "slug": "skaningh",
-  "performancePoster": "http://cs614617.vk.me/v614617756/10a6a/zeqE2VFDJdA.jpg",
+  "performancePoster": "http://kolyan.net/uploads/posts/2013-02/thumbs/1360575125_cat_in_snow_032.jpg",
   "dates": [
     {
       "month": 11,
@@ -25,6 +25,24 @@
       "year": 2014,
       "time": "18:00",
       "price": "60"
+    }
+  ],
+  "images": [
+    {
+      "source": "http://stylonica.com/wp-content/uploads/2014/03/Cats.jpg",
+      "text": "About current image"
+    },
+    {
+      "source": "http://stylonica.com/wp-content/uploads/2014/03/b73bcc559cb7886e72b7fd6ed101a3a71.jpg",
+      "text": "About current image"
+    },
+    {
+      "source": "http://affordablecatanddoghospital.com/cat/images/stories/slide/cats-two.jpg",
+      "text": "About current image"
+    },
+    {
+      "source": "http://explosionhub.com/wp-content/uploads/2012/07/1256277275_1440x900_norwegian-forest-cat-wallpapers.jpg",
+      "text": "About current image"
     }
   ],
   "team": [

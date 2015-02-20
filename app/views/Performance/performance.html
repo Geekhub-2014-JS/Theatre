@@ -10,7 +10,18 @@
             <img ng-src="{{performance.performancePoster}}" alt="{{performance.title}}"/>
         </div>
     </div>
-    <div class="media-block col-xs-6"></div>
+    <div class="media-block col-xs-6" >
+        <div ng-controller="ImageCarouselCtrl" style="height: 305px">
+            <carousel interval="myInterval">
+                <slide ng-repeat="slide in performance.images" active="slide.active">
+                    <img ng-src="{{slide.source}}" style="margin:auto;">
+                    <div class="carousel-caption">
+                        <p>{{slide.text}}</p>
+                    </div>
+                </slide>
+            </carousel>
+        </div>
+    </div>
     <ul class="performance-dates col-xs-3">
         <li ng-repeat="date in performance.dates">
             {{date.month}}, {{date.day}}, {{date.year}}, {{date.time}}, {{date.price}}
