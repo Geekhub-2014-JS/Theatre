@@ -4,15 +4,22 @@
     </li>
     <li class="active">{{'menu.persons' | translate}}</li>
 </ol>
-<div class="image-container" ng-style="{'border' : '1px solid black', 'width': '70%' , 'height': '400px', 'margin': '0 auto'}">
-    Картинка
+<div class="image-container" style="width: 1000px;margin: 0 auto">
+    <img src="http://lorempixel.com/1000/400" alt="pic" style="">
 </div>
 <h2>{{'persons.actors' | translate}}</h2>
-<span>Filter</span><input type="text" ng-model="actorsFilter">
 <ul>
-    <li class="list-group-item col-xs-6 col-sm-4" ng-repeat="person in persons | filter: actorsFilter">
-        <a ui-sref="app.personDetails({id: person.slug})">{{person.first_name + " "+ person.middle_name +" " + person.last_name}}</a>
+    <li class="list-group-item col-xs-6 col-sm-4" ng-repeat="person in persons">
+        <a ui-sref="app.personDetails({id: person.slug})">{{person.first_name + " " + person.last_name}}</a>
     </li>
 </ul>
 <div class="clearfix"></div>
+
+<pagination direction-links="true" previous-text="{{'pagination.previous' | translate}}"
+            next-text="{{'pagination.next' | translate}}" ng-change="pageChanged(currentPage)"
+            items-per-page="peronsPerPage"
+            total-items="personsUsers" ng-model="currentPage"
+            num-pages="smallnumPages">
+</pagination>
+
 

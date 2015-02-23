@@ -1,9 +1,24 @@
 angular.module('person',['ui.bootstrap'])
     .controller('PersonsCtrl', ['$scope', 'personsService','apiGet', function ($scope, personsService) {
-        personsService.getAllPersons().then(function(data){
-            $scope.persons = data.employees;
-            console.log($scope.persons);
-        });
+        $scope.persons = [];
+        $scope.personsUsers = 0;
+        $scope.peronsPerPage = 24; //pagination limit per page
+        getResultsPage(1);
+
+        $scope.pageChanged = function(newPage) {
+            getResultsPage(newPage);
+        };
+
+        function getResultsPage(pageNumber) {
+            personsService.getAllPersons(pageNumber,$scope.peronsPerPage)
+                .then(function(data) {
+                    $scope.persons = data.employees;
+                    //temp
+                    $scope.personsUsers = data.page_count * 25;
+                    //$scope.personsUsers = data.total_persons;
+                });
+        }
+
     }
     ])
     .controller('PersonsDetailCtrl', ['$scope', 'personsService', '$stateParams', function ($scope, personsService, $stateParams) {
@@ -15,7 +30,26 @@ angular.module('person',['ui.bootstrap'])
     ])
     .controller('PersonsSliderCtrl', function($scope) {
         $scope.interval = 4000;
-        $scope.promise.then(function(data){
-           $scope.slides = data.images;
-        });
+        //temp
+        $scope.slides = [
+            {
+                "image": "http://lorempixel.com/1000/400",
+                "text": "sometext"
+            },
+            {
+                "image": "http://lorempixel.com/1001/400",
+                "text": "sometext"
+            },
+            {
+                "image": "http://lorempixel.com/1000/401",
+                "text": "sometext"
+            },
+            {
+                "image": "http://lorempixel.com/1001/401",
+                "text": "sometext"
+            }
+        ];
+        //$scope.promise.then(function(data){
+        //   $scope.slides = data.images;
+        //});
     });

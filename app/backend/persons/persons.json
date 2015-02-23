@@ -1,0 +1,14 @@
+{
+  "employees": [
+    {
+      "first_name": "Володимир",
+      "last_name": "Осипов",
+      "middle_name": "Adah",
+      "dob": "2002-07-02T01:33:20+0300",
+      "position": "Директор театру",
+      "slug": "volodimir-osipov"
+    }
+  ],
+  "page_count": 1,
+  "employees_count" : 75
+}

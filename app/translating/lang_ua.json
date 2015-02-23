@@ -44,5 +44,9 @@
     "roles": "Ролі",
     "position": "Посада"
   },
+  "pagination": {
+    "next": "Наступна",
+    "previous": "Попередня"
+  },
   "key": "value"
 }

@@ -1,26 +1,30 @@
 {
-"first_name": "Сергій",
-"last_name": "Проскурня",
-"middle_name": "Maude",
-"dob": "2015-01-27T23:07:13+0200",
-"position": "Виконуючий обов’язки художнього керівника",
-"slug": "sierghii-proskurnia",
+  "firstName": "Сергій",
+  "lastName": "Проскурня",
+  "middleName": "Maude",
+  "dob": "2015-01-27T23:07:13+0200",
+  "position": "Виконуючий обов’язки художнього керівника",
+  "slug": "sierghii-proskurnia",
+  "since": "1994",
+  "education": "university name",
   "images": [
     {
       "image": "http://lorempixel.com/1000/400",
-      "text": "sometext"
+      "text": "Описание фото"
     },
     {
       "image": "http://lorempixel.com/1001/400",
-      "text": "sometext"
+      "text": "Описание фото"
+    }
+  ],
+  "roles": [
+    {
+      "characterName": "Персонаж",
+      "perfomance": "Название спектакля"
     },
     {
-      "image": "http://lorempixel.com/1000/401",
-      "text": "sometext"
-    },
-    {
-      "image": "http://lorempixel.com/1001/401",
-      "text": "sometext"
+      "characterName": "Персонаж",
+      "perfomance": "Название спектакля"
     }
   ]
 }

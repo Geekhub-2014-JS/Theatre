@@ -44,5 +44,9 @@
     "roles": "Roles",
     "position" : "Position"
   },
+  "pagination": {
+    "next": "Next",
+    "previous": "Previous"
+  },
   "key": "value"
 }
