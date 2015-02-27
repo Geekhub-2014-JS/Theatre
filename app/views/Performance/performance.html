@@ -24,7 +24,8 @@
     </div>
     <ul class="performance-dates col-xs-3">
         <li ng-repeat="date in performance.dates">
-            {{date.month}}, {{date.day}}, {{date.year}}, {{date.time}}, {{performance.title}}
+            {{date.month}}, {{date.day}}, {{date.weekDay}}, {{date.time}}, {{performance.title}}
+            {{performance.shortDescription}}
         </li>
     </ul>
 </div>
@@ -35,14 +36,18 @@
             {{performance.description}}
         </tab>
         <tab heading="{{ 'performance.team' | translate }}">
-            <ul class="performance-actors">
-                <li ng-repeat="member in performance.team">
-                    {{member.title}}
-                    {{member.description}}
-                    <a href="app.personDetails({id: member.employee.slug})">{{member.employee.first_name +  ' ' + member.employee.middle_name + ' ' + member.employee.last_name}}</a>
-                    {{member.employee.position}}
-                </li>
-            </ul>
+            <div ng-controller="PaginationCtrl">
+                <ul class="performance-actors">
+                    <li ng-repeat="member in teamInfo.team">
+                        {{member.title}}
+                        {{member.description}}
+                        <a href="app.personDetails({id: member.employee.slug})">{{member.employee.first_name +  ' ' + member.employee.middle_name + ' ' + member.employee.last_name}}</a>
+                        {{member.employee.position}}
+                        <img ng-src="{{member.employee.photo}}" alt="{{member.title}}" style="height: 100px"/>
+                    </li>
+                </ul>
+                <pagination total-items="totalItems" ng-change="setPage()" ng-model="currentPage" max-size="maxSize" items-per-page="itemPerPage" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+            </div>
         </tab>
         <tab heading="{{ 'performance.press' | translate }}">
             <ul class="article-list">

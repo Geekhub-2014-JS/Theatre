@@ -11,9 +11,28 @@ angular.module('singlePerf',['ui.bootstrap'])
     ])
     .controller('PerfTabsCtrl', ['$scope', '$window',
         function ($scope, $window) {
-
         }
     ])
     .controller('ImageCarouselCtrl', function ($scope) {
         $scope.myInterval = 5000;
-    });
+    })
+    .controller('PaginationCtrl', ['$scope', '$q', 'apiGet', '$stateParams',
+        function ($scope, $q, apiGet, $stateParams) {
+            //$scope.totalItems = 64;
+            $scope.itemPerPage = 8;
+            getMembers(1);
+            $scope.setPage = function (pageNo) {
+                pageNo = $scope.currentPage;
+
+                getMembers(pageNo);
+            };
+
+            $scope.maxSize = 5;
+
+            function getMembers(pageNum) {
+                apiGet($stateParams.slug + "team" + pageNum + '.json').success(function (data) {
+                    $scope.teamInfo = data;
+                    $scope.totalItems = data.members_count;
+                });
+            }
+    }]);

@@ -1,0 +1,101 @@
+{
+  "members_count": 140,
+  "team": [
+    {
+      "title": "Рекрут",
+      "description": "Short, Few words only",
+      "employee": {
+        "first_name": "Наталія",
+        "last_name": "Гребень",
+        "middle_name": "Vernice",
+        "position": "Актриса",
+        "slug": "nataliia-griebien",
+        "photo": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Abraham_Lincoln_head_on_shoulders_photo_portrait.jpg/780px-Abraham_Lincoln_head_on_shoulders_photo_portrait.jpg"
+      }
+    },
+    {
+      "title": "Горбатий",
+      "description": "Short, Few words only",
+      "employee": {
+        "first_name": "Наталія",
+        "last_name": "Науменко",
+        "middle_name": "Jeramie",
+        "position": "Актриса",
+        "slug": "nataliia-naumienko",
+        "photo": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Abraham_Lincoln_head_on_shoulders_photo_portrait.jpg/780px-Abraham_Lincoln_head_on_shoulders_photo_portrait.jpg"
+      }
+    },
+    {
+      "title": "апостол Іван",
+      "description": "Short, Few words only",
+      "employee": {
+        "first_name": "Наталія",
+        "last_name": "Глазова",
+        "middle_name": "Leora",
+        "position": "Актриса",
+        "slug": "nataliia-glazova",
+        "photo": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Abraham_Lincoln_head_on_shoulders_photo_portrait.jpg/780px-Abraham_Lincoln_head_on_shoulders_photo_portrait.jpg"
+      }
+    },
+    {
+      "title": "Пречистинський",
+      "description": "Short, Few words only",
+      "employee": {
+        "first_name": "Олександр",
+        "last_name": "Кузьменко",
+        "middle_name": "Zelma",
+        "position": "Актриса",
+        "slug": "olieksandr-kuz-mienko",
+        "photo": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Abraham_Lincoln_head_on_shoulders_photo_portrait.jpg/780px-Abraham_Lincoln_head_on_shoulders_photo_portrait.jpg"
+      }
+    },
+    {
+      "title": "Шкандибиха",
+      "description": "Short, Few words only",
+      "employee": {
+        "first_name": "Лідія",
+        "last_name": "Попова",
+        "middle_name": "Norval",
+        "position": "Актриса",
+        "slug": "lidiia-popova",
+        "photo": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Abraham_Lincoln_head_on_shoulders_photo_portrait.jpg/780px-Abraham_Lincoln_head_on_shoulders_photo_portrait.jpg"
+      }
+    },
+    {
+      "title": "Курчаєв",
+      "description": "Short, Few words only",
+      "employee": {
+        "first_name": "Наталія",
+        "last_name": "Вігран",
+        "middle_name": "Heath",
+        "position": "Заслужена артистка України",
+        "slug": "nataliia-vighran",
+        "photo": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Abraham_Lincoln_head_on_shoulders_photo_portrait.jpg/780px-Abraham_Lincoln_head_on_shoulders_photo_portrait.jpg"
+      }
+    },
+    {
+      "title": "Дуенья",
+      "description": "Short, Few words only",
+      "employee": {
+        "first_name": "Олена",
+        "last_name": "Пономаренко",
+        "middle_name": "Linnea",
+        "position": "Актриса",
+        "slug": "oliena-ponomarienko",
+        "photo": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Abraham_Lincoln_head_on_shoulders_photo_portrait.jpg/780px-Abraham_Lincoln_head_on_shoulders_photo_portrait.jpg"
+      }
+    },
+    {
+      "title": "Орсіно",
+      "description": "Short, Few words only",
+      "employee": {
+        "first_name": "Олег",
+        "last_name": "Телятник",
+        "middle_name": "Chyna",
+        "position": "Актор",
+        "slug": "oliegh-tieliatnik",
+        "photo": "http://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Abraham_Lincoln_head_on_shoulders_photo_portrait.jpg/780px-Abraham_Lincoln_head_on_shoulders_photo_portrait.jpg"
+      }
+    }
+  ]
+}
