@@ -18,7 +18,6 @@ angular.module('singlePerf',['ui.bootstrap'])
     })
     .controller('PaginationCtrl', ['$scope', '$q', 'apiGet', '$stateParams',
         function ($scope, $q, apiGet, $stateParams) {
-            //$scope.totalItems = 64;
             $scope.itemPerPage = 8;
             getMembers(1);
             $scope.setPage = function (pageNo) {
