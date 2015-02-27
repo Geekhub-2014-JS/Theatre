@@ -1,0 +1,192 @@
+{
+  "employees": [
+    {
+      "first_name": "Володимир",
+      "last_name": "Осипов",
+      "middle_name": "Adah",
+      "dob": "2002-07-02T01:33:20+0300",
+      "position": "Директор театру",
+      "slug": "volodimir-osipov"
+    },
+    {
+      "first_name": "Сергій",
+      "last_name": "Проскурня",
+      "middle_name": "Maude",
+      "dob": "2015-01-27T23:07:13+0200",
+      "position": "Виконуючий обов’язки художнього керівника",
+      "slug": "sierghii-proskurnia"
+    },
+    {
+      "first_name": "Олександр",
+      "last_name": "Павлютін",
+      "middle_name": "Lily",
+      "dob": "1978-05-28T08:09:37+0300",
+      "position": "Режисер-постановник",
+      "slug": "olieksandr-pavliutin"
+    },
+    {
+      "first_name": "Сергій",
+      "last_name": "Ридванецький",
+      "middle_name": "Gordon",
+      "dob": "2012-03-17T12:53:51+0200",
+      "position": "Головний художник",
+      "slug": "sierghii-ridvaniets-kii"
+    },
+    {
+      "first_name": "Наталія",
+      "last_name": "Ридванецька",
+      "middle_name": "Emory",
+      "dob": "1984-06-13T16:46:22+0400",
+      "position": "Художник по костюмах",
+      "slug": "nataliia-ridvaniets-ka"
+    },
+    {
+      "first_name": "Надія",
+      "last_name": "Нікіфорова",
+      "middle_name": "Shaina",
+      "dob": "2004-08-07T07:09:58+0300",
+      "position": "Художник-постановник",
+      "slug": "nadiia-nikiforova"
+    },
+    {
+      "first_name": "Володимир",
+      "last_name": "Татарінов",
+      "middle_name": "Terry",
+      "dob": "1988-10-29T16:07:20+0300",
+      "position": "Головний балетмейстер",
+      "slug": "volodimir-tatarinov"
+    },
+    {
+      "first_name": "Варвара",
+      "last_name": "Присяжненко",
+      "middle_name": "Samanta",
+      "dob": "2012-05-15T16:12:13+0300",
+      "position": "Керівник літературно-драматичною частиною",
+      "slug": "varvara-prisiazhnienko"
+    },
+    {
+      "first_name": "Олена",
+      "last_name": "Бєлкіна",
+      "middle_name": "Mohammed",
+      "dob": "2013-09-07T18:20:17+0300",
+      "position": "Диригент",
+      "slug": "oliena-bielkina"
+    },
+    {
+      "first_name": "Світлана",
+      "last_name": "Лежненко",
+      "middle_name": "Maximillian",
+      "dob": "1993-05-18T12:27:20+0300",
+      "position": "Концертмейстр",
+      "slug": "svitlana-liezhnienko"
+    },
+    {
+      "first_name": "Галина",
+      "last_name": "Кириченко",
+      "middle_name": "Reta",
+      "dob": "2011-06-22T18:36:56+0300",
+      "position": "Концертмейстр",
+      "slug": "galina-kirichienko"
+    },
+    {
+      "first_name": "Сергій",
+      "last_name": "Бобров",
+      "middle_name": "Clifford",
+      "dob": "1972-09-03T06:07:36+0300",
+      "position": "Актор",
+      "slug": "sierghii-bobrov"
+    },
+    {
+      "first_name": "Наталія",
+      "last_name": "Вігран",
+      "middle_name": "Heath",
+      "dob": "1996-04-27T21:15:15+0300",
+      "position": "Заслужена артистка України",
+      "slug": "nataliia-vighran"
+    },
+    {
+      "first_name": "Марія",
+      "last_name": "Марущак",
+      "middle_name": "Jaquelin",
+      "dob": "2005-12-15T20:49:55+0200",
+      "position": "Актриса",
+      "slug": "mariia-marushchak"
+    },
+    {
+      "first_name": "Юрій",
+      "last_name": "Берлінський",
+      "middle_name": "Betty",
+      "dob": "1984-04-21T09:40:38+0400",
+      "position": "Заслужений артист України",
+      "slug": "iurii-bierlins-kii"
+    },
+    {
+      "first_name": "Світлана",
+      "last_name": "Амеліна",
+      "middle_name": "Wilber",
+      "dob": "1971-07-18T02:25:53+0300",
+      "position": "Актриса",
+      "slug": "svitlana-amielina"
+    },
+    {
+      "first_name": "Анна",
+      "last_name": "Боброва",
+      "middle_name": "Estella",
+      "dob": "2003-10-03T20:28:26+0300",
+      "position": "Актриса",
+      "slug": "anna-bobrova"
+    },
+    {
+      "first_name": "Олена",
+      "last_name": "Брехаря",
+      "middle_name": "Pierce",
+      "dob": "1980-01-09T08:10:05+0300",
+      "position": "Актриса",
+      "slug": "oliena-briekharia"
+    },
+    {
+      "first_name": "Лілія",
+      "last_name": "Бурлакова",
+      "middle_name": "Kathleen",
+      "dob": "1973-11-20T18:10:17+0300",
+      "position": "Актриса",
+      "slug": "liliia-burlakova"
+    },
+    {
+      "first_name": "Оксана",
+      "last_name": "Вовкостріл",
+      "middle_name": "Mohammed",
+      "dob": "1975-05-24T01:21:27+0300",
+      "position": "Актриса",
+      "slug": "oksana-vovkostril"
+    },
+    {
+      "first_name": "Олександр",
+      "last_name": "Гелеверя",
+      "middle_name": "Bennett",
+      "dob": "1984-09-10T19:18:17+0400",
+      "position": "Актор",
+      "slug": "olieksandr-gielievieria"
+    },
+    {
+      "first_name": "Микола",
+      "last_name": "Глазов",
+      "middle_name": "Demetris",
+      "dob": "2001-05-20T05:47:13+0300",
+      "position": "Актор",
+      "slug": "mikola-glazov"
+    },
+    {
+      "first_name": "Ірина",
+      "last_name": "Глазова",
+      "middle_name": "Kaley",
+      "dob": "1989-02-09T19:41:55+0300",
+      "position": "Актриса",
+      "slug": "irina-glazova"
+    }
+  ],
+  "next_page": "false",
+  "previous_page": "false",
+  "page_count": 1,
+  "total_persons" : 35
+}

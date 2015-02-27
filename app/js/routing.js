@@ -47,6 +47,11 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                     templateUrl: "views/Persons/persons.html",
                     controller: 'PersonsCtrl'
                 })
+                .state('app.personDetails', {
+                    url: '/persons/:id',
+                    templateUrl: "views/Persons/details.html",
+                    controller: 'PersonsDetailCtrl'
+                })
                 .state('app.contacts', {
                     url: "/contacts",
                     templateUrl: "views/Contacts/contacts.html",
@@ -57,5 +62,4 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                 requireBase: false
             });
         }
-    ])
-;
+    ]);

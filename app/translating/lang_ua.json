@@ -41,5 +41,17 @@
       "Saturday": "Субота",
       "Sunday": "Неділя"
   },
+  "persons": {
+    "actors": "Актори театру",
+    "aboutActor": "Про актора",
+    "education": "Освіта",
+    "since": "У театрі працює з",
+    "roles": "Ролі",
+    "position": "Посада"
+  },
+  "pagination": {
+    "next": "Наступна",
+    "previous": "Попередня"
+  },
   "key": "value"
 }

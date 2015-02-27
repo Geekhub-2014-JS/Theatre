@@ -91,20 +91,25 @@ angular.module('posterDirectives', [])
                     year = scope.yearl;
                     month = scope.monthl;
 
-                    apiGet(""+ year + "-" + (month + 1) + ".json").success(function(data){
-                        if (data instanceof Array) {
-                            var generetedCalendar = genCalendar(scope.monthl, scope.yearl, data);
-                            var calendarHtml = angular.element(generetedCalendar);
-                            $compile(calendarHtml)(scope);
-                            element.html(calendarHtml);
-                        } else {
-                            var generetedCalendar = genCalendar(scope.monthl, scope.yearl, []);
-                            var calendarHtml = angular.element(generetedCalendar);
-                            $compile(calendarHtml)(scope);
-                            element.html(calendarHtml);
-                            console.log('bad request');
-                        }
-                    });
+                    var generetedCalendar = genCalendar(scope.monthl, scope.yearl, []);
+                    var calendarHtml = angular.element(generetedCalendar);
+                    $compile(calendarHtml)(scope);
+                    element.html(calendarHtml);
+
+                    //apiGet(""+ year + "-" + (month + 1) + ".json").success(function(data){
+                    //    if (data instanceof Array) {
+                    //        var generetedCalendar = genCalendar(scope.monthl, scope.yearl, data);
+                    //        var calendarHtml = angular.element(generetedCalendar);
+                    //        $compile(calendarHtml)(scope);
+                    //        element.html(calendarHtml);
+                    //    } else {
+                    //        var generetedCalendar = genCalendar(scope.monthl, scope.yearl, []);
+                    //        var calendarHtml = angular.element(generetedCalendar);
+                    //        $compile(calendarHtml)(scope);
+                    //        element.html(calendarHtml);
+                    //        console.log('bad request');
+                    //    }
+                    //});
                 }, true);
             }
         }
