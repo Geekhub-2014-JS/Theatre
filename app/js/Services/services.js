@@ -18,7 +18,8 @@ theatreServices
                     data: data
                 };
 
-                return $http(conf)
+                //return $http(conf)
+                return $http.post(api_url + url, data)
                     .success(function (response) {
                         return response || [];
                     })
@@ -40,7 +41,8 @@ theatreServices
                     }
                 };
 
-                return $http(conf)
+                //return $http(conf)
+                return $http.get(api_url + url)
                     .success(function (response) {
                         return response || [];
                     })

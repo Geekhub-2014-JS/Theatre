@@ -13,7 +13,6 @@ angular.module('person',['ui.bootstrap'])
             personsService.getAllPersons(pageNumber,$scope.peronsPerPage)
                 .then(function(data) {
                     $scope.persons = data.employees;
-                    //temp
                     $scope.personsTotal = data.page_count * $scope.peronsPerPage;
                     //$scope.personsUsers = data.total_persons;
                 });
