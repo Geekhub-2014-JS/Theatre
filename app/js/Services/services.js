@@ -8,8 +8,20 @@ theatreServices
     .constant('api_url', 'http://api.theatre.pp.ua/')
     .factory('apiPost', ['$http', 'api_url',
         function ($http, api_url) {
+    .constant('api_url', '/backend/')
+    .factory('apiPost', ['$http', 'api_url', '$stateParams',
+        function ($http, api_url, $stateParams) {
             return function (url, data) {
-                return $http.post(api_url + url, data)
+                var conf = {
+                    method: 'GET',
+                    url: api_url + url,
+                    headers: {
+                        'locale': $stateParams.locale
+                    },
+                    data: data
+                };
+
+                return $http(conf)
                     .success(function (response) {
                         return response || [];
                     })
@@ -20,10 +32,18 @@ theatreServices
             }
         }
     ])
-    .factory('apiGet', ['$http', 'api_url',
-        function ($http, api_url) {
+    .factory('apiGet', ['$http', 'api_url', '$stateParams',
+        function ($http, api_url, $stateParams) {
             return function (url) {
-                return $http.get(api_url + url)
+                var conf = {
+                    method: 'GET',
+                    url: api_url + url,
+                    headers: {
+                        'locale': $stateParams.locale
+                    }
+                };
+
+                return $http(conf)
                     .success(function (response) {
                         return response || [];
                     })
