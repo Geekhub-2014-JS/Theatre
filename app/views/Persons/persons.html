@@ -8,18 +8,23 @@
     <img src="http://lorempixel.com/1000/400" alt="pic" style="">
 </div>
 <h2>{{'persons.actors' | translate}}</h2>
-<ul>
-    <li class="list-group-item col-xs-6 col-sm-4" ng-repeat="person in persons">
-        <a ui-sref="app.personDetails({id: person.slug})">{{person.first_name + " " + person.last_name}}</a>
-    </li>
-</ul>
-<div class="clearfix"></div>
+
+<div ng-repeat="person in persons">
+    <div class="col-md-4">
+        <img ng-src="http://api.theatre.pp.ua/{{person.avatar.reference.url}}" style="width: 300px; max-height: 450px">
+        <a ui-sref="app.personDetails({id: person.slug})" style="display: block; width: 200px">{{person.first_name + " " + person.last_name}}</a>
+    </div>
+</div>
+
+
+
 
 <pagination direction-links="true" previous-text="{{'pagination.previous' | translate}}"
             next-text="{{'pagination.next' | translate}}" ng-change="pageChanged(currentPage)"
             items-per-page="peronsPerPage"
-            total-items="personsUsers" ng-model="currentPage"
-            num-pages="smallnumPages">
+            total-items="personsTotal" ng-model="currentPage"
+            num-pages="smallnumPages"
+            ng-show="personsTotal > 1">
 </pagination>
 
 

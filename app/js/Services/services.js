@@ -5,8 +5,7 @@
 var theatreServices = angular.module('theatreServices', []);
 
 theatreServices
-    .constant('api_url', 'http://jsonp.nodejitsu.com/?url=http://api.theatre.pp.ua/')
-    //.constant('api_url', '/backend/')
+    .constant('api_url', 'http://api.theatre.pp.ua/')
     .factory('apiPost', ['$http', 'api_url',
         function ($http, api_url) {
             return function (url, data) {
@@ -40,7 +39,6 @@ theatreServices
         return {
             getAllPersons: function (page,limit) {
                 var deferred = $q.defer();
-                //apiGet('/persons/' + page + '.json')
                 apiGet('employees?limit=' + limit + '&page=' + page)
                     .success(function (data) {
                     deferred.resolve(data);

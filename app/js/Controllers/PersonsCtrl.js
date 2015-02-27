@@ -1,8 +1,8 @@
 angular.module('person',['ui.bootstrap'])
     .controller('PersonsCtrl', ['$scope', 'personsService','apiGet', function ($scope, personsService) {
         $scope.persons = [];
-        $scope.personsUsers = 0;
-        $scope.peronsPerPage = 24; //pagination limit per page
+        $scope.personsTotal = 0;
+        $scope.peronsPerPage = 12; //pagination limit per page
         getResultsPage(1);
 
         $scope.pageChanged = function(newPage) {
@@ -14,7 +14,7 @@ angular.module('person',['ui.bootstrap'])
                 .then(function(data) {
                     $scope.persons = data.employees;
                     //temp
-                    $scope.personsUsers = data.page_count * 25;
+                    $scope.personsTotal = data.page_count * $scope.peronsPerPage;
                     //$scope.personsUsers = data.total_persons;
                 });
         }
