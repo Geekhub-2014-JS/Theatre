@@ -8,45 +8,49 @@
 #slides_control {
     margin: 25px auto;
 }
-#calendar2 {
+#calendar {
     width: 100%;
     font: monospace;
     line-height: 1.2em;
     font-size: 15px;
     text-align: center;
 }
-#calendar2 thead tr:last-child {
+#calendar thead tr:last-child {
     font-size: small;
     color: rgb(85, 85, 85);
 }
-#calendar2 thead tr:nth-child(1) td:nth-child(2) span.th-calendar-date  {
+#calendar thead tr:nth-child(1) td:nth-child(2) span.th-calendar-date  {
     color: rgb(50, 50, 50);
 }
-#calendar2 thead th {
+#calendar thead th {
     width: 14%;
     max-width: 14%;
     text-align: center;
 }
-#calendar2 tbody tr {
+#calendar tbody tr {
     height: 100px;
     border-top: 1px solid rgba(0, 0, 0, 0.60);
 }
-#calendar2 tbody td {
+#calendar tbody td {
     vertical-align: top;
     text-align: left;
     padding: 10px 5px;
     color: rgb(44, 86, 122);
 }
-#calendar2 tbody td div.th-calendar-poster {
+#calendar tbody td div.th-calendar-poster {
     color: #000000;
 }
-#calendar2 tbody td:hover {
+#calendar tbody td:hover {
     background-color: rgba(211, 211, 211, 0.2);
 }
-#calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
+#calendar tbody td:nth-child(n+6), #calendar .holiday {
     color: rgb(231, 140, 92);
 }
-#calendar2 tbody td.today {
+#calendar tbody td.today {
     border: solid 2px rgb(220, 0, 0);
     /*color: rgb(50, 50, 50);*/
+}
+#calendar tbody td.prev-month-day,
+#calendar tbody td.next-month-day {
+    color: lightgray;
 }
