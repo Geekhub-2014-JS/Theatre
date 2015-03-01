@@ -56,7 +56,8 @@
     "education": "Education",
     "since": "Work in theatre ",
     "roles": "Roles",
-    "position" : "Position"
+    "position" : "Position",
+    "biography": "Biography"
   },
   "pagination": {
     "next": "Next",
