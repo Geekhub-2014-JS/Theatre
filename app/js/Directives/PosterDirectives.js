@@ -15,10 +15,22 @@ angular.module('posterDirectives', [])
                     var templ = "<div class='th-calendar-poster'>";
 
                     data.forEach(function(el){
-                        if (el.day === day && el.month === (month + 1)) {
-                            templ = templ + "<div class='th-calendar-poster-item'><span class='th-calendar-poster-descr'>" +
-                            el.description + "</span><span class='th-calendar-poster-link'><a href='#' class='btn btn-default btn-xs' >link</a></span>" +
-                            "<span class='th-calendar-poster-date'>" + (el.day < 10 ? "0"+el.day:el.day) + "." + (el.month < 10 ? "0"+el.month:el.month) + "." + el.year + "</span><span class='th-calendar-poster-price'>" + el.price + "</span></div>";
+                        if (parseInt(el.day) === day && parseInt(el.month) === (month + 1)) {
+
+//                            templ = templ +
+//                            "<div class='th-calendar-poster-item'>" +
+//                            "<a ui-sref='app.singlePerformance({slug: " + el.performance.slug + "})' title='" + el.performance.description + "' class='th-calendar-poster-link'>" +
+//                            "<div class='th-calendar-poster-title'>" + el.performance.title + "</div>" +
+//                            "<div class='th-calendar-poster-time'>" + el.time + "</div>" +
+////                                    "<div class='th-calendar-poster-date'>" + (el.day < 10 ? "0" + el.day : el.day) + "." + (el.month < 10 ? "0"+el.month:el.month) + "." + el.year + "</div>" +
+//                            "</a>" +
+//                            "</div>";
+
+                            templ = templ +
+                            "<div class='th-calendar-poster-item'>" +
+                                    "<div class='th-calendar-poster-title'>" + el.performance.title + "</div>" +
+                                    "<div class='th-calendar-poster-time'>" + el.time + "</div>" +
+                            "</div>";
                         }
                     });
 
@@ -43,14 +55,14 @@ angular.module('posterDirectives', [])
                         var i = 0,
                             j = prDlast - (DNfirst - 2);
                         for(i = 1, j; i < DNfirst; i++, j++) {
-                            calendar += '<td class="prev-month-day">' + '<span class="th-calendar-date-before">' + j + '</span>';  // пустые ячейки до начала месяца
+                            calendar += '<td class="prev-month-day">' + '<span class="th-calendar-date-before">' + j + '</span>' + getMonthData(data, (month - 1), j);  // пустые ячейки до начала месяца
                         }
 
                     } else {
                         var i = 0,
                             j = prDlast - 5;
                         for(i = 0, j; i < 6; i++, j++) {
-                            calendar += '<td class="prev-month-day">' + '<span class="th-calendar-date-before">' + j + '</span>';  // пустые ячейки до начала месяца
+                            calendar += '<td class="prev-month-day">' + '<span class="th-calendar-date-before">' + j + '</span>' + getMonthData(data, (month - 1), j);  // пустые ячейки до начала месяца
                         }
                     }
                     var i = 0;
@@ -59,12 +71,6 @@ angular.module('posterDirectives', [])
                             calendar += '<td class="this-month-day today">' + '<span class="th-calendar-date">' + i + '</span>' + getMonthData(data, month, i);    ///   today
                         }else{
                             calendar += '<td class="this-month-day">' + '<span class="th-calendar-date">' + i + '</span>' + getMonthData(data, month, i);   //   other days
-
-                            //if (dd.indexOf(i) != -1) {
-                            //    calendar += '<td class="this-month-day">'  + '<span class="th-calendar-date">' + i  + '</span>' + getMonthData(data, month, i);   //   other days
-                            //} else {
-                            //    calendar += '<td class="this-month-day">' + '<span class="th-calendar-date">' + i + '</span>' + getMonthData(data, month, i);   //   other days
-                            //}
                         }
 
                         if (new Date(D.getFullYear(),D.getMonth(),i).getDay() == 0) {
@@ -76,7 +82,7 @@ angular.module('posterDirectives', [])
 
                     if (DNlast != 0 ) {
                         for (i = DNlast; i < 7; i++) {
-                            calendar += '<td class="next-month-day">' + '<span class="th-calendar-date-after">' + (++nw) + '</span>';  //  оставшиеся пустые ячейки в месяце
+                            calendar += '<td class="next-month-day">' + '<span class="th-calendar-date-after">' + (++nw) + '</span>' + getMonthData(data, (month + 1), (nw));  //  оставшиеся пустые ячейки в месяце
                         }
                     }
 
@@ -93,32 +99,26 @@ angular.module('posterDirectives', [])
                     year = scope.yearl;
                     month = scope.monthl;
 
-                    var generetedCalendar = genCalendar(scope.monthl, scope.yearl, []);
-                    var calendarHtml = angular.element(generetedCalendar);
-                    $compile(calendarHtml)(scope);
-                    element.html(calendarHtml);
+                    var yearL = year;
+                    var monthL = month;
+                    var toDate = moment(yearL+'-'+(monthL + 1), 'YYYY-M').add(1, 'months').add(7, 'days');
+                    var fromDate = moment(yearL+'-'+(monthL + 1), 'YYYY-M').subtract(7, 'days');
+                    var url = 'performanceevents.json?fromDate=' + fromDate.format('DD-MM-YYYY') + '&toDate=' + toDate.format('DD-MM-YYYY');
 
-//          url =   /performanceevents.json?limit=10&page=1&fromDate=01-01-2014&toDate=01-01-2050
-                    var toDate = moment(year+'-'+(month + 1), 'YYYY-M').add(1, 'months').add(7, 'days');
-                    var fromDate = moment(year+'-'+(month + 1), 'YYYY-M').subtract(7, 'days');
-                    var url = '/performanceevents.json?limit=100&page=1&fromDate=' + fromDate.format('DD-MM-YYYY') + '&toDate=' + toDate.format('DD-MM-YYYY');
-
-                    console.info(url);
-
-                    //apiGet(""+ year + "-" + (month + 1) + ".json").success(function(data, status){
-                    //    if (status == 200) {
-                    //        var generetedCalendar = genCalendar(scope.monthl, scope.yearl, data.performance_events);
-                    //        var calendarHtml = angular.element(generetedCalendar);
-                    //        $compile(calendarHtml)(scope);
-                    //        element.html(calendarHtml);
-                    //    } else {
-                    //        var generetedCalendar = genCalendar(scope.monthl, scope.yearl, []);
-                    //        var calendarHtml = angular.element(generetedCalendar);
-                    //        $compile(calendarHtml)(scope);
-                    //        element.html(calendarHtml);
-                    //        console.log('bad request');
-                    //    }
-                    //});
+                    apiGet(url).success(function(data, status){
+                        if (status == 200) {
+                            var generetedCalendar = genCalendar(scope.monthl, scope.yearl, data.performance_events);
+                            var calendarHtml = angular.element(generetedCalendar);
+                            $compile(calendarHtml)(scope);
+                            element.html(calendarHtml);
+                        } else {
+                            var generetedCalendar = genCalendar(scope.monthl, scope.yearl, []);
+                            var calendarHtml = angular.element(generetedCalendar);
+                            $compile(calendarHtml)(scope);
+                            element.html(calendarHtml);
+                            console.log('bad request');
+                        }
+                    });
                 }, true);
             }
         }
