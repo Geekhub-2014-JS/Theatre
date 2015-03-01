@@ -5,8 +5,8 @@
 var theatreServices = angular.module('theatreServices', []);
 
 theatreServices
-    //.constant('api_url', 'http://api.theatre.pp.ua/')
-    .constant('api_url', '/backend/')
+    .constant('api_url', 'http://api.theatre.pp.ua/')
+    //.constant('api_url', '/backend/')
 
     .factory('apiPost', ['$http', 'api_url', '$stateParams',
         function ($http, api_url, $stateParams) {
@@ -81,4 +81,21 @@ theatreServices
                 return deferred.promise;
             }
         };
-    }]);
+    }])
+
+    .factory('dateConvert', function() {
+        return {
+            perfDate: function(timestamp) {
+                var currentDate = moment(timestamp);
+                var weekDay = ["weekDay.Sunday", "weekDay.Monday", "weekDay.Tuesday", "weekDay.Wednesday", "weekDay.Thursday", "weekDay.Friday", "weekDay.Saturday"];
+                var monthN = ["month.Jan", "month.Feb", "month.Mar", "month.Apr", "month.May", "month.Jun", "month.Jul", "month.Aug", "month.Sept", "month.Oct", "month.Nov", "month.Dec"];
+                return {
+                    weekDay: weekDay[currentDate.format("d")],
+                    day: currentDate.format("D"),
+                    month: monthN[currentDate.format("M")-1],
+                    time: currentDate.format("H:mm")
+                };
+            }
+        }
+    })
+;

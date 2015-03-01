@@ -41,6 +41,15 @@
     "Saturday": "Saturday",
     "Sunday": "Sunday"
   },
+  "weekDay": {
+    "Monday": "Mon",
+    "Tuesday": "Tue",
+    "Wednesday": "Wed",
+    "Thursday": "Thu",
+    "Friday": "Fri",
+    "Saturday": "Sat",
+    "Sunday": "Sun"
+  },
   "persons": {
     "actors": "Actors",
     "aboutActor": "About actor",

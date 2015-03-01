@@ -41,6 +41,15 @@
       "Saturday": "Субота",
       "Sunday": "Неділя"
   },
+  "weekDay": {
+    "Monday": "Пн",
+    "Tuesday": "Вт",
+    "Wednesday": "Ср",
+    "Thursday": "Чт",
+    "Friday": "Пт",
+    "Saturday": "Сб",
+    "Sunday": "Нд"
+  },
   "persons": {
     "actors": "Актори театру",
     "aboutActor": "Про актора",

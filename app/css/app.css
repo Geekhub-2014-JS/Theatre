@@ -1,25 +1,19 @@
 /* app css stylesheet */
 
 .performance-block {
+    overflow: hidden;
     display: inline-block;
-    width: 100px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     margin: 20px;
     text-align: center;
 }
-.performance-img .performance-block {
+.performance-block a {
     display: block;
-    width: 100%;
-    max-height: 300px;
-    margin: 0;
 }
-.performance-block img {
+.performance-img img {
     max-width: 100%;
     max-height: 100%;
-}
-/* Image-carousel on performance page */
-.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-    max-height: 300px;
 }
 
 #slides_control > div {
