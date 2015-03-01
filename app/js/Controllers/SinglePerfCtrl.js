@@ -4,6 +4,8 @@
 angular.module('singlePerf',['ui.bootstrap'])
     .controller('SinglePerformanceCtrl', ['$scope', '$q', 'apiGet', '$stateParams',
         function ($scope, $q, apiGet, $stateParams) {
+
+            console.info($stateParams.slug);
             apiGet($stateParams.slug + '.json').success(function (data) {
                 $scope.performance = data;
             });

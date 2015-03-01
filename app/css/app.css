@@ -56,15 +56,21 @@
 #calendar tbody td {
     vertical-align: bottom;
     text-align: left;
-    padding: 10px 5px;
     color: rgb(44, 86, 122);
     position: relative;
     height: 150px;
     overflow: hidden;
 }
+#calendar tbody td a {
+    text-decoration: none;
+}
+#calendar tbody td a span {
+    padding: 0 5px;
+}
 #calendar tbody td img {
-    height: 100px;
-    max-width: 150px;
+    /*height: 100px;*/
+    width: 100%;
+    /*max-width: 150px;*/
     position: absolute;
     top: 0;
 }
