@@ -5,8 +5,8 @@
 var theatreServices = angular.module('theatreServices', []);
 
 theatreServices
-    //.constant('api_url', 'http://api.theatre.pp.ua/')
-    .constant('api_url', '/backend/')
+    .constant('api_url', 'http://api.theatre.pp.ua/')
+    //.constant('api_url', '/backend/')
 
     .factory('apiPost', ['$http', 'api_url', '$stateParams',
         function ($http, api_url, $stateParams) {
@@ -20,8 +20,7 @@ theatreServices
                     data: data
                 };
 
-                //return $http(conf)
-                return $http.post(api_url + url, data)
+                return $http(conf)
                     .success(function (response) {
                         return response || [];
                     })
@@ -43,8 +42,7 @@ theatreServices
                     }
                 };
 
-                //return $http(conf)
-                return $http.get(api_url + url)
+                return $http(conf)
                     .success(function (response) {
                         return response || [];
                     })
