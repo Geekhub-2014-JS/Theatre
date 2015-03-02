@@ -21,35 +21,35 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" ui-sref="app.home">Theatre logo {{ 'menu.logo' | translate }}</a>
+        <a class="navbar-brand" ui-sref="app.home">Theatre logo <span ng-bind="'menu.logo' | translate"></span></a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
         <ul class="nav navbar-nav">
           <li ui-sref-active="active">
-            <a ui-sref="app.poster">{{ 'menu.poster' | translate }}</a>
+            <a ui-sref="app.poster"><span ng-bind="'menu.poster' | translate"></span></a>
           </li>
           <li ui-sref-active="active">
-            <a ui-sref="app.repertoire">{{ 'menu.repertoire' | translate }}</a>
+            <a ui-sref="app.repertoire"><span ng-bind="'menu.repertoire' | translate"></span></a>
           </li>
           <li ui-sref-active="active">
-            <a ui-sref="app.news">{{ 'menu.news' | translate }}</a>
+            <a ui-sref="app.news"><span ng-bind="'menu.news' | translate"></span></a>
           </li>
           <li ui-sref-active="active">
-            <a ui-sref="app.about">{{ 'menu.about' | translate }}</a>
+            <a ui-sref="app.about"><span ng-bind="'menu.about' | translate"></span></a>
           </li>
           <li ui-sref-active="active">
-            <a ui-sref="app.persons">{{ 'menu.persons' | translate }}</a>
+            <a ui-sref="app.persons"><span ng-bind="'menu.persons' | translate"></span></a>
           </li>
           <li ui-sref-active="active">
-            <a ui-sref="app.contacts">{{ 'menu.contacts' | translate }}</a>
+            <a ui-sref="app.contacts"><span ng-bind="'menu.contacts' | translate"></span></a>
           </li>
         </ul>
         <div ng-controller="translateCtrl">
         <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ 'translId' | translate }} <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span ng-bind="'translId' | translate"></span> <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li><a href="#" ng-click="chLocale('ua')">UA</a></li>
                     <li><a href="#" ng-click="chLocale('en')">EN</a></li>
