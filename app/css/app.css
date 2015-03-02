@@ -25,45 +25,84 @@
     margin: 25px auto;
 }
 /*   Calendar   */
-#calendar2 {
+#calendar {
     width: 100%;
     font: monospace;
     line-height: 1.2em;
     font-size: 15px;
     text-align: center;
 }
-#calendar2 thead tr:last-child {
+#calendar thead tr:last-child {
     font-size: small;
     color: rgb(85, 85, 85);
 }
-#calendar2 thead tr:nth-child(1) td:nth-child(2) span.th-calendar-date  {
+#calendar thead tr:nth-child(1) td:nth-child(2) span.th-calendar-date  {
     color: rgb(50, 50, 50);
 }
-#calendar2 thead th {
+#calendar thead th {
     width: 14%;
     max-width: 14%;
     text-align: center;
 }
-#calendar2 tbody tr {
-    height: 100px;
+#calendar tbody tr {
     border-top: 1px solid rgba(0, 0, 0, 0.60);
 }
-#calendar2 tbody td {
-    vertical-align: top;
+#calendar tbody td {
+    vertical-align: bottom;
     text-align: left;
-    padding: 10px 5px;
     color: rgb(44, 86, 122);
+    position: relative;
+    height: 150px;
+    overflow: hidden;
 }
-#calendar2 tbody td div.th-calendar-poster {
-    color: #000000;
+#calendar tbody td a {
+    text-decoration: none;
 }
-#calendar2 tbody td:hover {
+#calendar tbody td a span {
+    padding: 0 5px;
+}
+#calendar tbody td img {
+    /*height: 100px;*/
+    width: 100%;
+    /*max-width: 150px;*/
+    position: absolute;
+    top: 0;
+}
+#calendar tbody td .th-calendar-date,
+#calendar tbody td .th-calendar-date-after,
+#calendar tbody td .th-calendar-date-before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: block;
+    padding: 3px;
+}
+#calendar tbody td .th-calendar-poster-link {
+    position: relative;
+    z-index: 2;
+    min-height: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    display: block;
+    color: wheat;
+}
+#calendar tbody td .th-calendar-poster-time {
+    display: block;
+    text-align: right;
+    color: rgb(235, 170, 30);
+}
+#calendar tbody td:hover {
     background-color: rgba(211, 211, 211, 0.2);
 }
-#calendar2 tbody td:nth-child(n+6), #calendar2 .holiday {
+#calendar tbody td:nth-child(n+6), #calendar .holiday {
     color: rgb(231, 140, 92);
 }
-#calendar2 tbody td.today {
+#calendar tbody td.today {
     border: solid 2px rgb(220, 0, 0);
     /*color: rgb(50, 50, 50);*/
 }
+#calendar tbody td.prev-month-day,
+#calendar tbody td.next-month-day {
+    color: lightgray;
+}
+
