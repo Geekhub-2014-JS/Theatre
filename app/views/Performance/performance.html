@@ -38,7 +38,7 @@
                     <li ng-repeat="role in roles">
                         {{role.title}} <br/>
                         {{role.description}}<br/>
-                        <a href="app.personDetails({id: role.employee.slug})">{{role.employee.first_name +  ' ' + role.employee.middle_name + ' ' + role.employee.last_name}}</a> <br/>
+                        <a ui-sref="app.personDetails({id: role.employee.slug})">{{role.employee.first_name +  ' ' + role.employee.middle_name + ' ' + role.employee.last_name}}</a> <br/>
                         {{role.employee.position}} <br/>
                         <img ng-src="http://api.theatre.pp.ua/{{role.employee.avatar.default_small.url}}" alt="{{role.title}}" style="height: 100px"/>
                     </li>
