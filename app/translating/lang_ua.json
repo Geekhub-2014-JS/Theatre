@@ -1,14 +1,19 @@
 {
   "translId": "UA",
   "menu": {
-      "logo": "Театр Шевченка",
-      "home": "Головна",
-      "poster": "Афіша",
-      "repertoire": "Репертуар",
-      "news": "Новини",
-      "about": "Про театр",
-      "persons": "Персоналії",
-      "contacts": "Контакти"
+    "logo": "Театр Шевченка",
+    "home": "Головна",
+    "poster": "Афіша",
+    "repertoire": "Репертуар",
+    "news": "Новини",
+    "about": "Про театр",
+    "persons": "Персоналії",
+    "contacts": "Контакти",
+    "photoarchive": "Фотоархів",
+    "videoarchive": "Відеоархів",
+    "board": "Піклувальна рада",
+    "partners": "Партнери",
+    "forum": "Форум"
   },
   "performance": {
     "description": "Про Спектакль",

@@ -6,9 +6,14 @@
     "poster": "Poster",
     "repertoire": "Repertoire",
     "news": "News",
-    "about": "About theater",
+    "about": "About Theater",
     "persons": "Persons",
-    "contacts": "Contacts"
+    "contacts": "Contacts",
+    "photoarchive": "Photo Archive",
+    "videoarchive": "Video Archive",
+    "board": "Board of Trustees",
+    "partners": "Partners",
+    "forum": "Forum"
   },
   "performance": {
     "description": "Description",

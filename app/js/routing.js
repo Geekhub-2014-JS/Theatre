@@ -56,7 +56,26 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                     url: "/contacts",
                     templateUrl: "views/Contacts/contacts.html",
                     controller: "ContactsCtrl"
-                });
+                })
+                .state('app.photos', {
+                    url: "/photos",
+                    templateUrl: "views/PhotoArchive/photoarchive.html",
+                    controller: "PhotoArchiveCtrl"
+                })
+                .state('app.videos', {
+                    url: "/videos",
+                    templateUrl: "views/VideoArchive/videoarchive.html",
+                    controller: "VideoArchiveCtrl"
+                })
+                .state('app.board', {
+                    url: "/board",
+                    templateUrl: "views/Static/board.html"
+                })
+                .state('app.partners', {
+                    url: "/partners",
+                    templateUrl: "views/Static/partners.html"
+                })
+            ;
             $locationProvider.html5Mode({
                 enabled: true,
                 requireBase: false
