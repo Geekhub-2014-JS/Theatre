@@ -1,0 +1,80 @@
+<ul class="breadcrumb">
+    <li><a ui-sref="app.home">{{ 'menu.home' | translate }}</a></li>
+    <li><a ui-sref="app.repertoire">{{'menu.repertoire' | translate}}</a></li>
+    <li class="active">{{performance.title}}</li>
+</ul>
+<h2>{{performance.title}}</h2>
+<div class="row">
+    <div class="performance-img col-xs-3">
+        <div class="performance-block">
+            <img ng-src="http://api.theatre.pp.ua/{{performance.mainPicture.default_big.url}}" alt="{{performance.title}}"/>
+        </div>
+    </div>
+    <div class="media-block col-xs-6" >
+        <div ng-controller="ImageCarouselCtrl" style="height: 305px">
+            <carousel interval="myInterval">
+                <slide ng-repeat="slide in slides" active="slide.active">
+                    <img ng-src="{{slide.source}}" style="margin:auto;">
+                    <div class="carousel-caption">
+                        <p>{{slide.text}}</p>
+                    </div>
+                </slide>
+            </carousel>
+        </div>
+    </div>
+    <ul class="performance-dates col-xs-3">
+        <li ng-repeat="date in dates">
+            {{date.weekDay}}, {{date.day}}, {{date.month | translate}}, {{date.time}}
+            {{performance.title}}
+        </li>
+        <!--<li ng-repeat="date in performanceEvents">-->
+            <!--{{date.date_time | date : 'EEE'}}-->
+            <!--<br/>-->
+            <!--{{date.date_time | date : 'MMMM'}}-->
+            <!--<br/>-->
+            <!--{{date.date_time | date : 'd'}}-->
+            <!--<br/>-->
+            <!--{{date.date_time | date : 'd'}}-->
+            <!--<br/>-->
+            <!--{{performance.title}}-->
+        <!--</li>-->
+    </ul>
+</div>
+
+<div ng-controller="PerfTabsCtrl">
+    <tabset>
+        <tab heading="{{ 'performance.team' | translate }}">
+            <div ng-controller="PaginationCtrl">
+                <ul class="performance-actors">
+                    <li ng-repeat="role in roles">
+                        {{role.title}} <br/>
+                        {{role.description}}<br/>
+                        <a href="app.personDetails({id: role.employee.slug})">{{role.employee.first_name +  ' ' + role.employee.middle_name + ' ' + role.employee.last_name}}</a> <br/>
+                        {{role.employee.position}} <br/>
+                        <img ng-src="http://api.theatre.pp.ua/{{role.employee.avatar.default_small.url}}" alt="{{role.title}}" style="height: 100px"/>
+                    </li>
+                </ul>
+                <!--<pagination total-items="totalItems"-->
+                            <!--ng-change="setPage()"-->
+                            <!--ng-model="currentPage"-->
+                            <!--max-size="maxSize"-->
+                            <!--items-per-page="itemPerPage"-->
+                            <!--class="pagination-sm"-->
+                            <!--boundary-links="true"-->
+                            <!--rotate="false"-->
+                            <!--num-pages="numPages">-->
+                <!--</pagination>-->
+            </div>
+        </tab>
+        <tab heading="{{ 'performance.description' | translate }}">
+            {{performance.description}}
+        </tab>
+        <!--<tab heading="{{ 'performance.press' | translate }}">-->
+            <!--<ul class="article-list">-->
+                <!--<li ng-repeat="article in performance.press">-->
+                    <!--<a href="{{article.link}}">{{article.title}}</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</tab>-->
+    </tabset>
+</div>

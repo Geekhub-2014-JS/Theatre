@@ -36,5 +36,29 @@
       "Saturday": "Субота",
       "Sunday": "Неділя"
   },
+<<<<<<< Updated upstream
+=======
+  "weekDay": {
+    "Monday": "Пн",
+    "Tuesday": "Вт",
+    "Wednesday": "Ср",
+    "Thursday": "Чт",
+    "Friday": "Пт",
+    "Saturday": "Сб",
+    "Sunday": "Нд"
+  },
+  "persons": {
+    "actors": "Актори театру",
+    "aboutActor": "Про актора",
+    "education": "Освіта",
+    "since": "У театрі працює з",
+    "roles": "Ролі",
+    "position": "Посада"
+  },
+  "pagination": {
+    "next": "Наступна",
+    "previous": "Попередня"
+  },
+>>>>>>> Stashed changes
   "key": "value"
 }

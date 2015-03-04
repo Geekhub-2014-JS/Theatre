@@ -36,6 +36,30 @@
     "Saturday": "Saturday",
     "Sunday": "Sunday"
   },
+<<<<<<< Updated upstream
 
+=======
+  "weekDay": {
+    "Monday": "Mon",
+    "Tuesday": "Tue",
+    "Wednesday": "Wed",
+    "Thursday": "Thu",
+    "Friday": "Fri",
+    "Saturday": "Sat",
+    "Sunday": "Sun"
+  },
+  "persons": {
+    "actors": "Actors",
+    "aboutActor": "About actor",
+    "education": "Education",
+    "since": "Work in theatre ",
+    "roles": "Roles",
+    "position" : "Position"
+  },
+  "pagination": {
+    "next": "Next",
+    "previous": "Previous"
+  },
+>>>>>>> Stashed changes
   "key": "value"
 }
