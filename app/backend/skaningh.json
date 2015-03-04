@@ -1,0 +1,59 @@
+{
+  "title": "Сканінг",
+  "description": "Євген Марковський. Антиутопія",
+  "shortDescription": "Євген Марковський. Антиутопія",
+  "premiere": "2008-09-24T02:32:48+0300",
+  "slug": "skaningh",
+  "performancePoster": "http://kolyan.net/uploads/posts/2013-02/thumbs/1360575125_cat_in_snow_032.jpg",
+  "dates": [
+    {
+      "month": "Лютий",
+      "day": 21,
+      "weekDay": "Cб",
+      "time": "16:40",
+      "price": "45"
+    },
+    {
+      "month": "Лютий",
+      "day": 21,
+      "weekDay": "Cб",
+      "time": "14:00",
+      "price": "50"
+    },
+    {
+      "month": "Лютий",
+      "day": 21,
+      "weekDay": "Cб",
+      "time": "18:00",
+      "price": "60"
+    }
+  ],
+  "images": [
+    {
+      "source": "http://stylonica.com/wp-content/uploads/2014/03/Cats.jpg",
+      "text": "About current image"
+    },
+    {
+      "source": "http://stylonica.com/wp-content/uploads/2014/03/b73bcc559cb7886e72b7fd6ed101a3a71.jpg",
+      "text": "About current image"
+    },
+    {
+      "source": "http://affordablecatanddoghospital.com/cat/images/stories/slide/cats-two.jpg",
+      "text": "About current image"
+    },
+    {
+      "source": "http://explosionhub.com/wp-content/uploads/2012/07/1256277275_1440x900_norwegian-forest-cat-wallpapers.jpg",
+      "text": "About current image"
+    }
+  ],
+  "press": [
+    {
+      "title": "bla-bla-bla",
+      "link": "https://www.youtube.com/watch?v=vci-HIIy2HY"
+    },
+    {
+      "title": "bla-bla-bla",
+      "link": "https://www.youtube.com/watch?v=KXt63etqj5E"
+    }
+  ]
+}

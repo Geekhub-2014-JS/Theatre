@@ -10,6 +10,11 @@
       "persons": "Персоналії",
       "contacts": "Контакти"
   },
+  "performance": {
+    "description": "Про Спектакль",
+    "team": "Актори та Постановка",
+    "press": "Пресса"
+  },
   "poster": {
       "poster_on": "Афіша на"
   },
@@ -36,8 +41,6 @@
       "Saturday": "Субота",
       "Sunday": "Неділя"
   },
-<<<<<<< Updated upstream
-=======
   "weekDay": {
     "Monday": "Пн",
     "Tuesday": "Вт",
@@ -53,12 +56,12 @@
     "education": "Освіта",
     "since": "У театрі працює з",
     "roles": "Ролі",
-    "position": "Посада"
+    "position": "Посада",
+    "biography": "Бiографiя"
   },
   "pagination": {
     "next": "Наступна",
     "previous": "Попередня"
   },
->>>>>>> Stashed changes
   "key": "value"
 }

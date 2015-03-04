@@ -1,6 +1,6 @@
 
 angular.module('posterDirectives', [])
-    .directive('thPosterCalendar', ['apiGet', '$compile', function(apiGet, $compile){
+    .directive('thPosterCalendar', ['apiGet', '$compile', '$stateParams', function(apiGet, $compile, $stateParams){
         return {
             restrict: 'E',
             templateUrl: "views/Poster/Directives/thCalendarView.html",
@@ -12,17 +12,40 @@ angular.module('posterDirectives', [])
                 var el = element;
 
                 function getMonthData(data, month, day) {
-                    var templ = "<div class='th-calendar-poster'>";
+                    var templ = "";
 
-                    data.forEach(function(el, arr){
-                        if (el.day === day && el.month === (month + 1)) {
-                            templ = templ + "<div class='th-calendar-poster-item'><span class='th-calendar-poster-descr'>" +
-                            el.description + "</span><span class='th-calendar-poster-link'><a href='#' class='btn btn-default btn-xs' >link</a></span>" +
-                            "<span class='th-calendar-poster-date'>" + (el.day < 10 ? "0"+el.day:el.day) + "." + (el.month < 10 ? "0"+el.month:el.month) + "." + el.year + "</span><span class='th-calendar-poster-price'>" + el.price + "</span></div>";
+                    data.forEach(function(el){
+                        if (parseInt(el.day) === day && parseInt(el.month) === (month + 1)) {
+
+
+                            templ = templ +
+                                //"<div class='th-calendar-poster-item'>" +
+                            "<img src='http://api.theatre.pp.ua" + el.performance.mainPicture.default_big.url + "' >" +
+                            "<a href='" + $stateParams.locale + "/performance/" + el.performance.slug + "' title='" + el.performance.description + "' class='th-calendar-poster-link'>" +
+                            "<span class='th-calendar-poster-title'>" + el.performance.title + "</span>" +
+                            "<span class='th-calendar-poster-time'>" + el.time + "</span>" +
+//                                    "<div class='th-calendar-poster-date'>" + (el.day < 10 ? "0" + el.day : el.day) + "." + (el.month < 10 ? "0"+el.month:el.month) + "." + el.year + "</div>" +
+                            "</a>";
+
+//                            templ = templ +
+//                            //"<div class='th-calendar-poster-item'>" +
+//                                "<img src='http://cs614617.vk.me/v614617756/10a6a/zeqE2VFDJdA.jpg' >" +
+//                                "<a ui-sref='app.singlePerformance({slug: " + el.performance.slug + "})' title='" + el.performance.description + "' class='th-calendar-poster-link'>" +
+//                                    "<span class='th-calendar-poster-title'>" + el.performance.title + "</span>" +
+//                                    "<span class='th-calendar-poster-time'>" + el.time + "</span>" +
+////                                    "<div class='th-calendar-poster-date'>" + (el.day < 10 ? "0" + el.day : el.day) + "." + (el.month < 10 ? "0"+el.month:el.month) + "." + el.year + "</div>" +
+//                                "</a>";
+
+                            //templ = templ +
+                            //"<div class='th-calendar-poster-item'>" +
+                            //        "<div class='th-calendar-poster-title'>" + el.performance.title + "</div>" +
+                            //        "<div class='th-calendar-poster-time'>" + el.time + "</div>" +
+                            //"</div>";
                         }
                     });
 
-                    return templ + "</div>";
+                    return templ ;
+                    //return templ + "</div>";
                 }
 
                 function genCalendar(month, year, data) {
@@ -31,8 +54,8 @@ angular.module('posterDirectives', [])
                         D = new Date(year, month, Dlast),
                         DNlast = new Date(D.getFullYear(),D.getMonth(),Dlast).getDay(),
                         DNfirst = new Date(D.getFullYear(),D.getMonth(),1).getDay(),
-                        calendarHeadr = '<table id="calendar2" class="theatre-poster-calendar"><thead><tr><th>{{"day.Monday"|translate}}<th>{{"day.Tuesday"|translate}}<th>{{"day.Wednesday"|translate}}<th>{{"day.Thursday"|translate}}<th>{{"day.Friday"|translate}}<th>{{"day.Saturday"|translate}}<th>{{"day.Sunday"|translate}}<tbody>',
-                        calendar = '<tr class="th-calendar-tr">',
+                        calendarHeadr = '<table id="calendar" class="theatre-poster-calendar"><thead><tr><th>{{"day.Monday"|translate}}<th>{{"day.Tuesday"|translate}}<th>{{"day.Wednesday"|translate}}<th>{{"day.Thursday"|translate}}<th>{{"day.Friday"|translate}}<th>{{"day.Saturday"|translate}}<th>{{"day.Sunday"|translate}}<tbody>',
+                        calendar = '<tr>',
                         calendarFooter = '</table>',
                         i = 0;
 
@@ -43,26 +66,22 @@ angular.module('posterDirectives', [])
                         var i = 0,
                             j = prDlast - (DNfirst - 2);
                         for(i = 1, j; i < DNfirst; i++, j++) {
-                            calendar += '<td style="color: lightgray;">' + '<span class="th-calendar-date-before">' + j + '</span>';  // пустые ячейки до начала месяца
+                            calendar += '<td class="prev-month-day">' + '<span class="th-calendar-date-before">' + j + '</span>' + getMonthData(data, (month - 1), j);  // пустые ячейки до начала месяца
                         }
 
                     } else {
                         var i = 0,
                             j = prDlast - 5;
                         for(i = 0, j; i < 6; i++, j++) {
-                            calendar += '<td style="color: lightgray;">' + '<span class="th-calendar-date-before">' + j + '</span>';  // пустые ячейки до начала месяца
+                            calendar += '<td class="prev-month-day">' + '<span class="th-calendar-date-before">' + j + '</span>' + getMonthData(data, (month - 1), j);  // пустые ячейки до начала месяца
                         }
                     }
                     var i = 0;
                     for(i = 1; i <= Dlast; i++) {
                         if (i == new Date().getDate() && D.getFullYear() == new Date().getFullYear() && D.getMonth() == new Date().getMonth()) {
-                            calendar += '<td class="today">' + '<span class="th-calendar-date">' + i + '</span>' + getMonthData(data, month, i);    ///   today
+                            calendar += '<td class="this-month-day today">' + '<span class="th-calendar-date">' + i + '</span>' + getMonthData(data, month, i);    ///   today
                         }else{
-                            if (dd.indexOf(i) != -1) {
-                                calendar += '<td>'  + '<span class="th-calendar-date">' + i  + '</span>' + getMonthData(data, month, i);   //   other days
-                            } else {
-                                calendar += '<td>' + '<span class="th-calendar-date">' + i + '</span>' + getMonthData(data, month, i);   //   other days
-                            }
+                            calendar += '<td class="this-month-day">' + '<span class="th-calendar-date">' + i + '</span>' + getMonthData(data, month, i);   //   other days
                         }
 
                         if (new Date(D.getFullYear(),D.getMonth(),i).getDay() == 0) {
@@ -74,7 +93,7 @@ angular.module('posterDirectives', [])
 
                     if (DNlast != 0 ) {
                         for (i = DNlast; i < 7; i++) {
-                            calendar += '<td style="color: lightgray;">' + '<span class="th-calendar-date-after">' +(++nw) + '</span>';  //  оставшиеся пустые ячейки в месяце
+                            calendar += '<td class="next-month-day">' + '<span class="th-calendar-date-after">' + (++nw) + '</span>' + getMonthData(data, (month + 1), (nw));  //  оставшиеся пустые ячейки в месяце
                         }
                     }
 
@@ -91,9 +110,15 @@ angular.module('posterDirectives', [])
                     year = scope.yearl;
                     month = scope.monthl;
 
-                    apiGet(""+ year + "-" + (month + 1) + ".json").success(function(data){
-                        if (data instanceof Array) {
-                            var generetedCalendar = genCalendar(scope.monthl, scope.yearl, data);
+                    var yearL = year;
+                    var monthL = month;
+                    var toDate = moment(yearL+'-'+(monthL + 1), 'YYYY-M').add(1, 'months').add(7, 'days');
+                    var fromDate = moment(yearL+'-'+(monthL + 1), 'YYYY-M').subtract(7, 'days');
+                    var url = 'performanceevents.json?fromDate=' + fromDate.format('DD-MM-YYYY') + '&toDate=' + toDate.format('DD-MM-YYYY');
+
+                    apiGet(url).success(function(data, status){
+                        if (status == 200) {
+                            var generetedCalendar = genCalendar(scope.monthl, scope.yearl, data.performance_events);
                             var calendarHtml = angular.element(generetedCalendar);
                             $compile(calendarHtml)(scope);
                             element.html(calendarHtml);

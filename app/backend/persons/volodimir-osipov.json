@@ -1,0 +1,26 @@
+{
+  "first_name": "Володимир",
+  "last_name": "Осипов",
+  "middle_name": "Adah",
+  "dob": "2002-07-02T01:33:20+0300",
+  "position": "Директор театру",
+  "slug": "volodimir-osipov",
+  "images": [
+    {
+      "image": "http://lorempixel.com/1000/400",
+      "text": "sometext"
+    },
+    {
+      "image": "http://lorempixel.com/1001/400",
+      "text": "sometext"
+    },
+    {
+      "image": "http://lorempixel.com/1000/401",
+      "text": "sometext"
+    },
+    {
+      "image": "http://lorempixel.com/1001/401",
+      "text": "sometext"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "employees": [
+    {
+      "first_name": "Олена",
+      "last_name": "Пономаренко",
+      "middle_name": "Linnea",
+      "dob": "1971-03-08T22:11:55+0300",
+      "position": "Актриса",
+      "slug": "oliena-ponomarienko"
+    },
+    {
+      "first_name": "Лідія",
+      "last_name": "Попова",
+      "middle_name": "Norval",
+      "dob": "1974-08-11T01:31:22+0300",
+      "position": "Актриса",
+      "slug": "lidiia-popova"
+    },
+    {
+      "first_name": "Дмитро",
+      "last_name": "Потапчук",
+      "middle_name": "Deion",
+      "dob": "1990-04-13T04:28:09+0400",
+      "position": "Актор",
+      "slug": "dmitro-potapchuk"
+    },
+    {
+      "first_name": "Олександр",
+      "last_name": "Приз",
+      "middle_name": "Ayana",
+      "dob": "2004-10-12T09:05:31+0300",
+      "position": "Актриса",
+      "slug": "olieksandr-priz"
+    },
+    {
+      "first_name": "Юрій",
+      "last_name": "Прокопчук",
+      "middle_name": "Laurie",
+      "dob": "2013-09-29T17:59:28+0300",
+      "position": "Актор",
+      "slug": "iurii-prokopchuk"
+    },
+    {
+      "first_name": "Олександр",
+      "last_name": "Пятківський",
+      "middle_name": "Wilbert",
+      "dob": "1978-03-27T04:42:57+0300",
+      "position": "Актор",
+      "slug": "olieksandr-piatkivs-kii"
+    },
+    {
+      "first_name": "Ольга",
+      "last_name": "Ромодан",
+      "middle_name": "Monroe",
+      "dob": "1978-06-20T04:23:58+0300",
+      "position": "Актриса",
+      "slug": "ol-gha-romodan"
+    },
+    {
+      "first_name": "Любов",
+      "last_name": "Скобель",
+      "middle_name": "Salvatore",
+      "dob": "1981-02-02T15:07:34+0300",
+      "position": "Актриса",
+      "slug": "liubov-skobiel"
+    },
+    {
+      "first_name": "Євген",
+      "last_name": "Скрипніченко",
+      "middle_name": "Lavonne",
+      "dob": "1976-02-27T14:45:28+0300",
+      "position": "Актор",
+      "slug": "ievghien-skripnichienko"
+    },
+    {
+      "first_name": "Людмила",
+      "last_name": "Талах",
+      "middle_name": "Brycen",
+      "dob": "1973-01-30T13:34:32+0300",
+      "position": "Актриса",
+      "slug": "liudmila-talakh"
+    },
+    {
+      "first_name": "Олег",
+      "last_name": "Телятник",
+      "middle_name": "Chyna",
+      "dob": "1980-03-08T09:55:08+0300",
+      "position": "Актор",
+      "slug": "oliegh-tieliatnik"
+    },
+    {
+      "first_name": "Світлана",
+      "last_name": "Терещенко",
+      "middle_name": "Justyn",
+      "dob": "1985-09-13T12:31:13+0400",
+      "position": "Актриса",
+      "slug": "svitlana-tierieshchienko"
+    },
+    {
+      "first_name": "Лілія",
+      "last_name": "Харченко",
+      "middle_name": "Miller",
+      "dob": "1971-08-05T11:17:06+0300",
+      "position": "Актриса",
+      "slug": "liliia-kharchienko"
+    },
+    {
+      "first_name": "Костянтин",
+      "last_name": "Шаєнко",
+      "middle_name": "Damian",
+      "dob": "1973-05-03T22:02:32+0300",
+      "position": "Актор",
+      "slug": "kostiantin-shaienko"
+    },
+    {
+      "first_name": "Катерина",
+      "last_name": "Шакалова",
+      "middle_name": "Rosalyn",
+      "dob": "2006-01-19T19:04:46+0200",
+      "position": "Актриса",
+      "slug": "katierina-shakalova"
+    }
+  ],
+  "next_page": "false",
+  "previous_page": "false",
+  "page_count": 5,
+  "total_persons" : 35
+}

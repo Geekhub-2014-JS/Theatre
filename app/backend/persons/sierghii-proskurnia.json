@@ -1,0 +1,30 @@
+{
+  "firstName": "Сергій",
+  "lastName": "Проскурня",
+  "middleName": "Maude",
+  "dob": "2015-01-27T23:07:13+0200",
+  "position": "Виконуючий обов’язки художнього керівника",
+  "slug": "sierghii-proskurnia",
+  "since": "1994",
+  "education": "university name",
+  "images": [
+    {
+      "image": "http://lorempixel.com/1000/400",
+      "text": "Описание фото"
+    },
+    {
+      "image": "http://lorempixel.com/1001/400",
+      "text": "Описание фото"
+    }
+  ],
+  "roles": [
+    {
+      "characterName": "Персонаж",
+      "perfomance": "Название спектакля"
+    },
+    {
+      "characterName": "Персонаж",
+      "perfomance": "Название спектакля"
+    }
+  ]
+}

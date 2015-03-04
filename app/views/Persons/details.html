@@ -1,0 +1,44 @@
+<ol class="breadcrumb">
+    <li>
+        <a ui-sref="app.home">{{ 'menu.home' | translate }}</a>
+    </li>
+    <li>
+        <a ui-sref="app.persons">{{ 'menu.persons' | translate }}</a>
+    </li>
+    <li class="active">{{'persons.aboutActor' | translate}}</li>
+</ol>
+<div ng-controller="PersonsSliderCtrl" id="slides_control">
+    <div>
+        <carousel interval="interval">
+            <slide ng-repeat="slide in slides" active="slide.active">
+                <img ng-src="{{slide.image}}">
+                <div class="carousel-caption">
+                    <h4>{{slide.text}}</h4>
+                </div>
+            </slide>
+        </carousel>
+    </div>
+</div>
+
+<table class="table table-bordered">
+    <tr>
+        <td colspan="2">{{person.first_name + " " + person.middle_name + " " + person.last_name}}</td>
+    </tr>
+    <tr>
+        <td>{{'persons.position' | translate}}</td>
+        <td>{{person.position}}</td>
+    </tr>
+    <tr>
+        <td>{{'persons.biography' | translate}}</td>
+        <td>{{person.biography}}</td>
+    </tr>
+    <tr>
+        <td>{{'persons.since' | translate}}</td>
+        <td>{{person.dob | date: "dd/MM/yyyy"}}</td>
+    </tr>
+    <tr>
+        <td>{{'persons.roles' | translate}}:</td>
+        <td>{{person.roles}}In progress....</td>
+    </tr>
+
+</table>

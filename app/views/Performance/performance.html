@@ -7,7 +7,7 @@
 <div class="row">
     <div class="performance-img col-xs-3">
         <div class="performance-block">
-            <img ng-src="http://api.theatre.pp.ua/{{performance.mainPicture.default_big.url}}" alt="{{performance.title}}"/>
+            <img ng-src="http://api.theatre.pp.ua/{{performance.mainPicture.reference.url}}" alt="{{performance.title}}"/>
         </div>
     </div>
     <div class="media-block col-xs-6" >
@@ -24,20 +24,9 @@
     </div>
     <ul class="performance-dates col-xs-3">
         <li ng-repeat="date in dates">
-            {{date.weekDay}}, {{date.day}}, {{date.month | translate}}, {{date.time}}
+            {{date.weekDay | translate}}, {{date.day}}, {{date.month | translate}}, {{date.time}}
             {{performance.title}}
         </li>
-        <!--<li ng-repeat="date in performanceEvents">-->
-            <!--{{date.date_time | date : 'EEE'}}-->
-            <!--<br/>-->
-            <!--{{date.date_time | date : 'MMMM'}}-->
-            <!--<br/>-->
-            <!--{{date.date_time | date : 'd'}}-->
-            <!--<br/>-->
-            <!--{{date.date_time | date : 'd'}}-->
-            <!--<br/>-->
-            <!--{{performance.title}}-->
-        <!--</li>-->
     </ul>
 </div>
 

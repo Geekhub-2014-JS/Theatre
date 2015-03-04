@@ -10,6 +10,11 @@
     "persons": "Persons",
     "contacts": "Contacts"
   },
+  "performance": {
+    "description": "Description",
+    "team": "Team",
+    "press": "Press"
+  },
   "poster": {
     "poster_on": "Poster on"
   },
@@ -36,9 +41,6 @@
     "Saturday": "Saturday",
     "Sunday": "Sunday"
   },
-<<<<<<< Updated upstream
-
-=======
   "weekDay": {
     "Monday": "Mon",
     "Tuesday": "Tue",
@@ -54,12 +56,12 @@
     "education": "Education",
     "since": "Work in theatre ",
     "roles": "Roles",
-    "position" : "Position"
+    "position" : "Position",
+    "biography": "Biography"
   },
   "pagination": {
     "next": "Next",
     "previous": "Previous"
   },
->>>>>>> Stashed changes
   "key": "value"
 }
