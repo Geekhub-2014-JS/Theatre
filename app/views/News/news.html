@@ -1,4 +1,30 @@
-<br>
+<ol class="breadcrumb">
+    <li>
+        <a ui-sref="app.home">{{ 'menu.home' | translate }}</a>
+    </li>
+    <li class="active">{{'menu.news' | translate}}</li>
+</ol>
 
-<h2>News page</h2>
-{{ info }}
+<div class="text-center">
+    <h3>{{'menu.news' | translate}}</h3>
+    <article class="catalog" ng-repeat="item in news">
+        <img src="http://lorempixel.com/400/200/cats" alt="">
+        <h3><a ui-sref="app.newsDetail({id: item.slug})">{{ item.title }}</a></h3>
+        <p class="topic">{{ item.short_description }}</p>
+        <footer class="article-footer">
+            <time datetime="2015-02-12">12.02.2015</time>
+            <small class="view"><span>112</span></small>
+        </footer>
+    </article>
+
+    <pagination direction-links="true"
+                previous-text="{{'pagination.previous' | translate}}"
+                next-text="{{'pagination.next' | translate}}"
+                ng-change="nextPage(currentPage)"
+                items-per-page="perPage"
+                total-items="total"
+                ng-model="currentPage"
+                num-pages="smallnumPages"
+                ng-show="total > 1">
+    </pagination>
+</div>

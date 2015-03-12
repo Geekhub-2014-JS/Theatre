@@ -1,0 +1,19 @@
+<ol class="breadcrumb">
+    <li>
+        <a ui-sref="app.home">{{ 'menu.home' | translate }}</a>
+    </li>
+    <li>
+        <a ui-sref="app.news">{{ 'menu.news' | translate }}</a>
+    </li>
+    <li class="active">{{ title }}</li>
+</ol>
+
+<article>
+    <img src="http://lorempixel.com/800/400/cats" alt="">
+    <h3>{{ news.title }}</h3>
+    <p class="topic">{{ news.text }}</p>
+    <footer class="article-footer">
+        <time datetime="2015-02-12">12.02.2015</time>
+        <small class="view"><span>112</span></small>
+    </footer>
+</article>

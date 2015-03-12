@@ -37,6 +37,11 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                     templateUrl: "views/News/news.html",
                     controller: 'NewsCtrl'
                 })
+                .state('app.newsDetail', {
+                    url: '/news/:id',
+                    templateUrl: 'views/News/detail.html',
+                    controller: 'NewsDetailCtrl'
+                })
                 .state('app.about', {
                     url: "/about",
                     templateUrl: "views/About/about.html",
