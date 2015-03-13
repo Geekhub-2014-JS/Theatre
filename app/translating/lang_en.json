@@ -63,5 +63,24 @@
     "next": "Next",
     "previous": "Previous"
   },
-  "key": "value"
+  "key": "value",
+    "Jan": "January",
+    "Feb": "February",
+    "Mar": "March",
+    "Apr": "April",
+    "May": "May",
+    "Jun": "June",
+    "Jul": "July",
+    "Aug": "August",
+    "Sept": "September",
+    "Oct": "October",
+    "Nov": "November",
+    "Dec": "December",
+    "Mon": "MON",
+    "Tue": "TUE",
+    "Wed": "WED",
+    "Thu": "THU",
+    "Fri": "FRI",
+    "Sat": "SAT",
+    "Sun": "SUN"
 }
