@@ -9,22 +9,15 @@
 </div>
 <h2>{{'persons.actors' | translate}}</h2>
 
-<div ng-repeat="person in persons">
-    <div class="col-md-4">
-        <img ng-src="http://api.theatre.pp.ua/{{person.avatar.reference.url}}" style="width: 300px; max-height: 450px">
-        <a ui-sref="app.personDetails({id: person.slug})" style="display: block; width: 200px">{{person.first_name + " " + person.last_name}}</a>
+<div infinite-scroll="loadPersons()" infinite-scroll-distance='0' infinite-scroll-disabled='busy' infinite-scroll-disabled="true">
+    <div ng-repeat="person in persons | orderBy">
+        <div class="col-md-4">
+            <img ng-src="http://api.theatre.pp.ua/{{person.avatar.reference.url}}"
+                 style="width: 300px; max-height: 450px">
+            <a ui-sref="app.personDetails({id: person.slug})" style="display: block; width: 200px">{{person.first_name + " " + person.last_name}}</a>
+        </div>
     </div>
+    <div style='clear: both;'></div>
 </div>
-
-
-
-
-<pagination direction-links="true" previous-text="{{'pagination.previous' | translate}}"
-            next-text="{{'pagination.next' | translate}}" ng-change="pageChanged(currentPage)"
-            items-per-page="peronsPerPage"
-            total-items="personsTotal" ng-model="currentPage"
-            num-pages="smallnumPages"
-            ng-show="personsTotal > 1">
-</pagination>
 
 
