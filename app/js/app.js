@@ -3,14 +3,15 @@
 /* App Module */
 
 var theatreApp = angular.module('theatre', [
-                                            'ui.router',
-                                            'pascalprecht.translate',
-                                            'theatreServices',
-                                            'theatreControllers',
-                                            'theatreRoutes',
-                                            'ngCookies',
-                                            'theatreDirectives'
-                                            ]);
+        'ui.router',
+        'pascalprecht.translate',
+        'theatreServices',
+        'theatreControllers',
+        'theatreRoutes',
+        'ngCookies',
+        'theatreDirectives',
+        'darthwade.dwLoading'
+    ]);
 
 theatreApp.run(['$rootScope', '$state', '$stateParams', '$translate', function ($rootScope, $state, $stateParams, $translate) {
     $rootScope.$state = $state;
