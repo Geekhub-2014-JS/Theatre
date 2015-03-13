@@ -6,8 +6,6 @@ var theatreServices = angular.module('theatreServices', []);
 
 theatreServices
     .constant('api_url', 'http://api.theatre.pp.ua/')
-    //.constant('api_url', '/backend/')
-
     .factory('apiPost', ['$http', 'api_url', '$stateParams',
         function ($http, api_url, $stateParams) {
             return function (url, data) {
@@ -31,8 +29,8 @@ theatreServices
             }
         }
     ])
-    .factory('apiGet', ['$http', 'api_url', '$stateParams',
-        function ($http, api_url, $stateParams) {
+    .factory('apiGet', ['$http', 'api_url', '$stateParams', '$loading',
+        function ($http, api_url, $stateParams, $loading) {
             return function (url) {
                 var conf = {
                     method: 'GET',
@@ -41,12 +39,29 @@ theatreServices
                         'locale': $stateParams.locale
                     }
                 };
-
+                var spinerOptions = {
+                    text: 'Loading ',
+                    className: 'loader',
+                    spinnerOptions: {
+                        radius: 20,
+                        length: 0,
+                        lines: 30,
+                        corners: 0.5,
+                        color: 'black',
+                        className: 'dw-spinner',
+                        top: 'auto',
+                        left: 'auto'
+                    }
+                };
+                $loading.setDefaultOptions(spinerOptions);
+                $loading.start('spiner');
                 return $http(conf)
                     .success(function (response) {
+                        $loading.finish('spiner');
                         return response || [];
                     })
                     .error(function (error) {
+                        $loading.finish('spiner');
                         return error;
                     });
             }

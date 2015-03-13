@@ -17,7 +17,6 @@ angular.module('posterDirectives', [])
                     data.forEach(function(el){
                         if (parseInt(el.day) === day && parseInt(el.month) === (month + 1)) {
 
-
                             templ = templ +
                                 //"<div class='th-calendar-poster-item'>" +
                             "<img src='http://api.theatre.pp.ua" + el.performance.mainPicture.default_big.url + "' >" +
@@ -27,20 +26,6 @@ angular.module('posterDirectives', [])
 //                                    "<div class='th-calendar-poster-date'>" + (el.day < 10 ? "0" + el.day : el.day) + "." + (el.month < 10 ? "0"+el.month:el.month) + "." + el.year + "</div>" +
                             "</a>";
 
-//                            templ = templ +
-//                            //"<div class='th-calendar-poster-item'>" +
-//                                "<img src='http://cs614617.vk.me/v614617756/10a6a/zeqE2VFDJdA.jpg' >" +
-//                                "<a ui-sref='app.singlePerformance({slug: " + el.performance.slug + "})' title='" + el.performance.description + "' class='th-calendar-poster-link'>" +
-//                                    "<span class='th-calendar-poster-title'>" + el.performance.title + "</span>" +
-//                                    "<span class='th-calendar-poster-time'>" + el.time + "</span>" +
-////                                    "<div class='th-calendar-poster-date'>" + (el.day < 10 ? "0" + el.day : el.day) + "." + (el.month < 10 ? "0"+el.month:el.month) + "." + el.year + "</div>" +
-//                                "</a>";
-
-                            //templ = templ +
-                            //"<div class='th-calendar-poster-item'>" +
-                            //        "<div class='th-calendar-poster-title'>" + el.performance.title + "</div>" +
-                            //        "<div class='th-calendar-poster-time'>" + el.time + "</div>" +
-                            //"</div>";
                         }
                     });
 
