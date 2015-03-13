@@ -10,7 +10,21 @@
 </head>
 <body>
 
-<div class="container">
+<div class="container" dw-loading="spiner" dw-loading-options="{
+    text: 'Loading ',
+    className: 'loader',
+    spinnerOptions: {
+        radius: 20,
+        length: 0,
+        lines: 30,
+        corners: 0.9,
+        color: 'black',
+        className: 'dw-spinner',
+        top: 'auto',
+        left: 'auto'
+        }
+    }"
+>
   <br>
   <nav class="navbar navbar-default">
     <div class="container-fluid">

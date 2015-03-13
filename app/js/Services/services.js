@@ -39,21 +39,6 @@ theatreServices
                         'locale': $stateParams.locale
                     }
                 };
-                var spinerOptions = {
-                    text: 'Loading ',
-                    className: 'loader',
-                    spinnerOptions: {
-                        radius: 20,
-                        length: 0,
-                        lines: 30,
-                        corners: 0.5,
-                        color: 'black',
-                        className: 'dw-spinner',
-                        top: 'auto',
-                        left: 'auto'
-                    }
-                };
-                $loading.setDefaultOptions(spinerOptions);
                 $loading.start('spiner');
                 return $http(conf)
                     .success(function (response) {
