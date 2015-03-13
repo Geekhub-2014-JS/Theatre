@@ -10,7 +10,8 @@ var theatreApp = angular.module('theatre', [
         'theatreRoutes',
         'ngCookies',
         'theatreDirectives',
-        'darthwade.dwLoading'
+        'darthwade.dwLoading',
+        'infinite-scroll'
     ]);
 
 theatreApp.run(['$rootScope', '$state', '$stateParams', '$translate', function ($rootScope, $state, $stateParams, $translate) {

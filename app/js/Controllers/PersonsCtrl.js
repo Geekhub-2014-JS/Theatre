@@ -1,33 +1,37 @@
-angular.module('person',['ui.bootstrap'])
-    .controller('PersonsCtrl', ['$scope', 'personsService','apiGet', function ($scope, personsService) {
+angular.module('person', ['ui.bootstrap'])
+    .controller('PersonsCtrl', ['$scope', 'personsService', 'apiGet', function ($scope, personsService) {
         $scope.persons = [];
         $scope.personsTotal = 0;
-        $scope.peronsPerPage = 12; //pagination limit per page
-        getResultsPage(1);
+        $scope.peronsPerPage = 6; //pagination limit per page
+        $scope.currentPage = 1;
+        $scope.busy = false;
 
-        $scope.pageChanged = function(newPage) {
-            getResultsPage(newPage);
+        $scope.loadPersons = function () {
+            if ($scope.busy == true || $scope.currentPage >= $scope.pagesCount) return;
+            $scope.busy = true;
+            getResultsPage($scope.currentPage++);
         };
 
         function getResultsPage(pageNumber) {
-            personsService.getAllPersons(pageNumber,$scope.peronsPerPage)
-                .then(function(data) {
-                    $scope.persons = data.employees;
-                    $scope.personsTotal = data.page_count * $scope.peronsPerPage;
-                    //$scope.personsUsers = data.total_persons;
+            personsService.getAllPersons(pageNumber, $scope.peronsPerPage)
+                .then(function (data) {
+                    $scope.persons = $scope.persons.concat(data.employees);
+
+                    $scope.pagesCount = data.page_count;
+                    $scope.busy = false;
                 });
         }
 
     }
     ])
     .controller('PersonsDetailCtrl', ['$scope', 'personsService', '$stateParams', function ($scope, personsService, $stateParams) {
-        $scope.promise = personsService.getPerson($stateParams.id).then(function(data){
+        $scope.promise = personsService.getPerson($stateParams.id).then(function (data) {
             $scope.person = data;
             return data;
         });
     }
     ])
-    .controller('PersonsSliderCtrl', function($scope) {
+    .controller('PersonsSliderCtrl', function ($scope) {
         $scope.interval = 4000;
         //temp
         $scope.slides = [
