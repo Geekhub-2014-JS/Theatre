@@ -1,7 +1,7 @@
 angular.module('home',['homepage.bootstrap.carousel'])
     .controller('HomeCtrl', ['$scope', 'apiGet',
         function($scope, apiGet){
-            apiGet('posts.json?limit=5')
+            apiGet('posts.json?limit=3')
                 .success(function(data, status){
                     if (status === 200) {
                         $scope.news = data.posts;

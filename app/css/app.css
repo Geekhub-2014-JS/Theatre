@@ -1,4 +1,14 @@
 /* app css stylesheet */
+[dw-loading] {
+    position: static;
+}
+.dw-loading.dw-loading-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.dw-loading > .dw-loading-body > .dw-loading-text {
+    color: #fff;
+    text-shadow: none;
+}
 
 .performance-block {
     overflow: hidden;

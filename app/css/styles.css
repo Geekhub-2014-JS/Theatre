@@ -91,7 +91,7 @@ input[type="submit"] {
 }
 
 textarea                       { vertical-align:top; }
-:focus                         { outline:none; }
+:focus, a:focus                { outline:none; }
 
 img, fieldset                  { border:0; }
 /*----------------------- body -----------------------*/
@@ -138,49 +138,74 @@ header h1 {
 header .lang-select {
     float: right;
     margin: 26px 11px 0 10px;
-    position: relative;
+    /*position: relative;*/
 }
-
-header .lang-select .arrow {
-    background: url(../img/arrow.png);
-    display: inline-block;
-    width: 9px;
-    height: 4px;
-    position: absolute;
-    top: 8px;
-    right: -12px;
+header .lang-select li {
+    float: left;
+    margin-left: 10px;
 }
+/*header .lang-select .arrow {*/
+    /*background: url(../img/arrow.png);*/
+    /*display: inline-block;*/
+    /*width: 9px;*/
+    /*height: 4px;*/
+    /*position: absolute;*/
+    /*top: 8px;*/
+    /*right: -12px;*/
+/*}*/
 header .lang-select a {
     font-size: 12px; 
     color: #FFFFFF;
 }
-header .lang-select a:hover {
-    color: #292929;
-}
-header .lang-select ul {
-    display: none;
-}
+/*header .lang-select a:hover {*/
+    /*color: #292929;*/
+/*}*/
+/*header .lang-select ul {*/
+    /*display: none;*/
+/*}*/
 header nav {
     overflow: hidden;
 } 
 header nav li {
     display: inline-block;
+    position: relative;
 }
 header nav li a {
+    position: relative;
+    z-index: 2;
     font-size: 12px;
     color: #FFFFFF;
-    display: inline-block;
+    display: block;
     padding: 30.5px 11px;
 }
-header nav li a:hover {
+header nav li > span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 0;
     background: #FFFFFF;
+    -webkit-transition: height 1s ease-out;
+    -moz-transition: height 1s ease-out;
+    -o-transition: height 1s ease-out;
+    transition: height 1s ease-out;
+}
+header nav li:hover a,
+header nav li:hover a:focus {
     color: #292929;
+    -webkit-transition: color 1s ease-out;
+    -moz-transition: color 1s ease-out;
+    -o-transition: color 1s ease-out;
+    transition: color 1s ease-out;
 }
-header nav li a.active {
-    background: url(../img/active-nav.jpg) repeat-x;
+header nav li:hover > span,
+header nav li.active:hover > span{
+    height: 83px;
 }
-header nav li a.active:hover {
-    background: #FFFFFF;
+header nav li.active > span {
+    height: 5px;
+}
+header nav li a:focus {
+    color: #FFFFFF;
 }
 /*----------------------- slider -----------------------*/
 .carousel {
@@ -197,34 +222,6 @@ header nav li a.active:hover {
 
 /** Carousel Controls **/
 
-
-.jcarousel-control-prev,
-.jcarousel-control-next {
-    display: block;
-    width: 36px;
-    height: 36px; 
-    border-radius: 4px;
-    margin: 30px 0 0;
-}
-
-.jcarousel-control-prev {
-    float: left;
-    background: url(../img/prew.png) center center no-repeat #4F4F4F;
-}
-
-.jcarousel-control-next {
-    float: right;
-    background: url(../img/next.png) center center no-repeat #4F4F4F;
-}
-.jcarousel-control-prev:hover {
-    float: left;
-    background: url(../img/prew.png) center center no-repeat #E34B2B;
-}
-
-.jcarousel-control-next:hover {
-    float: right;
-    background: url(../img/next.png) center center no-repeat #E34B2B;
-}
 .carousel-inner {
     z-index: -1;
 }
