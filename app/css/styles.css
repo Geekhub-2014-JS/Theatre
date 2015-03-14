@@ -434,7 +434,7 @@ section.main-page .article-footer {
     font: 12px robotoregular;
 }
 section.main-page .article-footer time {
-    float: left;
+    float: right;
 }
 section.main-page .article-footer small {
     float: right;
@@ -448,7 +448,7 @@ section.main-page .article-footer small {
 }
 .strip {
     height: 4px;
-    background: background: rgb(236,83,42);
+    background: rgb(236,83,42);
     /* Old browsers */
     background: -moz-linear-gradient(left,  rgba(236,83,42,1) 0%, rgba(196,36,46,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(236,83,42,1)), color-stop(100%,rgba(196,36,46,1))); /* Chrome,Safari4+ */

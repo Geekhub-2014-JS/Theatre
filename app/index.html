@@ -64,8 +64,39 @@
 
   <div ui-view ></div>
 
-  <footer>
-    <p class="text-center">This is footer</p>
+  <footer class="main-footer">
+    <div class="strip">
+    </div>
+    <div class="wrapp-footer">
+      <ul class="footer-nav uppercase">
+        <li ui-sref-active="active">
+          <a ui-sref="app.poster"><span ng-bind="'menu.poster' | translate"></span></a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="app.repertoire"><span ng-bind="'menu.repertoire' | translate"></span></a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="app.news"><span ng-bind="'menu.news' | translate"></span></a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="app.about"><span ng-bind="'menu.about' | translate"></span></a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="app.persons"><span ng-bind="'menu.persons' | translate"></span></a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="app.contacts"><span ng-bind="'menu.contacts' | translate"></span></a>
+        </li>
+      </ul>
+      <ul class="soc-nav">
+        <li class="vkon"><a href="http://vk.com/club32121977"><span class="ico-vk"></span></a></li>
+        <!--<li><a href="#"><span class="ico-y"></span></a></li>-->
+        <!--<li><a href="#"><span class="ico-g"></span></a></li>-->
+        <!--<li><a href="#"><span class="ico-f"></span></a></li>-->
+        <!--<li><a href="#"><span class="ico-t"></span></a></li>-->
+      </ul>
+      <small class="copy">&copy; Copyright 2015</small>
+    </div>
   </footer>
 
 

@@ -1,7 +1,15 @@
 angular.module('home',['homepage.bootstrap.carousel'])
-    .controller('HomeCtrl', ['$scope',
-        function($scope){
-            $scope.info = 'Hello from home controller';
+    .controller('HomeCtrl', ['$scope', 'apiGet',
+        function($scope, apiGet){
+            apiGet('posts.json?limit=5')
+                .success(function(data, status){
+                    if (status === 200) {
+                        $scope.news = data.posts;
+                    }
+                })
+                .error(function(error){
+                    $scope.error = error;
+                });
         }
     ])
     .controller('HomepageCarouselCtrl', ['$scope', 'apiGet',
@@ -18,15 +26,6 @@ angular.module('home',['homepage.bootstrap.carousel'])
                 })
             ;
 
-            apiGet('posts.json?limit=5')
-                .success(function(data, status){
-                    if (status === 200) {
-                        $scope.news = data.posts;
-                    }
-                 })
-                .error(function(error){
-                    console.log(error);
-                });
         }
     ])
 ;
