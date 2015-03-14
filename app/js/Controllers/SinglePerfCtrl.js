@@ -14,10 +14,10 @@ angular.module('singlePerf',['ui.bootstrap'])
                 })
             ;
 
-            apiGet('performances/' + $stateParams.slug + '/performanceevents') // TODO to much information for a few dates
+            apiGet('performanceevents.json?fromDate=today&performance=' + $stateParams.slug)
                 .success(function (data) {
                     $scope.dates = [];
-                    $scope.performanceEvents = data;
+                    $scope.performanceEvents = data.performance_events;
                     $scope.performanceEvents.forEach(function(val, idx) {
                         $scope.dates[idx] = dateConvert.perfDate(val.date_time);
                     });

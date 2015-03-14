@@ -1,6 +1,6 @@
 /* app css stylesheet */
 [dw-loading] {
-    position: static;
+    height: 100%;
 }
 .dw-loading.dw-loading-overlay {
     background-color: rgba(0, 0, 0, 0.7);
