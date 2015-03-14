@@ -11,14 +11,14 @@
         <aside-menu></aside-menu>
 
         <aside class="right-sitebar">
-            <h2>Галерея</h2>
+            <h2>{{'last.photo' | translate}}</h2>
             <div class="catalog">
                 <img src="img/gallery.jpg" alt="">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 </p>
             </div>
-            <h2>Відео</h2>
+            <h2>{{'last.video' | translate}}</h2>
             <div class="video catalog">
                 <iframe src="https://www.youtube.com/embed/RKfElR19sag?rel=0&amp;controls=0&amp;showinfo=0" allowfullscreen></iframe>
                 <!--                        <span id="play" class="play"></span>-->
@@ -28,20 +28,11 @@
             </div>
         </aside>
         <section class="main-page">
-            <h2>Новини</h2>
-            <article class="catalog">
-                <img src="img/topic-img.jpg" alt="">
-                <h3><a href="#">Назва новини</a></h3>
-                <p class="topic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium commodi consectetur perferendis quia asperiores consequuntur in, tempore natus, illum quis mollitia minima minus cupiditate odit quidem ipsum non molestiae debitis.</p>
-                <footer class="article-footer">
-                    <time datetime="2015-02-12">12.02.2015</time>
-                    <small class="view"><span>112</span></small>
-                </footer>
-            </article>
-            <article class="catalog">
-                <img src="img/topic-img.jpg" alt="">
-                <h3><a href="#">Назва новини</a></h3>
-                <p class="topic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium commodi consectetur perferendis quia asperiores consequuntur in, tempore natus, illum quis mollitia minima minus cupiditate odit quidem ipsum non molestiae debitis.</p>
+            <h2>{{'menu.news' | translate}}</h2>
+            <article class="catalog" ng-repeat="item in news">
+                <img src="http://lorempixel.com/400/200/cats" alt="">
+                <h3><a ui-sref="app.newsDetail({id: item.slug})">{{ item.title }}</a></h3>
+                <p class="topic">{{ item.short_description }}</p>
                 <footer class="article-footer">
                     <time datetime="2015-02-12">12.02.2015</time>
                     <small class="view"><span>112</span></small>

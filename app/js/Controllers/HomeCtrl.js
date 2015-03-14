@@ -18,6 +18,15 @@ angular.module('home',['homepage.bootstrap.carousel'])
                 })
             ;
 
+            apiGet('posts.json?limit=5')
+                .success(function(data, status){
+                    if (status === 200) {
+                        $scope.news = data.posts;
+                    }
+                 })
+                .error(function(error){
+                    console.log(error);
+                });
         }
     ])
 ;

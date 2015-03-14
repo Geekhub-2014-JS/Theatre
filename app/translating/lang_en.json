@@ -68,5 +68,9 @@
     "next": "Next",
     "previous": "Previous"
   },
+  "last": {
+    "photo": "Last photo",
+    "video": "Last video"
+  },
   "key": "value"
 }
