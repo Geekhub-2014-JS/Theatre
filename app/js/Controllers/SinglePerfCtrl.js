@@ -14,7 +14,7 @@ angular.module('singlePerf',['ui.bootstrap'])
                 })
             ;
 
-            apiGet('performanceevents.json?fromDate=today&performance=' + $stateParams.slug)
+            apiGet('performanceevents.json?fromDate=today&limit=5&performance=' + $stateParams.slug)
                 .success(function (data) {
                     $scope.dates = [];
                     $scope.performanceEvents = data.performance_events;
