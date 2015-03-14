@@ -12,13 +12,17 @@ angular.module('home',['homepage.bootstrap.carousel'])
                 });
         }
     ])
-    .controller('HomepageCarouselCtrl', ['$scope', 'apiGet',
-        function($scope, apiGet){
+    .controller('HomepageCarouselCtrl', ['$scope', 'apiGet', 'dateConvert',
+        function($scope, apiGet, dateConvert){
             apiGet('performanceevents.json?fromDate=today&limit=5')
                 .success(function (data, status) {
                     if (status === 200) {
+                        $scope.slidesInfoArray = [];
                         $scope.slides = data.performance_events;
                         $scope.myInterval = 0;
+                        $scope.slides.forEach(function(val, idx) {
+                            $scope.slidesInfoArray[idx].date = dateConvert.perfDate(val.date_time);
+                        });
                     }
                 })
                 .error(function(error) {

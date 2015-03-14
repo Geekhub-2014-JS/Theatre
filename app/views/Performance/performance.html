@@ -40,7 +40,7 @@
                         {{role.description}}<br/>
                         <a ui-sref="app.personDetails({id: role.employee.slug})">{{role.employee.first_name +  ' ' + role.employee.middle_name + ' ' + role.employee.last_name}}</a> <br/>
                         {{role.employee.position}} <br/>
-                        <img ng-src="http://api.theatre.pp.ua/{{role.employee.avatar.default_small.url}}" alt="{{role.title}}" style="height: 100px"/>
+                        <img ng-src="http://api.theatre.pp.ua/{{role.employee.avatar.employee_small.url}}" alt="{{role.title}}" style="height: 100px"/>
                     </li>
                 </ul>
                 <!--<pagination total-items="totalItems"-->
