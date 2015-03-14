@@ -1,4 +1,4 @@
-angular.module('home',['homepage.bootstrap.carousel'])
+angular.module('home',[])
     .controller('HomeCtrl', ['$scope', 'apiGet',
         function($scope, apiGet){
             apiGet('posts.json?limit=3')
@@ -12,17 +12,16 @@ angular.module('home',['homepage.bootstrap.carousel'])
                 });
         }
     ])
-    .controller('HomepageCarouselCtrl', ['$scope', 'apiGet', 'dateConvert',
+    .controller('HomepageCarousel', ['$scope', 'apiGet', 'dateConvert',
         function($scope, apiGet, dateConvert){
+            $scope.slidesInfoArray = [];
             apiGet('performanceevents.json?fromDate=today&limit=5')
                 .success(function (data, status) {
                     if (status === 200) {
-                        $scope.slidesInfoArray = [];
                         $scope.slides = data.performance_events;
-                        $scope.myInterval = 0;
-                        $scope.slides.forEach(function(val, idx) {
-                            $scope.slidesInfoArray[idx].date = dateConvert.perfDate(val.date_time);
-                        });
+                        $scope.slidesDate = dateConvert.perfDate;
+                        selectActiveSlide(0);
+                        $scope.selectSlide = selectActiveSlide;
                     }
                 })
                 .error(function(error) {
@@ -30,6 +29,9 @@ angular.module('home',['homepage.bootstrap.carousel'])
                 })
             ;
 
+            function selectActiveSlide(index) {
+                $scope.activeSlideIndex = index;
+            }
         }
     ])
 ;

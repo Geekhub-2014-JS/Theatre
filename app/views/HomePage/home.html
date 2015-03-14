@@ -1,9 +1,33 @@
 <main>
-    <div class="homepage-slider" ng-controller="HomepageCarouselCtrl">
-        <homepage-carousel interval="myInterval" slidesinfo="slidesInfoArray">
-            <homepage-slide ng-repeat="slide in slides" active="slide.active">
-                <img ng-src="http://api.theatre.pp.ua/{{slide.performance.mainPicture.reference.url}}" style="margin:auto; height: 300px;"></homepage-slide>
-        </homepage-carousel>
+    <div class="homepage-slider carousel slide" ng-controller="HomepageCarousel">
+
+        <div class="carousel-inner" role="listbox">
+            <div class="item" ng-repeat="slide in slides track by $index" ng-class="{
+                active: activeSlideIndex == $index,
+                next: activeSlideIndex+1 == $index,
+                prev: activeSlideIndex-1 == $index
+            }">
+                <img ng-src="http://api.theatre.pp.ua/{{slide.performance.mainPicture.reference.url}}" style="margin:auto; height: 300px;">
+            </div>
+        </div>
+
+        <ol class="carousel-indicators">
+            <li ng-repeat="slide in slides track by $index" ng-click="selectSlide($index)" ng-class="{
+                active: activeSlideIndex == $index,
+                next: activeSlideIndex+1 == $index,
+                prev: activeSlideIndex-1 == $index
+            }">
+                <div class="date-slide">
+                    <span class="day">{{slidesDate(slide.date_time).weekDay | translate}}</span>
+                    <span class="number">{{slidesDate(slide.date_time).day | translate}}</span>
+                    <span class="month">{{slidesDate(slide.date_time).month | translate}}</span>
+                </div>
+                <div class="discription-slide">
+                    <h2><a ui-href="app.singlePerformance({slug: slide.performance.slug})">{{slide.performance.title}}</a></h2>
+                    <p>{{slide.performance.type}}</p>
+                </div>
+            </li>
+        </ol>
     </div>
 
     <div class="wrapp">
