@@ -1,4 +1,48 @@
-<br>
+    <ol class="breadcrumb">
+        <li>
+            <a ui-sref="app.home">{{ 'menu.home' | translate }}</a>
+        </li>
+        <li class="active">{{'menu.news' | translate}}</li>
+    </ol>
 
-<h2>News page</h2>
-{{ info }}
+    <h3 class="text-center">{{'menu.news' | translate}}</h3>
+
+    <div class="container">
+        <div class="col-md-8 col-lg-8 col-xs-12">
+            <article class="catalog" ng-repeat="item in news">
+                <img src="http://lorempixel.com/400/200/cats" alt="">
+                <h3><a ui-sref="app.newsDetail({id: item.slug})">{{ item.title }}</a></h3>
+                <p class="topic">{{ item.short_description }}</p>
+                <footer class="article-footer">
+                    <time datetime="2015-02-12">12.02.2015</time>
+                    <small class="view"><span>112</span></small>
+                </footer>
+            </article>
+        </div>
+        <div class="col-md-4 col-lg-4 col-xs-12">
+            <article ng-repeat="poster in posters" class="sidebar-poster">
+                <div class="sidebar-poster-date">
+                    <span class="sidebar-poster-dayWeek">{{ poster.date_time | date: 'EEE' | translate }}</span>
+                    <span class="sidebar-poster-day">{{ poster.date_time | date: 'd' }}</span>
+                    <span class="sidebar-poster-month">{{ poster.date_time | date: 'MMM' | translate }}</span>
+                </div>
+                <div class="sidebar-poster-info">
+                    <p>{{ poster.performance.title}}</p>
+                    <p>{{ poster.performance.description }}</p>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <pagination direction-links="true"
+                    previous-text="{{'pagination.previous' | translate}}"
+                    next-text="{{'pagination.next' | translate}}"
+                    ng-change="nextPage(currentPage)"
+                    items-per-page="perPage"
+                    total-items="total"
+                    ng-model="currentPage"
+                    num-pages="smallnumPages"
+                    ng-show="total > 1">
+        </pagination>
+    </div>

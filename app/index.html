@@ -5,29 +5,84 @@
   <base href="/">
   <title>Theatre</title>
   <link rel="stylesheet" type="text/css" href="vendors/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/html" href="vendors/angular-loading/angular-loading.css">
   <link rel="stylesheet" type="text/css" href="vendors/bootstrap/dist/css/bootstrap-theme.min.css" />
   <link rel="stylesheet" type="text/css" href="css/app.css">
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
+  <div class="container" dw-loading="spiner" dw-loading-options="{
+      text: 'Loading ',
+      className: 'loader',
+      spinnerOptions: {
+          radius: 20,
+          length: 0,
+          lines: 30,
+          corners: 0.9,
+          color: 'black',
+          className: 'dw-spinner',
+          top: 'auto',
+          left: 'auto'
+          }
+      }">
 
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" ui-sref="app.home">Theatre logo <span ng-bind="'menu.logo' | translate"></span></a>
+        </div>
 
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" ui-sref="app.home">Theatre logo <span ng-bind="'menu.logo' | translate"></span></a>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+          <ul class="nav navbar-nav">
+            <li ui-sref-active="active">
+              <a ui-sref="app.poster"><span ng-bind="'menu.poster' | translate"></span></a>
+            </li>
+            <li ui-sref-active="active">
+              <a ui-sref="app.repertoire"><span ng-bind="'menu.repertoire' | translate"></span></a>
+            </li>
+            <li ui-sref-active="active">
+              <a ui-sref="app.news"><span ng-bind="'menu.news' | translate"></span></a>
+            </li>
+            <li ui-sref-active="active">
+              <a ui-sref="app.about"><span ng-bind="'menu.about' | translate"></span></a>
+            </li>
+            <li ui-sref-active="active">
+              <a ui-sref="app.persons"><span ng-bind="'menu.persons' | translate"></span></a>
+            </li>
+            <li ui-sref-active="active">
+              <a ui-sref="app.contacts"><span ng-bind="'menu.contacts' | translate"></span></a>
+            </li>
+          </ul>
+          <div ng-controller="translateCtrl">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span ng-bind="'translId' | translate"></span> <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#" ng-click="chLocale('ua')">UA</a></li>
+                  <li><a href="#" ng-click="chLocale('en')">EN</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <div ui-view ></div>
+
+    <footer class="main-footer">
+      <div class="strip">
       </div>
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
-        <ul class="nav navbar-nav">
+      <div class="wrapp-footer">
+        <ul class="footer-nav uppercase">
           <li ui-sref-active="active">
             <a ui-sref="app.poster"><span ng-bind="'menu.poster' | translate"></span></a>
           </li>
@@ -47,57 +102,17 @@
             <a ui-sref="app.contacts"><span ng-bind="'menu.contacts' | translate"></span></a>
           </li>
         </ul>
-        <div ng-controller="translateCtrl">
-        <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span ng-bind="'translId' | translate"></span> <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                    <li><a href="#" ng-click="chLocale('ua')">UA</a></li>
-                    <li><a href="#" ng-click="chLocale('en')">EN</a></li>
-                </ul>
-            </li>
+        <ul class="soc-nav">
+          <li class="vkon"><a href="http://vk.com/club32121977"><span class="ico-vk"></span></a></li>
+          <!--<li><a href="#"><span class="ico-y"></span></a></li>-->
+          <!--<li><a href="#"><span class="ico-g"></span></a></li>-->
+          <!--<li><a href="#"><span class="ico-f"></span></a></li>-->
+          <!--<li><a href="#"><span class="ico-t"></span></a></li>-->
         </ul>
-        </div>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
-
-  <div ui-view ></div>
-
-  <footer class="main-footer">
-    <div class="strip">
-    </div>
-    <div class="wrapp-footer">
-      <ul class="footer-nav uppercase">
-        <li ui-sref-active="active">
-          <a ui-sref="app.poster"><span ng-bind="'menu.poster' | translate"></span></a>
-        </li>
-        <li ui-sref-active="active">
-          <a ui-sref="app.repertoire"><span ng-bind="'menu.repertoire' | translate"></span></a>
-        </li>
-        <li ui-sref-active="active">
-          <a ui-sref="app.news"><span ng-bind="'menu.news' | translate"></span></a>
-        </li>
-        <li ui-sref-active="active">
-          <a ui-sref="app.about"><span ng-bind="'menu.about' | translate"></span></a>
-        </li>
-        <li ui-sref-active="active">
-          <a ui-sref="app.persons"><span ng-bind="'menu.persons' | translate"></span></a>
-        </li>
-        <li ui-sref-active="active">
-          <a ui-sref="app.contacts"><span ng-bind="'menu.contacts' | translate"></span></a>
-        </li>
-      </ul>
-      <ul class="soc-nav">
-        <li class="vkon"><a href="http://vk.com/club32121977"><span class="ico-vk"></span></a></li>
-        <!--<li><a href="#"><span class="ico-y"></span></a></li>-->
-        <!--<li><a href="#"><span class="ico-g"></span></a></li>-->
-        <!--<li><a href="#"><span class="ico-f"></span></a></li>-->
-        <!--<li><a href="#"><span class="ico-t"></span></a></li>-->
-      </ul>
-      <small class="copy">&copy; Copyright 2015</small>
-    </div>
-  </footer>
+        <small class="copy">&copy; Copyright 2015</small>
+      </div>
+    </footer>
+  </div>
 
 
 <script src="vendors/jquery/dist/jquery.js"></script>
@@ -112,6 +127,9 @@
 <script src="vendors/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
 <script src="vendors/angular-translate-storage-local/angular-translate-storage-local.js"></script>
 <script src="vendors/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="vendors/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+<script src="vendors/spin.js/spin.js"></script>
+<script src="vendors/angular-loading/angular-loading.min.js"></script>
 <script src="vendors/moment/moment.js"></script>
 <script src="js/post_patch.js"></script>
 <script src="js/app.js"></script>
