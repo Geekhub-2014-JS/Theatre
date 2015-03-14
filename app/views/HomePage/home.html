@@ -1,4 +1,10 @@
 <main>
+    <div ng-controller="HomepageCarouselCtrl">
+        <homepage-carousel interval="myInterval" slides="slides">
+            <homepage-slide ng-repeat="slide in slides" active="slide.active">
+                <img ng-src="http://api.theatre.pp.ua/{{slide.performance.mainPicture.reference.url}}" style="margin:auto; height: 300px;"></homepage-slide>
+        </homepage-carousel>
+    </div>
 
     <div class="wrapp">
 

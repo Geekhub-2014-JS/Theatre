@@ -117,7 +117,7 @@ body {
 }
 /*----------------------- header -----------------------*/
 .main-header {
-    background: background: rgb(236,83,42);
+    background: rgb(236,83,42);
     /* Old browsers */
     background: -moz-linear-gradient(left,  rgba(236,83,42,1) 0%, rgba(196,36,46,1) 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(236,83,42,1)), color-stop(100%,rgba(196,36,46,1))); /* Chrome,Safari4+ */
@@ -244,8 +244,6 @@ header nav li a.active:hover {
     text-align: center;
     padding: 0 0 0 6px;
     width: auto;
-    position: static;
-
 }
 
 .carousel-indicators li {

@@ -1,0 +1,16 @@
+<div ng-mouseenter="pause()" ng-mouseleave="play()" class="carousel" ng-swipe-right="prev()" ng-swipe-left="next()">
+    <ol class="carousel-indicators" ng-show="slides.length > 1">
+        <li ng-repeat="slide in slides" ng-class="{active: isActive(slide)}" ng-click="select(slide)">
+            <div class="date-slide">
+                <span class="day">Сб</span>
+                <span class="number">21</span>
+                <span class="month">лютого</span>
+            </div>
+            <div class="discription-slide">
+                <!--<h2><a ui-href="app.singlePerformance({slug: slide.performance.slug})">{{slide.performance.title}}</a></h2>-->
+                <p>Народна трагедія на 2 дії</p>
+            </div>
+        </li>
+    </ol>
+    <div class="carousel-inner" ng-transclude></div>
+</div>
