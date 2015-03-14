@@ -231,19 +231,19 @@ header nav li a:focus {
 /** Carousel Pagination **/
 
 
-.second-wrapp {
+.homepage-slider .second-wrapp {
     position: relative;
     left: -50%;
 }
 
-.carousel-indicators {
+.homepage-slider .carousel-indicators {
     overflow: hidden;
     text-align: center;
     padding: 0 0 0 6px;
     width: auto;
 }
 
-.carousel-indicators li {
+.homepage-slider .carousel-indicators li {
     border: 0;
     display: block;
     float: left;
@@ -256,7 +256,7 @@ header nav li a:focus {
     text-indent: 0;
 }
 
-.carousel-indicators li.active {
+.homepage-slider .carousel-indicators li.active {
     width: 556px;
     height: 93px;
     background: url(../img/pagination-active.png) center center no-repeat;
