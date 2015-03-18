@@ -35,9 +35,12 @@ theatreServices
                 var conf = {
                     method: 'GET',
                     url: api_url + url,
-                    headers: {
+                    params: {
                         'locale': $stateParams.locale
                     }
+                    //headers: {
+                    //    'locale': $stateParams.locale
+                    //}
                 };
                 $loading.start('spiner');
                 return $http(conf)
