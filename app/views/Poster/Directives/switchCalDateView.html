@@ -1,17 +1,29 @@
-<ol class="breadcrumb">
-    <li>
-        <a ui-sref="app.home">{{ 'menu.home' | translate }}</a>
-    </li>
-    <li class="active">{{'menu.poster' | translate}}</li>
-</ol>
-<div class="text-center">
-    <span class="poster-on">{{'poster.poster_on' | translate}}</span>
-    <a href="#" class="btn btn-default btn-sm" ng-click="prevMonth()"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>
-    <span class="poster-month-name">{{monthName | translate}}</span>
-    <span class="poster-year">{{year}}</span>
-    <a href="#" class="btn btn-default btn-sm" ng-click="nextMonth()"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></a>
-</div>
-<br>
+<main class="program">
+    <div class="wrapp">
+        <ul class="crumb">
+            <li><a ui-sref="app.home">{{ 'menu.home' | translate }}</a></li>
+            <li class="active">{{'menu.poster' | translate}}</li>
+        </ul>        
+        <form method="get" action="">
+            <fieldset class="search">
+                <ul>    
+                    <li><input type="text" placeholder="пошук" /></li>
+                    <li><input type="submit" value="Пошук" /></li>
+                    <li class="search-results"><p class="number-results">11 результатов</p><span class="close-results"></span></li>
+                </ul>    
+            </fieldset>
+        </form>
+        <h2 class="page-title">{{'poster.poster_on' | translate}}</h2>
+        
+        <div class="program-nav">
+            <span class="prev" ng-click="prevMonth()"></span>
+            <span class="next" ng-click="nextMonth()"></span>
+            <p class="mounth">{{monthName | translate}}</p>
+            <p class="year">{{year}}</p>
+        </div>
 
-<th-poster-calendar monthl="month" yearl="year"></th-poster-calendar><br>
+        <th-poster-calendar monthl="month" yearl="year"></th-poster-calendar><br>
 
+    </div>
+    <a class="up" href="javascript:scroll(0,0)"></a>
+</main>

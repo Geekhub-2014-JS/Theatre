@@ -11,111 +11,74 @@
   <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-  <div dw-loading="spiner" dw-loading-options="{
-      text: 'Loading ',
-      className: 'loader',
-      spinnerOptions: {
-          radius: 20,
-          length: 0,
-          lines: 30,
-          corners: 0.9,
-          color: 'white',
-          className: 'dw-spinner',
-          top: 'auto',
-          left: 'auto'
-          }
-      }">
-
+<div dw-loading="spiner" dw-loading-options="{
+  text: 'Loading ',
+  className: 'loader',
+  spinnerOptions: {
+      radius: 20,
+      length: 0,
+      lines: 30,
+      corners: 0.9,
+      color: 'white',
+      className: 'dw-spinner',
+      top: 'auto',
+      left: 'auto'
+      }
+  }">
     <header class="main-header">
-      <div class="wrapp">
-        <h1>
-          <a class="logo" ui-sref="app.home">
-            <img src="img/logo.png" alt="{'menu.logo' | translate}" />
-            <span ng-bind="'menu.logo' | translate"></span>
-          </a>
-        </h1>
+        <div class="wrapp">
+            <h1><a ui-sref="app.home"><img src="img/logo.png" alt="{'menu.logo' | translate}" /><span ng-bind="'menu.logo' | translate"></span></a></h1>
 
-        <!--<div class="uppercase lang-select">-->
-          <!--<a href="#" id="droplang">укр<span class="arrow"></span></a>-->
-          <!--<ul id="droplist">-->
-            <!--&lt;!&ndash;                       <li><a href="#">рус</a></li>&ndash;&gt;-->
-            <!--<li><a href="#">eng</a></li>-->
-          <!--</ul>-->
-        <!--</div>-->
-
-        <ul class="uppercase lang-select" ng-controller="translateCtrl">
-          <li><a href="#" ng-click="chLocale('ua')">UA</a></li>
-          <li><a href="#" ng-click="chLocale('en')">EN</a></li>
-        </ul>
-
-        <nav>
-          <ul class="uppercase">
-            <li ui-sref-active="active">
-              <span></span>
-              <a ui-sref="app.poster"><span ng-bind="'menu.poster' | translate"></span></a>
-            </li>
-            <li ui-sref-active="active">
-              <span></span>
-              <a ui-sref="app.repertoire"><span ng-bind="'menu.repertoire' | translate"></span></a>
-            </li>
-            <li ui-sref-active="active">
-              <span></span>
-              <a ui-sref="app.news"><span ng-bind="'menu.news' | translate"></span></a>
-            </li>
-            <li ui-sref-active="active">
-              <span></span>
-              <a ui-sref="app.about"><span ng-bind="'menu.about' | translate"></span></a>
-            </li>
-            <li ui-sref-active="active">
-              <span></span>
-              <a ui-sref="app.persons"><span ng-bind="'menu.persons' | translate"></span></a>
-            </li>
-            <li ui-sref-active="active">
-              <span></span>
-              <a ui-sref="app.contacts"><span ng-bind="'menu.contacts' | translate"></span></a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+            <div class="dropdown lang-select uppercase" >
+                <a id="dLabel" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false" ng-click="chLocale('ua')">укр<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" ng-controller="translateCtrl">
+                   <li><a ng-click="chLocale('en')">eng</a></li>
+                </ul>
+            </div>
+          
+            <nav>
+                <ul class="uppercase">
+                    <li ui-sref-active="active"><a ui-sref="app.home"><span ng-bind="'menu.home' | translate"></span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.poster"><span ng-bind="'menu.poster' | translate"></span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.repertoire"><span ng-bind="'menu.repertoire' | translate"></span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.news"><span ng-bind="'menu.news' | translate"></span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.about"><span ng-bind="'menu.about' | translate"></span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.persons"><span ng-bind="'menu.persons' | translate"></span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.contacts"><span ng-bind="'menu.contacts' | translate"></span></a></li>
+                    <li ui-sref-active="active"><a href="#">Фестивалі</a></li>
+              </ul>
+           </nav>
+       </div>
     </header>
 
     <div ui-view ></div>
-
+    
     <footer class="main-footer">
-      <div class="strip">
-      </div>
-      <div class="wrapp-footer">
-        <ul class="footer-nav uppercase">
-          <li ui-sref-active="active">
-            <a ui-sref="app.poster"><span ng-bind="'menu.poster' | translate"></span></a>
-          </li>
-          <li ui-sref-active="active">
-            <a ui-sref="app.repertoire"><span ng-bind="'menu.repertoire' | translate"></span></a>
-          </li>
-          <li ui-sref-active="active">
-            <a ui-sref="app.news"><span ng-bind="'menu.news' | translate"></span></a>
-          </li>
-          <li ui-sref-active="active">
-            <a ui-sref="app.about"><span ng-bind="'menu.about' | translate"></span></a>
-          </li>
-          <li ui-sref-active="active">
-            <a ui-sref="app.persons"><span ng-bind="'menu.persons' | translate"></span></a>
-          </li>
-          <li ui-sref-active="active">
-            <a ui-sref="app.contacts"><span ng-bind="'menu.contacts' | translate"></span></a>
-          </li>
-        </ul>
-        <ul class="soc-nav">
-          <li class="vkon"><a href="http://vk.com/club32121977"><span class="ico-vk"></span></a></li>
-          <!--<li><a href="#"><span class="ico-y"></span></a></li>-->
-          <!--<li><a href="#"><span class="ico-g"></span></a></li>-->
-          <!--<li><a href="#"><span class="ico-f"></span></a></li>-->
-          <!--<li><a href="#"><span class="ico-t"></span></a></li>-->
-        </ul>
-        <small class="copy">&copy; Copyright 2015</small>
-      </div>
-    </footer>
-  </div>
+        <div class="strip">
+        </div>
+        <div class="wrapp-footer">
+            <ul class="footer-nav uppercase">
+                <li ui-sref-active="active"><a ui-sref="app.home"><span ng-bind="'menu.home' | translate"></span></a></li>
+                <li ui-sref-active="active"><a ui-sref="app.poster"><span ng-bind="'menu.poster' | translate"></span></a></li>
+                <li ui-sref-active="active"><a ui-sref="app.repertoire"><span ng-bind="'menu.repertoire' | translate"></span></a></li>
+                <li ui-sref-active="active"><a ui-sref="app.news"><span ng-bind="'menu.news' | translate"></span></a></li>
+                <li ui-sref-active="active"><a ui-sref="app.about"><span ng-bind="'menu.about' | translate"></span></a></li>
+                <li ui-sref-active="active"><a ui-sref="app.persons"><span ng-bind="'menu.persons' | translate"></span></a></li>
+                <li ui-sref-active="active"><a ui-sref="app.contacts"><span ng-bind="'menu.contacts' | translate"></span></a></li>
+                <li ui-sref-active="active"><a href="#">Фестивалі</a></li>
+                <li ui-sref-active="active"><a href="#">Форум</a></li>
+            </ul>
+            <ul class="soc-nav">
+                <li class="vkon"><a href="http://vk.com/club32121977"><span class="ico-vk"></span></a></li>
+                <!--<li><a href="#"><span class="ico-y"></span></a></li>-->
+                <!--<li><a href="#"><span class="ico-g"></span></a></li>-->
+                <!--<li><a href="#"><span class="ico-f"></span></a></li>-->
+                <!--<li><a href="#"><span class="ico-t"></span></a></li>-->
+            </ul>
+            <small class="copy">&copy; Copyright    2015</small>
+        </div>
+    </footer> 
+</div>
 
 
 <script src="vendors/jquery/dist/jquery.js"></script>
