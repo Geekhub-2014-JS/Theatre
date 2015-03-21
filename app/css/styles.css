@@ -357,7 +357,7 @@ main {
 }
 .crumb li {
     display: inline;
-    font-size: 12px;
+    font-size: 14px;
     margin: 0 6px 0 0;
 }
 .crumb li.active {
@@ -371,6 +371,10 @@ main {
     color: #292929;
     margin: 0 6px 0 0;
 }
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 .search li, .search .search-results, .search .number-results {
     display: inline-block;
 }
@@ -390,6 +394,9 @@ main {
     font: 16px robotoregular;
     letter-spacing: 0.5px;
     padding: 10px 0;
+}
+.search input[type="submit"]:hover{
+    color: #ccc;
 }
 .search {
     position: relative;
@@ -536,7 +543,7 @@ section.main-page .article-footer time {
 section.main-page .article-footer small {
     float: right;
     padding: 0 0 0 24px;
-    background: url(../images/topic-view.png) left center no-repeat;
+    background: url(../img/topic-view.png) left center no-repeat;
 }
 
 /*----------------------- footer -----------------------*/
@@ -599,7 +606,7 @@ section.main-page .article-footer small {
     display: block;
     width: 42px;
     height: 42px;
-    background: url(../images/up.png) center center no-repeat #CD2E2D;
+    background: url(../img/up.png) center center no-repeat #CD2E2D;
     border-radius: 5px 5px 0 0;
     cursor: pointer;
     float: right;
@@ -634,7 +641,7 @@ footer .copy {
     width: 35px;
     height: 35px;
     margin: 15px 0 0;
-    background: url(../images/program-nav.png) no-repeat;
+    background: url(../img/program-nav.png) no-repeat;
     cursor: pointer;
 }
 .program-nav .prev {
@@ -663,78 +670,84 @@ footer .copy {
     color: #292929;
     margin: -10px 0 0;
 }
-.calendar {
-    width: 100%;
-    margin: 35px 0 95px;
+#calendar {
+    width: 99%;
+    margin: 35px 0 95px 1px;
 }
-.calendar thead th {
-    width: 142px;
+#calendar thead th {
+    width: 14%;
+    max-width: 14%;
     text-align: center;
+}
+#calendar thead .ng-binding {
     background: #E64C2B;
-/*
-    border-width: 1px;
-    border-style:  solid;
-    border-color: #fff;
-*/
     border-right: 1px solid #fff;
     color: #fff;
     font: 14px robotolight;
     padding: 11px 0;
 }
-.calendar > thead > tr > th:last-child {
+#calendar > thead > tr > .ng-binding:last-child{
     border-right: 1px solid #E64C2B;    
 }
-.calendar td {
-    width: 142px;
+#calendar > thead > tr > .ng-binding:first-child{
+    border-left: 1px solid #E64C2B;    
+}
+#calendar tbody td {
+    position: relative;
+    overflow: hidden;
     height: 142px;
     border-width: 1px;
     border-style:  solid;
     border-color: #C8C8C8;
-    border-collapse: collapse;
+    vertical-align: bottom;
 }
-.calendar .number {
+#calendar tbody td .th-calendar-date, #calendar tbody td .th-calendar-date-after, #calendar tbody td .th-calendar-date-before {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    z-index: 5;
+    display: block;
     margin: 0px 0 0 7px;
     font-size: 18px;
     color: #E54B2B;
     background: #fff;
     border-radius: 3px;
-    line-height: 1.7;
-    padding: 0 2px;
+    line-height: 1;
+    padding: 2px 0;
+    min-width: 25px;
+    text-align: center;
 }
-.calendar .last-m, .calendar .next-m {
+#calendar .prev-month-day, #calendar .next-month-day {
     opacity: 0.7;
 }
-.calendar .last-m .number, .calendar .next-m .number {
+#calendar .prev-month-day .th-calendar-date-before, #calendar .next-month-day .th-calendar-date-after {
     color: #000;
 }
-.calendar td {
-    position: relative;
-}
-.calendar .discr-plays {
-    width: 100%;
+#calendar tbody td img {
+    width: 101%;
     position: absolute;
-    bottom: 0px;
-    left: 0px;
+    top: -1px;
+    left: -1px;
+}
+#calendar tbody td .th-calendar-poster-link {
+    position: relative;
+    z-index: 2;
+    min-height: 30px;
     background: #2A2A2A;
-}
-.calendar .one-play {
     border-bottom: 1px solid #797979;
-
+    display: block;
 }
-.calendar .discr-plays .title-play {
-    margin: 2px 0 16px 15px;
+#calendar tbody td a span {
+    display: block;
+    margin: 0px 0 16px 15px;
+    font-size: 14px;
+    color: #ccc;
 }
-.calendar .discr-plays .title-play a {
-    font: 14px robotothin;
-    color: #FFF;
-}
-.calendar .discr-plays .time-play {
+#calendar tbody td .th-calendar-poster-time  {
+    display: block;
     font-size: 12px;
     color: #FFF;
     margin: 2px 0 2px 15px;
-}
-.calendar .play {
-    background: url(../images/programm-img.jpg) center center no-repeat;
 }
 /***** - actor - ******/
 .actor section {
@@ -768,7 +781,7 @@ footer .copy {
 }
 .actor .roles li {
     margin: 0 0 6px;
-    background: url(../images/roles.png) left center no-repeat;
+    background: url(../img/roles.png) left center no-repeat;
     padding: 0 0 0 29px;
 }
 .actor .roles a {
