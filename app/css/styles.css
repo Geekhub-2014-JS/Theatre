@@ -174,10 +174,12 @@ header ul.dropdown-menu {
     border-radius: 0;
     background: none;
     box-shadow: none;
-    
+    padding: 0px;
+    margin: 0px;
 }
 header ul.dropdown-menu li a {
     padding: 0px  0;
+    line-height: 14px;
 }
 header ul.dropdown-menu li a:hover {
     background: none;
@@ -480,7 +482,8 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     float: right;
     width: 23.9%;
 }
-.right-sitebar h2 {
+.right-sitebar h2,
+.page-title {
     font: 30px robotothin;
     color: #DF492B;
     margin: 0 0 25px 0;
@@ -626,7 +629,7 @@ footer .copy {
 
 
 /***** - programm - ******/
-.page-title {
+.program .page-title {
     text-align: center;
     font-size: 23.97px;
     color: #E54B2B;

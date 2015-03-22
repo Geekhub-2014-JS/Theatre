@@ -80,6 +80,10 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                     url: "/partners",
                     templateUrl: "views/Static/partners.html"
                 })
+                .state('app.fest', {
+                    url: "/festivals",
+                    templateUrl: "views/Festivals/festivals.html"
+                })
             ;
             $locationProvider.html5Mode({
                 enabled: true,

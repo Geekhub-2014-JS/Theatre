@@ -28,14 +28,14 @@
     <header class="main-header">
         <div class="wrapp">
             <h1><a ui-sref="app.home"><img src="img/logo.png" alt="{'menu.logo' | translate}" /><span ng-bind="'menu.logo' | translate"></span></a></h1>
-
-            <div class="dropdown lang-select uppercase" >
-                <a id="dLabel" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false" ng-click="chLocale('ua')">укр<span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel" ng-controller="translateCtrl">
-                   <li><a ng-click="chLocale('en')">eng</a></li>
+            <div class="dropdown lang-select uppercase" ng-controller="translateCtrl">
+                <a id="dLabel" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">{{ 'translId' | translate }}<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                  <li><a ng-click="chLocale('ua')">UA</a></li>
+                  <li><a ng-click="chLocale('en')">EN</a></li>
                 </ul>
             </div>
-          
+
             <nav>
                 <ul class="uppercase">
                     <li ui-sref-active="active"><a ui-sref="app.home"><span ng-bind="'menu.home' | translate"></span></a></li>
@@ -45,7 +45,7 @@
                     <li ui-sref-active="active"><a ui-sref="app.about"><span ng-bind="'menu.about' | translate"></span></a></li>
                     <li ui-sref-active="active"><a ui-sref="app.persons"><span ng-bind="'menu.persons' | translate"></span></a></li>
                     <li ui-sref-active="active"><a ui-sref="app.contacts"><span ng-bind="'menu.contacts' | translate"></span></a></li>
-                    <li ui-sref-active="active"><a href="#">Фестивалі</a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.fest"><span ng-bind="'menu.fest' | translate"></span></a></li>
               </ul>
            </nav>
        </div>
@@ -65,8 +65,8 @@
                 <li ui-sref-active="active"><a ui-sref="app.about"><span ng-bind="'menu.about' | translate"></span></a></li>
                 <li ui-sref-active="active"><a ui-sref="app.persons"><span ng-bind="'menu.persons' | translate"></span></a></li>
                 <li ui-sref-active="active"><a ui-sref="app.contacts"><span ng-bind="'menu.contacts' | translate"></span></a></li>
-                <li ui-sref-active="active"><a href="#">Фестивалі</a></li>
-                <li ui-sref-active="active"><a href="#">Форум</a></li>
+                <li ui-sref-active="active"><a ui-sref="app.fest"><span ng-bind="'menu.fest' | translate"></span></a></li>
+                <li ui-sref-active="active"><a href="http://forumua.org/viewtopic.php?f=2&t=233364&start=120"><span ng-bind="'menu.forum' | translate"></span></a></li>
             </ul>
             <ul class="soc-nav">
                 <li class="vkon"><a href="http://vk.com/club32121977"><span class="ico-vk"></span></a></li>
