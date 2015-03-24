@@ -1,23 +1,25 @@
-<div infinite-scroll="loadHistory()" infinite-scroll-distance='0' infinite-scroll-disabled='busy'
-     infinite-scroll-disabled="true">
-    <timeline>
-        <timeline-node ng-repeat="date in historyStore | orderBy:'year' : true" side="{{$odd ? 'right':'left'}}">
-            <timeline-badge class="info"><i>{{date.year}}</i>
-            </timeline-badge>
-            <timeline-panel>
-                <timeline-heading>
-                    <timeline-title>{{date.caption}}</timeline-title>
-                    <p>
-                        <small class="text-muted"><i class="glyphicon glyphicon-time"></i>{{date.year}}</small>
-                    </p>
-                </timeline-heading>
-                <timeline-content>
-                    <img class="about-img" ng-src="{{date.image}}">
+<div class="wrapp">
+    <div infinite-scroll="loadHistory()" infinite-scroll-distance='0' infinite-scroll-disabled='busy'
+         infinite-scroll-disabled="true">
+        <timeline>
+            <timeline-node ng-repeat="date in historyStore | orderBy:'year' : true" side="{{$odd ? 'right':'left'}}">
+                <timeline-badge class="info"><i>{{date.year}}</i>
+                </timeline-badge>
+                <timeline-panel>
+                    <timeline-heading>
+                        <timeline-title>{{date.caption}}</timeline-title>
+                        <p>
+                            <small class="text-muted"><i class="glyphicon glyphicon-time"></i>{{date.year}}</small>
+                        </p>
+                    </timeline-heading>
+                    <timeline-content>
+                        <img class="about-img" ng-src="{{date.image}}">
 
-                    <p>{{date.text}}</p>
-                </timeline-content>
-            </timeline-panel>
-        </timeline-node>
-    </timeline>
-    <div style='clear: both;'></div>
+                        <p>{{date.text}}</p>
+                    </timeline-content>
+                </timeline-panel>
+            </timeline-node>
+        </timeline>
+        <div style='clear: both;'></div>
+    </div>
 </div>
