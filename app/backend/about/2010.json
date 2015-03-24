@@ -1,21 +1,21 @@
 [
   {
-    "year": "2010",
-    "text" : "Lorem ipsum,Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum",
+    "year": "2015",
+    "text" : "Lorem Ipsum - це текст-&quot;риба&quot;, що використовується в друкарстві та дизайні. Lorem Ipsum є, фактично, стандартною &quot;рибою&quot; аж з XVI сторіччя, коли невідомий друкар взяв шрифтову гранку та склав на ній підбірку зразків шрифтів. &quot;Риба&quot; не тільки успішно пережила п&#39;ять століть, але й прижилася в електронному верстуванні, залишаючись по суті незмінною. Вона популяризувалась в 60-их роках минулого сторіччя завдяки виданню зразків шрифтів Letraset, які містили уривки з Lorem Ipsum, і вдруге - нещодавно завдяки програмам комп&#39;ютерного верстування на кшталт Aldus Pagemaker, які використовували різні версії Lorem Ipsum.",
     "caption" : "Test",
-    "image": "http://lorempixel.com/g/400/200/"
+    "image": "http://lorempixel.com/600/500/"
   },
   {
     "year": "2011",
     "text" : "Lorem ipsum,Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum",
     "caption" : "Test",
-    "image": "http://lorempixel.com/g/401/200/"
+    "image": "http://lorempixel.com/601/400/"
   },
   {
     "year": "2012",
     "text" : "Lorem ipsum,Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum",
     "caption" : "Test",
-    "image": "http://lorempixel.com/g/500/500/"
+    "image": "http://lorempixel.com/650/500/"
   },
   {
     "year": "2013",
