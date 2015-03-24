@@ -34,4 +34,6 @@
 #slides_control {
     margin: 25px auto;
 }
-
+.right-news-sidebar {
+    position: fixed;
+}
