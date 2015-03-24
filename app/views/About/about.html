@@ -1,4 +1,18 @@
-<br>
-
-<h2>About page</h2>
-{{ info }}
+<timeline>
+    <timeline-node  ng-repeat="year in historyStore" side="{{$odd ? 'right':'left'}}">
+        <timeline-badge class="info"><i>{{year.year}}</i>
+        </timeline-badge>
+        <timeline-panel>
+            <timeline-heading>
+                <timeline-title>{{year.caption}}</timeline-title>
+                <p>
+                    <small class="text-muted"><i class="glyphicon glyphicon-time"></i>{{year.year}}</small>
+                </p>
+            </timeline-heading>
+            <timeline-content>
+                <img ng-src="{{year.image}}">
+                <p>{{year.text}}</p>
+            </timeline-content>
+        </timeline-panel>
+    </timeline-node>
+</timeline>
