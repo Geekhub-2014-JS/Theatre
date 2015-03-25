@@ -11,19 +11,6 @@ angular.module('news',[])
 
             getNews(1);
 
-            var now = moment();
-            var toDate = now.add(4, 'days');
-            var url = 'performanceevents.json?fromDate=today&toDate=' + toDate.format('DD-MM-YYYY') + '&limit=4';
-            apiGet(url)
-                .success(function(response, status){
-                    if (status === 200) {
-                        $scope.posters = response.performance_events;
-                    }
-                })
-                .error(function(error){
-                    console.log(error);
-                });
-
             function getNews(page) {
                 apiGet('posts.json?limit=' + $scope.perPage + '&page=' + page)
                     .success(function(response, status){

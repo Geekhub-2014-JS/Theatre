@@ -2,4 +2,4 @@
 
 /* Directives */
 
-angular.module('theatreDirectives', ['posterDirectives', 'sideMenuDirective']);
+angular.module('theatreDirectives', ['posterDirectives', 'sideMenuDirective', 'newsRightSidebar']);

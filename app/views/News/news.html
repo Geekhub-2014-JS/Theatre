@@ -20,21 +20,7 @@
             </article>
         </div>
         <div class="col-md-4 col-lg-4 col-xs-12">
-            <div class="right-news-sidebar">
-                <div class="container-fluid">
-                    <article ng-repeat="poster in posters" class="sidebar-poster">
-                        <div class="sidebar-poster-date">
-                            <span class="sidebar-poster-dayWeek">{{ poster.date_time | date: 'EEE' | translate }}</span>
-                            <span class="sidebar-poster-day">{{ poster.date_time | date: 'd' }}</span>
-                            <span class="sidebar-poster-month">{{ poster.date_time | date: 'MMM' | translate }}</span>
-                        </div>
-                        <div class="sidebar-poster-info">
-                            <p>{{ poster.performance.title}}</p>
-                            <p>{{ poster.performance.description }}</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
+            <news-block></news-block>
         </div>
     </div>
 
