@@ -48,6 +48,7 @@
             </div>
             
             
+<!--
             <div class="test" ng-controller="PerfTabsCtrl">
                 <tabset>
                     <tab heading="{{ 'performance.team' | translate }}">
@@ -61,6 +62,7 @@
                                     <img ng-src="http://api.theatre.pp.ua/{{role.employee.avatar.employee_small.url}}" alt="{{role.title}}" style="height: 100px"/>
                                 </li>
                             </ul>
+-->
                             <!--<pagination total-items="totalItems"-->
                                         <!--ng-change="setPage()"-->
                                         <!--ng-model="currentPage"-->
@@ -71,11 +73,13 @@
                                         <!--rotate="false"-->
                                         <!--num-pages="numPages">-->
                             <!--</pagination>-->
+<!--
                         </div>
                     </tab>
                     <tab heading="{{ 'performance.description' | translate }}">
                         {{performance.description}}
                     </tab>
+-->
                     <!--<tab heading="{{ 'performance.press' | translate }}">-->
                         <!--<ul class="article-list">-->
                             <!--<li ng-repeat="article in performance.press">-->
@@ -83,8 +87,125 @@
                             <!--</li>-->
                         <!--</ul>-->
                     <!--</tab>-->
+<!--
                 </tabset>
             </div>
+-->
+            
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">           
+  <!-- Wrapper for slides -->
+                        <div class="play-slider carousel-inner" role="listbox">
+                            <div class="item">
+                              <img src="images/play-slider.jpg" alt="...">
+                            </div>
+                            <div class="item active">
+                              <img src="images/play-slider.jpg" alt="...">
+                            </div>
+                            <div class="item">
+                              <img src="images/play-slider.jpg" alt="...">
+                            </div>
+                       </div>
+                       <div class="wrapp-panel">
+
+                           <a class="jcarousel-control-prev" href="#carousel-example-generic" role="button" data-slide="prev"></a>
+                           <a class="jcarousel-control-next" href="#carousel-example-generic" role="button" data-slide="next"></a>
+                      </div>
+                   </div> 
+                   <div class="tabs-area" role="tabpanel">
+  <!-- Nav tabs -->
+                      <ul class="nav nav-tabs" role="tablist">
+                         <li role="presentation" class="active"><a href="#actors" aria-controls="actors" role="tab" data-toggle="tab">Творці вистави</a></li>
+                         <li role="presentation"><a href="#play" aria-controls="play" role="tab" data-toggle="tab">Про виставу</a></li>
+                         <li role="presentation"><a href="#press" aria-controls="press" role="tab" data-toggle="tab">Преса про виставу</a></li>
+                         <li role="presentation"><a href="#video" aria-controls="video" role="tab" data-toggle="tab">Відео</a></li>
+                      </ul>
+  <!-- Tab panes -->
+                      <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="actors">
+                            <ul class="tab-actors">
+                                <li>
+                                    <img src="../img/play-tab.jpg" alt="" />
+                                    <h3><a href="#">Lorem ipsum</a></h3>
+                                </li>
+                                <li>
+                                    <img src="../img/play-tab.jpg" alt="" />
+                                    <h3><a href="#">Lorem ipsum</a></h3>
+                                </li>
+                                <li>
+                                    <img src="../img/play-tab.jpg" alt="" />
+                                    <h3><a href="#">Lorem ipsum</a></h3>
+                                </li>
+                                <li>
+                                    <img src="../img/play-tab.jpg" alt="" />
+                                    <h3><a href="#">Lorem ipsum</a></h3>
+                                </li>
+                                <li>
+                                    <img src="../img/play-tab.jpg" alt="" />
+                                    <h3><a href="#">Lorem ipsum</a></h3>
+                                </li>
+                                <li>
+                                    <img src="../img/play-tab.jpg" alt="" />
+                                    <h3><a href="#">Lorem ipsum</a></h3>
+                                </li>
+                                <li>
+                                    <img src="../img/play-tab.jpg" alt="" />
+                                    <h3><a href="#">Lorem ipsum</a></h3>
+                                </li>
+                                <li>
+                                    <img src="../img/play-tab.jpg" alt="" />
+                                    <h3><a href="#">Lorem ipsum</a></h3>
+                                </li>
+                            </ul>
+                            <ul class="page-pagination">
+                                <li class="previous"><a href="#">&lt;</a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">...</a></li>
+                                <li><a href="#">12</a></li>
+                                <li class="next"><a href="#">&gt;</a></li>
+                            </ul>
+                        </div>
+                        <div role="tabpanel" class="tab-pane tab-about" id="play">
+                            <h3>Lorem ipsum</h3>
+                            <div class="about">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum deserunt repudiandae fuga. Molestiae sit minima deserunt mollitia quas porro esse iure velit asperiores, perspiciatis earum, iste similique eaque magni error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum deserunt repudiandae fuga. Molestiae sit minima deserunt mollitia quas porro esse iure velit asperiores, perspiciatis earum, iste similique eaque magni error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum deserunt repudiandae fuga. Molestiae sit minima deserunt mollitia quas porro esse iure velit asperiores, perspiciatis earum, iste similique eaque magni error.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit aut quis consequatur excepturi ullam, maiores laudantium provident, tenetur recusandae doloremque alias sed eligendi suscipit temporibus illo nulla deserunt repudiandae sapiente?</p>
+                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit aut quis consequatur excepturi ullam, maiores laudantium provident, tenetur recusandae doloremque alias sed eligendi suscipit temporibus illo nulla deserunt repudiandae sapiente?</p>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane tab-press" id="press">
+                            <h3>Lorem ipsum</h3>
+                            <div class="about">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum deserunt repudiandae fuga. Molestiae sit minima deserunt mollitia quas porro esse iure velit asperiores, perspiciatis earum, iste similique eaque magni error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum deserunt repudiandae fuga. Molestiae sit minima deserunt mollitia quas porro esse iure velit asperiores, perspiciatis earum, iste similique eaque magni error.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum deserunt repudiandae fuga. Molestiae sit minima deserunt mollitia quas porro esse iure velit asperiores, perspiciatis earum, iste similique eaque magni error.</p>
+                            </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane tab-video" id="video">
+                            <div class="video catalog">
+                        <iframe src="https://www.youtube.com/embed/RKfElR19sag?rel=0&amp;controls=0&amp;showinfo=0" allowfullscreen></iframe>
+<!--                        <span id="play" class="play"></span>-->
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                       <div class="video catalog">
+                        <iframe src="https://www.youtube.com/embed/RKfElR19sag?rel=0&amp;controls=0&amp;showinfo=0" allowfullscreen></iframe>
+<!--                        <span id="play" class="play"></span>-->
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                       <div class="video catalog">
+                        <iframe src="https://www.youtube.com/embed/RKfElR19sag?rel=0&amp;controls=0&amp;showinfo=0" allowfullscreen></iframe>
+<!--                        <span id="play" class="play"></span>-->
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                        </div>
+                      </div>
+                </div>
+                  
         </section>
     </div>
     <a class="up" href="javascript:scroll(0,0)"></a>
