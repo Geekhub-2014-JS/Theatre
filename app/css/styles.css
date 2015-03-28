@@ -130,6 +130,15 @@ body {
 .uppercase {
     text-transform: uppercase;
 }
+.ng-binding{
+    cursor: default;
+}
+.dropdown-menu a{
+    cursor: pointer;
+}
+.caret{
+    margin-bottom: 4px;
+}
 /*----------------------- header -----------------------*/
 .main-header {
     background: rgb(236,83,42);
@@ -484,6 +493,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 }
 .right-sitebar h2,
 .page-title {
+    text-align: center;
     font: 30px robotothin;
     color: #DF492B;
     margin: 0 0 25px 0;
@@ -629,14 +639,11 @@ footer .copy {
 
 
 /***** - programm - ******/
-.program .page-title {
+.program h2 {
     text-align: center;
     font-size: 23.97px;
     color: #E54B2B;
     margin: 0 0 5px;
-}
-.program h1, .actor h1 {
-    display: inline;
 }
 .program-nav {
     text-align: center;
@@ -704,6 +711,7 @@ footer .copy {
     position: relative;
     overflow: hidden;
     height: 142px;
+    padding: 34px 0 0 0;
     border-width: 1px;
     border-style:  solid;
     border-color: #C8C8C8;
@@ -763,14 +771,24 @@ footer .copy {
 }
 .actor .actor-avatar {
     float: left;
-    margin: 0 42px 0 0;
+    margin: 0 42px 25px 0;
 }
-.actor h2 {
+.actor h3 {
     font-size: 18px;
     color: #292929;
     margin: 0 0 16px;
 }
-.actor .biography {
+.actor strong{
+    margin: 0 5px 0 0 ;
+    font-weight: normal;
+    color: #000;
+}
+.actor strong span{
+    margin: 0 0 0 5px;
+    color: #797777;
+}
+.actor .biography p{
+    margin: 5px 0;
     font: 14px robotoregular;
     color: #797777;
     text-align: justify;
@@ -778,7 +796,7 @@ footer .copy {
 .actor .biography p {
     margin: 0 0 14px;
 }
-.actor h3 {
+.actor h4 {
     clear: both;
     margin: 39px 0 25px 0;
     font-size: 18px;
@@ -809,3 +827,264 @@ footer .copy {
 .actor .actor-gallery li img {
     margin: -2px 0 0 2px;
 } 
+/***** - rada - ******/
+
+.rada article {
+    overflow: hidden;
+    margin: 0 0 79px 0;
+}
+.rada .member-avatar {
+    float: left;
+    margin: 0 36px 0 0;
+    width: 199px;
+}
+.rada h2 {
+    text-align: center;
+font-size: 23.97px;
+color: #E54B2B;
+}
+.rada h3 {
+    font-size: 18px;
+    color: #292929;
+    margin: 0 0 16px;
+}
+.rada .member-discription {
+    font: 14.02px robotoregular;
+    color: #797777;
+    text-align: justify;
+}
+.rada section {
+    margin: 53px 0 0;
+}
+
+/***** - play - ******/
+.play section {
+    margin: 36px 0 0px 0;
+}
+
+.play .play-img {
+    float: left;
+    width: 236px;
+    margin: 0 11px 50px 0;
+}
+.play .carousel {
+    overflow: hidden;
+    position: relative;
+    margin: 0 12px 0 0px;
+    width: 508px;
+}
+.play .wrapp-panel {
+    position: absolute;
+    top: 90px;
+    left: 0px;
+    width: inherit;
+    padding: 0 5px;
+}
+.play .media-block{
+    margin: 0 0 50px 0;
+}
+.play .menu-programm {
+    float: right;
+    text-align: center;
+    width: 236px;
+    height: 280px;
+    margin: 0 0 50px 0;
+}
+.play .menu-programm li {
+    overflow: hidden;
+    background: #4f4f4f;
+    border-bottom: 1px dashed #292929;
+    cursor: pointer;
+}
+.play .menu-programm li:hover {
+    background: #E64C2B;
+}
+.play .menu-programm li:last-child {
+    border-bottom: none;    
+}
+.play .menu-programm .block-data {
+    float: left;
+    width: 75px;
+    background: url(../images/play-stick-menu.png) right center no-repeat;
+}
+.play .menu-programm .block-description {
+    overflow: hidden;
+    color: #FFF;
+}
+.play .menu-programm .block-data span {
+    display: block;
+}
+.play .menu-programm .block-data .day {
+    color: #717171;
+    font-size: 18px;
+}
+.play .menu-programm .block-data .number {
+    color: #FFF;
+    font: 30px robotothin; 
+    margin: -7px 0;
+}
+.play .menu-programm .block-data .month {
+    color: #717171;
+    font-size: 14px;
+}
+.play .menu-programm .block-description h3 a {
+    color: #fff;
+    font: 18px robotothin; 
+}
+.play .menu-programm .block-description h3 {
+    margin: 0 0 8px 0;
+}
+.play .menu-programm .block-description p {
+    font-size: 12px;
+}
+.play .tab-content {
+    margin: 0 0 110px;
+}
+.play .tabs-area {
+    clear: both;
+    margin: 42px 0 0;
+}
+.play .nav-tabs > li {
+    width: 250px;
+    text-align: center;
+    background: #F4F4F4;
+}
+.play .nav-tabs > li > a {
+    border: 1px solid #ccc;
+    border-radius: 0;
+    font-size: 18px;
+    color: #4D4B4B;
+}
+.nav-tabs > li {
+    margin: 0 0 -2px 0;
+}
+.play .nav-tabs > li.active > a {
+    border-bottom: none;
+}
+.play .nav-tabs > li > a:hover, .play .nav-tabs > li.active > a {
+    color: #E94F2B;
+}
+.play .tabs-area .tab-content {
+    border: 1px solid #ccc;
+    border-top: none;
+    padding: 10px;
+}
+.play .tabs-area .tab-actors {
+    overflow: hidden;
+    margin: 0 0px 21px -8px;
+}
+.play .tabs-area .tab-actors li {
+    float: left;
+    width: 238px;
+    margin: 0 0 6px 8px;
+    position: relative;
+}
+.play .tabs-area .tab-actors h3 {
+    position: absolute;
+    text-align: center;
+    padding: 13px;
+    width: 100%;
+    bottom: 3px;
+    left: 0;
+    background: rgba(79, 79, 79, 0.8);
+}
+.play .tabs-area .tab-actors h3 a {
+    font-size: 18px;
+    color: #fff;
+}
+.play .tabs-area .page-pagination {
+    text-align: center;
+    margin: 0 0 12px;
+}
+.play .tabs-area .page-pagination li {
+    display: inline-block;
+}
+.play .tabs-area .page-pagination li a {
+    display: inline-block;
+    font: 18px robotothin; 
+    color: #fff;
+    background: #4D4D4D;
+    width: 28px;
+    height: 28px;
+    border-radius: 2px;
+}
+.play .tabs-area .page-pagination li a:hover {
+    background: #E44B2B;
+}
+.play .tab-about h3, .play .tab-press h3 {
+    font-size: 18px;
+    color: #292929;
+    margin: 0 0 16px;
+}
+.play .tab-about .about, .play .tab-press .about {
+    font: 14px robotoregular;
+    color: #797777;
+    text-align: justify;
+}
+.play .tab-about p, .play .tab-press p {
+    margin: 0 0 12px;
+}
+.play .tab-video {
+    overflow: hidden;
+} 
+.play .tab-video .catalog {
+    float: left;
+    width: 305px;
+    margin: 10px;
+}
+.test{
+    clear: both;
+}
+/***** - person - ******/
+.person .picture {
+    margin: 35px 0 20px 0;
+}
+.person h3 {
+    font-size: 18px;
+    color: #292929;
+    margin: 20px 0 27px 0;
+}
+.person .actor-list {
+    overflow: hidden;
+    margin: 0 0 36px -11px;
+}
+.person .actor-list li {
+    overflow: hidden;
+    width: 241px;
+    border: 1px solid #ccc;
+    background: #F8F5F5;
+    padding: 0 5px 0 0;
+    float: left;
+    margin: 0 0 6px 11px;
+}
+.person .actor-list img {
+    float: left;
+    height: 57px;
+    margin: 0 6px 0px 0;
+}
+.person .actor-list h4 {
+    color: #292929;
+}
+.person .actor-list p {
+    font-size: 12px;
+    color: #777777;
+}
+.person .actor-list a {
+    display: block;
+    font-size: 12px;
+    color: #292929;
+    text-decoration: underline;
+    text-align: right;
+    margin: 8px 0 0;
+}
+
+
+
+.performance-actors li{
+    float: left;
+    width: 240px;
+    height: 285px;
+    padding: 5px;
+    margin:  10px 5px;
+    background: #eee;
+}

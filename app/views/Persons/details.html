@@ -1,24 +1,69 @@
-<ol class="breadcrumb">
-    <li>
-        <a ui-sref="app.home">{{ 'menu.home' | translate }}</a>
-    </li>
-    <li>
-        <a ui-sref="app.persons">{{ 'menu.persons' | translate }}</a>
-    </li>
-    <li class="active">{{'persons.aboutActor' | translate}}</li>
-</ol>
-<div ng-controller="PersonsSliderCtrl" id="slides_control">
-    <div>
-        <carousel interval="interval">
-            <slide ng-repeat="slide in slides" active="slide.active">
-                <img ng-src="{{slide.image}}">
-                <div class="carousel-caption">
-                    <h4>{{slide.text}}</h4>
-                </div>
-            </slide>
-        </carousel>
-    </div>
-</div>
+<main class="actor" role="main">
+    <div class="wrapp">
+        <ul class="crumb">
+            <li><a ui-sref="app.home">{{ 'menu.home' | translate }}</a></li>
+            <li><a ui-sref="app.persons">{{ 'menu.persons' | translate }}</a></li>
+            <li class="active">{{'persons.aboutActor' | translate}}</li>
+        </ul> 
+        <form method="get" action="">
+            <fieldset class="search">
+                <ul>    
+                    <li><input type="text" placeholder="пошук" /></li>
+                    <li><input type="submit" value="Пошук" /></li>
+                    <li class="search-results"><p class="number-results">11 результатiв</p><span class="close-results"></span></li>
+                </ul>    
+            </fieldset>
+        </form>
+        <h2 class="page-title">Актор театру</h2>
+        <section>
+            <img class="actor-avatar" ng-src="http://api.theatre.pp.ua/{{person.avatar.reference.url}}" />
+            <h3>{{person.first_name + " " + person.middle_name + " " + person.last_name}}</h3>
+            <div class="biography">
+                <p><strong>{{'persons.position' | translate}}:</strong>{{person.position}}</p>
+                <p><strong>{{'persons.biography' | translate}}:</strong>{{person.biography}}</p>
+                <p><strong>{{'persons.since' | translate}}:</strong>{{person.dob | date: "dd/MM/yyyy"}}</p>
+            </div>
+
+            <h4>{{'persons.roles' | translate}}:</h4>
+            <ul class="roles">
+                <li><a href="#">"Назва вистави" 1999. Роль: Пастор</a></li>
+                <li><a href="#">"Назва вистави" 1999. Роль: Пастор</a></li>
+                <li><a href="#">"Назва вистави" 1999. Роль: Пастор</a></li>
+                <li><a href="#">"Назва вистави" 1999. Роль: Пастор</a></li>
+                <li><a href="#">"Назва вистави" 1999. Роль: Пастор</a></li>
+                <li><a href="#">"Назва вистави" 1999. Роль: Пастор</a></li>
+                <li><a href="#">"Назва вистави" 1999. Роль: Пастор</a></li>
+                <li><a href="#">"Назва вистави" 1999. Роль: Пастор</a></li>
+                <li><a href="#">"Назва вистави" 1999. Роль: Пастор</a></li>
+            </ul>
+            <ul class="actor-gallery">
+                <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
+                <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
+                <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
+                <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
+                <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
+                <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
+                <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
+                <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
+                <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
+                <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
+            </ul>
+        </section>
+<!--
+        <div ng-controller="PersonsSliderCtrl" id="slides_control">
+            <div>
+                <carousel interval="interval">
+                    <slide ng-repeat="slide in slides" active="slide.active">
+                        <img ng-src="{{slide.image}}">
+                        <div class="carousel-caption">
+                            <h4>{{slide.text}}</h4>
+                        </div>
+                    </slide>
+                </carousel>
+            </div>
+        </div>
+-->
+<!--
 
 <table class="table table-bordered">
     <tr>
@@ -42,3 +87,9 @@
     </tr>
 
 </table>
+-->
+   
+   
+   
+    </div>
+</main>
