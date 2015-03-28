@@ -26,6 +26,15 @@ angular.module('singlePerf',['ui.bootstrap'])
                     $scope.error = error;
                 })
             ;
+
+            apiGet('performances/' + $stateParams.slug + '/roles')
+                .success(function (data) {
+                    $scope.roles = data;
+                })
+                .error(function(error) {
+                    $scope.error = error;
+                })
+            ;
         }
     ])
     .controller('PerfTabsCtrl', ['$scope', '$window',
@@ -47,27 +56,4 @@ angular.module('singlePerf',['ui.bootstrap'])
         for (var i=0; i<10; i++) {
             $scope.addSlide();
         }
-    })
-    .controller('PaginationCtrl', ['$scope', '$q', 'apiGet', '$stateParams',
-        function ($scope, $q, apiGet, $stateParams) {
-            $scope.itemPerPage = 8;
-            getMembers(1);
-            $scope.setPage = function (pageNo) {
-                pageNo = $scope.currentPage;
-                getMembers(pageNo);
-            };
-
-            $scope.maxSize = 5;
-
-            function getMembers(pageNum) {
-                apiGet('performances/' + $stateParams.slug + '/roles') // TODO (+ '?limit=' + $scope.itemPerPage + '&page=' + 'pageNum')
-                    .success(function (data) {
-                        $scope.roles = data;
-                        //$scope.totalItems = data.members_count;
-                    })
-                    .error(function(error) {
-                        $scope.error = error;
-                    })
-                ;
-            }
-    }]);
+    });

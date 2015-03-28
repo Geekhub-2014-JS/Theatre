@@ -19,7 +19,8 @@
   "performance": {
     "description": "Description",
     "team": "Team",
-    "press": "Press"
+    "press": "Press",
+    "video": "Video"
   },
   "poster": {
     "poster_on": "Poster on"

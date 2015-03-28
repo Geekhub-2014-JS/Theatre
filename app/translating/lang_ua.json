@@ -17,9 +17,10 @@
     "forum": "Форум"
   },
   "performance": {
-    "description": "Про Спектакль",
+    "description": "Про Виставу",
     "team": "Актори та Постановка",
-    "press": "Пресса"
+    "press": "Пресса Про Виставу",
+    "video": "Відео"
   },
   "poster": {
       "poster_on": "Афіша на"

@@ -29,16 +29,15 @@
                     </div>
                     <div class="block-description">
                         <h3><a href="#">{{performance.title}}</a></h3>
-                        <p>{{performance.title}}</p>
                         <p>{{date.time}}</p>
                     </div>
                 </li>
            </ul>                     
             <div class="media-block slide" >
-                <div ng-controller="ImageCarouselCtrl" style="height: 305px">
+                <div ng-controller="ImageCarouselCtrl">
                     <carousel interval="myInterval">
                         <slide ng-repeat="slide in slides" active="slide.active">
-                            <img ng-src="{{slide.source}}" style="margin:auto;">
+                            <img ng-src="{{slide.source}}">
                             <div class="carousel-caption">
                                 <p>{{slide.text}}</p>
                             </div>
@@ -46,72 +45,35 @@
                     </carousel>
                 </div>
             </div>
-            
-            
-<!--
+
             <div class="test" ng-controller="PerfTabsCtrl">
                 <tabset>
                     <tab heading="{{ 'performance.team' | translate }}">
-                        <div ng-controller="PaginationCtrl">
-                            <ul class="performance-actors">
-                                <li ng-repeat="role in roles">
-                                    {{role.title}} <br/>
-                                    {{role.description}}<br/>
-                                    <a ui-sref="app.personDetails({id: role.employee.slug})">{{role.employee.first_name +  ' ' + role.employee.middle_name + ' ' + role.employee.last_name}}</a> <br/>
-                                    {{role.employee.position}} <br/>
-                                    <img ng-src="http://api.theatre.pp.ua/{{role.employee.avatar.employee_small.url}}" alt="{{role.title}}" style="height: 100px"/>
-                                </li>
-                            </ul>
--->
-                            <!--<pagination total-items="totalItems"-->
-                                        <!--ng-change="setPage()"-->
-                                        <!--ng-model="currentPage"-->
-                                        <!--max-size="maxSize"-->
-                                        <!--items-per-page="itemPerPage"-->
-                                        <!--class="pagination-sm"-->
-                                        <!--boundary-links="true"-->
-                                        <!--rotate="false"-->
-                                        <!--num-pages="numPages">-->
-                            <!--</pagination>-->
-<!--
-                        </div>
+                        <ul class="performance-actors">
+                            <li ng-repeat="role in roles">
+                                <img ng-src="http://api.theatre.pp.ua/{{role.employee.avatar.employee_small.url}}" alt="{{role.title}}"/>
+                                <h3>{{role.title}} - <a ui-sref="app.personDetails({id: role.employee.slug})">{{role.employee.first_name +  ' ' + role.employee.middle_name + ' ' + role.employee.last_name}}</a></h3>
+                            </li>
+                        </ul>
                     </tab>
                     <tab heading="{{ 'performance.description' | translate }}">
                         {{performance.description}}
                     </tab>
--->
-                    <!--<tab heading="{{ 'performance.press' | translate }}">-->
-                        <!--<ul class="article-list">-->
-                            <!--<li ng-repeat="article in performance.press">-->
-                                <!--<a href="{{article.link}}">{{article.title}}</a>-->
-                            <!--</li>-->
-                        <!--</ul>-->
-                    <!--</tab>-->
-<!--
+
+                    <tab heading="{{ 'performance.press' | translate }}">
+
+
+                    </tab>
+                    <tab heading="{{ 'performance.video' | translate }}">
+
+
+                    </tab>
+
                 </tabset>
             </div>
--->
-            
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">           
-  <!-- Wrapper for slides -->
-                        <div class="play-slider carousel-inner" role="listbox">
-                            <div class="item">
-                              <img src="images/play-slider.jpg" alt="...">
-                            </div>
-                            <div class="item active">
-                              <img src="images/play-slider.jpg" alt="...">
-                            </div>
-                            <div class="item">
-                              <img src="images/play-slider.jpg" alt="...">
-                            </div>
-                       </div>
-                       <div class="wrapp-panel">
 
-                           <a class="jcarousel-control-prev" href="#carousel-example-generic" role="button" data-slide="prev"></a>
-                           <a class="jcarousel-control-next" href="#carousel-example-generic" role="button" data-slide="next"></a>
-                      </div>
-                   </div> 
-                   <div class="tabs-area" role="tabpanel">
+            
+
   <!-- Nav tabs -->
                       <ul class="nav nav-tabs" role="tablist">
                          <li role="presentation" class="active"><a href="#actors" aria-controls="actors" role="tab" data-toggle="tab">Творці вистави</a></li>
