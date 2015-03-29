@@ -30,11 +30,16 @@
         <div class="wrapp">
             <h1><a ui-sref="app.home"><img src="img/logo.png" alt="{'menu.logo' | translate}" /><span ng-bind="'menu.logo' | translate"></span></a></h1>
             <div class="dropdown lang-select uppercase" ng-controller="translateCtrl">
-                <a id="dLabel" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">{{ 'translId' | translate }}<span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-                  <li><a ng-click="chLocale('ua')">UA</a></li>
-                  <li><a ng-click="chLocale('en')">EN</a></li>
-                </ul>
+                <a href="#">
+                    <span ng-click="chLocale()">
+                        {{ 'translId' | translate }}
+                    </span>
+                </a>
+                <!--<a id="dLabel" href="#" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">{{ 'translId' | translate }}<span class="caret"></span></a>-->
+                <!--<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">-->
+                  <!--<li><a ng-click="chLocale('ua')">UA</a></li>-->
+                  <!--<li><a ng-click="chLocale('en')">EN</a></li>-->
+                <!--</ul>-->
             </div>
 
             <nav>

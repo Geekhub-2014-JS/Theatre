@@ -16,7 +16,14 @@ var theatreControllers = angular.module('theatreControllers', [
 ]);
 theatreControllers.controller('translateCtrl', ['$scope', '$translate', '$stateParams', '$state',
     function($scope, $translate, $stateParams, $state){
-        $scope.chLocale = function(lng) {
+
+        $scope.chLocale = function() {
+            var lng = '';
+            if ($stateParams.locale === 'ua') {
+                lng = 'en';
+            } else {
+                lng = 'ua';
+            }
             $translate.use(lng);
             $stateParams.locale = lng;
             $state.reload();
