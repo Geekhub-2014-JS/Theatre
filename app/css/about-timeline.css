@@ -1,0 +1,32 @@
+.wrapp .timeline {
+    overflow: hidden;
+}
+.wrapp .timeline > li {
+    width: 50%;
+    float: left;
+    clear: left;
+}
+.wrapp .timeline > li > .timeline-panel {
+    width: calc(100% - 70px);
+}
+.wrapp .timeline > li > .timeline-badge {
+    right: -25px;
+    left: auto;
+}
+.wrapp .timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+}
+.wrapp .timeline > li.timeline-inverted {
+    float: right;
+    clear: right;
+}
+.wrapp .timeline > li:nth-child(2){
+    margin-top: 100px;
+}
+.wrapp .timeline > li.timeline-inverted > .timeline-badge {
+    right: auto;
+}
+.wrapp .timeline > li > .timeline-panel .timeline-body {
+    max-height: 300px;
+    overflow: hidden;
+}
