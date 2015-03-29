@@ -28,7 +28,7 @@
   }">
     <header class="main-header">
         <div class="wrapp">
-            <h1><a ui-sref="app.home"><img src="img/logo.png" alt="{'menu.logo' | translate}" /><span ng-bind="'menu.logo' | translate"></span></a></h1>
+            <h1><a ui-sref="app.home" ui-sref-opts="{reload: true}"><img src="img/logo.png" alt="{'menu.logo' | translate}" /><span ng-bind="'menu.logo' | translate"></span></a></h1>
             <div class="dropdown lang-select uppercase" ng-controller="translateCtrl">
                 <a href="#">
                     <span ng-click="chLocale()">
