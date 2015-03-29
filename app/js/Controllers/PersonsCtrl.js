@@ -2,7 +2,7 @@ angular.module('person', ['ui.bootstrap'])
     .controller('PersonsCtrl', ['$scope', 'personsService', 'apiGet', function ($scope, personsService) {
         $scope.persons = [];
         $scope.personsTotal = 0;
-        $scope.peronsPerPage = 6; //pagination limit per page
+        $scope.peronsPerPage = 20; //pagination limit per page
         $scope.currentPage = 1;
         $scope.busy = false;
 
@@ -30,29 +30,4 @@ angular.module('person', ['ui.bootstrap'])
             return data;
         });
     }
-    ])
-    .controller('PersonsSliderCtrl', function ($scope) {
-        $scope.interval = 4000;
-        //temp
-        $scope.slides = [
-            {
-                "image": "http://lorempixel.com/1000/400",
-                "text": "sometext"
-            },
-            {
-                "image": "http://lorempixel.com/1001/400",
-                "text": "sometext"
-            },
-            {
-                "image": "http://lorempixel.com/1000/401",
-                "text": "sometext"
-            },
-            {
-                "image": "http://lorempixel.com/1001/401",
-                "text": "sometext"
-            }
-        ];
-        //$scope.promise.then(function(data){
-        //   $scope.slides = data.images;
-        //});
-    });
+    ]);

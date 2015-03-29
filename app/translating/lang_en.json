@@ -19,7 +19,8 @@
   "performance": {
     "description": "Description",
     "team": "Team",
-    "press": "Press"
+    "press": "Press",
+    "video": "Video"
   },
   "poster": {
     "poster_on": "Poster on"
@@ -62,7 +63,7 @@
     "education": "Education",
     "since": "Work in theatre ",
     "roles": "Roles",
-    "position" : "Position",
+    "position": "Position",
     "biography": "Biography"
   },
   "pagination": {
@@ -74,23 +75,27 @@
     "video": "Last video"
   },
   "key": "value",
-    "Jan": "January",
-    "Feb": "February",
-    "Mar": "March",
-    "Apr": "April",
-    "May": "May",
-    "Jun": "June",
-    "Jul": "July",
-    "Aug": "August",
-    "Sept": "September",
-    "Oct": "October",
-    "Nov": "November",
-    "Dec": "December",
-    "Mon": "MON",
-    "Tue": "TUE",
-    "Wed": "WED",
-    "Thu": "THU",
-    "Fri": "FRI",
-    "Sat": "SAT",
-    "Sun": "SUN"
+  "Jan": "January",
+  "Feb": "February",
+  "Mar": "March",
+  "Apr": "April",
+  "May": "May",
+  "Jun": "June",
+  "Jul": "July",
+  "Aug": "August",
+  "Sept": "September",
+  "Oct": "October",
+  "Nov": "November",
+  "Dec": "December",
+  "Mon": "MON",
+  "Tue": "TUE",
+  "Wed": "WED",
+  "Thu": "THU",
+  "Fri": "FRI",
+  "Sat": "SAT",
+  "Sun": "SUN",
+  "search": {
+    "search": "Search",
+    "results": "results"
+  }
 }

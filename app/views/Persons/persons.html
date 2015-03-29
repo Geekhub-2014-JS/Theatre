@@ -1,23 +1,34 @@
-<ol class="breadcrumb">
-    <li>
-        <a ui-sref="app.home">{{ 'menu.home' | translate }}</a>
-    </li>
-    <li class="active">{{'menu.persons' | translate}}</li>
-</ol>
-<div class="image-container" style="width: 1000px;margin: 0 auto">
-    <img src="http://lorempixel.com/1000/400" alt="pic" style="">
-</div>
-<h2>{{'persons.actors' | translate}}</h2>
-
-<div infinite-scroll="loadPersons()" infinite-scroll-distance='0' infinite-scroll-disabled='busy' infinite-scroll-disabled="true">
-    <div ng-repeat="person in persons | orderBy">
-        <div class="col-md-4">
-            <img ng-src="http://api.theatre.pp.ua/{{person.avatar.reference.url}}"
-                 style="width: 300px; max-height: 450px">
-            <a ui-sref="app.personDetails({id: person.slug})" style="display: block; width: 200px">{{person.first_name + " " + person.last_name}}</a>
+<main class="person" role="main">
+    <div class="wrapp">
+       
+        <ul class="crumb">
+            <li><a ui-sref="app.home">{{ 'menu.home' | translate }}</a></li>
+            <li class="active">{{'menu.persons' | translate}}</li>
+        </ul>        
+        <form method="get" action="">
+            <fieldset class="search">
+                <ul>
+                    <li><input type="text" placeholder="{{'search.search' | translate }}" /></li>
+                    <li><input type="submit" value="{{'search.search' | translate }}" /></li>
+                    <li class="search-results"><p class="number-results">11 {{'search.results' | translate }}</p><span class="close-results"></span></li>
+                </ul>
+            </fieldset>
+        </form>
+        <h2 class="page-title">Персоналії</h2>
+        <div class="image-container" style="width: 1000px;margin: 0 auto">
+            <img src="http://lorempixel.com/1000/400" alt="pic" style="">
         </div>
+        <h3>{{'persons.actors' | translate}}</h3>
+
+        <ul class="actor-list" infinite-scroll="loadPersons()" infinite-scroll-distance='0' infinite-scroll-disabled='busy' infinite-scroll-disabled="true">
+            <li  ng-repeat="person in persons | orderBy">
+                    <img ng-src="http://api.theatre.pp.ua/{{person.avatar.reference.url}}" />
+                    <h4>{{person.first_name + " " + person.last_name}}</h4>
+                    <p>{{person.dob | date: "yyyy"}}</p>
+                    <a ui-sref="app.personDetails({id: person.slug})">Детальніше</a>
+            </li>
+        </ul>
     </div>
-    <div style='clear: both;'></div>
-</div>
+</main>
 
 
