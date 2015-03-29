@@ -24,7 +24,7 @@
             <li  ng-repeat="person in persons | orderBy">
                     <img ng-src="http://api.theatre.pp.ua/{{person.avatar.reference.url}}" />
                     <h4>{{person.first_name + " " + person.last_name}}</h4>
-                    <p>1956</p>
+                    <p>{{person.dob | date: "yyyy"}}</p>
                     <a ui-sref="app.personDetails({id: person.slug})">Детальніше</a>
             </li>
         </ul>
