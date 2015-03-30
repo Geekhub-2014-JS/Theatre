@@ -19,10 +19,10 @@ theatreControllers.controller('translateCtrl', ['$scope', '$translate', '$stateP
 
         $scope.chLocale = function() {
             var lng = '';
-            if ($stateParams.locale === 'ua') {
+            if ($stateParams.locale === 'uk') {
                 lng = 'en';
             } else {
-                lng = 'ua';
+                lng = 'uk';
             }
             $translate.use(lng);
             $stateParams.locale = lng;

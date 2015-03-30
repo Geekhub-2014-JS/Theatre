@@ -32,8 +32,8 @@ theatreApp.config(['$translateProvider', '$httpProvider', function($translatePro
         suffix: '.json'
     });
 
-    $translateProvider.preferredLanguage('ua');
-    $translateProvider.fallbackLanguage('ua');
+    $translateProvider.preferredLanguage('uk');
+    $translateProvider.fallbackLanguage('uk');
     //$translateProvider.useLocalStorage();
 
     $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';

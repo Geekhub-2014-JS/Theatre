@@ -5,7 +5,7 @@
 angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
     .config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
         function($stateProvider, $urlRouterProvider, $locationProvider) {
-            $urlRouterProvider.otherwise("/ua/");
+            $urlRouterProvider.otherwise("/uk/");
             $stateProvider
                 .state('app',{
                     abstract: true,
