@@ -9,11 +9,11 @@
 </ol>
 
 <article>
-    <img src="http://lorempixel.com/800/400/cats" alt="">
+    <img ng-src="{{news.main_picture.provider_metadata.filename}}" alt="{{news.title}}">
     <h3>{{ news.title }}</h3>
     <p class="topic">{{ news.text }}</p>
     <footer class="article-footer">
-        <time datetime="2015-02-12">12.02.2015</time>
-        <small class="view"><span>112</span></small>
+        <time>{{news.created_at | date: 'dd.MM.yyyy' }}</time>
+        <!--<small class="view"><span>112</span></small>-->
     </footer>
 </article>

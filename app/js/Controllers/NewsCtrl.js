@@ -16,7 +16,7 @@ angular.module('news',[])
                     .success(function(response, status){
                         if (status === 200) {
                             $scope.news = response.posts;
-                            $scope.total = response.page_count * $scope.perPage;
+                            $scope.total = response.total_count;
                         }
                     })
                     .error(function(error){
