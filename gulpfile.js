@@ -14,18 +14,14 @@ gulp.task('vendors-css', function () {
         'vendors/bootstrap/dist/css/bootstrap-theme.css'
     ])
         .pipe(concat('vendors-css.min.css'))
-        .pipe(uglifycss({
-            "max-line-len": 80
-            }))
+        .pipe(uglifycss())
         .pipe(gulp.dest('app/css/'));
 });
 
 gulp.task('custom-css', function() {
     gulp.src(['src/css/main.less'])
         .pipe(less({compress: true}))
-        .pipe(uglifycss({
-            "max-line-len": 80
-        }))
+        .pipe(uglifycss())
         .pipe(gulp.dest('app/css/'));
 });
 

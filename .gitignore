@@ -4,4 +4,4 @@ node_modules/
 tmp
 .idea
 .DS_Store
-app/vendors/
+vendors/
