@@ -35,7 +35,6 @@
     "protractor": "protractor test/protractor-conf.js"
   },
   "dependencies": {
-    "beeper": "^1.0.0",
     "gulp-uglifycss": "^1.0.4"
   }
 }

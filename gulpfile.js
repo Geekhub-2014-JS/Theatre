@@ -3,9 +3,7 @@ var gulp = require('gulp'),
     minifyJs = require('gulp-uglify'),
     uglifycss = require('gulp-uglifycss'),
     less = require('gulp-less'),
-    beeper = require('beeper'),
     ngAnnotate = require('gulp-ng-annotate'),
-    //minifyCSS = require('gulp-minify-css'),
     clean = require('gulp-clean');
 
 gulp.task('vendors-css', function () {
@@ -75,8 +73,6 @@ gulp.task('default', ['clean'], function () {
         gulp.start(val);
     });
 });
-
-//beeper('***-**');
 
 gulp.task('watch', function () {
     var css = gulp.watch('css/*.css', ['custom-css']),
