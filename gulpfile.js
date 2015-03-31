@@ -21,7 +21,7 @@ gulp.task('vendors-css', function () {
 });
 
 gulp.task('custom-css', function() {
-    gulp.src(['css/main.less'])
+    gulp.src(['src/css/main.less'])
         .pipe(less({compress: true}))
         .pipe(uglifycss({
             "max-line-len": 80
@@ -54,7 +54,7 @@ gulp.task('vendors-js', function() {
 });
 
 gulp.task('angular-app-js', function() {
-    gulp.src('js/**/*.js')
+    gulp.src('src/js/**/*.js')
         .pipe(concat('angular-app.min.js'))
         .pipe(ngAnnotate())
         .pipe(minifyJs())
@@ -75,6 +75,6 @@ gulp.task('default', ['clean'], function () {
 });
 
 gulp.task('watch', function () {
-    var css = gulp.watch('css/*.css', ['custom-css']),
-        js = gulp.watch('js/**/*.js', ['angular-app-js']);
+    var css = gulp.watch('src/css/*.css', ['custom-css']),
+        js = gulp.watch('src/js/**/*.js', ['angular-app-js']);
 });
