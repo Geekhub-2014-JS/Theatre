@@ -5,3 +5,5 @@ vendors
 tmp
 .idea
 .DS_Store
+app/css
+app/js
