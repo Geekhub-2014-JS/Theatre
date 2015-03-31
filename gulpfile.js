@@ -4,6 +4,8 @@ var gulp = require('gulp'),
     uglifycss = require('gulp-uglifycss'),
     less = require('gulp-less'),
     ngAnnotate = require('gulp-ng-annotate'),
+    rename = require("gulp-rename"),
+    notify = require("gulp-notify"),
     clean = require('gulp-clean');
 
 gulp.task('vendors-css', function () {
@@ -22,7 +24,9 @@ gulp.task('custom-css', function() {
     gulp.src(['src/css/main.less'])
         .pipe(less({compress: true}))
         .pipe(uglifycss())
-        .pipe(gulp.dest('app/css/'));
+        .pipe(rename("app.min.css"))
+        .pipe(gulp.dest('app/css/'))
+        .pipe(notify("Gulp watch: custom-css task completed."));
 });
 
 gulp.task('vendors-js', function() {
@@ -54,7 +58,8 @@ gulp.task('angular-app-js', function() {
         .pipe(concat('angular-app.min.js'))
         .pipe(ngAnnotate())
         .pipe(minifyJs())
-        .pipe(gulp.dest('app/js/'));
+        .pipe(gulp.dest('app/js/'))
+        .pipe(notify("Gulp watch: angular-app-js task completed."));
 });
 
 gulp.task('clean', function () {

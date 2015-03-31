@@ -12,6 +12,8 @@
     "gulp-concat": "^2.5.2",
     "gulp-less": "^3.0.1",
     "gulp-ng-annotate": "^0.5.2",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.0",
     "gulp-uglify": "^1.1.0",
     "http-server": "^0.6.1",
     "karma": "^0.12.16",
