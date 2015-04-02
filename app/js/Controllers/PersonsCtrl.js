@@ -17,17 +17,24 @@ angular.module('person', ['ui.bootstrap'])
                 .then(function (data) {
                     $scope.persons = $scope.persons.concat(data.employees);
 
-                    $scope.pagesCount = data.page_count;
+                    $scope.pagesCount = Math.ceil(data.total_count / $scope.peronsPerPage);
+                    console.log($scope.pagesCount);
                     $scope.busy = false;
                 });
         }
 
     }
     ])
-    .controller('PersonsDetailCtrl', ['$scope', 'personsService', '$stateParams', function ($scope, personsService, $stateParams) {
+    .controller('PersonsDetailCtrl', ['$scope', 'personsService', '$stateParams', 'apiGet', function ($scope, personsService, $stateParams, apiGet) {
+        $scope.roles = [];
         $scope.promise = personsService.getPerson($stateParams.id).then(function (data) {
             $scope.person = data;
+
             return data;
+        });
+        apiGet('employees/' + $stateParams.id + '/roles.json').then(function (response){
+           $scope.roles = response.data;
+            console.log($scope.roles);
         });
     }
     ]);
