@@ -10,7 +10,7 @@
     <div class="container">
         <div class="col-md-8 col-lg-8 col-xs-12">
             <article class="catalog" ng-repeat="item in news">
-                <img ng-src="{{item.main_picture.provider_metadata.filename}}" alt="{{item.title}}">
+                <img ng-src="{{item.mainPicture.post_big.url}}" alt="{{item.title}}">
                 <h3><a ui-sref="app.newsDetail({id: item.slug})">{{ item.title }}</a></h3>
                 <p class="topic">{{ item.short_description }}</p>
                 <footer class="article-footer">

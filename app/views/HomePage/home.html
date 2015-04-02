@@ -6,7 +6,7 @@
                 next: activeSlideIndex+1 == $index,
                 prev: activeSlideIndex-1 == $index
             }">
-                <img ng-src="http://api.theatre.pp.ua/{{slide.performance.mainPicture.reference.url}}" style="margin:auto; height: 500px;">
+                <img ng-src="{{slide.performance.mainPicture.reference.url}}" style="margin:auto; height: 500px;">
             </div>
         </div>
         <div class="wrapp-panel">
@@ -56,11 +56,11 @@
         <section class="main-page">
             <h2 class="page-title">{{'menu.news' | translate}}</h2>
             <article class="catalog" ng-repeat="article in news">
-                <img src="http://lorempixel.com/400/200/cats" alt="">
+                <img ng-src="{{article.mainPicture.post_big.url}}" alt="{{article.title}}">
                 <h3><a ui-sref="app.newsDetail({id: article.slug})">{{ article.title }}</a></h3>
                 <p class="topic">{{ article.short_description }}</p>
                 <footer class="article-footer">
-                    <time datetime="2015-02-12">12.02.2015</time>
+                    <time>{{article.updated_at | date: 'dd.MM.yyyy'}}</time>
                     <!--<small class="view"><span>112</span></small>-->
                 </footer>
             </article>

@@ -51,3 +51,6 @@ news-block {
     display: inline-block;
     width: 350px;
 }
+article a {
+    cursor: pointer !important;
+}
