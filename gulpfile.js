@@ -13,7 +13,9 @@ gulp.task('vendors-css', function () {
         'vendors/bootstrap/dist/css/bootstrap.css',
         'vendors/angular-loading/angular-loading.css',
         'vendors/angular-timeline/src/angular-timeline.css',
-        'vendors/bootstrap/dist/css/bootstrap-theme.css'
+        'vendors/bootstrap/dist/css/bootstrap-theme.css',
+        'vendors/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.css',
+        'vendors/angular-loading-bar/build/loading-bar.css'
     ])
         .pipe(concat('vendors-css.min.css'))
         .pipe(uglifycss())
@@ -46,7 +48,10 @@ gulp.task('vendors-js', function() {
         'vendors/spin.js/spin.js',
         'vendors/angular-timeline/src/angular-timeline.js',
         'vendors/angular-loading/angular-loading.js',
-        'vendors/moment/moment.js'
+        'vendors/angular-loading-bar/build/loading-bar.js',
+        'vendors/moment/moment.js',
+        'vendors/angular-touch/angular-touch.js',
+        'vendors/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js'
     ])
         .pipe(concat('vendors-js.min.js'))
         .pipe(minifyJs())
