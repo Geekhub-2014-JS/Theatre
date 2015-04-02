@@ -16,7 +16,7 @@
         </form>
         <h2 class="page-title">Актор театру</h2>
         <section>
-            <img class="actor-avatar" ng-src="http://api.theatre.pp.ua/{{person.avatar.reference.url}}" />
+            <img class="actor-avatar" ng-src="{{person.avatar.reference.url}}" />
             <h3>{{person.first_name + " " + person.middle_name + " " + person.last_name}}</h3>
             <div class="biography">
                 <p><strong>{{'persons.position' | translate}}:</strong>{{person.position}}</p>
@@ -24,17 +24,12 @@
                 <p><strong>{{'persons.since' | translate}}:</strong>{{person.dob | date: "dd/MM/yyyy"}}</p>
             </div>
 
-            <h4>{{'persons.roles' | translate}}:</h4>
+            <h4 ng-show="roles.length > 0">{{'persons.roles' | translate}}:</h4>
             <ul class="roles">
-                <li><a href="#">"Назва вистави" 1999. Роль: Пастор</a></li>
-                <li><a href="#">"Назва вистави" 1999. Роль: Пастор</a></li>
-                <li><a href="#">"Назва вистави" 1999. Роль: Пастор</a></li>
-                <li><a href="#">"Назва вистави" 1999. Роль: Пастор</a></li>
-                <li><a href="#">"Назва вистави" 1999. Роль: Пастор</a></li>
-                <li><a href="#">"Назва вистави" 1999. Роль: Пастор</a></li>
-                <li><a href="#">"Назва вистави" 1999. Роль: Пастор</a></li>
-                <li><a href="#">"Назва вистави" 1999. Роль: Пастор</a></li>
-                <li><a href="#">"Назва вистави" 1999. Роль: Пастор</a></li>
+                <li ng-repeat="role in roles">
+                    <a ui-sref="app.singlePerformance({slug: role.performance.slug})">"{{role.performance.title}}"
+                        {{role.performance.premiere | date: "yyyy"}}. Роль: {{role.title}}</a>
+                </li>
             </ul>
             <ul class="actor-gallery">
                 <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
