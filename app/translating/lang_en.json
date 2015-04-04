@@ -6,7 +6,7 @@
     "poster": "Poster",
     "repertoire": "Repertoire",
     "news": "News",
-    "about": "About Theater",
+    "about": "About Theatre",
     "persons": "Persons",
     "contacts": "Contacts",
     "photoarchive": "Photo Archive",
@@ -98,5 +98,9 @@
     "search": "Search",
     "results": "results"
   },
-  "details": "Details"
+  "details": "Details",
+  "gallery": {
+    "previous": "Previous",
+    "next": "Next"
+  }
 }

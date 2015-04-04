@@ -4,23 +4,28 @@
             <li><a ui-sref="app.home">{{ 'menu.home' | translate }}</a></li>
             <li><a ui-sref="app.persons">{{ 'menu.persons' | translate }}</a></li>
             <li class="active">{{'persons.aboutActor' | translate}}</li>
-        </ul> 
+        </ul>
         <form method="get" action="">
             <fieldset class="search">
-                <ul>    
-                    <li><input type="text" placeholder="{{'search.search' | translate }}" /></li>
-                    <li><input type="submit" value="{{'search.search' | translate }}" /></li>
-                    <li class="search-results"><p class="number-results">11 {{'search.results' | translate }}</p><span class="close-results"></span></li>
-                </ul>    
+                <ul>
+                    <li><input type="text" placeholder="{{'search.search' | translate }}"/></li>
+                    <li><input type="submit" value="{{'search.search' | translate }}"/></li>
+                    <li class="search-results"><p class="number-results">11 {{'search.results' | translate }}</p><span
+                            class="close-results"></span></li>
+                </ul>
             </fieldset>
         </form>
         <h2 class="page-title">Актор театру</h2>
         <section>
-            <img class="actor-avatar" ng-src="{{person.avatar.reference.url}}" />
+            <img class="actor-avatar" ng-src="{{person.avatar.reference.url}}"/>
+
             <h3>{{person.first_name + " " + person.middle_name + " " + person.last_name}}</h3>
+
             <div class="biography">
                 <p><strong>{{'persons.position' | translate}}:</strong>{{person.position}}</p>
+
                 <p><strong>{{'persons.biography' | translate}}:</strong>{{person.biography}}</p>
+
                 <p><strong>{{'persons.since' | translate}}:</strong>{{person.dob | date: "dd/MM/yyyy"}}</p>
             </div>
 
@@ -31,17 +36,13 @@
                         {{role.performance.premiere | date: "yyyy"}}. Роль: {{role.title}}</a>
                 </li>
             </ul>
+
             <ul class="actor-gallery">
-                <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
-                <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
-                <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
-                <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
-                <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
-                <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
-                <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
-                <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
-                <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
-                <li><a href="#"><img src="images/actor-gallery.jpg" alt="lorem" /></a></li>
+                <li ng-repeat="galleryItem in person.gallery">
+                    <a ng-click="openLightboxModal($index)">
+                        <img ng-src="{{galleryItem.images.performance_small.url}}" class="img-thumbnail" alt="{{galleryItem.title}}">
+                    </a>
+                </li>
             </ul>
         </section>
     </div>
