@@ -51,6 +51,6 @@ news-block {
     display: inline-block;
     width: 350px;
 }
-article a {
+a {
     cursor: pointer !important;
 }

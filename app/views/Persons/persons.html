@@ -21,11 +21,11 @@
         <h3>{{'persons.actors' | translate}}</h3>
 
         <ul class="actor-list" infinite-scroll="loadPersons()" infinite-scroll-distance='0' infinite-scroll-disabled='busy' infinite-scroll-disabled="true">
-            <li  ng-repeat="person in persons | orderBy">
-                    <img ng-src="http://api.theatre.pp.ua/{{person.avatar.reference.url}}" />
+            <li  ng-repeat="person in persons">
+                    <img ng-src="{{person.avatar.reference.url}}" />
                     <h4>{{person.first_name + " " + person.last_name}}</h4>
                     <p>{{person.dob | date: "yyyy"}}</p>
-                    <a ui-sref="app.personDetails({id: person.slug})">Детальніше</a>
+                    <a ui-sref="app.personDetails({id: person.slug})">{{'details' | translate}}</a>
             </li>
         </ul>
     </div>

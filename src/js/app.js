@@ -11,7 +11,8 @@ var theatreApp = angular.module('theatre', [
         'ngCookies',
         'theatreDirectives',
         'darthwade.dwLoading',
-        'infinite-scroll'
+        'infinite-scroll',
+        'bootstrapLightbox',
     ]);
 
 theatreApp.run(['$rootScope', '$state', '$stateParams', '$translate', function ($rootScope, $state, $stateParams, $translate) {
@@ -42,3 +43,10 @@ theatreApp.config(['$translateProvider', '$httpProvider', function($translatePro
         return angular.isObject( data ) && String( data ) !== '[object File]' ? angular.toParam( data ) : data;
     };
 }]);
+
+theatreApp.config(function (LightboxProvider) {
+    LightboxProvider.getImageUrl = function (image) {
+        return image.images.reference.url;
+    };
+    LightboxProvider.templateUrl = 'views/Persons/gallery.html';
+});

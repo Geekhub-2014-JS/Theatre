@@ -98,5 +98,10 @@
   "search": {
     "search": "Пошук",
     "results": "результатiв"
+  },
+  "details": "Детальніше",
+  "gallery": {
+    "previous": "Попередня",
+    "next": "Наступна"
   }
 }
