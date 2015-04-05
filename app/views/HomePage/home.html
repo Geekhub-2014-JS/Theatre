@@ -6,7 +6,7 @@
                 next: activeSlideIndex+1 == $index,
                 prev: activeSlideIndex-1 == $index
             }">
-                <img ng-src="{{slide.performance.mainPicture.reference.url}}" style="margin:auto; height: 500px;">
+                <img ng-src="{{slide.performance.sliderImage.slider_slider.url}}" style="margin:auto; height: 500px;">
             </div>
         </div>
         <div class="wrapp-panel">
@@ -37,21 +37,23 @@
         <aside-menu></aside-menu>
 
         <aside class="right-sitebar">
+
             <h2>{{'last.photo' | translate}}</h2>
-            <div class="catalog">
-                <img src="img/gallery.jpg" alt="">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </p>
-            </div>
-            <h2>{{'last.video' | translate}}</h2>
-            <div class="video catalog">
-                <iframe src="https://www.youtube.com/embed/RKfElR19sag?rel=0&amp;controls=0&amp;showinfo=0" allowfullscreen></iframe>
-                <!--                        <span id="play" class="play"></span>-->
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                </p>
-            </div>
+            <!--<div class="catalog">-->
+                <!--<img src="img/gallery.jpg" alt="">-->
+                <!--<p>-->
+                    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
+                <!--</p>-->
+            <!--</div>-->
+            <!--<h2>{{'last.video' | translate}}</h2>-->
+            <!--<div class="video catalog">-->
+                <!--<iframe src="https://www.youtube.com/embed/RKfElR19sag?rel=0&amp;controls=0&amp;showinfo=0" allowfullscreen></iframe>-->
+                <!--&lt;!&ndash;                        <span id="play" class="play"></span>&ndash;&gt;-->
+                <!--<p>-->
+                    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit.-->
+                <!--</p>-->
+            <!--</div>-->
+
         </aside>
         <section class="main-page">
             <h2 class="page-title">{{'menu.news' | translate}}</h2>
