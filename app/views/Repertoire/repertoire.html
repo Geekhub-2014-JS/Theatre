@@ -16,17 +16,21 @@
             </li>
         </ul>
 
-        <pagination total-items="totalItems"
-                    ng-change="setPage()"
-                    ng-model="currentPage"
-                    max-size="maxSize"
-                    items-per-page="itemPerPage"
-                    class="pagination-sm"
-                    boundary-links="false"
-                    rotate="false"
-                    num-pages="numPages"
-                    ng-show="totalItems > itemPerPage">
-        </pagination>
+        <div class="text-center">
+            <pagination total-items="totalItems"
+                        ng-change="setPage()"
+                        ng-model="currentPage"
+                        previous-text="{{'pagination.previous' | translate}}"
+                        next-text="{{'pagination.next' | translate}}"
+                        max-size="maxSize"
+                        items-per-page="itemPerPage"
+                        class="pagination-sm"
+                        boundary-links="false"
+                        rotate="false"
+                        num-pages="numPages"
+                        ng-show="totalItems > itemPerPage">
+            </pagination>
+        </div>
     </div>
 </div>
 
