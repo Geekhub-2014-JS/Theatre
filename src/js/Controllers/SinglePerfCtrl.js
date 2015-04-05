@@ -44,5 +44,5 @@ angular.module('singlePerf',['ui.bootstrap'])
     ])
     .controller('ImageCarouselCtrl', function ($scope) {
         $scope.myInterval = 5000;
-        
+
     });

@@ -3,14 +3,19 @@
         <li><a ui-sref="app.home">{{ 'menu.home' | translate }}</a></li>
         <li class="active">{{'menu.repertoire' | translate}}</li>
     </ul>
+
+    <!--TODO: insert search field here-->
+
+    <h2 class="page-title">{{ 'menu.repertoire' | translate }}</h2>
+
     <div class="repertoire">
-        <h2 class="page-title">{{ 'menu.repertoire' | translate }}</h2>
         <ul>
             <li ng-repeat="performance in repertoire" class="performance-block">
                 <img ng-src="{{performance.mainPicture.performance_small.url}}" alt="{{performance.title}}"/>
                 <a ui-sref="app.singlePerformance({slug: performance.slug})">{{performance.title}}</a>
             </li>
         </ul>
+
         <pagination total-items="totalItems"
                     ng-change="setPage()"
                     ng-model="currentPage"

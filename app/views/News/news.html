@@ -1,11 +1,14 @@
-    <ol class="breadcrumb">
+<div class="wrapp">
+    <ul class="crumb">
         <li>
             <a ui-sref="app.home">{{ 'menu.home' | translate }}</a>
         </li>
         <li class="active">{{'menu.news' | translate}}</li>
-    </ol>
+    </ul>
 
-    <h3 class="text-center">{{'menu.news' | translate}}</h3>
+    <!--TODO: insert search field here-->
+
+    <h2 class="page-title">{{'menu.news' | translate}}</h2>
 
     <div class="container">
         <div class="col-md-8 col-lg-8 col-xs-12">
@@ -36,3 +39,5 @@
                     ng-show="total > 1">
         </pagination>
     </div>
+</div>
+

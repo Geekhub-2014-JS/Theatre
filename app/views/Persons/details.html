@@ -5,17 +5,9 @@
             <li><a ui-sref="app.persons">{{ 'menu.persons' | translate }}</a></li>
             <li class="active">{{'persons.aboutActor' | translate}}</li>
         </ul>
-        <form method="get" action="">
-            <fieldset class="search">
-                <ul>
-                    <li><input type="text" placeholder="{{'search.search' | translate }}"/></li>
-                    <li><input type="submit" value="{{'search.search' | translate }}"/></li>
-                    <li class="search-results"><p class="number-results">11 {{'search.results' | translate }}</p><span
-                            class="close-results"></span></li>
-                </ul>
-            </fieldset>
-        </form>
+
         <h2 class="page-title">Актор театру</h2>
+
         <section>
             <img class="actor-avatar" ng-src="{{person.avatar.reference.url}}"/>
 
