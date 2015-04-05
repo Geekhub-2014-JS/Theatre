@@ -3,8 +3,8 @@
         <div class="carousel-inner" role="listbox">
             <div class="item" ng-repeat="slide in slides track by $index" ng-class="{
                 active: activeSlideIndex == $index,
-                next: activeSlideIndex+1 == $index,
-                prev: activeSlideIndex-1 == $index
+                next: activeSlideIndex < $index,
+                prev: activeSlideIndex > $index
             }">
                 <img ng-src="{{slide.performance.sliderImage.slider_slider.url}}" style="margin:auto; height: 500px;">
             </div>
