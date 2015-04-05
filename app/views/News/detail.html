@@ -1,19 +1,18 @@
-<ol class="breadcrumb">
-    <li>
-        <a ui-sref="app.home">{{ 'menu.home' | translate }}</a>
-    </li>
-    <li>
-        <a ui-sref="app.news">{{ 'menu.news' | translate }}</a>
-    </li>
-    <li class="active">{{ title }}</li>
-</ol>
+<div class="wrapp">
 
-<article>
-    <img ng-src="{{news.main_picture.provider_metadata.filename}}" alt="{{news.title}}">
-    <h3>{{ news.title }}</h3>
-    <p class="topic">{{ news.text }}</p>
-    <footer class="article-footer">
-        <time>{{news.created_at | date: 'dd.MM.yyyy' }}</time>
-        <!--<small class="view"><span>112</span></small>-->
-    </footer>
-</article>
+    <ul class="crumb">
+        <li><a ui-sref="app.home">{{ 'menu.home' | translate }}</a></li>
+        <li><a ui-sref="app.news">{{ 'menu.news' | translate }}</a></li>
+        <li class="active">{{ title}}</li>
+    </ul>
+
+    <article>
+        <img ng-src="{{news.mainPicture.reference.url}}" alt="{{news.title}}">
+        <h3>{{ news.title }}</h3>
+        <p class="topic">{{ news.text }}</p>
+        <footer class="article-footer">
+            <time>{{news.created_at | date: 'dd.MM.yyyy' }}</time>
+            <!--<small class="view"><span>112</span></small>-->
+        </footer>
+    </article>
+</div>

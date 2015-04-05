@@ -1,4 +1,10 @@
 <div class="wrapp">
+
+    <ul class="crumb">
+        <li><a ui-sref="app.home">{{ 'menu.home' | translate }}</a></li>
+        <li class="active">{{'menu.about' | translate}}</li>
+    </ul>
+
     <div infinite-scroll="loadHistory()" infinite-scroll-distance='0' infinite-scroll-disabled='busy'
          infinite-scroll-disabled="true">
         <timeline>
@@ -7,13 +13,15 @@
                 </timeline-badge>
                 <timeline-panel>
                     <timeline-heading>
-                        <timeline-title>{{date.caption}}</timeline-title>
+                        <a ui-sref="app.aboutDetail({slug: date.slug})">
+                            <timeline-title>{{date.title}}</timeline-title>
+                        </a>
                         <p>
                             <small class="text-muted"><i class="glyphicon glyphicon-time"></i>{{date.year}}</small>
                         </p>
                     </timeline-heading>
                     <timeline-content>
-                        <img class="about-img" ng-src="{{date.image}}">
+                        <img class="about-img" ng-src="{{date.mainPicture.history_big.url}}" alt="{{date.title}}">
 
                         <p>{{date.text}}</p>
                     </timeline-content>

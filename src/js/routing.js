@@ -47,6 +47,11 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                     templateUrl: "views/About/about.html",
                     controller: "AboutCtrl"
                 })
+                .state('app.aboutDetail', {
+                    url: "/about/:slug",
+                    templateUrl: "views/About/aboutDetail.html",
+                    controller: "AboutDetailCtrl"
+                })
                 .state('app.persons', {
                     url: "/persons",
                     templateUrl: "views/Persons/persons.html",

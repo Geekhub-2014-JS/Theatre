@@ -7,7 +7,7 @@
                 <span class="sidebar-poster-month">{{ poster.date_time | date: 'MMM' | translate }}</span>
             </div>
             <div class="sidebar-poster-info">
-                <p>{{ poster.performance.title}}</p>
+                <a ui-sref="app.singlePerformance({slug: poster.performance.slug})">{{ poster.performance.title}}</a>
                 <p>{{ poster.performance.description }}</p>
             </div>
         </article>
