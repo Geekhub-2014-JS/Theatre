@@ -12,7 +12,7 @@ var theatreApp = angular.module('theatre', [
         'theatreDirectives',
         'darthwade.dwLoading',
         'infinite-scroll',
-        'bootstrapLightbox',
+        'bootstrapLightbox'
     ]);
 
 theatreApp.run(['$rootScope', '$state', '$stateParams', '$translate', function ($rootScope, $state, $stateParams, $translate) {

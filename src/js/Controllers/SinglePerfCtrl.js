@@ -8,6 +8,7 @@ angular.module('singlePerf',['ui.bootstrap'])
             apiGet('performances/' + $stateParams.slug)
                 .success(function (data) {
                     $scope.performance = data;
+                    $scope.slides = data.gallery;
                 })
                 .error(function(error) {
                     $scope.error = error;
@@ -44,16 +45,4 @@ angular.module('singlePerf',['ui.bootstrap'])
     .controller('ImageCarouselCtrl', function ($scope) {
         $scope.myInterval = 5000;
 
-        var slides = $scope.slides = [];
-        $scope.addSlide = function() {
-            var newWidth = 600 + slides.length + 1;
-            slides.push({
-                source: 'http://placekitten.com/' + newWidth + '/300',
-                text: ['More','Extra','Lots of','Surplus'][slides.length % 4] + ' ' +
-                ['Cats', 'Kittys', 'Felines', 'Cutes'][slides.length % 4]
-            });
-        };
-        for (var i=0; i<10; i++) {
-            $scope.addSlide();
-        }
     });

@@ -5,21 +5,11 @@
             <li><a ui-sref="app.repertoire">{{'menu.repertoire' | translate}}</a></li>
             <li class="active">{{performance.title}}</li>
         </ul>
-        <form method="get" action="">
-            <fieldset class="search">
-                <ul>
-                    <li><input type="text" placeholder="{{'search.search' | translate }}" /></li>
-                    <li><input type="submit" value="{{'search.search' | translate }}" /></li>
-                    <li class="search-results"><p class="number-results">11 {{'search.results' | translate }}</p><span class="close-results"></span></li>
-                </ul>
-            </fieldset>
-        </form>
-        <div class="page-title">
-            <h2>{{performance.title}}</h2>
-        </div>
+
+        <h2 class="page-title">{{performance.title}}</h2>
         
         <section>
-           <img class="play-img" ng-src="http://api.theatre.pp.ua/{{performance.mainPicture.reference.url}}" alt="{{performance.title}}"/>
+           <img class="play-img" ng-src="{{performance.mainPicture.reference.url}}" alt="{{performance.title}}"/>
             <ul class="menu-programm">
                 <li ng-repeat="date in dates">
                      <div class="block-data">
@@ -28,7 +18,7 @@
                         <span class="month">{{date.month | translate}}</span>
                     </div>
                     <div class="block-description">
-                        <h3><a href="#">{{performance.title}}</a></h3>
+                        <h3>{{performance.title}}</h3>
                         <p>{{date.time}}</p>
                     </div>
                 </li>
@@ -37,9 +27,9 @@
                 <div ng-controller="ImageCarouselCtrl">
                     <carousel interval="myInterval">
                         <slide ng-repeat="slide in slides" active="slide.active">
-                            <img ng-src="{{slide.source}}">
+                            <img ng-src="{{slide.images.performance_big.url}}" style="height: 338px; margin: 0 auto;">
                             <div class="carousel-caption">
-                                <p>{{slide.text}}</p>
+                                <p>{{slide.decription}}</p>
                             </div>
                         </slide>
                     </carousel>
@@ -51,7 +41,7 @@
                     <tab heading="{{ 'performance.team' | translate }}">
                         <ul class="performance-actors">
                             <li ng-repeat="role in roles">
-                                <img ng-src="http://api.theatre.pp.ua/{{role.employee.avatar.reference.url}}" alt="{{role.title}}"/>
+                                <img ng-src="{{role.employee.avatar.reference.url}}" alt="{{role.title}}"/>
                                 <h3>{{role.title}} - <a ui-sref="app.personDetails({id: role.employee.slug})">{{role.employee.first_name +  ' ' + role.employee.middle_name + ' ' + role.employee.last_name}}</a></h3>
                             </li>
                         </ul>
@@ -60,14 +50,11 @@
                         {{performance.description}}
                     </tab>
 
-                    <tab heading="{{ 'performance.press' | translate }}">
+                    <!--<tab heading="{{ 'performance.press' | translate }}">-->
+                    <!--</tab>-->
 
-
-                    </tab>
-                    <tab heading="{{ 'performance.video' | translate }}">
-
-
-                    </tab>
+                    <!--<tab heading="{{ 'performance.video' | translate }}">-->
+                    <!--</tab>-->
 
                 </tabset>
             </div>
