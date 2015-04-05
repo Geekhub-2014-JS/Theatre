@@ -14,7 +14,7 @@ angular.module('repertoire',[])
                 apiGet('performances' + '?limit=' + $scope.itemPerPage + '&page=' + pageNum)
                     .success(function (data) {
                         $scope.repertoire = data.performances;
-                        $scope.totalItems = data.page_count * $scope.itemPerPage; // TODO change after performance_count fix
+                        $scope.totalItems = data.total_count;
                     })
                     .error(function(error) {
                         $scope.error = error;
