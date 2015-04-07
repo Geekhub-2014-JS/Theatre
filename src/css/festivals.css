@@ -1,0 +1,22 @@
+.festivals section {
+    margin: 45px 0 100px 0;
+}
+.festivals article {
+    overflow: hidden;
+    margin: 0 0 46px 0;
+}
+.festivals article img {
+    width: 355px;
+    float: left;
+    margin: 0 29px 0 0;
+}
+.festivals article h2 {
+    font-size: 18px;
+    color: #292929;
+    margin: 0 0 19px 0;
+}
+.festivals article .descriprion {
+    font: 14px robotoregular;
+    color: #797777;
+    text-align: justify;
+}
