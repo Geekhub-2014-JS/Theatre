@@ -8,12 +8,10 @@
             <li class="active">{{'persons.aboutActor' | translate}}</li>
         </ul>
 
-        <h2 class="page-title">Актор театру</h2>
+        <h2 class="page-title">{{person.first_name + " " + person.last_name}}</h2>
 
         <section>
             <img class="actor-avatar" ng-src="{{person.avatar.reference.url}}"/>
-
-            <h3>{{person.first_name + " " + person.middle_name + " " + person.last_name}}</h3>
 
             <div class="biography">
                 <p><strong>{{'persons.position' | translate}}:</strong>{{person.position}}</p>
