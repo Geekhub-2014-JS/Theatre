@@ -247,34 +247,6 @@ header nav li a:focus{
 
 /** Carousel Controls **/
 
-
-.homepage-slider .jcarousel-control-prev,
-.homepage-slider .jcarousel-control-next {
-    display: block;
-    width: 36px;
-    height: 36px; 
-    border-radius: 4px;
-    margin: 30px 0 0;
-}
-
-.homepage-slider .jcarousel-control-prev {
-    float: left;
-    background: url(../img/prew.png) center center no-repeat #4F4F4F;
-}
-
-.homepage-slider .jcarousel-control-next {
-    float: right;
-    background: url(../img/next.png) center center no-repeat #4F4F4F;
-}
-.homepage-slider .jcarousel-control-prev:hover {
-    float: left;
-    background: url(../img/prew.png) center center no-repeat #E34B2B;
-}
-
-.homepage-slider .jcarousel-control-next:hover {
-    float: right;
-    background: url(../img/next.png) center center no-repeat #E34B2B;
-}
 .homepage-slider .carousel-inner {
     z-index: -1;
     background: #ccc;
@@ -313,6 +285,7 @@ header nav li a:focus{
 }
 
 .homepage-slider .carousel-indicators li.active {
+    cursor: default;
     width: 556px;
     height: 93px;
     background: url(../img/pagination-active.png) center center no-repeat;
@@ -325,6 +298,10 @@ header nav li a:focus{
 }
 .date-slide span {
     display: block;
+    cursor: pointer;
+}
+.homepage-slider .carousel-indicators li.active .date-slide span {
+    cursor: auto;
 }
 .date-slide .day {
     color: rgba(255, 255, 255, 0.5);
@@ -349,6 +326,8 @@ header nav li a:focus{
 /*    display: none;*/ 
 }
 .discription-slide h2 {
+    max-height: 40px;
+    overflow: hidden;
     margin: 0 0 8px;
 }
 .discription-slide h2 a {

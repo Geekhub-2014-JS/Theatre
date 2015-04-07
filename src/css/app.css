@@ -51,8 +51,7 @@ news-block {
     display: inline-block;
     width: 350px;
 }
-a timeline-title,
-a span,
-a {
-    cursor: pointer !important;
+
+body .ng-binding {
+    cursor: auto;
 }
