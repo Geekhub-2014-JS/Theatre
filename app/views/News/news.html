@@ -1,37 +1,32 @@
 <div ng-include="'views/shared/menu.html'"></div>
+<main class="news" role="main">
+    <div class="wrapp">
 
-<div class="wrapp">
+        <ul class="crumb">
+            <li><a ui-sref="app.home">{{ 'menu.home' | translate }}</a></li>
+            <li class="active">{{'menu.news' | translate}}</li>
+        </ul>
 
-    <ul class="crumb">
-        <li><a ui-sref="app.home">{{ 'menu.home' | translate }}</a></li>
-        <li class="active">{{'menu.news' | translate}}</li>
-    </ul>
+        <!--TODO: insert search field here-->
 
-    <!--TODO: insert search field here-->
+        <h2 class="page-title">{{'menu.news' | translate}}</h2>
 
-    <h2 class="page-title">{{'menu.news' | translate}}</h2>
-
-    <div class="container">
-        <div class="col-md-8 col-lg-8 col-xs-12">
+        <section class="news-list">
             <article class="catalog" ng-repeat="item in news">
                 <img ng-src="{{item.mainPicture.post_big.url}}" alt="{{item.title}}">
                 <h3><a ui-sref="app.newsDetail({id: item.slug})">{{ item.title }}</a></h3>
                 <p class="topic">{{ item.short_description }}</p>
                 <footer class="article-footer">
                     <time>{{item.created_at | date: 'dd.MM.yyyy' }}</time>
-                    <!--<small class="view"><span>112</span></small>-->
                 </footer>
             </article>
-        </div>
-        <div class="col-md-4 col-lg-4 col-xs-12">
-            <news-block></news-block>
-        </div>
-    </div>
+        </section>
 
-    <div class="text-center">
+        <news-block></news-block>
+
         <pagination direction-links="true"
-                    previous-text="{{'pagination.previous' | translate}}"
-                    next-text="{{'pagination.next' | translate}}"
+                    previous-text="<"
+                    next-text=">"
                     ng-change="nextPage(currentPage)"
                     items-per-page="perPage"
                     total-items="total"
@@ -40,6 +35,9 @@
                     ng-show="total > 1">
         </pagination>
     </div>
-</div>
+
+    <a class="up" href="javascript:scroll(0,0)"></a>
+</main>
+
 
 <div ng-include="'views/shared/footer.html'"></div>

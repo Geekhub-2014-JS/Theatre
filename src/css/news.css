@@ -1,0 +1,131 @@
+.news-list {
+    float: left;
+    width: 627px;
+    margin: 0 19px 0 0;
+}
+.news .catalog p {
+    color: #868B8C;
+}
+.news .topic {
+    font: 14px robotolight;
+    color: #868B8C;
+}
+.news h3 a {
+    color: #474B4D;
+    font-size: 18px;
+    margin: 6px 0 0 11px;
+}
+.news .article-footer {
+    border-top: 1px solid #E7E7E7;
+    overflow: hidden;
+    padding: 6px 11px;
+    color: #868B8C;
+    font: 12px robotoregular;
+}
+.news .article-footer time {
+    float: right;
+}
+.news .menu-programm {
+    overflow: hidden;
+    margin: 0 0 50px 0;
+}
+.news .menu-programm li {
+    overflow: hidden;
+    background: url(../images/news-code.png) 320px center no-repeat, #4f4f4f;
+    border-bottom: 1px dashed #292929;
+    cursor: pointer;
+    padding: 2px 0;
+}
+.news .menu-programm li:hover {
+    background:  url(../images/news-code.png) 320px center no-repeat, #E64C2B;
+}
+.news .menu-programm li:last-child {
+    border-bottom: none;
+}
+.news .menu-programm .block-data {
+    float: left;
+    width: 75px;
+    text-align: center;
+    background: url(../images/play-stick-menu.png) right center no-repeat;
+}
+.news .menu-programm .block-description {
+    overflow: hidden;
+    color: #FFF;
+}
+.news .menu-programm .block-data span {
+    display: block;
+}
+.news .menu-programm .block-data .day {
+    color: #717171;
+    font-size: 18px;
+}
+.news .menu-programm .block-data .number {
+    color: #FFF;
+    font: 30px robotothin;
+    margin: -7px 0;
+}
+.news .menu-programm .block-data .month {
+    color: #717171;
+    font-size: 14px;
+}
+.news .menu-programm .block-description h3 a {
+    color: #fff;
+    font: 18px robotothin;
+}
+.news .menu-programm .block-description h3 {
+    margin: 0 0 8px 0;
+}
+.news .menu-programm .block-description p {
+    font-size: 14px;
+    margin: 0 0 0 8px;
+}
+
+
+.pagination {
+    clear: both;
+    display: block;
+    margin: 0 0 73px 0;
+    text-align: center;
+}
+.pagination li {
+    display: inline-block;
+}
+.pagination li a {
+    display: inline-block;
+    font: 18px robotothin;
+    color: #fff;
+    background: #4d4d4d;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border-radius: 2px;
+    float: none;
+    position: static;
+    margin: 0 1px;
+    border: 0;
+}
+.pagination li a:hover,
+.pagination li.active a,
+.pagination>li>a:hover,
+.pagination>li>span:hover,
+.pagination>li>a:focus,
+.pagination>li>span:focus,
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus {
+    background: #E44B2B;
+    color: #FFFFFF;
+}
+
+.pagination>.disabled>span,
+.pagination>.disabled>span:hover,
+.pagination>.disabled>span:focus,
+.pagination>.disabled>a,
+.pagination>.disabled>a:hover,
+.pagination>.disabled>a:focus {
+    color: #717171;
+    background: #4D4D4D;
+}

@@ -1,15 +1,13 @@
-<div class="right-news-sidebar">
-    <div class="container-fluid">
-        <article ng-repeat="poster in posters" class="sidebar-poster">
-            <div class="sidebar-poster-date">
-                <span class="sidebar-poster-dayWeek">{{ poster.date_time | date: 'EEE' | translate }}</span>
-                <span class="sidebar-poster-day">{{ poster.date_time | date: 'd' }}</span>
-                <span class="sidebar-poster-month">{{ poster.date_time | date: 'MMM' | translate }}</span>
-            </div>
-            <div class="sidebar-poster-info">
-                <a ui-sref="app.singlePerformance({slug: poster.performance.slug})">{{ poster.performance.title}}</a>
-                <p>{{ poster.performance.description }}</p>
-            </div>
-        </article>
-    </div>
-</div>
+<ul class="menu-programm">
+    <li ng-repeat="poster in posters">
+        <div class="block-data">
+            <span class="day">{{ poster.date_time | date: 'EEE' | translate }}</span>
+            <span class="number">{{ poster.date_time | date: 'd' }}</span>
+            <span class="month">{{ poster.date_time | date: 'MMM' | translate }}</span>
+        </div>
+        <div class="block-description">
+            <h3><a ui-sref="app.singlePerformance({slug: poster.performance.slug})">{{ poster.performance.title}}</a></h3>
+            <p>{{ poster.performance.type }}</p>
+        </div>
+    </li>
+</ul>

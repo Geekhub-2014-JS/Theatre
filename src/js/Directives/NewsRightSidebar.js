@@ -22,7 +22,7 @@ angular.module('newsRightSidebar', [])
                 scope.posters = [];
                 var now = moment();
                 var toDate = now.add(4, 'days');
-                var url = 'performanceevents.json?fromDate=today&toDate=' + toDate.format('DD-MM-YYYY') + '&limit=4';
+                var url = 'performanceevents.json?fromDate=today&limit=4';
                 apiGet(url)
                     .success(function(response, status){
                         if (status === 200) {
