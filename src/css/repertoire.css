@@ -1,24 +1,24 @@
-.program-nav {
+.repertoire .program-nav {
     width: 170px;
 }
-.program-nav .season {
+.repertoire .program-nav .season {
     color: #797777;
     font: 14.2px robotoregular;
     margin: 15px 0 0;
 
 }
-.program-nav span {
+.repertoire .program-nav span {
     width: 13px;
     height: 21px;
     background: url(../images/repertoire-nav.png) no-repeat;
 }
-.program-nav .next {
+.repertoire .program-nav .next {
     background-position: -26px 0px;
 }
-.program-nav .prev:hover {
+.repertoire .program-nav .prev:hover {
     background-position: -13px 0px;
 }
-.program-nav .next:hover {
+.repertoire .program-nav .next:hover {
     background-position: -39px 0px;
 }
 
