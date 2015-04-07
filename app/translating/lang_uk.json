@@ -25,6 +25,9 @@
   "poster": {
       "poster_on": "Афіша на"
   },
+  "repertoire": {
+    "season": "сезон"
+  },
   "month": {
       "Jan": "Січень",
       "Feb": "Лютий",

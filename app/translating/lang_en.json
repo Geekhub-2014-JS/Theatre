@@ -6,7 +6,7 @@
     "poster": "Poster",
     "repertoire": "Repertoire",
     "news": "News",
-    "about": "About Theatre",
+    "about": "About Us",
     "persons": "Persons",
     "contacts": "Contacts",
     "photoarchive": "Photo Archive",
@@ -23,7 +23,10 @@
     "video": "Video"
   },
   "poster": {
-    "poster_on": "Poster on"
+    "poster_on": "What's on"
+  },
+  "repertoire": {
+    "season": "season"
   },
   "month": {
     "Jan": "January",
@@ -58,7 +61,7 @@
     "Sunday": "Sun"
   },
   "persons": {
-    "actors": "Actors",
+    "actors": "Creative Team",
     "aboutActor": "About actor",
     "education": "Education",
     "since": "Work in theatre ",
@@ -71,8 +74,8 @@
     "previous": "Previous"
   },
   "last": {
-    "photo": "Last photo",
-    "video": "Last video"
+    "photo": "Latest photo",
+    "video": "Latest video"
   },
   "key": "value",
   "Jan": "January",

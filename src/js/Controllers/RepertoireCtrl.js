@@ -1,7 +1,7 @@
 angular.module('repertoire',[])
     .controller('RepertoireCtrl', ['$scope', 'apiGet',
         function($scope, apiGet){
-            $scope.itemPerPage = 8;
+            $scope.itemPerPage = 100;
             getPerformances(1);
             $scope.setPage = function (pageNo) {
                 pageNo = $scope.currentPage;

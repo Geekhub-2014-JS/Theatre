@@ -130,15 +130,8 @@ body {
 .uppercase {
     text-transform: uppercase;
 }
-.ng-binding{
-    cursor: default;
-}
-.dropdown-menu a{
-    cursor: pointer;
-}
-.caret{
-    margin-bottom: 4px;
-}
+.hidden {display: none;}
+
 /*----------------------- header -----------------------*/
 .main-header {
     background: rgb(236,83,42);
@@ -231,6 +224,14 @@ header nav li a:focus{
     border: none;
     outline: none;
 }
+
+.page-title {
+    text-align: center;
+    font-size: 23.97px;
+    color: #E54B2B;
+    margin: 0 0 5px;
+}
+
 /*----------------------- slider -----------------------*/
 .homepage-slider.carousel {
     position: relative;
@@ -470,8 +471,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     float: right;
     width: 23.9%;
 }
-.right-sitebar h2,
-.page-title {
+.right-sitebar h2 {
     text-align: center;
     font: 30px robotothin;
     color: #DF492B;

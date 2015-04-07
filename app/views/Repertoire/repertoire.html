@@ -1,23 +1,16 @@
 <div ng-include="'views/shared/menu.html'"></div>
-<div class="wrapp">
-    <ul class="crumb">
-        <li><a ui-sref="app.home">{{ 'menu.home' | translate }}</a></li>
-        <li class="active">{{'menu.repertoire' | translate}}</li>
-    </ul>
-
-    <!--TODO: insert search field here-->
-
-    <h2 class="page-title">{{ 'menu.repertoire' | translate }}</h2>
-
-    <div class="repertoire">
-        <ul>
-            <li ng-repeat="performance in repertoire" class="performance-block">
-                <img ng-src="{{performance.mainPicture.performance_small.url}}" alt="{{performance.title}}"/>
-                <a ui-sref="app.singlePerformance({slug: performance.slug})">{{performance.title}}</a>
-            </li>
+<main class="repertoire" role="main">
+    <div class="wrapp">
+        <ul class="crumb">
+            <li><a ui-sref="app.home">{{ 'menu.home' | translate }}</a></li>
+            <li class="active">{{'menu.repertoire' | translate}}</li>
         </ul>
 
-        <div class="text-center">
+        <!--TODO: insert search field here-->
+
+        <h2 class="page-title">{{ 'menu.repertoire' | translate }}</h2>
+
+        <div class="text-center hidden" >
             <pagination total-items="totalItems"
                         ng-change="setPage()"
                         ng-model="currentPage"
@@ -32,7 +25,21 @@
                         ng-show="totalItems > itemPerPage">
             </pagination>
         </div>
-    </div>
-</div>
 
+        <div class="program-nav">
+            <!--<span class="prev"></span>-->
+            <!--<span class="next"></span>-->
+            <p class="season">{{'repertoire.season' | translate}} 2014 - 2015</p>
+        </div>
+
+        <ul class="repertoire-list">
+            <li ng-repeat="performance in repertoire">
+                <img ng-src="{{performance.mainPicture.performance_big.url}}" alt="{{performance.title}}"/>
+                <h3><a ui-sref="app.singlePerformance({slug: performance.slug})">{{performance.title}}</a></h3>
+            </li>
+        </ul>
+    </div>
+
+    <a class="up" href="javascript:scroll(0,0)"></a>
+</main>
 <div ng-include="'views/shared/footer.html'"></div>
