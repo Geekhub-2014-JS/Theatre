@@ -5,7 +5,7 @@
 var theatreServices = angular.module('theatreServices', []);
 
 theatreServices
-    .constant('api_url', 'http://api.theatre.pp.ua/')
+    .constant('api_url', 'http://apistaging.theatre.pp.ua/')
     .factory('apiPost', ['$http', 'api_url', '$stateParams',
         function ($http, api_url, $stateParams) {
             return function (url, data) {
