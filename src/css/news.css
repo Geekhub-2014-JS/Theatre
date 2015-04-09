@@ -26,18 +26,19 @@
     float: right;
 }
 .news .menu-programm {
+    width: 350px;
     overflow: hidden;
     margin: 0 0 50px 0;
 }
 .news .menu-programm li {
     overflow: hidden;
-    background: url(../images/news-code.png) 320px center no-repeat, #4f4f4f;
+    background: url(../img/news-code.png) 320px center no-repeat, #4f4f4f;
     border-bottom: 1px dashed #292929;
     cursor: pointer;
     padding: 2px 0;
 }
 .news .menu-programm li:hover {
-    background:  url(../images/news-code.png) 320px center no-repeat, #E64C2B;
+    background-color: #E64C2B;
 }
 .news .menu-programm li:last-child {
     border-bottom: none;
@@ -46,7 +47,7 @@
     float: left;
     width: 75px;
     text-align: center;
-    background: url(../images/play-stick-menu.png) right center no-repeat;
+    background: url(../img/play-stick-menu.png) right center no-repeat;
 }
 .news .menu-programm .block-description {
     overflow: hidden;
@@ -128,4 +129,18 @@
 .pagination>.disabled>a:focus {
     color: #717171;
     background: #4D4D4D;
+}
+
+.single-post .date {
+    float: left;
+}
+.single-post img {
+    display: block;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+}
+.single-post p {
+    text-align: justify;
+    margin: 10px 0 60px;
 }

@@ -1,5 +1,6 @@
 .wrapp .timeline {
     overflow: hidden;
+    padding: 20px 0 40px;
 }
 .wrapp .timeline > li {
     width: 50%;
@@ -27,6 +28,16 @@
     right: auto;
 }
 .wrapp .timeline > li > .timeline-panel .timeline-body {
-    max-height: 300px;
+    max-height: 350px;
     overflow: hidden;
+}
+.wrapp .timeline h4 a {
+    color: #474B4D;
+    font-size: 18px;
+    margin: 6px 0 0 11px;
+}
+.wrapp .timeline .timeline-body img {
+    display: block;
+    width: 100%;
+    height: 270px;
 }

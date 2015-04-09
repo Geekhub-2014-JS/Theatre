@@ -1,41 +1,48 @@
 <div ng-include="'views/shared/menu.html'"></div>
+<main>
+    <div class="wrapp">
 
-<div class="wrapp">
+        <ul class="crumb">
+            <li><a ui-sref="app.home">{{ 'menu.home' | translate }}</a></li>
+            <li class="active">{{'menu.about' | translate}}</li>
+        </ul>
 
-    <ul class="crumb">
-        <li><a ui-sref="app.home">{{ 'menu.home' | translate }}</a></li>
-        <li class="active">{{'menu.about' | translate}}</li>
-    </ul>
+        <!--TODO: insert search field here-->
 
-    <!--TODO: insert search field here-->
+        <h2 class="page-title">{{'menu.about' | translate}}</h2>
 
-    <h2 class="page-title">{{'menu.about' | translate}}</h2>
-    
-    <div infinite-scroll="loadHistory()" infinite-scroll-distance='0' infinite-scroll-disabled='busy'
-         infinite-scroll-disabled="true">
-        <timeline>
-            <timeline-node ng-repeat="date in historyStore | orderBy:'year' : true" side="{{$odd ? 'right':'left'}}">
-                <timeline-badge class="info"><i>{{date.year}}</i>
-                </timeline-badge>
-                <timeline-panel>
-                    <timeline-heading>
-                        <a ui-sref="app.aboutDetail({slug: date.slug})">
-                            <timeline-title>{{date.title}}</timeline-title>
-                        </a>
-                        <p>
-                            <small class="text-muted"><i class="glyphicon glyphicon-time"></i>{{date.year}}</small>
-                        </p>
-                    </timeline-heading>
-                    <timeline-content>
-                        <img class="about-img" ng-src="{{date.mainPicture.history_big.url}}" alt="{{date.title}}">
+        <div infinite-scroll="loadHistory()" infinite-scroll-distance='0' infinite-scroll-disabled='busy'
+             infinite-scroll-disabled="true">
+            <timeline>
+                <timeline-node ng-repeat="date in historyStore | orderBy:'year' : true" side="{{$odd ? 'right':'left'}}">
+                    <timeline-badge class="info">
+                        {{date.year}}
+                    </timeline-badge>
+                    <timeline-panel>
+                        <timeline-heading>
+                            <timeline-title>
+                                <a ui-sref="app.aboutDetail({slug: date.slug})">
+                                    {{date.title}}
+                                </a>
+                            </timeline-title>
+                            <!--<p>-->
+                                <!--<small class="text-muted"><i class="glyphicon glyphicon-time"></i>{{date.year}}</small>-->
+                            <!--</p>-->
+                        </timeline-heading>
+                        <timeline-content>
+                            <img ng-src="{{date.mainPicture.history_big.url}}" alt="{{date.title}}">
 
-                        <p>{{date.text}}</p>
-                    </timeline-content>
-                </timeline-panel>
-            </timeline-node>
-        </timeline>
-        <div style='clear: both;'></div>
+                            <p>{{date.text}}</p>
+                        </timeline-content>
+                    </timeline-panel>
+                </timeline-node>
+            </timeline>
+            <div style='clear: both;'></div>
+        </div>
     </div>
-</div>
+
+    <a class="up" href="javascript:scroll(0,0)"></a>
+</main>
+
 
 <div ng-include="'views/shared/footer.html'"></div>
