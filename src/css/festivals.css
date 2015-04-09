@@ -15,7 +15,8 @@
     color: #292929;
     margin: 0 0 19px 0;
 }
-.festivals article .descriprion {
+.festivals article .description {
+    overflow: hidden;
     font: 14px robotoregular;
     color: #797777;
     text-align: justify;

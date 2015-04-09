@@ -829,6 +829,7 @@ color: #E54B2B;
     margin: 0 0 16px;
 }
 .rada .member-discription {
+    overflow: hidden;
     font: 14.02px robotoregular;
     color: #797777;
     text-align: justify;
