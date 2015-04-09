@@ -250,7 +250,7 @@ header nav li a:focus{
 
 .homepage-slider .carousel-inner {
     z-index: -1;
-    background: #ccc;
+    background: #484c4d;
 }
 .homepage-slider.carousel {
     overflow: hidden;
