@@ -40,6 +40,7 @@ gulp.task('vendors-js', function() {
         'vendors/angular-bootstrap/ui-bootstrap.js',
         'vendors/angular-bootstrap/ui-bootstrap-tpls.js',
         'vendors/angular-cookies/angular-cookies.js',
+        'vendors/angular-sanitize/angular-sanitize.js',
         'vendors/angular-translate/angular-translate.js',
         'vendors/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
         'vendors/angular-translate-storage-cookie/angular-translate-storage-cookie.js',

@@ -11,7 +11,7 @@
         <time class="date">{{history.created_at | date: 'dd.MM.yyyy' }}</time>
         <img ng-src="{{history.mainPicture.reference.url}}" alt="{{history.title}}">
         <h2 class="page-title">{{ title}}</h2>
-        <p class="topic">{{ history.text }}</p>
+        <p class="topic" ng-bind-html="history.text"></p>
 
     </div>
     <a class="up" href="javascript:scroll(0,0)"></a>

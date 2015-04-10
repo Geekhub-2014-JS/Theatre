@@ -49,7 +49,7 @@
                         </ul>
                     </tab>
                     <tab heading="{{ 'performance.description' | translate }}">
-                        {{performance.description}}
+                        <div ng-bind-html="performance.description"></div>
                     </tab>
 
                     <!--<tab heading="{{ 'performance.press' | translate }}">-->

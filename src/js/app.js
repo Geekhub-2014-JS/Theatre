@@ -12,6 +12,7 @@ var theatreApp = angular.module('theatre', [
         'theatreDirectives',
         'darthwade.dwLoading',
         'infinite-scroll',
+        'ngSanitize',
         'bootstrapLightbox'
     ]);
 
