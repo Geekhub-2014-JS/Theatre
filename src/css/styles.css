@@ -849,7 +849,8 @@ color: #E54B2B;
 
 .play .play-img {
     float: left;
-    width: 236px;
+    max-width: 236px;
+    max-height: 330px;
     margin: 0 11px 50px 0;
 }
 .play .carousel {
@@ -866,7 +867,15 @@ color: #E54B2B;
     padding: 0 5px;
 }
 .play .media-block{
+    overflow: hidden;
     margin: 0 0 50px 0;
+}
+.play .media-block .carousel-control {
+    cursor: pointer;
+}
+.play .media-block .carousel-inner img {
+    height: 330px;
+    margin: 0 auto;
 }
 .play .menu-programm {
     float: right;
