@@ -10,7 +10,7 @@
         <time class="date">{{news.created_at | date: 'dd.MM.yyyy' }}</time>
         <img ng-src="{{news.mainPicture.reference.url}}" alt="{{ news.title }}">
         <h2 class="page-title">{{ news.title }}</h2>
-        <p class="topic" ng-bind-html="news.text"></p>
+        <div class="topic post-text" ng-bind-html="news.text"></div>
 
     </div>
     <a class="up" href="javascript:scroll(0,0)"></a>
