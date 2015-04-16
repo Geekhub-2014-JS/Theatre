@@ -751,6 +751,7 @@ footer .copy {
 }
 .actor .actor-avatar {
     float: left;
+    max-width: 300px;
     margin: 0 42px 25px 0;
 }
 .actor h3 {
@@ -799,6 +800,7 @@ footer .copy {
 }
 .actor .actor-gallery {
     overflow: hidden;
+    clear: both;
     margin: 0 0 41px -2px;
 }
 .actor .actor-gallery li {
