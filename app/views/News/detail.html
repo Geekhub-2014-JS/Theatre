@@ -8,7 +8,7 @@
         </ul>
 
         <time class="date">{{news.created_at | date: 'dd.MM.yyyy' }}</time>
-        <img ng-src="{{news.mainPicture.reference.url}}" alt="{{ news.title }}">
+        <img ng-src="{{news.mainPicture.post_big.url}}" alt="{{ news.title }}">
         <h2 class="page-title">{{ news.title }}</h2>
         <div class="topic post-text" ng-bind-html="news.text"></div>
 

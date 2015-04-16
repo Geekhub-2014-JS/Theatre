@@ -1,5 +1,6 @@
 /* app css stylesheet */
 [dw-loading] {
+    position: static;
     min-height: 100%;
 }
 .dw-loading.dw-loading-overlay {

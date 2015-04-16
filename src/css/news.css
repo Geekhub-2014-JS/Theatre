@@ -139,14 +139,11 @@
     cursor: default;
 }
 
-.single-post .date {
-    float: left;
-}
 .single-post img {
     display: block;
     width: 600px;
     height: 400px;
-    margin: 0 auto;
+    margin: 0 auto 5px;
 }
 .single-post .post-text {
     margin: 10px 0 60px;
