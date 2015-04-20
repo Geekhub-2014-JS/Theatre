@@ -24,3 +24,6 @@
 .timeline-badge.info {
     background-color: #df442b !important;
 }
+.crumb {
+    display: none !important;
+}
