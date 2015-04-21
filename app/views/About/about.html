@@ -14,7 +14,8 @@
         <div infinite-scroll="loadHistory()" infinite-scroll-distance='0' infinite-scroll-disabled='busy'
              infinite-scroll-disabled="true">
             <timeline>
-                <timeline-node ng-repeat="date in historyStore | orderBy:'year' : true" side="{{$odd ? 'right':'left'}}">
+                <timeline-node ng-repeat="date in historyStore | orderBy:'year' : true"
+                               side="{{$odd ? 'right':'left'}}">
                     <timeline-badge class="info">
                         {{date.year}}
                     </timeline-badge>
@@ -26,11 +27,13 @@
                                 </a>
                             </timeline-title>
                             <!--<p>-->
-                                <!--<small class="text-muted"><i class="glyphicon glyphicon-time"></i>{{date.year}}</small>-->
+                            <!--<small class="text-muted"><i class="glyphicon glyphicon-time"></i>{{date.year}}</small>-->
                             <!--</p>-->
                         </timeline-heading>
                         <timeline-content>
-                            <img ng-src="{{date.mainPicture.history_big.url}}" alt="{{date.title}}">
+                            <a ui-sref="app.aboutDetail({slug: date.slug})">
+                                <img ng-src="{{date.mainPicture.history_big.url}}" alt="{{date.title}}">
+                            </a>
 
                             <p>{{date.text}}</p>
                         </timeline-content>

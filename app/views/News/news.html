@@ -13,11 +13,13 @@
 
         <section class="news-list">
             <article class="catalog" ng-repeat="item in news">
-                <img ng-src="{{item.mainPicture.post_big.url}}" alt="{{item.title}}">
+                <a ui-sref="app.newsDetail({id: item.slug})"><img ng-src="{{item.mainPicture.post_big.url}}"
+                                                                  alt="{{item.title}}"></a>
                 <h3><a ui-sref="app.newsDetail({id: item.slug})">{{ item.title }}</a></h3>
                 <p class="topic">{{ item.short_description }}</p>
                 <footer class="article-footer">
                     <time>{{item.created_at | date: 'dd.MM.yyyy' }}</time>
+
                 </footer>
             </article>
         </section>
