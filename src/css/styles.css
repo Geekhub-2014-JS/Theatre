@@ -811,6 +811,7 @@ footer .copy a {
 }
 .actor .actor-gallery li {
     float: left;
+    cursor: pointer;
 }
 .actor .actor-gallery li img {
     margin: -2px 0 0 2px;
