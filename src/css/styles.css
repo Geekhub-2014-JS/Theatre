@@ -229,7 +229,7 @@ header nav li a:focus{
     text-align: center;
     font-size: 23.97px;
     color: #E54B2B;
-    margin: 35px 0;
+    margin: 20px 0;
 }
 
 /*----------------------- slider -----------------------*/
@@ -629,7 +629,7 @@ footer .copy a {
     text-align: center;
     font-size: 23.97px;
     color: #E54B2B;
-    margin: 0 0 5px;
+    margin: 20px 0 5px;
 }
 .program-nav {
     text-align: center;

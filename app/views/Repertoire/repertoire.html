@@ -33,7 +33,7 @@
         </div>
 
         <ul class="repertoire-list">
-            <li ng-repeat="performance in repertoire">
+            <li ng-repeat="performance in repertoire" ui-sref="app.singlePerformance({slug: performance.slug})">
                 <img ng-src="{{performance.mainPicture.performance_big.url}}" alt="{{performance.title}}"/>
                 <h3><a ui-sref="app.singlePerformance({slug: performance.slug})">{{performance.title}}</a></h3>
             </li>
