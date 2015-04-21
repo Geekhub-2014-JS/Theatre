@@ -973,6 +973,7 @@ color: #E54B2B;
     height: 238px;
     margin: 0 0 6px 8px;
     position: relative;
+    cursor: pointer;
 }
 .play .performance-actors img{
     width: 238px;
@@ -982,6 +983,7 @@ color: #E54B2B;
     text-align: center;
     padding: 13px;
     width: 100%;
+    min-height: 64px;
     bottom: 0;
     left: 0;
     background: rgba(79, 79, 79, 0.8);
