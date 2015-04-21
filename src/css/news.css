@@ -72,12 +72,10 @@
     color: #717171;
     font-size: 14px;
 }
-.news .menu-programm .block-description h3 a {
+.news .menu-programm .block-description h3 {
+    margin: 6px 0 8px 11px;
     color: #fff;
     font: 18px robotothin;
-}
-.news .menu-programm .block-description h3 {
-    margin: 0 0 8px 0;
 }
 .news .menu-programm .block-description p {
     font-size: 14px;
