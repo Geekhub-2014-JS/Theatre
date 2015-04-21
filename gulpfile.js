@@ -12,7 +12,7 @@ gulp.task('vendors-css', function () {
     gulp.src([
         'vendors/bootstrap/dist/css/bootstrap.css',
         'vendors/angular-loading/angular-loading.css',
-        'vendors/angular-timeline/src/angular-timeline.css',
+        'vendors/angular-timeline/dist/angular-timeline.css',
         'vendors/bootstrap/dist/css/bootstrap-theme.css',
         'vendors/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.css',
         'vendors/angular-loading-bar/build/loading-bar.css'
@@ -47,7 +47,7 @@ gulp.task('vendors-js', function() {
         'vendors/angular-translate-storage-local/angular-translate-storage-local.js',
         'vendors/ngInfiniteScroll/build/ng-infinite-scroll.js',
         'vendors/spin.js/spin.js',
-        'vendors/angular-timeline/src/angular-timeline.js',
+        'vendors/angular-timeline/dist/angular-timeline.js',
         'vendors/angular-loading/angular-loading.js',
         'vendors/angular-loading-bar/build/loading-bar.js',
         'vendors/moment/moment.js',
