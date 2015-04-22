@@ -1,12 +1,16 @@
 <div ng-include="'views/shared/menu.html'"></div>
 
-<div class="wrapp">
-    <ul class="crumb">
-        <li><a ui-sref="app.home">{{ 'menu.home' | translate }}</a></li>
-        <li class="active">{{'menu.partners' | translate}}</li>
-    </ul>
+<main>
+    <div class="wrapp">
+        <ul class="crumb">
+            <li><a ui-sref="app.home">{{ 'menu.home' | translate }}</a></li>
+            <li class="active">{{'menu.partners' | translate}}</li>
+        </ul>
 
-    <h2 class="page-title">{{'menu.partners' | translate}}</h2>
-</div>
+        <h2 class="page-title">{{'menu.partners' | translate}}</h2>
+    </div>
+
+    <a class="up" href="javascript:scroll(0,0)"></a>
+</main>
 
 <div ng-include="'views/shared/footer.html'"></div>
