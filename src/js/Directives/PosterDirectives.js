@@ -20,7 +20,7 @@ angular.module('posterDirectives', [])
                             templ = templ +
                                 //"<div class='th-calendar-poster-item'>" +
                             "<img ng-src='" + el.performance.mainPicture.performance_big.url + "' >" +
-                            "<a href='" + $stateParams.locale + "/performance/" + el.performance.slug + "' title='" + el.performance.description + "' class='th-calendar-poster-link'>" +
+                            "<a href='" + $stateParams.locale + "/performance/" + el.performance.slug + "' title='" + el.performance.description.replace(/(<([^>]+)>)|'|&nbsp|;/gi, '') + "' class='th-calendar-poster-link'>" +
                             "<span class='th-calendar-poster-title'>" + el.performance.title + "</span>" +
                             "<span class='th-calendar-poster-time'>" + el.time + "</span>" +
 //                                    "<div class='th-calendar-poster-date'>" + (el.day < 10 ? "0" + el.day : el.day) + "." + (el.month < 10 ? "0"+el.month:el.month) + "." + el.year + "</div>" +
