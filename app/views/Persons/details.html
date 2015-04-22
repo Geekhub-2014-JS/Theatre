@@ -32,12 +32,13 @@
             <ul class="actor-gallery">
                 <li ng-repeat="galleryItem in person.gallery">
                     <a ng-click="openLightboxModal($index)">
-                        <img ng-src="{{galleryItem.images.performance_small.url}}" class="img-thumbnail" alt="{{galleryItem.title}}">
+                        <img ng-src="{{galleryItem.images.performance_small.url}}" class="img-thumbnail"
+                             alt="{{galleryItem.title}}">
                     </a>
                 </li>
             </ul>
         </section>
     </div>
+    <a class="up" href="javascript:scroll(0,0)"></a>
 </main>
-
 <div ng-include="'views/shared/footer.html'"></div>
