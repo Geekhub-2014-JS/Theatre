@@ -997,6 +997,15 @@ color: #E54B2B;
     color: #fff;
     cursor: pointer;
 }
+.play .performance-description ol, .play .performance-description ol > li {
+    list-style: decimal inside;
+}
+.play .performance-description ul, .play .performance-description ul > li {
+    list-style: disc inside;
+}
+.play .performance-description li ul, .play .performance-description li ol {
+    padding-left: 15px;
+}
 .play .tabs-area .page-pagination {
     text-align: center;
     margin: 0 0 12px;

@@ -147,3 +147,12 @@
     margin: 10px 0 60px;
     text-align: justify;
 }
+.single-post .post-text ol, .single-post .post-text ol > li {
+    list-style: decimal inside;
+}
+.single-post .post-text ul, .single-post .post-text ul > li {
+    list-style: disc inside;
+}
+.single-post .post-text li ol, .single-post .post-text li ul {
+    padding-left: 15px;
+}
