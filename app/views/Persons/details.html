@@ -18,7 +18,7 @@
 
                 <p><strong>{{'persons.birth' | translate}}:</strong>{{person.dob | date: "dd/MM/yyyy"}}</p>
 
-                <p><strong>{{'persons.biography' | translate}}:</strong>{{person.biography}}</p>
+                <p><strong>{{'persons.biography' | translate}}:</strong><span ng-bind-html="person.biography"></span></p>
             </div>
 
             <h4 ng-show="roles.length > 0">{{'persons.roles' | translate}}:</h4>

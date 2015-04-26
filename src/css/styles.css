@@ -777,6 +777,11 @@ footer .copy a {
     margin: 0 0 0 5px;
     color: #797777;
 }
+.actor .biography p {
+    width: 658px;
+    float:right;
+}
+
 .actor .biography p{
     margin: 5px 0;
     font: 14px robotoregular;
