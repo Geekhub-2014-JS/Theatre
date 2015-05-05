@@ -25,8 +25,8 @@ angular.module('news',[])
             }
         }
     ])
-    .controller('NewsDetailCtrl', ['$scope', 'apiGet', '$stateParams',
-        function($scope, apiGet, $stateParams){
+    .controller('NewsDetailCtrl', ['$scope', 'apiGet', '$stateParams', '$rootScope',
+        function($scope, apiGet, $stateParams, $rootScope){
             $scope.title = '';
             $scope.news = {};
 
@@ -37,7 +37,7 @@ angular.module('news',[])
                     .success(function(response, status){
                         if (status === 200) {
                             $scope.news = response;
-                            $scope.title = response.title;
+                            $rootScope.title = response.title;
                         }
                     })
                     .error(function(error){

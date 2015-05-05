@@ -1,5 +1,5 @@
 angular.module('person', ['ui.bootstrap'])
-    .controller('PersonsCtrl', ['$scope', 'personsService', 'apiGet', function ($scope, personsService) {
+    .controller('PersonsCtrl', ['$scope', 'personsService', '$rootScope', function ($scope, personsService, $rootScope) {
         $scope.persons = [];
         $scope.personsTotal = 0;
         $scope.peronsPerPage = 36; //pagination limit per page
@@ -23,10 +23,12 @@ angular.module('person', ['ui.bootstrap'])
 
     }
     ])
-    .controller('PersonsDetailCtrl', ['$scope', 'personsService', '$stateParams', 'apiGet', 'Lightbox', function ($scope, personsService, $stateParams, apiGet, Lightbox) {
+    .controller('PersonsDetailCtrl', ['$scope', 'personsService', '$stateParams', 'apiGet', 'Lightbox', '$rootScope',
+        function ($scope, personsService, $stateParams, apiGet, Lightbox, $rootScope) {
         $scope.roles = [];
         $scope.promise = personsService.getPerson($stateParams.id).then(function (data) {
             $scope.person = data;
+            $rootScope.title = data.first_name + " " + data.last_name;
             return data;
         });
         apiGet('employees/' + $stateParams.id + '/roles.json').then(function (response){

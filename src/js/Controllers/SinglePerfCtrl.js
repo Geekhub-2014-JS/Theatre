@@ -2,13 +2,14 @@
  * Created by Yana on 16.02.2015.
  */
 angular.module('singlePerf',['ui.bootstrap'])
-    .controller('SinglePerformanceCtrl', ['$scope', '$q', 'apiGet', '$stateParams', 'dateConvert',
-        function ($scope, $q, apiGet, $stateParams, dateConvert) {
+    .controller('SinglePerformanceCtrl', ['$scope', '$q', 'apiGet', '$stateParams', 'dateConvert', '$rootScope',
+        function ($scope, $q, apiGet, $stateParams, dateConvert, $rootScope) {
 
             apiGet('performances/' + $stateParams.slug)
                 .success(function (data) {
                     $scope.performance = data;
                     $scope.slides = data.gallery;
+                    $rootScope.title = data.title;
                 })
                 .error(function(error) {
                     $scope.error = error;

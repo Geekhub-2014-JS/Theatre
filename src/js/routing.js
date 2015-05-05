@@ -15,17 +15,26 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                 .state('app.home', {
                     url: "/",
                     templateUrl: "views/HomePage/home.html",
-                    controller: 'HomeCtrl'
+                    controller: 'HomeCtrl',
+                    data: {
+                        pageTitle: "menu.logo"
+                    }
                 })
                 .state('app.poster', {
                     url: "/poster",
                     templateUrl: "views/Poster/poster.html",
-                    controller: 'PosterCtrl'
+                    controller: 'PosterCtrl',
+                    data: {
+                        pageTitle: "menu.poster"
+                    }
                 })
                 .state('app.repertoire', {
                     url: "/repertoire",
                     templateUrl: "views/Repertoire/repertoire.html",
-                    controller: 'RepertoireCtrl'
+                    controller: 'RepertoireCtrl',
+                    data: {
+                        pageTitle: "menu.repertoire"
+                    }
                 })
                 .state('app.singlePerformance', {
                     url: '/performance/:slug',
@@ -35,7 +44,10 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                 .state('app.news', {
                     url: "/news",
                     templateUrl: "views/News/news.html",
-                    controller: 'NewsCtrl'
+                    controller: 'NewsCtrl',
+                    data: {
+                        pageTitle: "menu.news"
+                    }
                 })
                 .state('app.newsDetail', {
                     url: '/news/:id',
@@ -45,7 +57,10 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                 .state('app.about', {
                     url: "/about",
                     templateUrl: "views/About/about.html",
-                    controller: "AboutCtrl"
+                    controller: "AboutCtrl",
+                    data: {
+                        pageTitle: "menu.about"
+                    }
                 })
                 .state('app.aboutDetail', {
                     url: "/about/:slug",
@@ -55,7 +70,10 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                 .state('app.persons', {
                     url: "/persons",
                     templateUrl: "views/Persons/persons.html",
-                    controller: 'PersonsCtrl'
+                    controller: 'PersonsCtrl',
+                    data: {
+                        pageTitle: "menu.persons"
+                    }
                 })
                 .state('app.personDetails', {
                     url: '/persons/:id',
@@ -65,21 +83,33 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                 .state('app.contacts', {
                     url: "/contacts",
                     templateUrl: "views/Contacts/contacts.html",
-                    controller: "ContactsCtrl"
+                    controller: "ContactsCtrl",
+                    data: {
+                        pageTitle: "menu.contacts"
+                    }
                 })
                 .state('app.photos', {
                     url: "/photos",
                     templateUrl: "views/PhotoArchive/photoarchive.html",
-                    controller: "PhotoArchiveCtrl"
+                    controller: "PhotoArchiveCtrl",
+                    data: {
+                        pageTitle: "menu.photoarchive"
+                    }
                 })
                 .state('app.videos', {
                     url: "/videos",
                     templateUrl: "views/VideoArchive/videoarchive.html",
-                    controller: "VideoArchiveCtrl"
+                    controller: "VideoArchiveCtrl",
+                    data: {
+                        pageTitle: "menu.video"
+                    }
                 })
                 .state('app.board', {
                     url: "/board",
-                    templateUrl: "views/Static/board.html"
+                    templateUrl: "views/Static/board.html",
+                    data: {
+                        pageTitle: "menu.board"
+                    }
                 })
                 .state('app.partners', {
                     url: "/partners",
@@ -87,7 +117,10 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                 })
                 .state('app.fest', {
                     url: "/festivals",
-                    templateUrl: "views/Festivals/festivals.html"
+                    templateUrl: "views/Festivals/festivals.html",
+                    data: {
+                        pageTitle: "menu.fest"
+                    }
                 })
             ;
             $locationProvider.html5Mode({
