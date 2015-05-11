@@ -3,11 +3,13 @@
     min-height: 100%;
 }
 .dw-loading.dw-loading-overlay {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.9);
 }
-.dw-loading > .dw-loading-body > .dw-loading-text {
-    color: #fff;
-    text-shadow: none;
+.dw-loading > .dw-loading-body > .dw-loading-text,
+.dw-loading > .dw-loading-body > .dw-loading-spinner {
+    /*color: #000000;*/
+    /*text-shadow: none;*/
+    display: none !important;
 }
 
 #slides_control > div {
@@ -22,7 +24,4 @@
 
 .timeline-badge.info {
     background-color: #df442b !important;
-}
-.crumb {
-    display: none !important;
 }

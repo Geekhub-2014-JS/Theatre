@@ -351,6 +351,7 @@ main .wrapp {
     min-height: 200px;
 }
 .crumb {
+    display: none;
     margin: 3px 0px 10px 0px;
 }
 .crumb li {
