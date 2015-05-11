@@ -108,5 +108,8 @@
   "gallery": {
     "previous": "Previous",
     "next": "Next"
+  },
+  "error": {
+    "workinprogress": "Sorry, we are working on this page right now"
   }
 }

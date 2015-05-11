@@ -25,3 +25,17 @@
 .timeline-badge.info {
     background-color: #df442b !important;
 }
+
+.work-in-progress {
+    overflow: hidden;
+}
+.work-in-progress img {
+    float: left;
+    margin: 0 20px 0 0;
+}
+.work-in-progress p {
+    overflow: hidden;
+    padding-top: 100px;
+    text-align: left;
+    font-size: 18px;
+}
