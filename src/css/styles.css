@@ -348,7 +348,7 @@ main {
     width: 100%;
 }
 main .wrapp {
-    min-height: 200px;
+    min-height: 400px;
 }
 .crumb {
     display: none;
