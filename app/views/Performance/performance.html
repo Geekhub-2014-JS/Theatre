@@ -40,16 +40,17 @@
 
             <div class="tabset-block" ng-controller="PerfTabsCtrl">
                 <tabset>
-                    <tab heading="{{ 'performance.team' | translate }}">
+                    <tab heading="{{ 'performance.description' | translate }}">
+                        <div ng-bind-html="performance.description" class="performance-description"></div>
+                    </tab>
+
+                    <tab heading="{{ 'performance.team' | translate }}" ng-hide="roles.length == 0">
                         <ul class="performance-actors">
                             <li ng-repeat="role in roles" ui-sref="app.personDetails({id: role.employee.slug})">
                                 <img ng-src="{{role.employee.avatar.employee_big.url}}" alt="{{role.title}}"/>
                                 <h3><a ui-sref="app.personDetails({id: role.employee.slug})">{{role.title}} - {{role.employee.first_name +  ' ' + role.employee.middle_name + ' ' + role.employee.last_name}}</a></h3>
                             </li>
                         </ul>
-                    </tab>
-                    <tab heading="{{ 'performance.description' | translate }}">
-                        <div ng-bind-html="performance.description" class="performance-description"></div>
                     </tab>
 
                     <!--<tab heading="{{ 'performance.press' | translate }}">-->
