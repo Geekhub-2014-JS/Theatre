@@ -8,7 +8,36 @@
 
         <h2 class="page-title">{{'menu.contacts' | translate}}</h2>
 
-        <not-done-yet></not-done-yet>
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+
+                <div class="map-block">
+                    <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+                        <ui-gmap-marker coords="marker.coords" options="marker.options" events="marker.events" idkey="marker.id">
+                        </ui-gmap-marker>
+                    </ui-gmap-google-map>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <dl class="cont-list">
+                    <dt>{{'contacts.director' | translate}}, {{'contacts.secretary' | translate}}</dt>
+                    <dd><span class="glyphicon glyphicon-earphone"></span>(0472)36-07-20</dd>
+                    <dt>{{'contacts.administrator' | translate}}</dt>
+                    <dd><span class="glyphicon glyphicon-earphone"></span>(0472)36-07-18</dd>
+                    <dt>{{'contacts.cash_desk' | translate}}</dt>
+                    <dd><span class="glyphicon glyphicon-earphone"></span>(0472)36-07-21</dd>
+                    <dt>{{'contacts.personOnDuty' | translate}}</dt>
+                    <dd><span class="glyphicon glyphicon-earphone"></span>(0472)36-07-22</dd>
+                    <dt>{{'contacts.eMail' | translate}}</dt>
+                    <dd><span class="glyphicon glyphicon-envelope"></span>theatre_cherkasy@uch.net</dd>
+                    <!--<dt>{{'contacts.mobile' | translate}}</dt>-->
+                    <!--<dd><span class="glyphicon glyphicon-erase"></span>(012)345-67-89</dd>-->
+                    <dt class="last-contact">{{'contacts.addressTitle' | translate}}</dt>
+                    <dd class="last-contact"> <span class="glyphicon glyphicon-map-marker"></span> {{'contacts.address' | translate}}</dd>
+                </dl>
+            </div>
+        </div>
+
     </div>
 
     <a class="up" href="javascript:scroll(0,0)"></a>

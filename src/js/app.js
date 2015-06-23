@@ -13,6 +13,7 @@ var theatreApp = angular.module('theatre', [
         'darthwade.dwLoading',
         'infinite-scroll',
         'ngSanitize',
+        'uiGmapgoogle-maps',
         'bootstrapLightbox'
     ]);
 

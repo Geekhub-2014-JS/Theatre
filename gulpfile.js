@@ -52,6 +52,8 @@ gulp.task('vendors-js', function() {
         'vendors/angular-loading-bar/build/loading-bar.js',
         'vendors/moment/moment.js',
         'vendors/angular-touch/angular-touch.js',
+        'vendors/lodash/lodash.min.js',
+        'vendors/angular-google-maps/dist/angular-google-maps.min.js',
         'vendors/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js'
     ])
         .pipe(concat('vendors-js.min.js'))
