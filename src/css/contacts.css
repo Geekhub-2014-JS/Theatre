@@ -1,0 +1,40 @@
+.cont-l {
+    float: left;
+    margin: 20px 20px 20px 0;
+}
+.cont-r {
+    overflow: hidden;
+    margin: 25px 0 20px 0;
+}
+.cont-list {
+    overflow: hidden;
+}
+.cont-list span {
+    color: #e54b2b;
+    margin: 0 5px 0 0;
+    font-size: 18px;
+}
+.cont-list dd, .cont-list dt  {
+    margin: 16px 0;
+}
+.cont-list dt {
+    float: left;
+    width: 45%;
+    text-align: right;
+    clear: both;
+    border-bottom: 1px solid #c8c8c8;
+    padding: 0 0 9px 0px;
+}
+.cont-list dd {
+    overflow: hidden;
+    padding: 0 0 6px 9px;
+    float: right;
+    text-align: left;
+    width: 55%;
+    border-bottom: 1px solid #c8c8c8;
+}
+/*
+.cont-list .last-contact {
+    border: none;
+}
+*/
