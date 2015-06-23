@@ -111,5 +111,16 @@
   },
   "error": {
     "workinprogress": "Sorry, we are working on this page right now"
+  },
+  "contacts": {
+    "director": "Director",
+    "secretary": "Secretary",
+    "administrator": "Administrator",
+    "cash_desk": "Cash desk",
+    "personOnDuty": "Person on duty",
+    "mobile": "Mobile phone",
+    "eMail": "E-mail",
+    "addressTitle": "Address",
+    "address": "Cherkasy, Shevchenko, 234"
   }
 }
