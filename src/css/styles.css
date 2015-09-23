@@ -329,7 +329,7 @@ header nav li a:focus{
 .discription-slide h2 {
     max-height: 40px;
     overflow: hidden;
-    margin: 0 0 8px;
+    /*margin: 0 0 8px;*/
 }
 .discription-slide h2 a {
     color: #fff;
@@ -338,8 +338,13 @@ header nav li a:focus{
 
 .discription-slide p {
     color: #fff;
-    font: 12.89px robotothin; 
-    margin: -2px 0 0;
+    font: 12.89px robotothin;
+    margin: -5px 0 5px;
+}
+.discription-slide p.venue {
+    margin: 0;
+    text-align: right;
+    font: 14px robotolight;
 }
 
 /*----------------------- main -----------------------*/

@@ -11,7 +11,7 @@ theatreServices
         function ($http, api_url, $stateParams) {
             return function (url, data) {
                 var conf = {
-                    method: 'GET',
+                    method: 'POST',
                     url: api_url + url,
                     headers: {
                         'locale': $stateParams.locale
