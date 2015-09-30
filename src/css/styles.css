@@ -113,7 +113,6 @@ body {
     background: #FFFFFF;
     font: 14px robotolight;
     color: #868B8C;
-    overflow-y: scroll;
 }
 .wrapp {
     width: 1000px;
@@ -121,11 +120,10 @@ body {
     overflow: hidden;
 }
 .wrapp-footer {
+    position: relative;
     width: 1000px;
     margin: 0 auto;
-    overflow: hidden;
     padding: 26px 0;
-    
 }
 .uppercase {
     text-transform: uppercase;
@@ -560,7 +558,7 @@ section.main-page .article-footer small {
 
 /*----------------------- footer -----------------------*/
 .main-footer {
-    min-width: 1000px;
+    width: 100%;
 }
 .strip {
     height: 4px;
@@ -616,14 +614,15 @@ section.main-page .article-footer small {
     overflow: hidden;
 }
 .up {
+    position: absolute;
+    right: 0;
     display: block;
     width: 42px;
     height: 42px;
     background: url(../img/up.png) center center no-repeat #CD2E2D;
     border-radius: 5px 5px 0 0;
     cursor: pointer;
-    float: right;
-    margin: -40px 4% 0 0;
+    margin: -85px 0 0 0;
 }
 footer .copy {
     display: block;
