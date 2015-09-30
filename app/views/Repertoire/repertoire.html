@@ -10,27 +10,27 @@
 
         <h2 class="page-title">{{ 'menu.repertoire' | translate }}</h2>
 
-        <div class="text-center hidden" >
-            <pagination total-items="totalItems"
-                        ng-change="setPage()"
-                        ng-model="currentPage"
-                        previous-text="{{'pagination.previous' | translate}}"
-                        next-text="{{'pagination.next' | translate}}"
-                        max-size="maxSize"
-                        items-per-page="itemPerPage"
-                        class="pagination-sm"
-                        boundary-links="false"
-                        rotate="false"
-                        num-pages="numPages"
-                        ng-show="totalItems > itemPerPage">
-            </pagination>
-        </div>
+        <!--<div class="text-center hidden" >-->
+            <!--<pagination total-items="totalItems"-->
+                        <!--ng-change="setPage()"-->
+                        <!--ng-model="currentPage"-->
+                        <!--previous-text="{{'pagination.previous' | translate}}"-->
+                        <!--next-text="{{'pagination.next' | translate}}"-->
+                        <!--max-size="maxSize"-->
+                        <!--items-per-page="itemPerPage"-->
+                        <!--class="pagination-sm"-->
+                        <!--boundary-links="false"-->
+                        <!--rotate="false"-->
+                        <!--num-pages="numPages"-->
+                        <!--ng-show="totalItems > itemPerPage">-->
+            <!--</pagination>-->
+        <!--</div>-->
 
-        <div class="program-nav">
+        <!--<div class="program-nav">-->
             <!--<span class="prev"></span>-->
             <!--<span class="next"></span>-->
-            <p class="season">{{'repertoire.season' | translate}} 2014 - 2015</p>
-        </div>
+            <!--<p class="season">{{'repertoire.season' | translate}} 2014 - 2015</p>-->
+        <!--</div>-->
 
         <ul class="repertoire-list">
             <li ng-repeat="performance in repertoire" ui-sref="app.singlePerformance({slug: performance.slug})">

@@ -35,7 +35,7 @@
                                 <img ng-src="{{date.mainPicture.history_big.url}}" alt="{{date.title}}">
                             </a>
 
-                            <p>{{date.text}}</p>
+                            <p ng-bind-html="date.text"></p>
                         </timeline-content>
                     </timeline-panel>
                 </timeline-node>
