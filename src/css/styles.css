@@ -296,6 +296,7 @@ header nav li a:focus{
 .date-slide {
     float: left;
     width: 91px;
+    padding-left: 5px;
 }
 .date-slide span {
     display: block;
@@ -311,7 +312,7 @@ header nav li a:focus{
 .date-slide .number {
     color: #FFF;
     font: 44.14px robotothin; 
-    margin: -10px 0 0 5px;
+    margin: -10px 0 0 0;
 }
 .date-slide .month {
     color: rgba(255, 255, 255, 0.5);
@@ -538,6 +539,8 @@ section.main-page h3 a {
     color: #474B4D;
     font-size: 18px;
     margin: 6px 0 0 11px;
+    display: inline-block;
+    text-transform: uppercase;
 }
 section.main-page .article-footer {
     border-top: 1px solid #E7E7E7;
