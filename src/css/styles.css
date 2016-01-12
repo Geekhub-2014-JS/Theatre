@@ -342,7 +342,7 @@ header nav li a:focus{
 }
 .discription-slide p.venue {
     margin: 0;
-    text-align: right;
+    text-align: left;
     font: 14px robotolight;
 }
 
