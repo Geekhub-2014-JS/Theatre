@@ -20,7 +20,8 @@
             <li  ng-repeat="person in persons">
                     <img ng-src="{{person.avatar.employee_small.url}}" />
                     <h4>{{person.first_name + " " + person.last_name}}</h4>
-                    <p>{{person.dob | date: "yyyy"}}</p>
+                    <!-- According to conversation with Roman Burlakov -->
+                    <!--<p>{{person.dob | date: "yyyy"}}</p>-->
                     <a ui-sref="app.personDetails({id: person.slug})">{{'details' | translate}}</a>
             </li>
         </ul>
