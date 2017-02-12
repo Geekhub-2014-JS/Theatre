@@ -37,7 +37,6 @@
     "protractor": "protractor test/protractor-conf.js"
   },
   "dependencies": {
-    "gulp-uglifycss": "1.0.4",
-    "less": "2.7.2"
+    "gulp-uglifycss": "1.0.4"
   }
 }
