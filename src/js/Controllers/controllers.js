@@ -12,7 +12,9 @@ var theatreControllers = angular.module('theatreControllers', [
     'repertoire',
     'singlePerf',
     'videoArchive',
-    'photoArchive'
+    'photoArchive',
+    'cart',
+    'hall'
 ]);
 theatreControllers.controller('translateCtrl', ['$scope', '$translate', '$stateParams', '$state',
     function($scope, $translate, $stateParams, $state){

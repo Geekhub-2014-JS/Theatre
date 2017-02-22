@@ -100,4 +100,40 @@ theatreServices
             }
         }
     })
+
+    .factory('hallService', function() {
+        var hall='';
+        return {
+            gethall:function () {
+                return "/views/Hall/"+hall+".html";
+            },
+            setHall:function (newHall) {
+                hall=newHall;
+            }
+        }
+    })
+
+.factory('cartService', function () {
+    var order = [];
+    return {
+        addPlaceToCart: function (orders) {
+            orders = orders.split(',');
+            order.push({
+                row: orders[1],
+                sit: orders[2],
+                cost: 0,
+                area: orders[0]
+            });
+        },
+        getPlaceToCart: function () {
+            return order;
+        },
+        delPlaceFromCart: function (index) {
+            console.log(order[index],index)
+            order.splice(index, 1);
+            console.log(order)
+        }
+    }
+
+})
 ;

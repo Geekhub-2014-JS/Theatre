@@ -1,0 +1,22 @@
+<div class="booking">
+    <header>
+        <h2 class="title-booking">Ваші квитки</h2>
+        <h3 class="title-show">Назва вистави</h3>
+        <h3 class="title-hall-place">Черкаська обласна фiлармонiя</h3>
+    </header>
+    <div class="bought-place-info">
+        <dl class="close-booking" ng-repeat="orders in orders track by $index">
+            <dt>Ряд</dt><dd>{{orders.row}}</dd>
+            <dt>Місце</dt><dd>{{orders.sit}}</dd>
+            <dt>Ціна</dt><dd>{{orders.cost}} грн</dd>
+            <span class="close" ng-click="deleteItem($index)"></span>
+        </dl>
+    </div>
+    <footer>
+        <dl>
+            <dt>Всього:</dt><dd>600грн</dd>
+        </dl>
+        <button class="pay-btn">Оплатити</button>
+    </footer>
+
+</div>
