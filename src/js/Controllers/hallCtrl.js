@@ -1,12 +1,28 @@
-angular.module('hall',[])
-    .controller('hallCtrl', ['$scope','hallService','cartService',
-        function ($scope,hallService,cartService) {
-           // hallService.setHall('Filarmonia');
-            hallService.setHall('Kulyka');
+angular.module('hall', [])
+    .controller('hallCtrl', ['$scope', 'hallService', 'cartService', 'perfomanceService',
+        function ($scope, hallService, cartService, perfomanceService) {
+            var hallConst = {
+                "Черкаська Філармонія": "Filarmonia",
+                "Будинок культури ім. Кулика": "Kulyka",
+                "Черкаський Театр": "",
+                "Кінотеатр 'Салют'": "",
+                "Черкаський міський Палац молоді": "",
+                "Центр дитячої та юнацької творчості": ""
+            };
 
-        $scope.addToCart=function (data) {
-            cartService.addPlaceToCart(data);
-            $scope.$apply();
+            var selectedVenue = perfomanceService.getPerfomance().venue;
+            for (var key in hallConst) {
+                if (key === selectedVenue) selectedVenue = hallConst[key]
+            }
+            hallService.setHall(selectedVenue);
+
+            $scope.getUrl = function () {
+                return hallService.gethall();
+            };
+
+            $scope.addToCart = function (data) {
+                cartService.addPlaceToCart(data);
+                $scope.$apply();
+            }
         }
-    }
     ]);

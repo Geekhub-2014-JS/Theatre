@@ -13,7 +13,7 @@
         <section>
            <img class="play-img" ng-src="{{performance.mainPicture.performance_big.url}}" alt="{{performance.title}}"/>
             <ul class="menu-programm">
-                <li ng-repeat="date in dates">
+                <li ng-repeat="date in dates track by $index">
                      <div class="block-data">
                         <span class="day">{{date.weekDay | translate}}</span>
                         <span class="number">{{date.day}}</span>
@@ -22,6 +22,12 @@
                     <div class="block-description">
                         <h3>{{performance.title}}</h3>
                         <p>{{date.time}}</p>
+                    </div>
+                    <span>{{performanceEvents[$index].venue}}</span>
+                    <div class="block-description">
+                        <a ng-click="selectPerfomance($index)">
+                        <span >Придбати квиток</span>
+                        </a>
                     </div>
                 </li>
            </ul>                     

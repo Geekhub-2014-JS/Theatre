@@ -2,8 +2,8 @@
  * Created by Yana on 16.02.2015.
  */
 angular.module('singlePerf',['ui.bootstrap'])
-    .controller('SinglePerformanceCtrl', ['$scope', '$q', 'apiGet', '$stateParams', 'dateConvert', '$rootScope',
-        function ($scope, $q, apiGet, $stateParams, dateConvert, $rootScope) {
+    .controller('SinglePerformanceCtrl', ['$scope', '$q', 'apiGet', '$stateParams', 'dateConvert', '$rootScope','$state','perfomanceService',
+        function ($scope, $q, apiGet, $stateParams, dateConvert, $rootScope,$state,perfomanceService) {
 
             apiGet('performances/' + $stateParams.slug)
                 .success(function (data) {
@@ -37,6 +37,11 @@ angular.module('singlePerf',['ui.bootstrap'])
                     $scope.error = error;
                 })
             ;
+
+            $scope.selectPerfomance=function ($index) {
+                perfomanceService.addPerfomance($scope.performanceEvents[$index]);
+                $state.go('app.hall');
+            }
         }
     ])
     .controller('PerfTabsCtrl', ['$scope', '$window',

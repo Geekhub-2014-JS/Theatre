@@ -113,25 +113,41 @@ theatreServices
         }
     })
 
-.factory('cartService', function () {
-    var order = [];
-    return {
-        addPlaceToCart: function (orders) {
-            orders = orders.split(',');
-            order.push({
-                row: orders[1],
-                sit: orders[2],
-                cost: 0,
-                area: orders[0]
-            });
-        },
-        getPlaceToCart: function () {
-            return order;
-        },
-        delPlaceFromCart: function (index) {
-            order.splice(index, 1);
+    .factory('cartService', function () {
+        var order = [];
+        return {
+            addPlaceToCart: function (orders) {
+                order.push({
+                    row: orders.row,
+                    sit: orders.sit,
+                    cost: 0,
+                    area: orders.section
+                });
+            },
+            getPlaceToCart: function () {
+                return order;
+            },
+            delPlaceFromCart: function (index) {
+                order.splice(index, 1);
+            },
+            clearCart:function () {
+                order = [];
+            }
         }
-    }
 
-})
+    })
+
+    .factory('perfomanceService', function () {
+        var selectedPerfomance = {};
+        return {
+            addPerfomance: function (performanse) {
+                selectedPerfomance = {};
+                selectedPerfomance = performanse;
+            },
+            getPerfomance: function () {
+                return selectedPerfomance;
+            }
+        }
+
+    })
 ;
