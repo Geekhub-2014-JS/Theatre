@@ -129,9 +129,7 @@ theatreServices
             return order;
         },
         delPlaceFromCart: function (index) {
-            console.log(order[index],index)
             order.splice(index, 1);
-            console.log(order)
         }
     }
 
