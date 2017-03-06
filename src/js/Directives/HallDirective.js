@@ -3,7 +3,7 @@ angular.module('hallDirectives', [])
         return {
             restrict: 'E',
             template: "<div ng-include='getUrl()'></div>",
-            controller: 'hallCtrl',
+            controller: 'HallCtrl',
 
             link: function (scope, elem, attrs) {
                 elem[0].addEventListener("click", function (event) {

@@ -3,8 +3,8 @@ angular.module('cartAsideDirectives', [])
         return {
             restrict: 'E',
             templateUrl: "views/shared/Directives/bookingAside.html",
-             controller:'cartCtrl',
-            controllerAs:'cart'
+            controller: 'CartCtrl',
+            controllerAs: 'cart'
 
         }
     });
