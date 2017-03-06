@@ -124,5 +124,20 @@
     "eMail": "E-mail",
     "addressTitle": "Address",
     "address": "Cherkasy, Shevchenko, 234"
+  },
+  "booking":{
+    "ticketButton":"Buy ticket",
+    "yourTickets":"Your tickets",
+    "row":"Row",
+    "sit":"Sit",
+    "cost":"Cost",
+    "total":"Total",
+    "uah":"UAH",
+    "pay":"pay"
+  },
+  "hall":{
+    "boughtSits":"Bought sits",
+    "reservedSits":"Reserved sits",
+    "balcony":"Balcony"
   }
 }

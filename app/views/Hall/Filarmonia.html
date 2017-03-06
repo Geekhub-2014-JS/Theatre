@@ -2,13 +2,7 @@
 <main class="container-fluid hall-philharmonic hall">
     <section id="content">
         <h1 class="title-hall">Черкаська обласна фiлармонiя</h1>
-        <dl class="legend">
-            <dt class="place-bought"></dt>  <dd> Bикуплені місця</dd><!--Квадрат светло-серого цвета - Выкупленные места-->
-            <dt class="place-reserved"></dt><dd> Заброньовані місця</dd><!--Квадрат тёмно-серого цвета - Забронированные места-->
-            <dt class="place-price1"></dt>  <dd> 300 грн</dd><!--Квадрат синего цвета - места по цене 300 грн.-->
-            <dt class="place-price2"></dt>  <dd> 200 грн</dd><!--Квадрат розового цвета - места по цене 200 грн.-->
-            <dt class="place-price3"></dt>  <dd> 90 грн</dd><!--Квадрат зелёного цвета - места по цене от 90 грн.-->
-        </dl>
+        <div ng-include="'views/shared/legend.html'"></div>
         <h2 class="title title-philharmonic">СЦЕНА</h2>
         <section class="parterre" data-section="parterre">
             <ul class="section-front">

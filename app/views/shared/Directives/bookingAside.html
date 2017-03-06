@@ -1,25 +1,25 @@
 <aside>
     <div class="booking">
         <header>
-            <h2 class="title-booking">Ваші квитки</h2>
+            <h2 class="title-booking">{{'booking.yourTickets' | translate}}</h2>
             <span class="title-show">{{perfomance.performance.title}}</span>
             <span class="title-hall-place">{{perfomance.venue}}</span>
         </header>
         <ul class="bought-place-info">
             <li class="booking-place" ng-repeat="orders in orders track by $index">
                 <dl>
-                    <dt>Ряд</dt><dd>{{orders.row}}</dd>
-                    <dt>Місце</dt><dd>{{orders.sit}}</dd>
-                    <dt>Ціна</dt><dd>{{orders.cost}} грн</dd>
+                    <dt>{{'booking.row' | translate}}</dt><dd>{{orders.row}}</dd>
+                    <dt>{{'booking.sit' | translate}}</dt><dd>{{orders.sit}}</dd>
+                    <dt>{{'booking.cost' | translate}}</dt><dd>{{orders.cost}} грн</dd>
                 </dl>
                 <button class="btn btn-link btn-close-place" ng-click="deleteItem($index)"><span class="glyphicon glyphicon-remove"></span></button>
             </li>
         </ul>
         <footer>
             <dl>
-                <dt>Всього:</dt><dd>0грн</dd>
+                <dt>{{'booking.total' | translate}}</dt><dd>0 {{'booking.uah' | translate}}</dd>
             </dl>
-            <button class="pay-btn">Оплатити</button>
+            <button class="pay-btn">{{'booking.pay' | translate}}</button>
         </footer>
 
     </div>
