@@ -1,5 +1,5 @@
 angular.module('cart', [])
-    .controller('cartCtrl', ['$scope', 'hallService', 'cartService', 'perfomanceService',
+    .controller('CartCtrl', ['$scope', 'hallService', 'cartService', 'perfomanceService',
         function ($scope, hallService, cartService, perfomanceService) {
             cartService.clearCart();
             $scope.orders = cartService.getPlaceToCart();

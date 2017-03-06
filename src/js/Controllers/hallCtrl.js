@@ -1,5 +1,5 @@
 angular.module('hall', [])
-    .controller('hallCtrl', ['$scope', 'hallService', 'cartService', 'perfomanceService',
+    .controller('HallCtrl', ['$scope', 'hallService', 'cartService', 'perfomanceService',
         function ($scope, hallService, cartService, perfomanceService) {
             var hallConst = {
                 "Черкаська Філармонія": "Filarmonia",
@@ -7,7 +7,8 @@ angular.module('hall', [])
                 "Черкаський Театр": "",
                 "Кінотеатр 'Салют'": "",
                 "Черкаський міський Палац молоді": "",
-                "Центр дитячої та юнацької творчості": ""
+                "Центр дитячої та юнацької творчості": "",
+                "Черкаський обласний художній музей":""
             };
 
             var selectedVenue = perfomanceService.getPerfomance().venue;
