@@ -19,16 +19,18 @@
                         <span class="number">{{date.day}}</span>
                         <span class="month">{{date.month | translate}}</span>
                     </div>
+                    <div class="block-tickets">
+                        <button type="button" class="btn-success" ng-click="selectPerfomance($index)">
+                            <span >Придбати квиток</span>
+                        </button>
+                    </div>
                     <div class="block-description">
                         <h3>{{performance.title}}</h3>
                         <p>{{date.time}}</p>
+
                     </div>
                     <span>{{performanceEvents[$index].venue}}</span>
-                    <div class="block-description">
-                        <a ng-click="selectPerfomance($index)">
-                        <span >Придбати квиток</span>
-                        </a>
-                    </div>
+
                 </li>
            </ul>                     
             <div class="media-block slide" >
