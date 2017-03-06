@@ -1,0 +1,3431 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--internet explorer-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Philharmonic</title>
+    <!--Exist vendor styles-->
+    <link rel="stylesheet" type="text/css" href="../app/css/vendors-css.min.css">
+    <link rel="stylesheet" type="text/css" href="../app/css/app.min.css">
+    <!--New styles for places-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="main-header">
+    <div class="wrapp">
+        <h1><a ui-sref="app.home" ui-sref-opts="{reload: true}" href="/uk/"><img src="../app/img/logo.png" alt="{'menu.logo' | translate}"><span ng-bind="'menu.logo' | translate" class="ng-binding">Черкаський драматичний театр імені Т. Г. Шевченка</span></a></h1>
+        <div class="dropdown lang-select uppercase ng-scope" ng-controller="translateCtrl">
+            <a href="#">
+                <span ng-click="chLocale()" class="ng-binding">
+                    EN
+                </span>
+            </a>
+        </div>
+        <nav>
+            <ul class="uppercase">
+                <li ui-sref-active="active" class="active"><a ui-sref="app.home" href="/uk/"><span class="ng-binding">Головна</span></a></li>
+                <li ui-sref-active="active"><a ui-sref="app.poster" ui-sref-opts="{reload: true}" href="/uk/poster"><span class="ng-binding">Афіша</span></a></li>
+                <li ui-sref-active="active"><a ui-sref="app.repertoire" href="/uk/repertoire"><span class="ng-binding">Репертуар</span></a></li>
+                <li ui-sref-active="active"><a ui-sref="app.news" href="/uk/news"><span class="ng-binding">Новини</span></a></li>
+                <li ui-sref-active="active"><a ui-sref="app.about" href="/uk/about"><span class="ng-binding">Про театр</span></a></li>
+                <li ui-sref-active="active"><a ui-sref="app.persons" href="/uk/persons"><span class="ng-binding">Персоналії</span></a></li>
+                <li ui-sref-active="active"><a ui-sref="app.contacts" href="/uk/contacts"><span class="ng-binding">Контакти</span></a></li>
+                <!--<li ui-sref-active="active"><a ui-sref="app.fest"><span ng-bind="'menu.fest' | translate"></span></a></li>-->
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="container-fluid hall-druzhba hall">
+    <section id="content">
+        <h1 class="title-hall">ПК "Дружба Народів"</h1>
+        <dl class="legend">
+            <dt class="place-bought"></dt>
+            <dd> Bикуплені місця</dd><!--Квадрат светло-серого цвета - Выкупленные места-->
+            <dt class="place-reserved"></dt>
+            <dd> Заброньовані місця</dd><!--Квадрат тёмно-серого цвета - Забронированные места-->
+            <dt class="place-price1"></dt>
+            <dd> 300 грн</dd><!--Квадрат синего цвета - места по цене 300 грн.-->
+            <dt class="place-price2"></dt>
+            <dd> 200 грн</dd><!--Квадрат розового цвета - места по цене 200 грн.-->
+            <dt class="place-price3"></dt>
+            <dd> 90 грн</dd><!--Квадрат зелёного цвета - места по цене от 90 грн.-->
+        </dl>
+        <h2 class="title title-universal">СЦЕНА</h2>
+        <section class="parter">
+            <h2 class="title title-sector">ПАРТЕР</h2>
+            <ul data-section="parterre">
+                <li data-row="1">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                            16
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                            17
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                            18
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                            19
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                    </ul>
+                </li>
+                <li data-row="2">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                            16
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                            17
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                            18
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                            19
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                            30
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                            31
+                        </li>
+                    </ul>
+                </li>
+                <li data-row="3">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                            16
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                            17
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                            18
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                            19
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                            30
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                            31
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                            32
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                            33
+                        </li>
+                    </ul>
+                </li>
+                <li data-row="4">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                            16
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                            17
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                            18
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                            19
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                            30
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                            31
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                            32
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                            33
+                        </li>
+                    </ul>
+                </li>
+                <li data-row="5">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                            16
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                            17
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                            18
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                            19
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                            30
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                            31
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                            32
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                            33
+                        </li>
+                    </ul>
+                </li>
+                <li data-row="6">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                            16
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                            17
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                            18
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                            19
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                            30
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                            31
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                            32
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                            33
+                        </li>
+                    </ul>
+                </li>
+                <li data-row="7">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                            16
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                            17
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                            18
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                            19
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                            30
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                            31
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                            32
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                            33
+                        </li>
+                    </ul>
+                </li>
+                <li data-row="8">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                            16
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                            17
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                            18
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                            19
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                            30
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                            31
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                            32
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                            33
+                        </li>
+                    </ul>
+                </li>
+                <li data-row="9">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                            16
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                            17
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                            18
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                            19
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                            30
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                            31
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                            32
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                            33
+                        </li>
+                    </ul>
+                </li>
+                <li data-row="10">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                            16
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                            17
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                            18
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                            19
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                            30
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                            31
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                            32
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                            33
+                        </li>
+                    </ul>
+                </li>
+                <li data-row="11">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place offset-four" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                            30
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                            31
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                            32
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                            33
+                        </li>
+                    </ul>
+                </li>
+                <li data-row="12">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place offset-four" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                            30
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                            31
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                            32
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                            33
+                        </li>
+                    </ul>
+                </li>
+                <li data-row="13">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                            16
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                            17
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                            18
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                            19
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                            30
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                            31
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                            32
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                            33
+                        </li>
+                    </ul>
+                </li>
+                <li data-row="14">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                            16
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                            17
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                            18
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                            19
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                            30
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                            31
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                            32
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                            33
+                        </li>
+                    </ul>
+                </li>
+                <li data-row="15">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                            16
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                            17
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                            18
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                            19
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                            30
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                            31
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                            32
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                            33
+                        </li>
+                    </ul>
+                </li>
+                <li data-row="16">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                            16
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                            17
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                            18
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                            19
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                            30
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                            31
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                            32
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                            33
+                        </li>
+                    </ul>
+                </li>
+                <li data-row="17">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                            16
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                            17
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                            18
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                            19
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                            30
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                            31
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                            32
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                            33
+                        </li>
+                    </ul>
+                </li>
+                <li data-row="18">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                            16
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                            17
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                            18
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                            19
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                            30
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                            31
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                            32
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                            33
+                        </li>
+                    </ul>
+                </li>
+                <li data-row="19">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                            16
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                            17
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                            18
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                            19
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                            30
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                            31
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                            32
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                            33
+                        </li>
+                    </ul>
+                </li>
+                <li data-row="20">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                            16
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                            17
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                            18
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                            19
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                            30
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                            31
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                            32
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                            33
+                        </li>
+                    </ul>
+                </li>
+                <li data-row="21">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                            1
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                            2
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                            3
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                            4
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                            5
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                            6
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                            7
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                            8
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                            9
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                            10
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                            11
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                            12
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                            13
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                            14
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                            15
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                            16
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                            17
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                            18
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                            19
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                            20
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                            21
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                            22
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                            23
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                            24
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                            25
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                            26
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                            27
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                            28
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                            29
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                            30
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                            31
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                            32
+                        </li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                            33
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="balcony">
+            <h2 class="title title-sector">БАЛКОН</h2>
+            <section class="balcony-front">
+                <section class="balcony-front-left">
+                    <ul data-section="balcony">
+                        <li data-row="1">
+                            <ul class="hall-places">
+                                <li class="place" data-price="" data-sold="" data-place="1">
+                                    1
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="2">
+                                    2
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="3">
+                                    3
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="4">
+                                    4
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="5">
+                                    5
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="6">
+                                    6
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="7">
+                                    7
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="8">
+                                    8
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="9">
+                                    9
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-row="2">
+                            <ul class="hall-places">
+                                <li class="place" data-price="" data-sold="" data-place="1">
+                                    1
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="2">
+                                    2
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="3">
+                                    3
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="4">
+                                    4
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="5">
+                                    5
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="6">
+                                    6
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="7">
+                                    7
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="8">
+                                    8
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-row="3">
+                            <ul class="hall-places">
+                                <li class="place" data-price="" data-sold="" data-place="1">
+                                    1
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="2">
+                                    2
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="3">
+                                    3
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="4">
+                                    4
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="5">
+                                    5
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="6">
+                                    6
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-row="4">
+                            <ul class="hall-places">
+                                <li class="place" data-price="" data-sold="" data-place="1">
+                                    1
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="2">
+                                    2
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="3">
+                                    3
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="4">
+                                    4
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section class="balcony-front-centre">
+                    <ul data-section="balcony">
+                        <li data-row="1">
+                            <ul class="hall-places">
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                                    10
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                                    11
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                                    12
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                                    13
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                                    14
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                                    15
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                                    16
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                                    17
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                                    18
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                                    19
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                                    20
+                                </li>
+                                <li class="place offset-one-place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                                    21
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                                    22
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                                    23
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                                    24
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                                    25
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                                    26
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                                    27
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                                    28
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                                    29
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                                    30
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                                    31
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                                    32
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                                    33
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-row="2">
+                            <ul class="hall-places">
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                                    9
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                                    10
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                                    11
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                                    12
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                                    13
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                                    14
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                                    15
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                                    16
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                                    17
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                                    18
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                                    19
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                                    20
+                                </li>
+                                <li class="place offset-one-place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                                    21
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                                    22
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                                    23
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                                    24
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                                    25
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                                    26
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                                    27
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                                    28
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                                    29
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                                    30
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                                    31
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                                    32
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                                    33
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="34">
+                                    34
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-row="3">
+                            <ul class="hall-places">
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                                    7
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                                    8
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                                    9
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                                    10
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                                    11
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                                    12
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                                    13
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                                    14
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                                    15
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                                    16
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                                    17
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                                    18
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                                    19
+                                </li>
+                                <li class="place offset-one-place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                                    20
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                                    21
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                                    22
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                                    23
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                                    24
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                                    25
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                                    26
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                                    27
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                                    28
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                                    29
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                                    30
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                                    31
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                                    32
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                                    33
+                                </li>
+                                <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="34">
+                                    34
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <section class="balcony-front-right">
+                    <ul data-section="balcony">
+                        <li data-row="1">
+                            <ul class="hall-places">
+                                <li class="place" data-price="" data-sold="" data-place="34">
+                                    34
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="35">
+                                    35
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="36">
+                                    36
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="37">
+                                    37
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="38">
+                                    38
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="39">
+                                    39
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="40">
+                                    40
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="41">
+                                    41
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="42">
+                                    42
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-row="2">
+                            <ul class="hall-places">
+                                <li class="place" data-price="" data-sold="" data-place="35">
+                                    35
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="36">
+                                    36
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="37">
+                                    37
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="38">
+                                    38
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="39">
+                                    39
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="40">
+                                    40
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="41">
+                                    41
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="42">
+                                    42
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-row="3">
+                            <ul class="hall-places">
+                                <li class="place" data-price="" data-sold="" data-place="35">
+                                    35
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="36">
+                                    36
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="37">
+                                    37
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="38">
+                                    38
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="39">
+                                    39
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="40">
+                                    40
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-row="4">
+                            <ul class="hall-places">
+                                <li class="place" data-price="" data-sold="" data-place="5">
+                                    5
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="6">
+                                    6
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="7">
+                                    7
+                                </li>
+                                <li class="place" data-price="" data-sold="" data-place="8">
+                                    8
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+            <section class="balcony-back">
+                <ul data-section="balcony">
+                    <li data-row="5">
+                        <ul class="hall-places">
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                                1
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                                2
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                                3
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                                4
+                            </li>
+                            <li class="place offset-two-place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                                5
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                                6
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                                7
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                                8
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                                9
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                                10
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                                11
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                                12
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                                13
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                                14
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                                15
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                                16
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                                17
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                                18
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                                19
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                                20
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                                21
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                                22
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                                23
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                                24
+                            </li>
+                            <li class="place offset-two-place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                                25
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                                26
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                                27
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                                28
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-row="6">
+                        <ul class="hall-places">
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                                1
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                                2
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                                3
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                                4
+                            </li>
+                            <li class="place offset-two-place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                                5
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                                6
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                                7
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                                8
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                                9
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                                10
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                                11
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                                12
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                                13
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                                14
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                                15
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                                16
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                                17
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                                18
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                                19
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                                20
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                                21
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                                22
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                                23
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                                24
+                            </li>
+                            <li class="place offset-two-place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                                25
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                                26
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                                27
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                                28
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-row="7">
+                        <ul class="hall-places">
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                                1
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                                2
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                                3
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                                4
+                            </li>
+                            <li class="place offset-two-place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                                5
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                                6
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                                7
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                                8
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                                9
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                                10
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                                11
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                                12
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                                13
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                                14
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                                15
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                                16
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                                17
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                                18
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                                19
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                                20
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                                21
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                                22
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                                23
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                                24
+                            </li>
+                            <li class="place offset-two-place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                                25
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                                26
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                                27
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                                28
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-row="8">
+                        <ul class="hall-places">
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                                1
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                                2
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                                3
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                                4
+                            </li>
+                            <li class="place offset-two-place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                                5
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                                6
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                                7
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                                8
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                                9
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                                10
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                                11
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                                12
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                                13
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                                14
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                                15
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                                16
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                                17
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                                18
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                                19
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                                20
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                                21
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                                22
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                                23
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                                24
+                            </li>
+                            <li class="place offset-two-place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                                25
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                                26
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                                27
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                                28
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-row="9">
+                        <ul class="hall-places">
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                                1
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                                2
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                                3
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                                4
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                                5
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                                6
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                                7
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                                8
+                            </li>
+                            <li class="place offset-two-place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                                9
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                                10
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                                11
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                                12
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                                13
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                                14
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                                15
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                                16
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                                17
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                                18
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                                19
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                                20
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                                21
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                                22
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                                23
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                                24
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                                25
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                                26
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                                27
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                                28
+                            </li>
+                            <li class="place offset-two-place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                                29
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                                30
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                                31
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                                32
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                                33
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="34">
+                                34
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="35">
+                                35
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="36">
+                                36
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-row="10">
+                        <ul class="hall-places">
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                                1
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                                2
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                                3
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                                4
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                                5
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                                6
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                                7
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                                8
+                            </li>
+                            <li class="place offset-two-place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                                9
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                                10
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                                11
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                                12
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                                13
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                                14
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                                15
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                                16
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                                17
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                                18
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                                19
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                                20
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                                21
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                                22
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                                23
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                                24
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                                25
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                                26
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                                27
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                                28
+                            </li>
+                            <li class="place offset-two-place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                                29
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                                30
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                                31
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                                32
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                                33
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="34">
+                                34
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="35">
+                                35
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="36">
+                                36
+                            </li>
+                        </ul>
+                    </li>
+                    <li data-row="11">
+                        <ul class="hall-places">
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">
+                                1
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">
+                                2
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">
+                                3
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">
+                                4
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">
+                                5
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">
+                                6
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">
+                                7
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">
+                                8
+                            </li>
+                            <li class="place offset-two-place" data-toggle="popover" data-price="" data-sold="" data-place="9">
+                                9
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">
+                                10
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">
+                                11
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">
+                                12
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">
+                                13
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">
+                                14
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">
+                                15
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">
+                                16
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">
+                                17
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">
+                                18
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">
+                                19
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">
+                                20
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">
+                                21
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">
+                                22
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">
+                                23
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">
+                                24
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">
+                                25
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="26">
+                                26
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="27">
+                                27
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="28">
+                                28
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="29">
+                                29
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="30">
+                                30
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="31">
+                                31
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="32">
+                                32
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="33">
+                                33
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="34">
+                                34
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="35">
+                                35
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="36">
+                                36
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="37">
+                                37
+                            </li>
+                            <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="38">
+                                38
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+        </section>
+    </section>
+    <aside>
+        <div class="booking">
+            <header>
+                <h2 class="title-booking">Ваші квитки</h2>
+                <span class="title-show">Назва вистави</span>
+                <span class="title-hall-place">Черкаська обласна фiлармонiя</span>
+            </header>
+            <ul class="bought-place-info">
+                <li class="booking-place">
+                    <dl>
+                        <dt>Ряд</dt><dd>1</dd>
+                        <dt>Місце</dt><dd>2</dd>
+                        <dt>Ціна</dt><dd>200 грн</dd>
+                    </dl>
+                    <button class="btn btn-link btn-close-place"><span class="glyphicon glyphicon-remove"></span></button>
+                </li>
+                <li class="booking-place">
+                    <dl>
+                        <dt>Ряд</dt><dd>1</dd>
+                        <dt>Місце</dt><dd>2</dd>
+                        <dt>Ціна</dt><dd>200 грн</dd>
+                    </dl>
+                    <button class="btn btn-link btn-close-place"><span class="glyphicon glyphicon-remove"></span></button>
+                </li>
+                <li class="booking-place">
+                    <dl>
+                        <dt>Ряд</dt><dd>1</dd>
+                        <dt>Місце</dt><dd>2</dd>
+                        <dt>Ціна</dt><dd>200 грн</dd>
+                    </dl>
+                    <button class="btn btn-link btn-close-place"><span class="glyphicon glyphicon-remove"></span></button>
+                </li>
+            </ul>
+            <footer>
+                <dl>
+                    <dt>Всього:</dt><dd>600грн</dd>
+                </dl>
+                <button class="pay-btn">Оплатити</button>
+            </footer>
+
+        </div>
+    </aside>
+</main>
+
+<footer class="main-footer">
+    <div class="strip"></div>
+    <div class="wrapp-footer">
+        <a class="up" href="javascript:scroll(0,0)"></a>
+        <ul class="footer-nav uppercase">
+            <li ui-sref-active="active" class="active"><a ui-sref="app.home" href="/uk/"><span ng-bind="'menu.home' | translate" class="ng-binding">Головна</span></a></li>
+            <li ui-sref-active="active"><a ui-sref="app.poster" href="/uk/poster"><span ng-bind="'menu.poster' | translate" class="ng-binding">Афіша</span></a></li>
+            <li ui-sref-active="active"><a ui-sref="app.repertoire" href="/uk/repertoire"><span ng-bind="'menu.repertoire' | translate" class="ng-binding">Репертуар</span></a></li>
+            <li ui-sref-active="active"><a ui-sref="app.news" href="/uk/news"><span ng-bind="'menu.news' | translate" class="ng-binding">Новини</span></a></li>
+            <li ui-sref-active="active"><a ui-sref="app.about" href="/uk/about"><span ng-bind="'menu.about' | translate" class="ng-binding">Про театр</span></a></li>
+            <li ui-sref-active="active"><a ui-sref="app.persons" href="/uk/persons"><span ng-bind="'menu.persons' | translate" class="ng-binding">Персоналії</span></a></li>
+            <li ui-sref-active="active"><a ui-sref="app.contacts" href="/uk/contacts"><span ng-bind="'menu.contacts' | translate" class="ng-binding">Контакти</span></a></li>
+            <!--<li ui-sref-active="active"><a ui-sref="app.fest"><span ng-bind="'menu.fest' | translate"></span></a></li>-->
+            <li ui-sref-active="active"><a href="http://forumua.org/viewtopic.php?f=2&amp;t=233364&amp;start=120"><span ng-bind="'menu.forum' | translate" class="ng-binding">Форум</span></a></li>
+        </ul>
+        <ul class="soc-nav">
+            <li class="vkon"><a href="http://vk.com/club32121977"><span class="ico-vk"></span></a></li>
+        </ul>
+        <small class="copy">
+            © Copyright 2015
+            Powered by <a href="http://geekhub.ck.ua/">Geekhub</a>
+        </small>
+    </div>
+</footer>
+
+
+<!--jquery-->
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<!--js/bootstrap-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!--my JS-->
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover({
+            trigger: 'hover',
+            placement: 'top',
+            content: function () {
+                var el = $(this);
+
+                return el.parents("*[data-section]").attr("data-section")+", "+el.parents("*[data-row]").attr("data-row") +", "+ el.attr('data-place')
+            }
+        });
+    })
+</script>
+
+</body>
+</html>

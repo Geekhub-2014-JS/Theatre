@@ -7,6 +7,7 @@ ul {
 }
 li {
   list-style-type: none;
+  cursor: pointer;
 }
 .title-hall {
   text-align: center;
@@ -58,7 +59,7 @@ li {
   justify-content: space-between;
   border: 3px solid #761c19;
   width: 100%;
-  background: #ffcdcd;
+  background-color: #ffcdcd;
 }
 .booking .title-booking {
   font-size: 20px;
@@ -79,7 +80,7 @@ li {
   flex-direction: row;
 }
 .booking .pay-btn {
-  background: #761c19;
+  background-color: #761c19;
   color: #ffffff;
   border-radius: 20px;
   padding: 5px 10px;
@@ -120,7 +121,7 @@ li {
 }
 .booking header h2 {
   border: 1px solid #761c19;
-  background: #761c19;
+  background-color: #761c19;
   color: #ffffff;
 }
 .booking footer {
@@ -141,10 +142,11 @@ li {
 .place-price3 {
   background-color: #008000;
 }
-.hall-kulyka {
-  background-image: url("images/bg2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+.hall-kulyka,
+.hall-philharmonic,
+.hall-universal,
+.hall-druzhba {
+  background: url("images/bg2.jpg") top / cover no-repeat;
   padding-bottom: 50px;
   text-align: center;
 }
@@ -187,14 +189,8 @@ li {
   padding-left: 0;
   padding-right: 0;
 }
-.hall-philharmonic {
-  text-align: center;
-  padding-bottom: 50px;
-  background-image: url("images/bg2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.title-philharmonic {
+.title-philharmonic,
+.title-universal {
   width: 800px;
   border-bottom: 1px solid #ffffff;
   border-radius: 25px;
@@ -248,4 +244,44 @@ li {
 }
 .loggia-right li {
   transform: rotate(-80deg);
+}
+.offset-one-place {
+  margin-right: 20px;
+}
+.offset-two-place {
+  margin-right: 40px;
+}
+.offset-four {
+  margin-left: 80px;
+}
+.title-sector {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.balcony-front-left {
+  transform: rotate(45deg);
+  margin-bottom: 100px;
+}
+.balcony-front-left .hall-places {
+  justify-content: flex-end;
+}
+.balcony-front-right {
+  transform: rotate(-45deg);
+  margin-bottom: 100px;
+}
+.balcony-front-right .hall-places {
+  justify-content: flex-start;
+}
+.balcony-front-centre {
+  margin-bottom: 30px;
+}
+.hall-druzhba .hall-places {
+  font-size: 13px;
+}
+.hall-druzhba .place {
+  width: 18px;
+  height: 18px;
+}
+.title-sector {
+  color: #ffcdcd;
 }
