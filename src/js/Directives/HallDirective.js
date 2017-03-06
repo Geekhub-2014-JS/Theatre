@@ -19,9 +19,6 @@ angular.module('hallDirectives', [])
                         }
                         scope.addToCart(sitsData)
                     }
-
-
-
                 });
             }
 

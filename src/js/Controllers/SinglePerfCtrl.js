@@ -3,7 +3,7 @@
  */
 angular.module('singlePerf',['ui.bootstrap'])
     .controller('SinglePerformanceCtrl', ['$scope', '$q', 'apiGet', '$stateParams', 'dateConvert', '$rootScope','$state','perfomanceService',
-        function ($scope, $q, apiGet, $stateParams, dateConvert, $rootScope,$state,perfomanceService) {
+        function ($scope, $q, apiGet, $stateParams, dateConvert, $rootScope, $state, perfomanceService) {
 
             apiGet('performances/' + $stateParams.slug)
                 .success(function (data) {
