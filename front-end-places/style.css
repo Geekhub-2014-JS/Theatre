@@ -1,5 +1,5 @@
 body {
-  min-width: 1000px;
+  min-width: 1150px;
 }
 ul {
   padding-left: 0;
@@ -43,6 +43,7 @@ li {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  color: #A9A9A9;
 }
 .legend dt {
   border-radius: 3px;
@@ -53,7 +54,7 @@ li {
   margin-left: 25px;
 }
 .booking {
-  margin-top: 20px;
+  margin-top: 45px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -164,6 +165,9 @@ li {
   height: 23px;
   width: 23px;
 }
+.last-row {
+  margin-left: -27px;
+}
 .hall-places {
   display: flex;
   justify-content: center;
@@ -196,6 +200,7 @@ li {
   border-radius: 25px;
 }
 .section-middle,
+.section-back-parterre,
 .section-back {
   margin-top: 40px;
 }
@@ -232,6 +237,9 @@ li {
 }
 .back-offset {
   margin-right: 77.5px;
+}
+.big-offset {
+  margin-right: 175px;
 }
 .loggia-left li,
 .loggia-right li {

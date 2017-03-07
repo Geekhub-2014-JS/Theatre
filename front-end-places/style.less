@@ -1,5 +1,5 @@
 body {
-  min-width: 1000px;
+  min-width: 1150px;
 }
 ul{
   padding-left: 0;
@@ -44,6 +44,7 @@ li{
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  color: #A9A9A9;
   dt {
     border-radius: 3px;
     border: 1px solid #000000;
@@ -54,13 +55,12 @@ li{
   }
 }
 .booking{
-  margin-top: 20px;
+  margin-top: 45px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border: 3px solid #761c19;
   width: 100%;
-  //min-height: 400px;
   background-color: #ffcdcd;
   .title-booking{
     font-size: 20px;
@@ -149,7 +149,6 @@ li{
 
 .hall-kulyka, .hall-philharmonic, .hall-universal, .hall-druzhba {
   background: url("images/bg2.jpg") top/cover no-repeat;
-  //background-size: cover;
   padding-bottom: 50px;
   text-align: center;
 }
@@ -162,6 +161,7 @@ li{
     width: 23px;
   }
 }
+
 .offset-two {
   &:before{
     content: "\2002";
@@ -170,6 +170,9 @@ li{
     height: 23px;
     width: 23px;
   }
+}
+.last-row{
+  margin-left: -27px;
 }
 
 .hall-places {
@@ -206,6 +209,7 @@ li{
   border-radius: 25px;
 }
 .section-middle,
+.section-back-parterre,
 .section-back{
   margin-top: 40px;
 }
@@ -242,6 +246,10 @@ li{
 }
 .back-offset {
   margin-right: 77.5px;
+}
+
+.big-offset {
+  margin-right: 175px;
 }
 
 .loggia-left, .loggia-right {
