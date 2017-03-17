@@ -6,15 +6,17 @@ angular.module('hall', [])
                 "Будинок культури ім. Кулика": "Kulyka",
                 "Черкаський Театр": "",
                 "Кінотеатр 'Салют'": "",
-                "Черкаський міський Палац молоді": "",
+                "Черкаський міський Палац молоді": "Palace_youth",
                 "Центр дитячої та юнацької творчості": "",
                 "Черкаський обласний художній музей":""
             };
 
             var selectedVenue = perfomanceService.getPerfomance().venue;
+
             for (var key in hallConst) {
                 if (key === selectedVenue) selectedVenue = hallConst[key]
             }
+
             hallService.setHall(selectedVenue);
 
             $scope.getUrl = function () {
