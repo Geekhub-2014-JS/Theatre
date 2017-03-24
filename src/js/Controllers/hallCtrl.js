@@ -1,6 +1,7 @@
-angular.module('hall', [])
-    .controller('HallCtrl', ['$scope', 'hallService', 'cartService', 'perfomanceService',
-        function ($scope, hallService, cartService, perfomanceService) {
+angular.module('hall', ['ngFacebook','ui.bootstrap'])
+
+    .controller('HallCtrl', ['$scope', '$modal', 'hallService', 'cartService', 'perfomanceService',
+        function ($scope, $modal, hallService, cartService, perfomanceService) {
             var hallConst = {
                 "Черкаська Філармонія": "Filarmonia",
                 "Будинок культури ім. Кулика": "Kulyka",
@@ -27,5 +28,13 @@ angular.module('hall', [])
                 cartService.addPlaceToCart(data);
                 $scope.$apply();
             }
+
+            $modal.open({
+                templateUrl: 'views/shared/login.html',
+                backdrop: true,
+                windowClass: 'modal',
+                controller: 'LoginCtrl'
+            });
         }
+
     ]);
