@@ -19,8 +19,8 @@ angular.module('Login',['ngFacebook'])
             firstScriptElement.parentNode.insertBefore(facebookJS, firstScriptElement);
         }());
     })
-    .controller('LoginCtrl', ['$scope', '$rootScope', '$modal', '$facebook', 'apiPost', '$q',
-        function($scope, $rootScope, $modal, $facebook, apiPost){
+    .controller('LoginCtrl', ['$scope', '$modalInstance','$rootScope', '$facebook', 'apiPost', '$q',
+        function($scope, $modalInstance, $rootScope, $facebook, apiPost){
             $scope.isLoggedIn = false;
             $scope.login = function() {
                 console.log('login try');
@@ -36,7 +36,7 @@ angular.module('Login',['ngFacebook'])
                             if (response.status === 'connected') {
                                 $rootScope.user.uid = response.authResponse.userID;
                                 $rootScope.user.accessToken = response.authResponse.accessToken;
-                                apiPost('/customers/login',{"customer":{
+                                apiPost('customers/login',{"customer":{
                                  "id": $scope.user.id,
                                  "first_name": $rootScope.user.first_name,
                                  "last_name": $rootScope.user.last_name,
@@ -44,8 +44,10 @@ angular.module('Login',['ngFacebook'])
                                  },
                                  "api_key_token": $scope.user.accessToken
                                  }).then(function (response) {
+                                    $modalInstance.dismiss();
                                      //do something with login in page
                                  },function (response) {
+                                    $modalInstance.dismiss();
                                     //do something with error login in page
                                 });
                             } else if (response.status === 'not_authorized') {

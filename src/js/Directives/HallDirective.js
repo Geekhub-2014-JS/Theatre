@@ -7,7 +7,9 @@ angular.module('hallDirectives', [])
 
             link: function (scope, elem, attrs) {
                 elem[0].addEventListener("click", function (event) {
-                    if (event.target.tagName === 'LI') {
+                    if (event.target.tagName === 'LI'
+                        &&!event.target.classList.contains('place-reserved')
+                        &&!event.target.classList.contains('place-bought')) {
                         var nodeParent = event.target;
                         var sitsData={};
                         sitsData.sit=event.target.getAttribute('data-place');
