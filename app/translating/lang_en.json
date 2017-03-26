@@ -139,5 +139,12 @@
     "boughtSits":"Bought sits",
     "reservedSits":"Reserved sits",
     "balcony":"Balcony"
+  },
+  "login":{
+    "loginText":"User login",
+    "loginFacebook":"Login via Facebook"
+  },
+  "timer":{
+    "timerText":"Time remaining to order"
   }
 }

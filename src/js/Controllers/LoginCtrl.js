@@ -1,4 +1,4 @@
-angular.module('Login',['ngFacebook'])
+angular.module('login',['ngFacebook'])
     .config( function( $facebookProvider ) {
         $facebookProvider.setAppId('1835003956748098');
         $facebookProvider.setCustomInit({
@@ -9,7 +9,6 @@ angular.module('Login',['ngFacebook'])
 
     })
     .run( function( $rootScope ) {
-        // Load the facebook SDK asynchronously
         (function(){
             if (document.getElementById('facebook-jssdk')) {return;}
             var firstScriptElement = document.getElementsByTagName('script')[0];
@@ -19,43 +18,29 @@ angular.module('Login',['ngFacebook'])
             firstScriptElement.parentNode.insertBefore(facebookJS, firstScriptElement);
         }());
     })
-    .controller('LoginCtrl', ['$scope', '$modalInstance','$rootScope', '$facebook', 'apiPost', '$q',
-        function($scope, $modalInstance, $rootScope, $facebook, apiPost){
-            $scope.isLoggedIn = false;
+    .controller('LoginCtrl', ['$scope', '$modalInstance','$rootScope', '$facebook', 'apiPost', 'userService',
+        function($scope, $modalInstance, $rootScope, $facebook, apiPost, userService){
             $scope.login = function() {
-                console.log('login try');
                 $facebook.login().then(function() {
                     refresh();
                 });
-            }
+            };
             function refresh() {
                 $facebook.api("/me?fields=id,first_name,last_name,email").then(
                     function(response) {
-                        $rootScope.user=response;
+                        userService.addUser(response);
                         FB.getLoginStatus(function(response) {
+
                             if (response.status === 'connected') {
-                                $rootScope.user.uid = response.authResponse.userID;
-                                $rootScope.user.accessToken = response.authResponse.accessToken;
-                                apiPost('customers/login',{"customer":{
-                                 "id": $scope.user.id,
-                                 "first_name": $rootScope.user.first_name,
-                                 "last_name": $rootScope.user.last_name,
-                                 "email": $rootScope.user.email
-                                 },
-                                 "api_key_token": $scope.user.accessToken
-                                 }).then(function (response) {
-                                    $modalInstance.dismiss();
-                                     //do something with login in page
-                                 },function (response) {
-                                    $modalInstance.dismiss();
-                                    //do something with error login in page
-                                });
-                            } else if (response.status === 'not_authorized') {
-                                // the user is logged in to Facebook,
-                                // but has not authenticated your app
+                                userService.setApiToken(response.authResponse.accessToken);
+                                userService.setNetwork('facebook');
+                                /*$rootScope.user.accessToken = response.authResponse.accessToken;
+                                $rootScope.user.network = 'facebook';*/
                             } else {
                                 // the user isn't logged in to Facebook.
                             }
+
+                            $modalInstance.dismiss();
                         });
                     },
                     function(err) {

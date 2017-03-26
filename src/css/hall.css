@@ -249,3 +249,13 @@ li {
 .loggia-right li {
   transform: rotate(-80deg);
 }
+
+.modal-content {
+  background: #ffcdcd;
+  !important;
+}
+
+.ticket-timer {
+  font-size: 30px;
+  color: #761c19;
+}

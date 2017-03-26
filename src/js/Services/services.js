@@ -7,14 +7,15 @@ var theatreServices = angular.module('theatreServices', []);
 theatreServices
     .constant('api_url', 'http://api.theatre.pp.ua/')
     //.constant('api_url', 'http://apistaging.theatre.pp.ua/')
-    .factory('apiPost', ['$http', 'api_url', '$stateParams',
-        function ($http, api_url, $stateParams) {
+    .factory('apiPost', ['$http', 'api_url', '$stateParams', '$rootScope',
+        function ($http, api_url, $stateParams, $rootScope) {
             return function (url, data) {
                 var conf = {
                     method: 'POST',
                     url: api_url + url,
                     headers: {
-                        'locale': $stateParams.locale
+                        'locale': $stateParams.locale,
+                        'API-Key-Token':''
                     },
                     data: data
                 };
@@ -149,5 +150,27 @@ theatreServices
             }
         }
 
+    })
+
+    .factory('userService', function () {
+        var currentUser = {};
+        var customer={};
+        return {
+            addUser: function (user) {
+                currentUser=user;
+            },
+
+            getCurrentUser: function () {
+                return currentUser;
+            },
+
+            setNetwork: function (network) {
+                currentUser.network=network;
+            },
+
+            setApiToken: function (accessToken) {
+                currentUser.accessToken=accessToken;
+            }
+        }
     })
 ;

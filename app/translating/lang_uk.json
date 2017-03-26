@@ -132,7 +132,7 @@
     "row":"Ряд",
     "sit":"Місце",
     "cost":"Ціна",
-    "total":"Total",
+    "total":"Всього",
     "uah":"грн",
     "pay":"Оплатити"
   },
@@ -140,5 +140,12 @@
     "boughtSits":"Bикуплені місця",
     "reservedSits":"Заброньовані місця",
     "balcony":"БАЛКОН"
+  },
+  "login":{
+    "loginText":"Вхід користувача",
+    "loginFacebook":"Вхід через Facebook"
+  },
+  "timer":{
+    "timerText":"Час для оформлення заказу"
   }
 }
