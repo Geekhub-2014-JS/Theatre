@@ -5,8 +5,8 @@
 var theatreServices = angular.module('theatreServices', []);
 
 theatreServices
-    .constant('api_url', 'http://api.theatre.pp.ua/')
-    //.constant('api_url', 'http://apistaging.theatre.pp.ua/')
+    //.constant('api_url', 'http://api.theatre.pp.ua/')
+    .constant('api_url', 'http://api.staging.theatre.pp.ua/')
     .factory('apiPost', ['$http', 'api_url', '$stateParams', '$rootScope',
         function ($http, api_url, $stateParams, $rootScope) {
             return function (url, data) {
@@ -170,6 +170,28 @@ theatreServices
 
             setApiToken: function (accessToken) {
                 currentUser.accessToken=accessToken;
+            }
+        }
+    })
+
+    .factory('timerService', function () {
+        var timer;
+        return {
+            getTime:    function getTimeRemaining(){
+                var t = Date.parse(timer) - Date.parse(new Date());
+                var seconds = Math.floor( (t/1000) % 60 );
+                var minutes = Math.floor( (t/1000/60) % 60 );
+                var hours = Math.floor( (t/(1000*60*60)) % 24 );
+                var days = Math.floor( t/(1000*60*60*24) );
+                return {
+                    'total': t,
+                    'minutes': minutes,
+                    'seconds': ('0'+parseInt(seconds)).slice(-2) //seconds
+                };
+            },
+
+            setCurrentTimer: function (newTimer) {
+                timer=newTimer;
             }
         }
     })

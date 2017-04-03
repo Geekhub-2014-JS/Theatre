@@ -34,17 +34,13 @@ angular.module('login',['ngFacebook'])
                             if (response.status === 'connected') {
                                 userService.setApiToken(response.authResponse.accessToken);
                                 userService.setNetwork('facebook');
-                                /*$rootScope.user.accessToken = response.authResponse.accessToken;
-                                $rootScope.user.network = 'facebook';*/
-                            } else {
-                                // the user isn't logged in to Facebook.
                             }
 
                             $modalInstance.dismiss();
                         });
                     },
                     function(err) {
-                        $scope.welcomeMsg = "Please log in";
+                        $modalInstance.dismiss();
                     });
             };
 
