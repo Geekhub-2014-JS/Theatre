@@ -235,10 +235,15 @@ theatreServices
                 })
             },
             compareTicketChanges: function (tickets) {
+                console.log('ticket');
                 for (var i=0;i<currectTicketSet.length;i++) {
-                    if (currectTicketSet.status!==tickets.status) {
-                        var venue_sector = element.seat.venue_sector.title;
+                    if (currectTicketSet[i].status!==tickets[i].status) {
+                        currectTicketSet[i]=tickets[i];
+                        var venue_sector = tickets[i].seat.venue_sector.title;
                         var selectPlace=document.querySelector('.'+venue_sector);
+                        var row=tickets[i].seat.row;
+                        var place=tickets[i].seat.place;
+                        selectPlace=selectPlace.querySelector('[data-row="'+row+'"], [data-place="'+place+'"]');
                         setSit(selectPlace,tickets[i]);
                     }
                 }
