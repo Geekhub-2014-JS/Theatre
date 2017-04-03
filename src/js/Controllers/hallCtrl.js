@@ -1,10 +1,8 @@
 angular.module('hall', ['ngFacebook','ui.bootstrap'])
 
-    .controller('HallCtrl', ['$scope', '$modal', '$http', 'hallService', 'cartService', 'perfomanceService', 'userService', 'apiPost', 'apiGet',
-        function ($scope, $modal, $http, hallService, cartService, perfomanceService, userService, apiPost, apiGet) {
-        $http.get("../backend/tickets.json").success(function (data) {
-            console.log(data);
-        });
+    .controller('HallCtrl', ['$scope', '$modal', '$http', 'hallService', 'cartService', 'perfomanceService', 'userService', 'ticketService', 'apiPost', 'apiGet',
+        function ($scope, $modal, $http, hallService, cartService, perfomanceService, userService, ticketService, apiPost, apiGet) {
+
             var hallConst = {
                 "Черкаська Філармонія": "Filarmonia",
                 "Будинок культури ім. Кулика": "Kulyka",
@@ -38,6 +36,13 @@ angular.module('hall', ['ngFacebook','ui.bootstrap'])
                 windowClass: 'modal',
                 controller: 'LoginCtrl'
             }).result.finally(function(){
+
+                ticketService.clearHallSits();
+                $http.get("../backend/tickets.json").success(function (data) {
+                    ticketService.setTickets(data);
+                    ticketService.setHallSits();
+                });
+
 
                 apiPost('customers/login',{
                     "first_name": userService.getCurrentUser().first_name,
@@ -89,6 +94,13 @@ angular.module('hall', ['ngFacebook','ui.bootstrap'])
                 $interval.cancel(timerInterval);
             });
 
+        }
+    ])
+
+    .controller('TicketCtrl', ['$scope', '$interval', 'ticketService',
+        function ($scope, $interval,ticketService) {
+        console.log('ticketstart');
+            ticketService.clearHall();
         }
     ]);
 

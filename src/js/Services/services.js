@@ -195,4 +195,40 @@ theatreServices
             }
         }
     })
-;
+
+    .factory('ticketService',['$document',
+        function () {
+        var currectTicketSet;
+        return {
+            setTickets: function (tickets) {
+                currectTicketSet=tickets;
+            },
+            clearHallSits: function clearHall(){
+            var sits = document.getElementsByClassName('place');
+            sits=Array.prototype.slice.call(sits);
+            sits.forEach(function (element) {
+                element.className='';
+                element.className+='place ';
+                element.className+='place-bought';
+
+            })
+            },
+            setHallSits: function () {
+                currectTicketSet.forEach(function (element) {
+                    var venue_sector = element.seat.venue_sector.title;
+                    var row=element.seat.row;
+                    var place=element.seat.place;
+                    var selectPlace=document.querySelector('.'+venue_sector);
+                    selectPlace=selectPlace.querySelector('[data-row="'+row+'"], [data-place="'+place+'"]');
+                    selectPlace.className='';
+                    selectPlace.className+='place ';
+                    selectPlace.className+=element.seat.price_category.title+' ';
+                    selectPlace.className+=element.status+ ' ';
+                    selectPlace.setAttribute('data-price',element.price);
+                    selectPlace.setAttribute('ticket-uuid',element.id);
+                    selectPlace.style.backgroundColor=element.seat.price_category.color;
+
+                })
+            }
+        }
+    }] );
