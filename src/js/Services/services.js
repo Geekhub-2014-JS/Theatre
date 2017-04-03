@@ -235,7 +235,6 @@ theatreServices
                 })
             },
             compareTicketChanges: function (tickets) {
-                console.log('timer');
                 for (var i=0;i<currectTicketSet.length;i++) {
                     if (currectTicketSet.status!==tickets.status) {
                         var venue_sector = element.seat.venue_sector.title;
