@@ -1,7 +1,10 @@
 angular.module('hall', ['ngFacebook','ui.bootstrap'])
 
-    .controller('HallCtrl', ['$scope', '$modal', '$rootScope', 'hallService', 'cartService', 'perfomanceService', 'userService', 'apiPost',
-        function ($scope, $modal, $rootScope, hallService, cartService, perfomanceService, userService, apiPost) {
+    .controller('HallCtrl', ['$scope', '$modal', '$http', 'hallService', 'cartService', 'perfomanceService', 'userService', 'apiPost', 'apiGet',
+        function ($scope, $modal, $http, hallService, cartService, perfomanceService, userService, apiPost, apiGet) {
+        $http.get("../backend/tickets.json").success(function (data) {
+            console.log(data);
+        });
             var hallConst = {
                 "Черкаська Філармонія": "Filarmonia",
                 "Будинок культури ім. Кулика": "Kulyka",
@@ -12,7 +15,7 @@ angular.module('hall', ['ngFacebook','ui.bootstrap'])
                 "Черкаський обласний художній музей":""
             };
 
-            var selectedVenue = perfomanceService.getPerfomance().venue;
+            var selectedVenue = perfomanceService.getPerfomance().venue.title;
 
             for (var key in hallConst) {
                 if (key === selectedVenue) selectedVenue = hallConst[key]
@@ -25,6 +28,7 @@ angular.module('hall', ['ngFacebook','ui.bootstrap'])
             };
 
             $scope.addToCart = function (data) {
+                $scope.busy=true;
                 cartService.addPlaceToCart(data);
                 $scope.$apply();
             };
@@ -34,9 +38,9 @@ angular.module('hall', ['ngFacebook','ui.bootstrap'])
                 windowClass: 'modal',
                 controller: 'LoginCtrl'
             }).result.finally(function(){
-                //if (!$rootScope.user) $rootScope.user={}; //Todo change to object
+
                 apiPost('customers/login',{
-                    "first_name": userService.getCurrentUser().first_name, //Todo to service
+                    "first_name": userService.getCurrentUser().first_name,
                     "last_name": userService.getCurrentUser().last_name,
                     "email": userService.getCurrentUser().email,
                     "social_network": userService.getCurrentUser().network,
@@ -50,9 +54,9 @@ angular.module('hall', ['ngFacebook','ui.bootstrap'])
         }
 
     ])
-    .controller('TimerCtrl', ['$scope', '$interval', 'cartService',
-        function ($scope, $interval, cartService) {
-            var timerInterval;   //todo rewrite with $interval
+    .controller('TimerCtrl', ['$scope', '$interval', 'cartService', 'timerService',
+        function ($scope, $interval, cartService, timerService) {
+            var timerInterval;
             var endTime;
 
             $scope.isCartEmpty=function () {
@@ -70,8 +74,9 @@ angular.module('hall', ['ngFacebook','ui.bootstrap'])
                 if (cartService.getPlaceToCart().length&&!timerInterval) {
                     endTime=new Date();
                     endTime.setMinutes(endTime.getMinutes()+15);
+                    timerService.setCurrentTimer(endTime);
                     timerInterval=$interval(function () {
-                        $scope.timer=getTimeRemaining(endTime);
+                        $scope.timer=timerService.getTime();
                     },1000)
                 } else if (!cartService.getPlaceToCart().length) {
                     $interval.cancel(timerInterval);
@@ -84,18 +89,6 @@ angular.module('hall', ['ngFacebook','ui.bootstrap'])
                 $interval.cancel(timerInterval);
             });
 
-            function getTimeRemaining(endtime){
-                var t = Date.parse(endtime) - Date.parse(new Date());
-                var seconds = Math.floor( (t/1000) % 60 );
-                var minutes = Math.floor( (t/1000/60) % 60 );
-                var hours = Math.floor( (t/(1000*60*60)) % 24 );
-                var days = Math.floor( t/(1000*60*60*24) );
-                return {
-                    'total': t,
-                    'minutes': minutes,
-                    'seconds': seconds
-                };
-            };
         }
     ]);
 
