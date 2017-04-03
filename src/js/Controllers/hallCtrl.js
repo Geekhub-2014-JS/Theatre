@@ -1,7 +1,7 @@
 angular.module('hall', ['ngFacebook','ui.bootstrap'])
 
-    .controller('HallCtrl', ['$scope', '$modal', '$http', 'hallService', 'cartService', 'perfomanceService', 'userService', 'ticketService', 'apiPost', 'apiGet',
-        function ($scope, $modal, $http, hallService, cartService, perfomanceService, userService, ticketService, apiPost, apiGet) {
+    .controller('HallCtrl', ['$scope', '$modal', '$http', '$interval', 'hallService', 'cartService', 'perfomanceService', 'userService', 'ticketService', 'apiPost', 'apiGet',
+        function ($scope, $modal, $http, $interval, hallService, cartService, perfomanceService, userService, ticketService, apiPost, apiGet) {
 
             var hallConst = {
                 "Черкаська Філармонія": "Filarmonia",
@@ -14,10 +14,11 @@ angular.module('hall', ['ngFacebook','ui.bootstrap'])
             };
 
             var selectedVenue = perfomanceService.getPerfomance().venue.title;
+            var ticketTimerInterval;
 
             for (var key in hallConst) {
                 if (key === selectedVenue) selectedVenue = hallConst[key]
-            }
+            };
 
             hallService.setHall(selectedVenue);
 
@@ -31,6 +32,10 @@ angular.module('hall', ['ngFacebook','ui.bootstrap'])
                 $scope.$apply();
             };
 
+            $scope.$on('$destroy',function () {
+                $interval.cancel(ticketTimerInterval);
+            });
+
             $modal.open({
                 templateUrl: 'views/shared/login.html',
                 windowClass: 'modal',
@@ -42,6 +47,12 @@ angular.module('hall', ['ngFacebook','ui.bootstrap'])
                     ticketService.setTickets(data);
                     ticketService.setHallSits();
                 });
+                ticketTimerInterval=$interval(function () {
+                    $http.get("../backend/tickets.json").success(function (data) {
+                        ticketService.compareTicketChanges(data);
+                    });
+                },1000);
+
 
 
                 apiPost('customers/login',{

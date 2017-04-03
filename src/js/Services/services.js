@@ -199,6 +199,16 @@ theatreServices
     .factory('ticketService',['$document',
         function () {
         var currectTicketSet;
+
+        function setSit(selectPlace,element) {
+            selectPlace.className='';
+            selectPlace.className+='place ';
+            selectPlace.className+=element.seat.price_category.title+' ';
+            selectPlace.className+=element.status+ ' ';
+            selectPlace.setAttribute('data-price',element.price);
+            selectPlace.setAttribute('ticket-uuid',element.id);
+            selectPlace.style.backgroundColor=element.seat.price_category.color;
+        }
         return {
             setTickets: function (tickets) {
                 currectTicketSet=tickets;
@@ -220,15 +230,19 @@ theatreServices
                     var place=element.seat.place;
                     var selectPlace=document.querySelector('.'+venue_sector);
                     selectPlace=selectPlace.querySelector('[data-row="'+row+'"], [data-place="'+place+'"]');
-                    selectPlace.className='';
-                    selectPlace.className+='place ';
-                    selectPlace.className+=element.seat.price_category.title+' ';
-                    selectPlace.className+=element.status+ ' ';
-                    selectPlace.setAttribute('data-price',element.price);
-                    selectPlace.setAttribute('ticket-uuid',element.id);
-                    selectPlace.style.backgroundColor=element.seat.price_category.color;
+                    setSit(selectPlace,element);
 
                 })
+            },
+            compareTicketChanges: function (tickets) {
+                console.log('timer');
+                for (var i=0;i<currectTicketSet.length;i++) {
+                    if (currectTicketSet.status!==tickets.status) {
+                        var venue_sector = element.seat.venue_sector.title;
+                        var selectPlace=document.querySelector('.'+venue_sector);
+                        setSit(selectPlace,tickets[i]);
+                    }
+                }
             }
         }
     }] );
