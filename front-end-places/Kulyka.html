@@ -8,25 +8,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kulyka</title>
     <!--Exist vendor styles-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../app/css/vendors-css.min.css">
     <link rel="stylesheet" type="text/css" href="../app/css/app.min.css">
     <!--New styles for places-->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<header class="main-header">
-    <div class="wrapp">
-        <h1><a ui-sref="app.home" ui-sref-opts="{reload: true}" href="/uk/"><img src="../app/img/logo.png" alt="{'menu.logo' | translate}"><span ng-bind="'menu.logo' | translate" class="ng-binding">Черкаський драматичний театр імені Т. Г. Шевченка</span></a></h1>
-        <div class="dropdown lang-select uppercase ng-scope" ng-controller="translateCtrl">
-            <a href="#">
-                <span ng-click="chLocale()" class="ng-binding">
-                    EN
-                </span>
+<nav class="navbar navbar-theatre">
+    <div class="container-fluid">
+        <h1 class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="app.home" ui-sref-opts="{reload: true}" href="/uk/">
+                <img src="../app/img/logo.png" alt="{'menu.logo' | translate}">
             </a>
-        </div>
-        <nav>
-            <ul class="uppercase">
+        </h1>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-nav-hall">
                 <li ui-sref-active="active" class="active"><a ui-sref="app.home" href="/uk/"><span class="ng-binding">Головна</span></a></li>
                 <li ui-sref-active="active"><a ui-sref="app.poster" ui-sref-opts="{reload: true}" href="/uk/poster"><span class="ng-binding">Афіша</span></a></li>
                 <li ui-sref-active="active"><a ui-sref="app.repertoire" href="/uk/repertoire"><span class="ng-binding">Репертуар</span></a></li>
@@ -34,11 +38,10 @@
                 <li ui-sref-active="active"><a ui-sref="app.about" href="/uk/about"><span class="ng-binding">Про театр</span></a></li>
                 <li ui-sref-active="active"><a ui-sref="app.persons" href="/uk/persons"><span class="ng-binding">Персоналії</span></a></li>
                 <li ui-sref-active="active"><a ui-sref="app.contacts" href="/uk/contacts"><span class="ng-binding">Контакти</span></a></li>
-                <!--<li ui-sref-active="active"><a ui-sref="app.fest"><span ng-bind="'menu.fest' | translate"></span></a></li>-->
             </ul>
-        </nav>
+        </div>
     </div>
-</header>
+</nav>
 <main class="container-fluid hall-kulyka hall">
     <section id="content">
         <h1 class="title-hall">МБК ім.Кулика</h1>
@@ -1135,29 +1138,40 @@
     </aside>
 </main>
 
-<footer class="main-footer">
-    <div class="strip"></div>
-    <div class="wrapp-footer">
-        <a class="up" href="javascript:scroll(0,0)"></a>
-        <ul class="footer-nav uppercase">
-            <li ui-sref-active="active" class="active"><a ui-sref="app.home" href="/uk/"><span ng-bind="'menu.home' | translate" class="ng-binding">Головна</span></a></li>
-            <li ui-sref-active="active"><a ui-sref="app.poster" href="/uk/poster"><span ng-bind="'menu.poster' | translate" class="ng-binding">Афіша</span></a></li>
-            <li ui-sref-active="active"><a ui-sref="app.repertoire" href="/uk/repertoire"><span ng-bind="'menu.repertoire' | translate" class="ng-binding">Репертуар</span></a></li>
-            <li ui-sref-active="active"><a ui-sref="app.news" href="/uk/news"><span ng-bind="'menu.news' | translate" class="ng-binding">Новини</span></a></li>
-            <li ui-sref-active="active"><a ui-sref="app.about" href="/uk/about"><span ng-bind="'menu.about' | translate" class="ng-binding">Про театр</span></a></li>
-            <li ui-sref-active="active"><a ui-sref="app.persons" href="/uk/persons"><span ng-bind="'menu.persons' | translate" class="ng-binding">Персоналії</span></a></li>
-            <li ui-sref-active="active"><a ui-sref="app.contacts" href="/uk/contacts"><span ng-bind="'menu.contacts' | translate" class="ng-binding">Контакти</span></a></li>
-            <!--<li ui-sref-active="active"><a ui-sref="app.fest"><span ng-bind="'menu.fest' | translate"></span></a></li>-->
-            <li ui-sref-active="active"><a href="http://forumua.org/viewtopic.php?f=2&amp;t=233364&amp;start=120"><span ng-bind="'menu.forum' | translate" class="ng-binding">Форум</span></a></li>
-        </ul>
-        <ul class="soc-nav">
-            <li class="vkon"><a href="http://vk.com/club32121977"><span class="ico-vk"></span></a></li>
-        </ul>
-        <small class="copy">
-            © Copyright 2015
-            Powered by <a href="http://geekhub.ck.ua/">Geekhub</a>
-        </small>
-    </div>
+<footer>
+    <nav class="navbar navbar-theatre-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-footer-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-footer-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li ui-sref-active="active" class="active"><a ui-sref="app.home" href="/uk/"><span class="ng-binding">Головна</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.poster" ui-sref-opts="{reload: true}" href="/uk/poster"><span class="ng-binding">Афіша</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.repertoire" href="/uk/repertoire"><span class="ng-binding">Репертуар</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.news" href="/uk/news"><span class="ng-binding">Новини</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.about" href="/uk/about"><span class="ng-binding">Про театр</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.persons" href="/uk/persons"><span class="ng-binding">Персоналії</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.contacts" href="/uk/contacts"><span class="ng-binding">Контакти</span></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right navbar-footer-hall">
+                    <li><a href="http://vk.com/club32121977"><i class="fa fa-vk"></i></a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+        <a class="up up-hall" href="javascript:scroll(0,0)"></a>
+
+    </nav>
+    <small class="copy copy-hall">
+        &copy; Copyright 2017
+        Powered by <a href="http://geekhub.ck.ua/">Geekhub</a>
+    </small>
 </footer>
 
 <!--<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>/-->

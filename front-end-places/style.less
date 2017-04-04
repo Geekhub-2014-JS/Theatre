@@ -1,6 +1,76 @@
-body {
-  min-width: 1150px;
+.wrapp {
+  width: auto;
 }
+
+.navbar-theatre {
+  background-image: -moz-linear-gradient(left,  rgba(236,83,42,1) 0%, rgba(196,36,46,1) 100%); /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(236,83,42,1)), color-stop(100%,rgba(196,36,46,1))); /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(left,  rgba(236,83,42,1) 0%,rgba(196,36,46,1) 100%); /* Chrome10+,Safari5.1+ */
+  background-image: -o-linear-gradient(left,  rgba(236,83,42,1) 0%,rgba(196,36,46,1) 100%); /* Opera 11.10+ */
+  background-image: -ms-linear-gradient(left,  rgba(236,83,42,1) 0%,rgba(196,36,46,1) 100%); /* IE10+ */
+  background-image: linear-gradient(to right,  rgba(236,83,42,1) 0%,rgba(196,36,46,1) 100%); /* W3C */
+  .nav {
+    li {
+      a {
+        color: #FFFFFF;
+        &:hover {
+          background: #ffffff;
+          span {
+            color: #292929;
+          }
+        }
+      }
+    }
+  }
+}
+.navbar-theatre,.navbar-theatre-inverse {
+  border-radius: 0;
+  border: none;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  overflow: hidden;
+  .navbar-header {
+    margin: 3px 10px;
+  }
+  .navbar-brand {
+    height: 70px;
+    padding: 0;
+  }
+  .navbar-toggle {
+    margin-top: 20px;
+    span{
+      border: 1px solid #000000;
+    }
+  }
+  .nav {
+    li {
+      a {
+        font: 12px robotolight;
+        padding: 30.5px 11px;
+      }
+    }
+  }
+}
+.navbar-nav-hall{
+  padding-left: 30%;
+}
+.navbar-theatre-inverse {
+  background-color: #FFFFFF;
+  .nav {
+    li {
+      a {
+        color: #292929;
+        &:hover {
+          background: transparent;
+          span {
+            color: #ff0000;
+          }
+        }
+      }
+    }
+  }
+}
+
 ul{
   padding-left: 0;
   margin-bottom: 0;
@@ -44,7 +114,6 @@ li{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: #A9A9A9;
   dt {
     border-radius: 3px;
     border: 1px solid #000000;
@@ -55,7 +124,7 @@ li{
   }
 }
 .booking{
-  margin-top: 45px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -104,6 +173,7 @@ li{
   footer {
     color: #761c19;
     padding-bottom: 20px;
+    border-top: 1px solid #761c19;
   }
   header{
     border-bottom: 1px solid #761c19;
@@ -125,12 +195,19 @@ li{
       color: #ffffff;
     }
   }
-  footer{
-    border-top: 1px solid #761c19;
-  }
-
 }
-
+footer{
+  .navbar-footer-hall{
+    margin-right: 15px;
+  }
+  .up-hall{
+    margin: -79px 0 0 0;
+  }
+  .copy-hall{
+    display: block;
+    margin-bottom: 15px;
+  }
+}
 .place-reserved{
   background-color: #A9A9A9;
 }
@@ -147,7 +224,7 @@ li{
   background-color: #008000;
 }
 
-.hall-kulyka, .hall-philharmonic, .hall-universal, .hall-druzhba {
+.hall-kulyka, .hall-philharmonic, .hall-universal, .hall-druzhba,.hall-universal-registration {
   background: url("images/bg2.jpg") top/cover no-repeat;
   padding-bottom: 50px;
   text-align: center;
@@ -161,7 +238,6 @@ li{
     width: 23px;
   }
 }
-
 .offset-two {
   &:before{
     content: "\2002";
@@ -170,9 +246,6 @@ li{
     height: 23px;
     width: 23px;
   }
-}
-.last-row{
-  margin-left: -27px;
 }
 
 .hall-places {
@@ -209,7 +282,6 @@ li{
   border-radius: 25px;
 }
 .section-middle,
-.section-back-parterre,
 .section-back{
   margin-top: 40px;
 }
@@ -248,10 +320,6 @@ li{
   margin-right: 77.5px;
 }
 
-.big-offset {
-  margin-right: 175px;
-}
-
 .loggia-left, .loggia-right {
   li {
     margin: 5px;
@@ -278,6 +346,9 @@ li{
 }
 .offset-four {
   margin-left: 80px;
+}
+.big-offset{
+  margin-right: 175px;
 }
 .title-sector {
   margin-top: 0;
@@ -312,4 +383,381 @@ li{
 }
 .title-sector {
   color: #ffcdcd;
+}
+
+
+
+
+.hall-universal-registration{
+  padding-top: 70px;
+}
+.ticket-registration{
+  min-height: 450px;
+  background-color: #ffcdcd ;
+  width: 60%;
+  margin: 0 auto;
+  overflow: hidden;
+  .booking-registration{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 3px solid #761c19;
+    width: 100%;
+    background-color: #ffcdcd;
+    h2{
+      border: 1px solid #761c19;
+      background-color: #761c19;
+      color: #ffffff;
+    }
+    .title-booking{
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .ticket-box{
+      font-size: 18px;
+      width: 100%;
+      margin: 0 auto;
+      color:#761c19;
+      .btn-close-place{
+        color: #ff0000;
+      }
+      thead{
+        border-bottom: 1px solid #761c19;
+        th{
+          padding: 10px 0;
+          text-align: center;
+        }
+      }
+    }
+    .booking-place{
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+
+    }
+    .pay-btn {
+      font-size: 22px;
+      background-color: #761c19;
+      color: #ffffff;
+      border-radius: 20px;
+      padding: 5px 10px;
+      border: none;
+      &:hover {
+        background: transparent;
+        border: 1px solid #761c19;
+        color: #761c19;
+        padding: 4px 10px;
+      }
+    }
+
+    .bought-place-info,
+    footer {
+      .text-form{
+        font-size: 17px;
+        color: #000000;
+        padding-bottom: 15px;
+      }
+      .form-info-client{
+        padding-bottom: 15px;
+        input{
+          margin-top: 10px;
+          padding: 10px;
+          color: #000000;
+          border-radius: 10px;
+        }
+      }
+      dl{
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        font-size: 20px;
+      }
+      dd{
+        margin-left: 10px;
+      }
+      color: #761c19;
+      padding-bottom: 20px;
+      border-top: 1px solid #761c19;
+    }
+    header{
+      padding-left: 20px;
+      border-bottom: 1px solid #761c19;
+      padding-bottom: 15px;
+      .img-brand{
+        margin-top: 15px;
+      }
+      .title-show,.date-event{
+        color: #000000;
+        font-size: 20px;
+        margin: 10px;
+        display: block;
+      }
+      .title-hall-registration{
+        margin: 15px;
+        color: #000000;
+        font-size: 20px;
+      }
+
+    }
+  }
+}
+//--------------------------------------------MEDIA----------------------------------------------------------------
+@media (min-width: 320px) and (max-width: 767px){
+  .navbar-theatre,.navbar-theatre-inverse {
+    .nav {
+      li {
+        a {
+          font: 12px robotolight;
+          padding: 5px 11px;
+        }
+      }
+    }
+  }
+  .title-philharmonic, .title-universal,.title-kulyka {
+    width: 300px;
+  }
+  .legend {
+    dd{
+      font-size: 10px;
+    }
+    dt {
+      width: 15px;
+      height: 15px;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+  .hall {
+     flex-direction: column;
+    }
+  .booking {
+    width: 280px;
+    margin: 30px auto;
+  }
+  .hall-philharmonic{
+    .place {
+      width: 9.2px;
+      height: 10px;
+      margin: 0;
+      font-size: 6px;
+    }
+  }
+  .hall-kulyka{
+    .place {
+      width: 13px;
+      height: 13px;
+      margin: 0;
+      font-size: 8px;
+    }
+    .offset-one {
+      &:before{
+        margin: 0;
+        height: 13px;
+        width: 13px;
+      }
+    }
+    .offset-two {
+      &:before{
+        margin: 0;
+        height: 13px;
+        width: 13px;
+      }
+    }
+    .parter {
+      margin: 0 auto 40px;
+    }
+  }
+
+  .img-balcony {
+    min-height: 160px;
+  }
+  .left-hall{
+    margin-right: 10px;
+  }
+  .right-hall{
+    margin-left: 10px;
+  }
+  .hall-philharmonic{
+    .back-offset {
+    margin-right: 30px;
+    }
+    .big-offset{
+      margin-right: 65px;
+    }
+  }
+  .title-hall {
+    font-size: 18px;
+  }
+  .ticket-registration {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ticket-registration{
+    .booking-registration {
+      .ticket-box {
+        font-size: 14px;
+      }
+      header{
+        .img-brand{
+          display: none;
+        }
+      }
+    }
+  }
+
+}
+
+
+@media (min-width: 500px) and (max-width: 767px) {
+  .hall-philharmonic{
+    .place {
+      width: 15px;
+      height: 15px;
+      font-size: 10px;
+    }
+    .big-offset{
+      margin-right: 105px;
+    }
+    .back-offset {
+      margin-right: 45px;
+    }
+  }
+  .hall-kulyka{
+    .place {
+      width: 20px;
+      height: 20px;
+      margin: 0;
+      font-size: 12px;
+    }
+    .offset-one {
+      &:before{
+        margin: 0;
+        height: 20px;
+        width: 20px;
+      }
+    }
+    .offset-two {
+      &:before{
+        margin: 0;
+        height: 20px;
+        width: 20px;
+      }
+    }
+    .parter {
+      margin: 0 auto 40px;
+    }
+  }
+  .hall {
+    flex-direction: column;
+  }
+
+  .img-balcony {
+    min-height: 220px;
+  }
+  .legend {
+    dd{
+      font-size: 12px;
+      margin-left: 5px;
+    }
+    dt {
+      width: 18px;
+      height: 18px;
+      margin-left: 10px;
+    }
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-theatre{
+    .nav {
+      li {
+        a {
+          font: 12px robotolight;
+          padding: 30.5px 7px;
+          color: #FFFFFF;
+          &:hover {
+            background: #ffffff;
+            span {
+              color: #292929;
+            }
+          }
+        }
+      }
+    }
+  }
+  .booking {
+    width: 280px;
+    margin: 30px auto;
+  }
+  .hall {
+    flex-direction: column;
+  }
+  footer .up-hall {
+    margin: -85px 0 0 0;
+  }
+  .legend {
+    dd {
+      font-size: 15px;
+    }
+  }
+  .img-balcony {
+    min-height: 250px;
+  }
+  .hall-philharmonic{
+    .place {
+      width: 20px;
+      height: 20px;
+      margin: 0;
+      font-size: 15px;
+    }
+    .big-offset{
+      margin-right: 140px;
+    }
+    .back-offset {
+      margin-right: 60px;
+    }
+  }
+  .navbar-nav-hall{
+    padding-left: 4%;
+  }
+  .ticket-registration {
+    min-height: 450px;
+    background-color: #ffcdcd;
+    width: 80%;
+    }
+  }
+
+
+@media (min-width: 992px)and (max-width: 1160px){
+  .hall {
+    flex-direction: column;
+  }
+  .navbar-nav-hall{
+    padding-left: 10%;
+  }
+  .booking {
+    width: 400px;
+    margin: 30px auto;
+  }
+  .hall-philharmonic {
+    .place {
+      width: 20px;
+      height: 20px;
+      font-size: 15px;
+    }
+    .big-offset{
+      margin-right: 155px;
+    }
+    .back-offset {
+      margin-right: 67px;
+    }
+  }
+  .booking {
+    width: 280px;
+    margin: 30px auto;
+  }
 }
