@@ -21,6 +21,7 @@ angular.module('hall', ['ngFacebook','ui.bootstrap'])
                 if (key === selectedVenue) selectedVenue = hallConst[key]
             };
 
+            timerService.setCurrentTimer(0);
             cartService.clearCart();
 
             hallService.setHall(selectedVenue);

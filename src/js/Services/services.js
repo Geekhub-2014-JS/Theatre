@@ -196,8 +196,9 @@ theatreServices
             },
 
             setCurrentTimer: function (newTimer) {
-                console.log('timer set');
+                if (!newTimer) timer=0;
                if (!timer) timer=newTimer;
+
             },
             getCurrentTimer:function () {
                 return timer;
