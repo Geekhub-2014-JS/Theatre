@@ -1,0 +1,119 @@
+.hall-universal-registration {
+    padding-top: 70px;
+}
+.ticket-registration {
+    min-height: 450px;
+    background-color: #ffcdcd ;
+    width: 60%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.ticket-registration .booking-registration {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 3px solid #761c19;
+    width: 100%;
+    background-color: #ffcdcd;
+}
+.ticket-registration .booking-registration h2 {
+    border: 1px solid #761c19;
+    background-color: #761c19;
+    color: #ffffff;
+}
+.ticket-registration .booking-registration .title-booking {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.ticket-registration .booking-registration .ticket-box {
+    font-size: 18px;
+    width: 100%;
+    margin: 0 auto;
+    color: #761c19;
+}
+.ticket-registration .booking-registration .ticket-box .btn-close-place {
+    color: #ff0000;
+}
+.ticket-registration .booking-registration .ticket-box thead {
+    border-bottom: 1px solid #761c19;
+}
+.ticket-registration .booking-registration .ticket-box thead th {
+    padding: 10px 0;
+    text-align: center;
+}
+.ticket-registration .booking-registration .booking-place {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.ticket-registration .booking-registration .pay-btn {
+    font-size: 22px;
+    background-color: #761c19;
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 5px 10px;
+    border: none;
+}
+.ticket-registration .booking-registration .pay-btn:hover {
+    background: transparent;
+    border: 1px solid #761c19;
+    color: #761c19;
+    padding: 4px 10px;
+}
+.ticket-registration .booking-registration .bought-place-info,
+.ticket-registration .booking-registration footer {
+    color: #761c19;
+    padding-bottom: 20px;
+    border-top: 1px solid #761c19;
+}
+.ticket-registration .booking-registration .bought-place-info .text-form,
+.ticket-registration .booking-registration footer .text-form {
+    font-size: 17px;
+    color: #000000;
+    padding-bottom: 15px;
+}
+.ticket-registration .booking-registration .bought-place-info .form-info-client,
+.ticket-registration .booking-registration footer .form-info-client {
+    padding-bottom: 15px;
+}
+.ticket-registration .booking-registration .bought-place-info .form-info-client input,
+.ticket-registration .booking-registration footer .form-info-client input {
+    margin-top: 10px;
+    padding: 10px;
+    color: #000000;
+    border-radius: 10px;
+}
+.ticket-registration .booking-registration .bought-place-info dl,
+.ticket-registration .booking-registration footer dl {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 20px;
+}
+.ticket-registration .booking-registration .bought-place-info dd,
+.ticket-registration .booking-registration footer dd {
+    margin-left: 10px;
+}
+.ticket-registration .booking-registration header {
+    padding-left: 20px;
+    border-bottom: 1px solid #761c19;
+    padding-bottom: 15px;
+}
+.ticket-registration .booking-registration header .img-brand {
+    margin-top: 15px;
+}
+.ticket-registration .booking-registration header .title-show,
+.ticket-registration .booking-registration header .date-event {
+    color: #000000;
+    font-size: 20px;
+    margin: 10px;
+    display: block;
+}
+.ticket-registration .booking-registration header .title-hall-registration {
+    margin: 15px;
+    color: #000000;
+    font-size: 20px;
+}

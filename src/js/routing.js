@@ -129,6 +129,13 @@ angular.module('theatreRoutes', ['ui.router', 'theatreControllers'])
                         pageTitle: "menu.hall"
                     }
                 })
+                .state('app.order', {
+                    url: "/order",
+                    template: "<ticket-registration></ticket-registration>",
+                    data: {
+                        pageTitle: "menu.tickets"
+                    }
+                })
 
             ;
             $locationProvider.html5Mode({

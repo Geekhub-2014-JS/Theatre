@@ -15,7 +15,8 @@
     "partners": "Partners",
     "fest": "Festivals",
     "forum": "Forum",
-    "hall":"Hall map"
+    "hall":"Hall map",
+    "tickets":"Ordering"
   },
   "performance": {
     "description": "Description",
@@ -128,12 +129,18 @@
   "booking":{
     "ticketButton":"Buy ticket",
     "yourTickets":"Your tickets",
+    "sector":"Сектор",
     "row":"Row",
-    "sit":"Sit",
+    "sit":"Place",
     "cost":"Cost",
     "total":"Total",
     "uah":"UAH",
-    "pay":"pay"
+    "pay":"pay",
+    "deleteTicket":"Delete",
+    "perfomanceTitle":"Perfomanse title",
+    "perfomanceTime":"Perfomance date and time",
+    "perfomanceVenue":"Perfomance venue",
+    "ticketAdress":"Where and to whom to send the tickets purchased?"
   },
   "hall":{
     "boughtSits":"Bought sits",

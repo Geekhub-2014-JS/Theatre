@@ -17,9 +17,12 @@
         </ul>
         <footer>
             <dl>
-                <dt>{{'booking.total' | translate}}</dt><dd>0 {{'booking.uah' | translate}}</dd>
+                <dt>{{'booking.total' | translate}}</dt><dd>{{total()}} {{'booking.uah' | translate}}</dd>
             </dl>
-            <button class="pay-btn">{{'booking.pay' | translate}}</button>
+            <a ui-sref="app.order">
+                <button class="pay-btn">{{'booking.pay' | translate}}</button>
+            </a>
+
         </footer>
 
     </div>

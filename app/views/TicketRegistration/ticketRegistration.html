@@ -1,0 +1,61 @@
+<div ng-include="'views/shared/menu.html'"></div>
+
+<main class="hall-universal-registration">
+    <div class="ticket-registration">
+        <div class="booking-registration">
+            <h2 class="title-booking">{{'booking.yourTickets' | translate}}</h2>
+            <header class="row">
+                <a class=" col-sm-3 img-brand">
+                    <img src="img/logo.png" alt="{'menu.logo' | translate}">
+                </a>
+                <div class="col-sm-9">
+                    <span class="title-show">{{'booking.perfomanceTitle' | translate}} {{perfomance.performance.title}}</span>
+                    <span class="date-event" data-event=""  data-event-time="" >{{'booking.perfomanceTime' | translate}} {{perfomance.date_time|date:"yyyy/MM/dd HH:mm"}}</span>
+                    <span class="title-hall-registration">{{'booking.perfomanceVenue' | translate}} </span>
+                    <span class="title-hall-registration"><br>{{perfomance.venue.title}}<br>{{perfomance.venue.address}}</span>
+                </div>
+            </header>
+            <table class="ticket-box">
+                <thead>
+                <tr>
+                    <th>{{'booking.sector' | translate}}</th>
+                    <th>{{'booking.row' | translate}}</th>
+                    <th>{{'booking.sit' | translate}}</th>
+                    <th>{{'booking.cost' | translate}}</th>
+                    <th>{{'booking.deleteTicket' | translate}}</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="orders in orders track by $index">
+                    <td>{{orders.section}}</td>
+                    <td>{{orders.row}}</td>
+                    <td>{{orders.sit}}</td>
+                    <td>{{orders.cost}}</td>
+                    <td>
+                        <button class="btn btn-link btn-close-place" ng-click="deleteItem($index)">
+                                <span class="glyphicon glyphicon-remove">
+                                </span>
+                        </button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <footer>
+                <dl>
+                    <dt>{{'booking.total' | translate}}</dt>  <dd>{{total()}} {{'booking.uah' | translate}}</dd>
+                </dl>
+                <p class="text-form">{{'booking.ticketAdress' | translate}}</p>
+                <form class="form-info-client">
+                    <input type="text" placeholder="Ім'я" name="name" ng-value=customer.first_name>
+                    <input type="text" placeholder="Прізвище" name="surname" ng-value="customer.last_name">
+                    <input type="text" placeholder="E-mail" name="email" ng-value="customer.email">
+                </form>
+                <button class="pay-btn">{{'booking.pay' | translate}}</button>
+                <aside-timer></aside-timer>
+            </footer>
+        </div>
+    </div>
+
+</main>
+
+<div ng-include="'views/shared/footer.html'"></div>

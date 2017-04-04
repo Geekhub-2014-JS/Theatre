@@ -116,23 +116,28 @@ theatreServices
 
     .factory('cartService', function () {
         var order = [];
+        var totalSum=0;
         return {
             addPlaceToCart: function (orders) {
                 order.push({
                     row: orders.row,
                     sit: orders.sit,
-                    cost: 0,
-                    area: orders.section
+                    cost: orders.cost,
+                    section: orders.section
                 });
+                totalSum+=+orders.cost;
             },
             getPlaceToCart: function () {
                 return order;
             },
             delPlaceFromCart: function (index) {
+                totalSum-=+order[index].cost;
                 order.splice(index, 1);
+
             },
             clearCart:function () {
                 order = [];
+                totalSum=0;
             }
         }
 
@@ -191,7 +196,11 @@ theatreServices
             },
 
             setCurrentTimer: function (newTimer) {
-                timer=newTimer;
+                console.log('timer set');
+               if (!timer) timer=newTimer;
+            },
+            getCurrentTimer:function () {
+                return timer;
             }
         }
     })

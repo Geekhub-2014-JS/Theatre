@@ -1,7 +1,7 @@
 angular.module('hall', ['ngFacebook','ui.bootstrap'])
 
-    .controller('HallCtrl', ['$scope', '$modal', '$http', '$interval', 'hallService', 'cartService', 'perfomanceService', 'userService', 'ticketService', 'apiPost', 'apiGet',
-        function ($scope, $modal, $http, $interval, hallService, cartService, perfomanceService, userService, ticketService, apiPost, apiGet) {
+    .controller('HallCtrl', ['$scope', '$modal', '$http', '$interval', 'hallService', 'cartService', 'perfomanceService', 'userService', 'ticketService', 'timerService', 'apiPost', 'apiGet',
+        function ($scope, $modal, $http, $interval, hallService, cartService, perfomanceService, userService, ticketService, timerService, apiPost, apiGet) {
 
             var hallConst = {
                 "Черкаська Філармонія": "Filarmonia",
@@ -15,10 +15,13 @@ angular.module('hall', ['ngFacebook','ui.bootstrap'])
 
             var selectedVenue = perfomanceService.getPerfomance().venue.title;
             var ticketTimerInterval;
+            timerService.setCurrentTimer(0);
 
             for (var key in hallConst) {
                 if (key === selectedVenue) selectedVenue = hallConst[key]
             };
+
+            cartService.clearCart();
 
             hallService.setHall(selectedVenue);
 
@@ -110,8 +113,6 @@ angular.module('hall', ['ngFacebook','ui.bootstrap'])
 
     .controller('TicketCtrl', ['$scope', '$interval', 'ticketService',
         function ($scope, $interval,ticketService) {
-        console.log('ticketstart');
-            ticketService.clearHall();
         }
     ]);
 
