@@ -235,7 +235,6 @@ theatreServices
                 })
             },
             compareTicketChanges: function (tickets) {
-                console.log('ticket');
                 for (var i=0;i<currectTicketSet.length;i++) {
                     if (currectTicketSet[i].status!==tickets[i].status) {
                         currectTicketSet[i]=tickets[i];
