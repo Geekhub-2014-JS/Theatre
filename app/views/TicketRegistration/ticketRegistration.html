@@ -1,7 +1,9 @@
 <div ng-include="'views/shared/menu.html'"></div>
 
 <main class="hall-universal-registration">
+
     <div class="ticket-registration">
+        <aside-timer></aside-timer>
         <div class="booking-registration">
             <h2 class="title-booking">{{'booking.yourTickets' | translate}}</h2>
             <header class="row">
@@ -51,11 +53,10 @@
                     <input type="text" placeholder="E-mail" name="email" ng-value="customer.email">
                 </form>
                 <button class="pay-btn">{{'booking.pay' | translate}}</button>
-                <aside-timer></aside-timer>
             </footer>
+
         </div>
     </div>
-
 </main>
 
 <div ng-include="'views/shared/footer.html'"></div>
