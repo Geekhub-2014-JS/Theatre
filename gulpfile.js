@@ -15,7 +15,9 @@ gulp.task('vendors-css', function () {
         'vendors/angular-timeline/dist/angular-timeline.css',
         'vendors/bootstrap/dist/css/bootstrap-theme.css',
         'vendors/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.css',
-        'vendors/angular-loading-bar/build/loading-bar.css'
+        'vendors/angular-loading-bar/build/loading-bar.css',
+        'vendors/bootstrap-social/bootstrap-social.css',
+        'vendors/font-awesome/css/font-awesome.css'
     ])
         .pipe(concat('vendors-css.min.css'))
         .pipe(uglifycss())
@@ -54,7 +56,8 @@ gulp.task('vendors-js', function() {
         'vendors/angular-touch/angular-touch.js',
         'vendors/lodash/lodash.min.js',
         'vendors/angular-google-maps/dist/angular-google-maps.min.js',
-        'vendors/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js'
+        'vendors/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js',
+        'vendors/ng-facebook/ngFacebook.js'
     ])
         .pipe(concat('vendors-js.min.js'))
         .pipe(minifyJs())
@@ -62,7 +65,13 @@ gulp.task('vendors-js', function() {
 });
 
 gulp.task('angular-app-js', function() {
-    gulp.src('src/js/**/*.js')
+    gulp.src(['src/js/*.js',
+        'src/js/Animations/*.js',
+        'src/js/Controllers/*.js',
+        'src/js/Directives/*.js',
+        'src/js/Filters/*.js',
+        'src/js/Services/*.js',
+        'src/js/Config/*.js'])
         .pipe(concat('angular-app.min.js'))
         .pipe(ngAnnotate())
         .pipe(minifyJs())

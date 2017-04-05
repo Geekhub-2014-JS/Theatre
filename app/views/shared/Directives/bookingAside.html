@@ -3,7 +3,7 @@
         <header>
             <h2 class="title-booking">{{'booking.yourTickets' | translate}}</h2>
             <span class="title-show">{{perfomance.performance.title}}</span>
-            <span class="title-hall-place">{{perfomance.venue}}</span>
+            <span class="title-hall-place">{{perfomance.venue.title}}</span>
         </header>
         <ul class="bought-place-info">
             <li class="booking-place" ng-repeat="orders in orders track by $index">
@@ -17,10 +17,15 @@
         </ul>
         <footer>
             <dl>
-                <dt>{{'booking.total' | translate}}</dt><dd>0 {{'booking.uah' | translate}}</dd>
+                <dt>{{'booking.total' | translate}}</dt><dd>{{total()}} {{'booking.uah' | translate}}</dd>
             </dl>
-            <button class="pay-btn">{{'booking.pay' | translate}}</button>
+            <a ui-sref="app.order">
+                <button class="pay-btn">{{'booking.pay' | translate}}</button>
+            </a>
+
         </footer>
 
     </div>
+   <aside-timer></aside-timer>
+
 </aside>

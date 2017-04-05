@@ -15,7 +15,8 @@
     "partners": "Партнери",
     "fest": "Фестивалі",
     "forum": "Форум",
-    "hall":"Карта зали"
+    "hall":"Карта зали",
+    "tickets":"Оформлення замовлення"
   },
   "performance": {
     "description": "Про Виставу",
@@ -129,16 +130,29 @@
   "booking":{
     "ticketButton":"Придбати квиток",
     "yourTickets":"Ваші квитки",
+    "sector":"Сектор",
     "row":"Ряд",
     "sit":"Місце",
     "cost":"Ціна",
-    "total":"Total",
+    "total":"Всього",
     "uah":"грн",
-    "pay":"Оплатити"
+    "pay":"Оплатити",
+    "deleteTicket":"Видалити",
+    "perfomanceTitle":"Назва вистави",
+    "perfomanceTime":"Дата та час вистави",
+    "perfomanceVenue":"Місце проведення вистави",
+    "ticketAdress":"Куди та кому надіслати придбані квитки?"
   },
   "hall":{
     "boughtSits":"Bикуплені місця",
     "reservedSits":"Заброньовані місця",
     "balcony":"БАЛКОН"
+  },
+  "login":{
+    "loginText":"Вхід користувача",
+    "loginFacebook":"Вхід через Facebook"
+  },
+  "timer":{
+    "timerText":"Час для оформлення заказу"
   }
 }
