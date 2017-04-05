@@ -20,9 +20,5 @@ angular.module('cart', [])
             $scope.$on('$destroy',function () {
                 $interval.cancel(timerInterval);
             });
-
-            timerInterval=$interval(function () {
-                $scope.timer=timerService.getTime();
-            },1000);
         }
     ]);
