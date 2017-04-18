@@ -1,0 +1,31 @@
+<div ng-include="'views/shared/menu.html'"></div>
+<main class="container-fluid hall-philharmonic hall">
+    <section id="content">
+        <h1 class="title-hall"></h1>
+        <div ng-include="'views/shared/legend.html'"></div>
+        <h2 class="title title-philharmonic">СЦЕНА</h2>
+     <section id="hall" ng-bind-html="getHall()">
+
+     </section>
+    </section>
+    <aside>
+        <aside-cart></aside-cart>
+    </aside>
+
+</main>
+
+<div ng-include="'views/shared/footer.html'"></div>
+
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover({
+            trigger: 'hover',
+            placement: 'top',
+            content: function () {
+                var el = $(this);
+
+                return el.parents("*[data-section]").attr("data-section")+", "+el.parents("*[data-row]").attr("data-row") +", "+ el.attr('data-place')
+            }
+        });
+    })
+</script>

@@ -3,7 +3,7 @@
     "id": "394",
     "series": "DA",
     "number": "124",
-    "price": 90,
+    "price": 300,
     "seat": {
       "id": "string",
       "row": 2,
@@ -36,7 +36,7 @@
     "id": "395",
     "series": "DA",
     "number": "124",
-    "price": 90,
+    "price": 300,
     "seat": {
       "id": "string",
       "row": 2,
@@ -69,7 +69,7 @@
     "id": "394",
     "series": "DA",
     "number": "124",
-    "price": 300,
+    "price": 90,
     "seat": {
       "id": "string",
       "row": 1,

@@ -19,7 +19,7 @@
             <dl>
                 <dt>{{'booking.total' | translate}}</dt><dd>{{total()}} {{'booking.uah' | translate}}</dd>
             </dl>
-            <a ui-sref="app.order">
+            <a ui-sref="app.order" ng-if="isCartEmpty()">
                 <button class="pay-btn">{{'booking.pay' | translate}}</button>
             </a>
 

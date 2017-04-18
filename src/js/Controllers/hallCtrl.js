@@ -1,42 +1,28 @@
-angular.module('hall', ['ngFacebook','ui.bootstrap'])
+angular.module('hall', ['ngFacebook', 'ui.bootstrap'])
 
     .controller('HallCtrl', ['$scope', '$modal', '$http', '$interval', 'hallService', 'cartService', 'perfomanceService', 'userService', 'ticketService', 'timerService', 'apiPost', 'apiGet',
         function ($scope, $modal, $http, $interval, hallService, cartService, perfomanceService, userService, ticketService, timerService, apiPost, apiGet) {
-
-            var hallConst = {
-                "Черкаська Філармонія": "Filarmonia",
-                "Будинок культури ім. Кулика": "Kulyka",
-                "Черкаський Театр": "",
-                "Кінотеатр 'Салют'": "",
-                "Черкаський міський Палац молоді": "Palace_youth",
-                "Центр дитячої та юнацької творчості": "",
-                "Черкаський обласний художній музей":""
-            };
-
+            var userRoute;
             var selectedVenue = perfomanceService.getPerfomance().venue.title;
             var ticketTimerInterval;
+
             timerService.setCurrentTimer(0);
-
-            for (var key in hallConst) {
-                if (key === selectedVenue) selectedVenue = hallConst[key]
-            };
-
             timerService.setCurrentTimer(0);
             cartService.clearCart();
+            userService.clearUser();
 
-            hallService.setHall(selectedVenue);
-
-            $scope.getUrl = function () {
+            hallService.setHall(perfomanceService.getPerfomance().venue.hall_template);
+            $scope.getHall = function () {
                 return hallService.gethall();
             };
 
             $scope.addToCart = function (data) {
-                $scope.busy=true;
+                $scope.busy = true;
                 cartService.addPlaceToCart(data);
                 $scope.$apply();
             };
 
-            $scope.$on('$destroy',function () {
+            $scope.$on('$destroy', function () {
                 $interval.cancel(ticketTimerInterval);
             });
 
@@ -44,22 +30,27 @@ angular.module('hall', ['ngFacebook','ui.bootstrap'])
                 templateUrl: 'views/shared/login.html',
                 windowClass: 'modal',
                 controller: 'LoginCtrl'
-            }).result.finally(function(){
+            }).result.finally(function () {
 
                 ticketService.clearHallSits();
+
+                //   apiGet("perfomanseevents/"+perfomanceService.getPerfomance().id+"/tickets").success(function (data) {
                 $http.get("../backend/tickets.json").success(function (data) {
                     ticketService.setTickets(data);
                     ticketService.setHallSits();
                 });
-                ticketTimerInterval=$interval(function () {
+                ticketTimerInterval = $interval(function () {
                     $http.get("../backend/tickets.json").success(function (data) {
                         ticketService.compareTicketChanges(data);
                     });
-                },1000);
+                }, 5000);
 
+                if (userService.getCurrentUser().social_network) {
+                    userRoute = 'customers/login/social';
+                }
+                else userRoute = 'customers/login/new';
 
-
-                apiPost('customers/login',{
+                apiPost(userRoute, {
                     "first_name": userService.getCurrentUser().first_name,
                     "last_name": userService.getCurrentUser().last_name,
                     "email": userService.getCurrentUser().email,
@@ -67,7 +58,7 @@ angular.module('hall', ['ngFacebook','ui.bootstrap'])
                     "social_token": userService.getCurrentUser().accessToken
                 }).then(function (response) {
                     //do something with login in page
-                },function (response) {
+                }, function (response) {
                     //do something with error login in page
                 });
             });
@@ -79,33 +70,34 @@ angular.module('hall', ['ngFacebook','ui.bootstrap'])
             var timerInterval;
             var endTime;
 
-            $scope.isCartEmpty=function () {
+            $scope.isCartEmpty = function () {
                 $scope.startTimer();
                 return cartService.getPlaceToCart().length;
             };
 
-            $scope.timer=0;
+            $scope.timer = 0;
 
-            $scope.stopTimer=function () {
+            $scope.stopTimer = function () {
                 $interval.cancel(timerInterval)
             };
 
-            $scope.startTimer=function () {
-                if (cartService.getPlaceToCart().length&&!timerInterval) {
-                    endTime=new Date();
-                    endTime.setMinutes(endTime.getMinutes()+15);
+            $scope.startTimer = function () {
+                if (cartService.getPlaceToCart().length && !timerInterval) {
+                    endTime = new Date();
+                    endTime.setMinutes(endTime.getMinutes() + 15);
                     timerService.setCurrentTimer(endTime);
-                    timerInterval=$interval(function () {
-                        $scope.timer=timerService.getTime();
-                    },1000)
-                } else if (!cartService.getPlaceToCart().length) {
+                    timerInterval = $interval(function () {
+                        $scope.timer = timerService.getTime();
+                    }, 1000);
+                } else if (!cartService.getPlaceToCart().length && timerInterval) {
                     $interval.cancel(timerInterval);
-                    timerInterval=0;
-                    $scope.timer=0;
+                    timerInterval = 0;
+                    $scope.timer = 0;
+                    timerService.setCurrentTimer();
                 }
             };
 
-            $scope.$on('$destroy',function () {
+            $scope.$on('$destroy', function () {
                 $interval.cancel(timerInterval);
             });
 
@@ -113,7 +105,7 @@ angular.module('hall', ['ngFacebook','ui.bootstrap'])
     ])
 
     .controller('TicketCtrl', ['$scope', '$interval', 'ticketService',
-        function ($scope, $interval,ticketService) {
+        function ($scope, $interval, ticketService) {
         }
     ]);
 

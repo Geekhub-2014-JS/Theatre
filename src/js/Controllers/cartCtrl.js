@@ -2,7 +2,6 @@ angular.module('cart', [])
     .controller('CartCtrl', ['$scope', '$interval', 'hallService', 'cartService', 'userService', 'perfomanceService', 'timerService',
         function ($scope, $interval, hallService, cartService, userService, perfomanceService, timerService) {
             $scope.timer=0;
-            var timerInterval;
             $scope.orders = cartService.getPlaceToCart();
             $scope.perfomance = perfomanceService.getPerfomance();
             $scope.deleteItem = function ($index) {
@@ -16,9 +15,5 @@ angular.module('cart', [])
                 }
                 return total;
             };
-
-            $scope.$on('$destroy',function () {
-                $interval.cancel(timerInterval);
-            });
         }
     ]);

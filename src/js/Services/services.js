@@ -15,7 +15,7 @@ theatreServices
                     url: api_url + url,
                     headers: {
                         'locale': $stateParams.locale,
-                        'API-Key-Token':''
+                        'API-Key-Token':''//TODO get token
                     },
                     data: data
                 };
@@ -102,11 +102,12 @@ theatreServices
         }
     })
 
-    .factory('hallService', function() {
+    .factory('hallService', function($sce) {
         var hall='';
         return {
             gethall:function () {
-                return "/views/Hall/"+hall+".html";
+                console.log(hall);
+                return $sce.trustAsHtml(hall);
             },
             setHall:function (newHall) {
                 hall=newHall;
@@ -175,6 +176,10 @@ theatreServices
 
             setApiToken: function (accessToken) {
                 currentUser.accessToken=accessToken;
+            },
+
+            clearUser: function () {
+                currentUser={};
             }
         }
     })
@@ -256,6 +261,7 @@ theatreServices
                         setSit(selectPlace,tickets[i]);
                     }
                 }
+                setTickets(tickets);
             }
         }
     }] );
