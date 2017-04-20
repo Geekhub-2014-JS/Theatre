@@ -7,7 +7,6 @@ angular.module('hall', ['ngFacebook', 'ui.bootstrap'])
             var ticketTimerInterval;
 
             timerService.setCurrentTimer(0);
-            timerService.setCurrentTimer(0);
             cartService.clearCart();
             userService.clearUser();
 
@@ -26,42 +25,41 @@ angular.module('hall', ['ngFacebook', 'ui.bootstrap'])
                 $interval.cancel(ticketTimerInterval);
             });
 
-            $modal.open({
-                templateUrl: 'views/shared/login.html',
-                windowClass: 'modal',
-                controller: 'LoginCtrl'
-            }).result.finally(function () {
-
-                ticketService.clearHallSits();
-
-                //   apiGet("perfomanseevents/"+perfomanceService.getPerfomance().id+"/tickets").success(function (data) {
-                $http.get("../backend/tickets.json").success(function (data) {
-                    ticketService.setTickets(data);
-                    ticketService.setHallSits();
+            apiGet("users/me").success(function (response) {
+                userService.addUser(response.user);
+            }).error(function () {
+                apiPost('users/register').then(function (response) {
+                    userService.setApiKeyToken(response.data.api_key);
                 });
-                ticketTimerInterval = $interval(function () {
-                    $http.get("../backend/tickets.json").success(function (data) {
-                        ticketService.compareTicketChanges(data);
+
+                $modal.open({
+                    templateUrl: 'views/shared/login.html',
+                    windowClass: 'modal',
+                    controller: 'LoginCtrl'
+                }).result.finally(function () {
+                    apiPost('users/login/social', JSON.stringify({
+                        "social_network": userService.getCurrentUser().network,
+                        "social_token": userService.getCurrentUser().accessToken
+                    })).then(function (response) {
+                        userService.addUser(response.data.user);
+                    }, function (error) {
+                        console.log(error);
                     });
-                }, 5000);
-
-                if (userService.getCurrentUser().social_network) {
-                    userRoute = 'customers/login/social';
-                }
-                else userRoute = 'customers/login/new';
-
-                apiPost(userRoute, {
-                    "first_name": userService.getCurrentUser().first_name,
-                    "last_name": userService.getCurrentUser().last_name,
-                    "email": userService.getCurrentUser().email,
-                    "social_network": userService.getCurrentUser().network,
-                    "social_token": userService.getCurrentUser().accessToken
-                }).then(function (response) {
-                    //do something with login in page
-                }, function (response) {
-                    //do something with error login in page
                 });
             });
+
+            //  ToDo apiGet("perfomanseevents/"+perfomanceService.getPerfomance().id+"/tickets").success(function (data) {
+
+            $http.get("../backend/tickets.json").success(function (data) {
+                ticketService.clearHallSits();
+                ticketService.setTickets(data);
+                ticketService.setHallSits();
+            });
+            ticketTimerInterval = $interval(function () {
+                $http.get("../backend/tickets.json").success(function (data) {
+                    ticketService.compareTicketChanges(data);
+                });
+            }, 5000);
         }
 
     ])

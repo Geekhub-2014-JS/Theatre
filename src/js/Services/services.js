@@ -3,19 +3,20 @@
 /* Services */
 
 var theatreServices = angular.module('theatreServices', []);
-
+//var api_token='';
 theatreServices
     //.constant('api_url', 'http://api.theatre.pp.ua/')
-    .constant('api_url', 'http://api.staging.theatre.pp.ua/')
-    .factory('apiPost', ['$http', 'api_url', '$stateParams', '$rootScope',
-        function ($http, api_url, $stateParams, $rootScope) {
+    .constant('api_url', 'https://api.staging.theatre.pp.ua/')
+
+    .factory('apiPost', ['$http', 'api_url', '$stateParams', 'userService',
+        function ($http, api_url, $stateParams, userService) {
             return function (url, data) {
                 var conf = {
                     method: 'POST',
                     url: api_url + url,
                     headers: {
                         'locale': $stateParams.locale,
-                        'API-Key-Token':''//TODO get token
+                        'API-Key-Token':userService.getApiToken()||''
                     },
                     data: data
                 };
@@ -31,18 +32,18 @@ theatreServices
             }
         }
     ])
-    .factory('apiGet', ['$http', 'api_url', '$stateParams', '$loading',
-        function ($http, api_url, $stateParams, $loading) {
+    .factory('apiGet', ['$http', 'api_url', '$stateParams', '$loading', 'userService',
+        function ($http, api_url, $stateParams, $loading, userService) {
             return function (url) {
                 var conf = {
                     method: 'GET',
                     url: api_url + url,
                     params: {
                         'locale': $stateParams.locale
+                    },
+                    headers: {
+                        'API-Key-Token':userService.getApiToken()||''
                     }
-                    //headers: {
-                    //    'locale': $stateParams.locale
-                    //}
                 };
                 $loading.start('spiner');
                 return $http(conf)
@@ -106,7 +107,6 @@ theatreServices
         var hall='';
         return {
             gethall:function () {
-                console.log(hall);
                 return $sce.trustAsHtml(hall);
             },
             setHall:function (newHall) {
@@ -158,36 +158,39 @@ theatreServices
 
     })
 
-    .factory('userService', function () {
+    .factory('userService', [function () {
         var currentUser = {};
         var customer={};
+        var apiKey="";
         return {
             addUser: function (user) {
                 currentUser=user;
             },
-
             getCurrentUser: function () {
                 return currentUser;
             },
-
             setNetwork: function (network) {
                 currentUser.network=network;
             },
-
             setApiToken: function (accessToken) {
                 currentUser.accessToken=accessToken;
             },
-
+            setApiKeyToken: function (accessToken) {
+                apiKey=accessToken;
+            },
             clearUser: function () {
                 currentUser={};
+            },
+            getApiToken: function () {
+                return apiKey;
             }
         }
-    })
+    }])
 
     .factory('timerService', function () {
         var timer;
         return {
-            getTime:    function getTimeRemaining(){
+            getTime: function getTimeRemaining(){
                 var t = Date.parse(timer) - Date.parse(new Date());
                 var seconds = Math.floor( (t/1000) % 60 );
                 var minutes = Math.floor( (t/1000/60) % 60 );
@@ -199,7 +202,6 @@ theatreServices
                     'seconds': ('0'+parseInt(seconds)).slice(-2) //seconds
                 };
             },
-
             setCurrentTimer: function (newTimer) {
                 if (!newTimer) timer=0;
                if (!timer) timer=newTimer;
@@ -235,7 +237,6 @@ theatreServices
                 element.className='';
                 element.className+='place ';
                 element.className+='place-bought';
-
             })
             },
             setHallSits: function () {
@@ -261,7 +262,6 @@ theatreServices
                         setSit(selectPlace,tickets[i]);
                     }
                 }
-                setTickets(tickets);
             }
         }
     }] );
