@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ticket</title>
+    <title>Ticket info</title>
     <!--Exist vendor styles-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../app/css/vendors-css.min.css">
@@ -50,86 +50,19 @@
         </div>
     </div>
 </nav>
-<main class="hall-universal-registration">
+<main class="hall-universal-registration info-buy-ticket-height">
     <div class="ticket-registration">
         <div class="booking-registration">
-            <h2 class="title-booking">Ваші квитки</h2>
-            <header class="row">
-                <a class=" col-sm-3 img-brand">
-                    <img src="../app/img/logo.png" alt="{'menu.logo' | translate}">
-                </a>
-                <div class="col-sm-9">
-                    <span class="title-show">Назва вистави</span>
-                    <span class="date-event" data-event="" data-event-time="">дата час вистави</span>
-                    <span class="title-hall-registration">Місце проведення вистави</span>
-                </div>
-            </header>
-            <table class="ticket-box">
-                <thead>
-                <tr>
-                    <th>Сектор</th>
-                    <th>Ряд</th>
-                    <th>Місце</th>
-                    <th>Вартість</th>
-                    <th>Видалити</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Балкон</td>
-                    <td>11</td>
-                    <td>9</td>
-                    <td>200</td>
-                    <td>
-                        <button class="btn btn-link btn-close-place">
-                                <span class="glyphicon glyphicon-remove">
-                                </span>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Балкон</td>
-                    <td>1</td>
-                    <td>15</td>
-                    <td>200</td>
-                    <td>
-                        <button class="btn btn-link btn-close-place">
-                                <span class="glyphicon glyphicon-remove">
-                                </span>
-                        </button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Балкон</td>
-                    <td>15</td>
-                    <td>10</td>
-                    <td>150</td>
-                    <td>
-                        <button class="btn btn-link btn-close-place">
-                                <span class="glyphicon glyphicon-remove">
-                                </span>
-                        </button>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-            <footer>
-                <dl>
-                    <dt>Всього:</dt>
-                    <dd>600грн</dd>
-                </dl>
-                <p class="text-form">Куди та кому надіслати придбані квитки?</p>
-                <form class="form-info-client">
-                    <input type="text" placeholder="Ім'я" name="name">
-                    <input type="text" placeholder="Прізвище" name="surname">
-                    <input type="text" placeholder="E-mail" name="email">
-                </form>
-                <button class="pay-btn">Оплатити</button>
-                <div class="info-buy">
-                    <a href="info-buy-ticket.html">Як придбати квиток</a>
-                    <a href="oferta.html">Оферта</a>
-                </div>
-            </footer>
+            <h2 class="title-booking">Як придбати квиток</h2>
+            <p class="ticket-info">
+                Электронный билет – это билет, который Вы приобретаете в сервисе ТЕАТР,
+                оплачиваете банковской картой, электронными деньгами и получаете на e-mail.
+                Вы должны его распечатать и взять с собой на мероприятие.
+                Во время контроля штрих-код билета отсканируют и пригласят
+                Вас занять свое место в зале.Электронный билет удобен тем,
+                что не нужно ждать курьера или забирать в кассе –
+                Вы получаете билет на e-mail и экономите время и деньги.
+            </p>
         </div>
     </div>
 </main>
@@ -182,17 +115,7 @@
 <script src="../app/js/vendors-js.min.js"></script>
 
 <script>
-    $(function () {
-        $('[data-toggle="popover"]').popover({
-            trigger: 'hover',
-            placement: 'top',
-            content: function () {
-                var el = $(this);
 
-                return el.parents("*[data-section]").attr("data-section") + ", " + el.parents("*[data-row]").attr("data-row") + ", " + el.attr('data-place')
-            }
-        });
-    })
 </script>
 
 </body>

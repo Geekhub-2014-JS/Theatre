@@ -70,15 +70,23 @@
     }
   }
 }
+ol {
+  list-style: none;
+  counter-reset: li; }
+    li:before {
+      counter-increment: li;
+      content: counters(li,".") ". "; }
+
 
 ul{
   padding-left: 0;
   margin-bottom: 0;
+  li{
+    list-style-type: none;
+    cursor: pointer;
+  }
 }
-li{
-  list-style-type: none;
-  cursor: pointer;
-}
+
 .title-hall{
   text-align: center;
   font-size: 35px;
@@ -135,6 +143,7 @@ li{
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
+    padding: 15px;
   }
   dl{
     margin: 7px 15px;
@@ -195,6 +204,15 @@ li{
       color: #ffffff;
     }
   }
+}
+.ticket-info{
+  color:#000000;
+  padding: 40px 20px;
+  text-align: left;
+  font-size: 18px;
+}
+.info-buy-ticket-height{
+  min-height: 80vh;
 }
 footer{
   .navbar-footer-hall{
@@ -392,7 +410,7 @@ footer{
   padding-top: 70px;
 }
 .ticket-registration{
-  min-height: 450px;
+  //min-height: 450px;
   background-color: #ffcdcd ;
   width: 60%;
   margin: 0 auto;
@@ -415,12 +433,14 @@ footer{
       font-size: 20px;
       font-weight: 600;
       text-transform: uppercase;
+      padding: 15px;
     }
     .ticket-box{
       font-size: 18px;
       width: 100%;
       margin: 0 auto;
       color:#761c19;
+
       .btn-close-place{
         color: #ff0000;
       }
@@ -467,6 +487,19 @@ footer{
           padding: 10px;
           color: #000000;
           border-radius: 10px;
+        }
+      }
+      .info-buy{
+        font-size: 18px;
+        margin: 20px 0;
+        a{
+          padding-right: 90px;
+          color: #000000;
+          text-decoration: underline;
+          &:hover{
+            color: #761c19;
+            cursor: pointer;
+          }
         }
       }
       dl{
@@ -597,6 +630,14 @@ footer{
   }
   .ticket-registration{
     .booking-registration {
+      footer{
+        .info-buy{
+          a{
+            padding-right: 20px;
+          }
+        }
+      }
+
       .ticket-box {
         font-size: 14px;
       }
@@ -725,7 +766,7 @@ footer{
     padding-left: 4%;
   }
   .ticket-registration {
-    min-height: 450px;
+    //min-height: 450px;
     background-color: #ffcdcd;
     width: 80%;
     }

@@ -69,11 +69,19 @@
 .navbar-theatre-inverse .nav li a:hover span {
   color: #ff0000;
 }
+ol {
+  list-style: none;
+  counter-reset: li;
+}
+li:before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+}
 ul {
   padding-left: 0;
   margin-bottom: 0;
 }
-li {
+ul li {
   list-style-type: none;
   cursor: pointer;
 }
@@ -133,6 +141,7 @@ li {
   font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
+  padding: 15px;
 }
 .booking dl {
   margin: 7px 15px;
@@ -192,6 +201,15 @@ li {
   border: 1px solid #761c19;
   background-color: #761c19;
   color: #ffffff;
+}
+.ticket-info {
+  color: #000000;
+  padding: 40px 20px;
+  text-align: left;
+  font-size: 18px;
+}
+.info-buy-ticket-height {
+  min-height: 80vh;
 }
 footer .navbar-footer-hall {
   margin-right: 15px;
@@ -369,7 +387,6 @@ footer .copy-hall {
   padding-top: 70px;
 }
 .ticket-registration {
-  min-height: 450px;
   background-color: #ffcdcd ;
   width: 60%;
   margin: 0 auto;
@@ -394,6 +411,7 @@ footer .copy-hall {
   font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
+  padding: 15px;
 }
 .ticket-registration .booking-registration .ticket-box {
   font-size: 18px;
@@ -452,6 +470,22 @@ footer .copy-hall {
   padding: 10px;
   color: #000000;
   border-radius: 10px;
+}
+.ticket-registration .booking-registration .bought-place-info .info-buy,
+.ticket-registration .booking-registration footer .info-buy {
+  font-size: 18px;
+  margin: 20px 0;
+}
+.ticket-registration .booking-registration .bought-place-info .info-buy a,
+.ticket-registration .booking-registration footer .info-buy a {
+  padding-right: 90px;
+  color: #000000;
+  text-decoration: underline;
+}
+.ticket-registration .booking-registration .bought-place-info .info-buy a:hover,
+.ticket-registration .booking-registration footer .info-buy a:hover {
+  color: #761c19;
+  cursor: pointer;
 }
 .ticket-registration .booking-registration .bought-place-info dl,
 .ticket-registration .booking-registration footer dl {
@@ -558,6 +592,9 @@ footer .copy-hall {
     width: 100%;
     margin: 0 auto;
   }
+  .ticket-registration .booking-registration footer .info-buy a {
+    padding-right: 20px;
+  }
   .ticket-registration .booking-registration .ticket-box {
     font-size: 14px;
   }
@@ -656,7 +693,6 @@ footer .copy-hall {
     padding-left: 4%;
   }
   .ticket-registration {
-    min-height: 450px;
     background-color: #ffcdcd;
     width: 80%;
   }
