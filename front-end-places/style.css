@@ -69,11 +69,11 @@
 .navbar-theatre-inverse .nav li a:hover span {
   color: #ff0000;
 }
-ol {
+.booking-registration ol {
   list-style: none;
   counter-reset: li;
 }
-li:before {
+.booking-registration li:before {
   counter-increment: li;
   content: counters(li, ".") ". ";
 }
