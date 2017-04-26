@@ -3,13 +3,14 @@ angular.module('hall', ['ngFacebook', 'ui.bootstrap'])
     .controller('HallCtrl', ['$scope', '$modal', '$http', '$interval', 'hallService', 'cartService', 'perfomanceService', 'userService', 'ticketService', 'timerService', 'apiPost', 'apiGet',
         function ($scope, $modal, $http, $interval, hallService, cartService, perfomanceService, userService, ticketService, timerService, apiPost, apiGet) {
             var userRoute;
-            $scope.venue = perfomanceService.getPerfomance().venue.title;
             var ticketTimerInterval;
+            $scope.perfomance = perfomanceService.getPerfomance();
+
             timerService.setCurrentTimer(0);
             cartService.clearCart();
             userService.clearUser();
-
             hallService.setHall(perfomanceService.getPerfomance().venue.hall_template);
+
             $scope.getHall = function () {
                 return hallService.gethall();
             };

@@ -1,7 +1,8 @@
 <div ng-include="'views/shared/menu.html'"></div>
 <main class="container-fluid hall-philharmonic hall">
     <section id="content">
-        <h1 class="title-hall">{{venue}}</h1>
+        <h1 class="title-hall">{{perfomance.venue.title}}</h1>
+        <h2 class="title">{{perfomance.venue.address}}</h2>
         <div ng-include="'views/shared/legend.html'"></div>
      <section id="hall" ng-bind-html="getHall()">
 

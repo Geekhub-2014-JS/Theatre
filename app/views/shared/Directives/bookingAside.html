@@ -2,8 +2,17 @@
     <div class="booking">
         <header>
             <h2 class="title-booking">{{'booking.yourTickets' | translate}}</h2>
-            <span class="title-show">{{perfomance.performance.title}}</span>
+            <h3>
+                <span class="title-show">{{perfomance.performance.title}}</span>
+                <span class="day">{{perfomanceDate.weekDay | translate}}</span>
+                <span class="number">{{perfomanceDate.day}}</span>
+                <span class="month">{{perfomanceDate.month | translate}}</span>
+                <span class="month">{{perfomanceDate.time | translate}}</span>
+            </h3>
+
             <span class="title-hall-place">{{perfomance.venue.title}}</span>
+
+
         </header>
         <ul class="bought-place-info">
             <li class="booking-place" ng-repeat="orders in orders track by $index">
