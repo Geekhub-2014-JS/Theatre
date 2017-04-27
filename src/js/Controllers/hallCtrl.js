@@ -67,6 +67,7 @@ angular.module('hall', ['ngFacebook', 'ui.bootstrap'])
         function ($scope, $interval, cartService, timerService) {
             var timerInterval;
             var endTime;
+            var timeForBuy=15;
 
             $scope.isCartEmpty = function () {
                 $scope.startTimer();
@@ -82,7 +83,7 @@ angular.module('hall', ['ngFacebook', 'ui.bootstrap'])
             $scope.startTimer = function () {
                 if (cartService.getPlaceToCart().length && !timerInterval) {
                     endTime = new Date();
-                    endTime.setMinutes(endTime.getMinutes() + 15);
+                    endTime.setMinutes(endTime.getMinutes() + timeForBuy);
                     timerService.setCurrentTimer(endTime);
                     timerInterval = $interval(function () {
                         $scope.timer = timerService.getTime();
