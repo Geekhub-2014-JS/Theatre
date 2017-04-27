@@ -54,6 +54,7 @@ angular.module('hall', ['ngFacebook', 'ui.bootstrap'])
                 ticketService.clearHallSits();
                 ticketService.setTickets(data);
                 ticketService.setHallSits();
+                setSitsPopover();
             });
             ticketTimerInterval = $interval(function () {
                 $http.get("../backend/tickets.json").success(function (data) {

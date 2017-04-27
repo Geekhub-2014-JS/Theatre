@@ -15,17 +15,3 @@
 </main>
 
 <div ng-include="'views/shared/footer.html'"></div>
-
-<script>
-    $(function () {
-        $('[data-toggle="popover"]').popover({
-            trigger: 'hover',
-            placement: 'top',
-            content: function () {
-                var el = $(this);
-
-                return el.parents("*[data-section]").attr("data-section")+", "+el.parents("*[data-row]").attr("data-row") +", "+ el.attr('data-place')
-            }
-        });
-    })
-</script>
