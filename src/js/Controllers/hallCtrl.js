@@ -43,7 +43,7 @@ angular.module('hall', ['ngFacebook', 'ui.bootstrap'])
                     })).then(function (response) {
                         userService.addUser(response.data.user);
                     }, function (error) {
-                        console.error(error);
+                        console.error(error.status, error.statusText, "Unauthorized");
                     });
                 });
             });
