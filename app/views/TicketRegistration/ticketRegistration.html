@@ -10,9 +10,9 @@
                     <img src="img/logo.png" alt="{'menu.logo' | translate}">
                 </a>
                 <div class="col-sm-9">
-                    <span class="title-show">{{'booking.perfomanceTitle' | translate}} {{perfomance.performance.title}}</span>
-                    <span class="date-event" data-event=""  data-event-time="" >{{'booking.perfomanceTime' | translate}} {{perfomance.date_time|date:"yyyy/MM/dd HH:mm"}}</span>
-                    <span class="title-hall-registration">{{'booking.perfomanceVenue' | translate}} </span>
+                    <span class="title-show"><b>{{'booking.perfomanceTitle' | translate}}</b> {{perfomance.performance.title}}</span>
+                    <span class="date-event" data-event=""  data-event-time="" ><b>{{'booking.perfomanceTime' | translate}}</b> {{perfomance.date_time|date:"yyyy/MM/dd HH:mm"}}</span>
+                    <span class="title-hall-registration"><b>{{'booking.perfomanceVenue' | translate}}</b> </span>
                     <span class="title-hall-registration"><br>{{perfomance.venue.title}}<br>{{perfomance.venue.address}}</span>
                 </div>
             </header>
@@ -47,11 +47,11 @@
                 </dl>
                 <p class="text-form">{{'booking.ticketAdress' | translate}}</p>
                 <form class="form-info-client">
-                    <input type="text" placeholder="Ім'я" name="name" ng-value=customer.first_name>
-                    <input type="text" placeholder="Прізвище" name="surname" ng-value="customer.last_name">
-                    <input type="text" placeholder="E-mail" name="email" ng-value="customer.email">
+                    <input type="text" placeholder="Ім'я" name="name" ng-value=customer.first_name ng-model="customer.first_name">
+                    <input type="text" placeholder="Прізвище" name="surname" ng-value="customer.last_name" ng-model="customer.last_name">
+                    <input type="text" placeholder="E-mail" name="email" ng-value="customer.email" ng-model="customer.email">
                 </form>
-                <button class="pay-btn">{{'booking.pay' | translate}}</button>
+                <button ng-if="isCartEmpty()&&customer.first_name&&customer.last_name&&customer.email" class="pay-btn">{{'booking.pay' | translate}}</button>
             </footer>
 
         </div>

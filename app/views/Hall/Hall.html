@@ -1,0 +1,17 @@
+<div ng-include="'views/shared/menu.html'"></div>
+<main class="container-fluid hall-philharmonic hall">
+    <section id="content">
+        <h1 class="title-hall">{{perfomance.venue.title}}</h1>
+        <h2 class="title">{{perfomance.venue.address}}</h2>
+        <div ng-include="'views/shared/legend.html'"></div>
+     <section id="hall" ng-bind-html="getHall()">
+
+     </section>
+    </section>
+    <aside>
+        <aside-cart></aside-cart>
+    </aside>
+
+</main>
+
+<div ng-include="'views/shared/footer.html'"></div>

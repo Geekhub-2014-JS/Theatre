@@ -2,7 +2,7 @@ angular.module('hallDirectives', [])
     .directive('hallView', function () {
         return {
             restrict: 'E',
-            template: "<div ng-include='getUrl()'></div>",
+            templateUrl: "./views/Hall/Hall.html",
             controller: 'HallCtrl',
 
             link: function (scope, elem, attrs) {
@@ -27,4 +27,9 @@ angular.module('hallDirectives', [])
             }
 
         }
-    });
+    })
+    .filter('to_html', ['$sce', function ($sce) {
+    return function (text) {
+        return $sce.trustAsHtml(text);
+    };
+}]);
