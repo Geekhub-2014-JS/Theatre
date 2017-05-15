@@ -33,7 +33,7 @@ angular.module('hall', ['ngFacebook', 'ui.bootstrap'])
                 });
 
                 $modal.open({
-                    templateUrl: 'views/shared/login.html',
+                    templateUrl: 'views/shared/Login.html',
                     windowClass: 'modal',
                     controller: 'LoginCtrl'
                 }).result.finally(function () {

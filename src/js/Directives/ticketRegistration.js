@@ -2,7 +2,7 @@ angular.module('ticketRegistrationDirectives', [])
     .directive('ticketRegistration', function () {
         return {
             restrict: 'E',
-            templateUrl: "views/ticketRegistration/ticketRegistration.html",
+            templateUrl: "views/TicketRegistration/ticketRegistration.html",
            controller: 'CartCtrl',
            controllerAs: 'cart'
         }
