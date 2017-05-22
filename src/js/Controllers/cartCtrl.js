@@ -1,6 +1,6 @@
-angular.module('cart', [])
-    .controller('CartCtrl', ['$scope', '$interval', 'hallService', 'cartService', 'userService', 'perfomanceService', 'timerService', 'dateConvert',
-        function ($scope, $interval, hallService, cartService, userService, perfomanceService, timerService, dateConvert) {
+angular.module('cart', ['ui.bootstrap'])
+    .controller('CartCtrl', ['$scope', '$interval', 'hallService', 'cartService', 'userService', 'perfomanceService', 'timerService', 'dateConvert', '$modal', '$state',
+        function ($scope, $interval, hallService, cartService, userService, perfomanceService, timerService, dateConvert, $modal, $state) {
             $scope.timer=0;
             $scope.orders = cartService.getPlaceToCart();
             $scope.perfomance = perfomanceService.getPerfomance();
@@ -16,5 +16,23 @@ angular.module('cart', [])
                 }
                 return total;
             };
+
+            $scope.askForClear = function () {
+                $modal.open({
+                    templateUrl: 'views/shared/clearCart.html',
+                    scope: $scope
+                }).result.then(function () {
+                    cartService.clearCart();
+                    console.log('ok');
+                })
+            };
+
+            $scope.edit = function () {
+                $state.go('app.hall');
+            }
         }
     ]);
+
+
+
+

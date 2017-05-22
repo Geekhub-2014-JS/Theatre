@@ -32,6 +32,10 @@
                 <button class="pay-btn">{{'booking.pay' | translate}}</button>
             </a>
 
+            <a ng-if="isCartEmpty()" ng-click="askForClear()">
+                <button class="pay-btn">{{'booking.clearCart' | translate}}</button>
+            </a>
+
         </footer>
 
     </div>

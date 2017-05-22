@@ -140,7 +140,13 @@
     "perfomanceTitle":"Perfomanse title",
     "perfomanceTime":"Perfomance date and time",
     "perfomanceVenue":"Perfomance venue",
-    "ticketAdress":"Where and to whom to send the tickets purchased?"
+    "ticketAdress":"Where and to whom to send the tickets purchased?",
+    "clearCart":"Clear",
+    "yes":"Yes",
+    "no":"No",
+    "areYouSure":"Are You Sure?",
+    "edit":"Edit order",
+    "timeOver":"Time for bying is over"
   },
   "hall":{
     "boughtSits":"Bought sits",

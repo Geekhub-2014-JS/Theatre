@@ -1,101 +1,15 @@
 [
   {
-    "id": "394",
+    "performance_event_id": "394",
+    "id": "sfss34-dsg-3-3r4fd",
     "series": "DA",
     "number": "124",
     "price": 300,
     "seat": {
-      "id": "string",
+      "venue_sector_id": 1,
       "row": 2,
-      "place": 14,
-      "venue_sector": {
-        "id": 12,
-        "title": "section-front",
-        "venue": {
-          "id": 0,
-          "title": "string",
-          "address": "string",
-          "hall_template": "string"
-        }
-      },
-      "price_category": {
-        "id": 1,
-        "title": "place-price1",
-        "color": "#00f",
-        "venue": {
-          "id": 0,
-          "title": "string",
-          "address": "string",
-          "hall_template": "string"
-        }
-      }
+      "place": 14
     },
-    "status": "free"
-  },
-  {
-    "id": "395",
-    "series": "DA",
-    "number": "124",
-    "price": 300,
-    "seat": {
-      "id": "string",
-      "row": 2,
-      "place": 13,
-      "venue_sector": {
-        "id": 12,
-        "title": "section-front",
-        "venue": {
-          "id": 0,
-          "title": "string",
-          "address": "string",
-          "hall_template": "string"
-        }
-      },
-      "price_category": {
-        "id": 1,
-        "title": "place-price1",
-        "color": "#00f",
-        "venue": {
-          "id": 0,
-          "title": "string",
-          "address": "string",
-          "hall_template": "string"
-        }
-      }
-    },
-    "status": "free"
-  },
-  {
-    "id": "394",
-    "series": "DA",
-    "number": "124",
-    "price": 90,
-    "seat": {
-      "id": "string",
-      "row": 1,
-      "place": 5,
-      "venue_sector": {
-        "id": 12,
-        "title": "loggia-left",
-        "venue": {
-          "id": 0,
-          "title": "string",
-          "address": "string",
-          "hall_template": "string"
-        }
-      },
-      "price_category": {
-        "id": 1,
-        "title": "place-price2",
-        "color": "#008000",
-        "venue": {
-          "id": 0,
-          "title": "string",
-          "address": "string",
-          "hall_template": "string"
-        }
-      }
-    },
-    "status": "free"
+  "status": "free"
   }
 ]

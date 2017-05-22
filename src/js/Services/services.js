@@ -5,7 +5,6 @@
 var theatreServices = angular.module('theatreServices', []);
 //var api_token='';
 theatreServices
-    //.constant('api_url', 'http://api.theatre.pp.ua/')
     .constant('api_url', 'https://api.staging.theatre.pp.ua/')
 
     .factory('apiPost', ['$http', 'api_url', '$stateParams', 'userService',
@@ -16,7 +15,7 @@ theatreServices
                     url: api_url + url,
                     headers: {
                         'locale': $stateParams.locale,
-                        'API-Key-Token':userService.getApiToken()||''
+                        'API-Key-Token': userService.getApiToken() || ''
                     },
                     data: data
                 };
@@ -28,13 +27,13 @@ theatreServices
                     .error(function (error) {
                         return error;
                     })
-                ;
+                    ;
             }
         }
     ])
     .factory('apiGet', ['$http', 'api_url', '$stateParams', '$loading', 'userService',
         function ($http, api_url, $stateParams, $loading, userService) {
-            return function (url) {
+            return function (url,disableSpinner) {
                 var conf = {
                     method: 'GET',
                     url: api_url + url,
@@ -42,10 +41,10 @@ theatreServices
                         'locale': $stateParams.locale
                     },
                     headers: {
-                        'API-Key-Token':userService.getApiToken()||''
+                        'API-Key-Token': userService.getApiToken() || ''
                     }
                 };
-                $loading.start('spiner');
+              if (!disableSpinner) $loading.start('spiner');
                 return $http(conf)
                     .success(function (response) {
                         $loading.finish('spiner');
@@ -62,18 +61,18 @@ theatreServices
 
     .factory('personsService', ['$http', 'apiGet', '$q', function ($http, apiGet, $q) {
         return {
-            getAllPersons: function (page,limit) {
+            getAllPersons: function (page, limit) {
                 var deferred = $q.defer();
                 apiGet('employees?limit=' + limit + '&page=' + page)
                     .success(function (data) {
-                    deferred.resolve(data);
-                })
+                        deferred.resolve(data);
+                    })
                     .error(function (data, status) {
                         deferred.reject(status);
                     });
                 return deferred.promise;
             },
-            getPerson: function(id){
+            getPerson: function (id) {
                 var deferred = $q.defer();
                 apiGet('employees/' + id)
                     .success(function (data) {
@@ -87,37 +86,37 @@ theatreServices
         };
     }])
 
-    .factory('dateConvert', function() {
+    .factory('dateConvert', function () {
         return {
-            perfDate: function(timestamp) {
+            perfDate: function (timestamp) {
                 var currentDate = moment(timestamp);
                 var weekDay = ["weekDay.Sunday", "weekDay.Monday", "weekDay.Tuesday", "weekDay.Wednesday", "weekDay.Thursday", "weekDay.Friday", "weekDay.Saturday"];
                 var monthN = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
                 return {
                     weekDay: weekDay[currentDate.format("d")],
                     day: currentDate.format("D"),
-                    month: monthN[currentDate.format("M")-1],
+                    month: monthN[currentDate.format("M") - 1],
                     time: currentDate.format("H:mm")
                 };
             }
         }
     })
 
-    .factory('hallService', function($sce) {
-        var hall='';
+    .factory('hallService', function ($sce) {
+        var hall = '';
         return {
-            gethall:function () {
+            gethall: function () {
                 return $sce.trustAsHtml(hall);
             },
-            setHall:function (newHall) {
-                hall=newHall;
+            setHall: function (newHall) {
+                hall = newHall;
             }
         }
     })
 
     .factory('cartService', function () {
         var order = [];
-        var totalSum=0;
+        var totalSum = 0;
         return {
             addPlaceToCart: function (orders) {
                 order.push({
@@ -126,19 +125,19 @@ theatreServices
                     cost: orders.cost,
                     section: orders.section
                 });
-                totalSum+=+orders.cost;
+                totalSum += +orders.cost;
             },
             getPlaceToCart: function () {
                 return order;
             },
             delPlaceFromCart: function (index) {
-                totalSum-=+order[index].cost;
+                totalSum -= +order[index].cost;
                 order.splice(index, 1);
 
             },
-            clearCart:function () {
-                order = [];
-                totalSum=0;
+            clearCart: function () {
+                order.splice(0, order.length);
+                totalSum = 0;
             }
         }
 
@@ -160,26 +159,26 @@ theatreServices
 
     .factory('userService', [function () {
         var currentUser = {};
-        var customer={};
-        var apiKey="";
+        var customer = {};
+        var apiKey = "";
         return {
             addUser: function (user) {
-                currentUser=user;
+                currentUser = user;
             },
             getCurrentUser: function () {
                 return currentUser;
             },
             setNetwork: function (network) {
-                currentUser.network=network;
+                currentUser.network = network;
             },
             setApiToken: function (accessToken) {
-                currentUser.accessToken=accessToken;
+                currentUser.accessToken = accessToken;
             },
             setApiKeyToken: function (accessToken) {
-                apiKey=accessToken;
+                apiKey = accessToken;
             },
             clearUser: function () {
-                currentUser={};
+                currentUser = {};
             },
             getApiToken: function () {
                 return apiKey;
@@ -190,78 +189,129 @@ theatreServices
     .factory('timerService', function () {
         var timer;
         return {
-            getTime: function getTimeRemaining(){
+            getTime: function getTimeRemaining() {
                 var t = Date.parse(timer) - Date.parse(new Date());
-                var seconds = Math.floor( (t/1000) % 60 );
-                var minutes = Math.floor( (t/1000/60) % 60 );
-                var hours = Math.floor( (t/(1000*60*60)) % 24 );
-                var days = Math.floor( t/(1000*60*60*24) );
+                var seconds = Math.floor((t / 1000) % 60);
+                var minutes = Math.floor((t / 1000 / 60) % 60);
+                var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+                var days = Math.floor(t / (1000 * 60 * 60 * 24));
                 return {
                     'total': t,
                     'minutes': minutes,
-                    'seconds': ('0'+parseInt(seconds)).slice(-2) //seconds
+                    'seconds': ('0' + parseInt(seconds)).slice(-2) //seconds
                 };
             },
             setCurrentTimer: function (newTimer) {
-                if (!newTimer) timer=0;
-               if (!timer) timer=newTimer;
+                if (!newTimer) timer = 0;
+                if (!timer) timer = newTimer;
 
             },
-            getCurrentTimer:function () {
+            getCurrentTimer: function () {
                 return timer;
             }
         }
     })
 
-    .factory('ticketService',['$document',
+    .factory('ticketService', ['$document',
         function () {
-        var currectTicketSet;
+            var currectTicketSet;
+            var activeTicketSet = [];
+            var legend;
 
-        function setSit(selectPlace,element) {
-            selectPlace.className='';
-            selectPlace.className+='place ';
-            selectPlace.className+=element.seat.price_category.title+' ';
-            selectPlace.className+=element.status+ ' ';
-            selectPlace.setAttribute('data-price',element.price);
-            selectPlace.setAttribute('ticket-uuid',element.id);
-            selectPlace.style.backgroundColor=element.seat.price_category.color;
-        }
-        return {
-            setTickets: function (tickets) {
-                currectTicketSet=tickets;
-            },
-            clearHallSits: function clearHall(){
-            var sits = document.getElementsByClassName('place');
-            sits=Array.prototype.slice.call(sits);
-            sits.forEach(function (element) {
-                element.className='';
-                element.className+='place ';
-                element.className+='place-bought';
-            })
-            },
-            setHallSits: function () {
-                currectTicketSet.forEach(function (element) {
-                    var venue_sector = element.seat.venue_sector.title;
-                    var row=element.seat.row;
-                    var place=element.seat.place;
-                    var selectPlace=document.querySelector('.'+venue_sector);
-                    selectPlace=selectPlace.querySelector('[data-row="'+row+'"], [data-place="'+place+'"]');
-                    setSit(selectPlace,element);
+            function setSit(selectPlace, element, color) {
+                selectPlace.setAttribute('ticket-uuid', element.id);
+                if (element.status !== "offline") {
+                    selectPlace.className = '';
+                    selectPlace.className += 'place ';
+                    selectPlace.className += element.status;
+                    selectPlace.setAttribute('data-price', element.price);
+                    selectPlace.setAttribute('ticket-perfomance-id', element.performance_event_id);
+                    selectPlace.setAttribute('ticket-series-number', element.series_number);
+                    selectPlace.setAttribute('ticket-uuid', element.id);
+                    if (element.status == 'free') selectPlace.style.backgroundColor = color
+                    else selectPlace.style.backgroundColor = '#a9a9a9';
+                }
+            };
 
-                })
-            },
-            compareTicketChanges: function (tickets) {
-                for (var i=0;i<currectTicketSet.length;i++) {
-                    if (currectTicketSet[i].status!==tickets[i].status) {
-                        currectTicketSet[i]=tickets[i];
-                        var venue_sector = tickets[i].seat.venue_sector.title;
-                        var selectPlace=document.querySelector('.'+venue_sector);
-                        var row=tickets[i].seat.row;
-                        var place=tickets[i].seat.place;
-                        selectPlace=selectPlace.querySelector('[data-row="'+row+'"], [data-place="'+place+'"]');
-                        setSit(selectPlace,tickets[i]);
+            //function findSitInDOM (venue,row,place)
+            function findSitInDOM(venue, row, place) {
+                var selectPlace = document.querySelector('.' + venue);
+                selectPlace.querySelectorAll('[data-row="' + row + '"]').forEach(function (element) {
+                    if (element.querySelector('[data-place="' + place + '"]')) {
+                        selectPlace = element.querySelector('[data-place="' + place + '"]');
                     }
+                });
+                if (selectPlace && selectPlace.tagName === 'UL') {
+                    selectPlace = selectPlace.querySelector('[data-place="' + place + '"]');
+                }
+                return selectPlace;
+            };
+
+
+            return {
+                setTickets: function (tickets) {
+                    currectTicketSet = tickets;
+                    activeTicketSet = [];
+                    currectTicketSet.forEach(function (element) {
+                        if (element.status !== "offline") {
+                            activeTicketSet.push(element)
+                        }
+                        ;
+                    });
+                    activeTicketSet.forEach(function (element) {
+                        for (var i = 0; i < legend.length; i++) {
+                            if (legend[i].venueSector_id.id == element.seat.venue_sector_id) {
+                                element.venue_sector = legend[i].venueSector_id.slug;
+                                element.color = legend[i].color;
+                                break;
+                            }
+                        }
+                    });
+                },
+                clearHallSits: function clearHall() {
+                    var sits = document.getElementsByClassName('place');
+                    sits = Array.prototype.slice.call(sits);
+                    sits.forEach(function (element) {
+                        element.className = '';
+                        element.className += 'place ';
+                        element.className += 'place-bought';
+                    })
+                },
+                setHallSits: function () {
+                    activeTicketSet.forEach(function (element) {
+                        var venue_sector = element.venue_sector;
+                        var color = element.color;
+                        var row = element.seat.row;
+                        var place = element.seat.place;
+
+                        var selectPlace=findSitInDOM(venue_sector,row,place);
+                        if (selectPlace && selectPlace.tagName === 'LI') setSit(selectPlace, element, color);
+//there
+
+
+                    })
+                },
+                compareTicketChanges: function (tickets) {
+                    /*for (var i=0;i<tickets.length;i++) {
+
+                     } */
+                    /* for (var i=0;i<currectTicketSet.length;i++) {
+                     if (currectTicketSet[i].status!==tickets[i].status) {
+                     currectTicketSet[i].status=tickets[i].status;
+                     var venue_sector = tickets[i].seat.venue_sector.title;
+                     var selectPlace=document.querySelector('.'+venue_sector);
+                     var row=tickets[i].seat.row;
+                     var place=tickets[i].seat.place;
+                     selectPlace=selectPlace.querySelector('[data-row="'+row+'"], [data-place="'+place+'"]');
+                     setSit(selectPlace,tickets[i]);
+                     }
+                     }*/
+                },
+                setLegend: function (newLegend) {
+                    legend = newLegend;
+                },
+                getLegend: function () {
+                    return legend;
                 }
             }
-        }
-    }] );
+        }]);

@@ -1,14 +1,13 @@
 angular.module('hall', ['ngFacebook', 'ui.bootstrap'])
 
-    .controller('HallCtrl', ['$scope', '$modal', '$http', '$interval', 'hallService', 'cartService', 'perfomanceService', 'userService', 'ticketService', 'timerService', 'apiPost', 'apiGet',
-        function ($scope, $modal, $http, $interval, hallService, cartService, perfomanceService, userService, ticketService, timerService, apiPost, apiGet) {
+    .controller('HallCtrl', ['$scope', '$modal', '$http', '$interval', 'hallService', 'cartService', 'perfomanceService', 'userService', 'ticketService', 'timerService', 'apiPost', 'apiGet', '$compile', '$loading',
+        function ($scope, $modal, $http, $interval, hallService, cartService, perfomanceService, userService, ticketService, timerService, apiPost, apiGet, $compile, $loading) {
             var userRoute;
             var ticketTimerInterval;
+            var legendDL;
             $scope.perfomance = perfomanceService.getPerfomance();
 
-            timerService.setCurrentTimer(0);
-            cartService.clearCart();
-            userService.clearUser();
+
             hallService.setHall(perfomanceService.getPerfomance().venue.hall_template);
 
             $scope.getHall = function () {
@@ -50,22 +49,35 @@ angular.module('hall', ['ngFacebook', 'ui.bootstrap'])
 
             //  ToDo apiGet("perfomanseevents/"+perfomanceService.getPerfomance().id+"/tickets").success(function (data) {
 
-            $http.get("../backend/tickets.json").success(function (data) {
-                ticketService.clearHallSits();
-                ticketService.setTickets(data);
-                ticketService.setHallSits();
-                setSitsPopover();
+            apiGet("performanceevents/"+ $scope.perfomance.id + "/tickets").success(function (data) {
+                apiGet("performanceevents/" + $scope.perfomance.id + "/pricecategories").success(function (dataLegend) {
+                    ticketService.setLegend(dataLegend);
+                    legendDL = document.getElementsByClassName('legend')[0];
+                    dataLegend.forEach(function (element) {
+                        var newDt = document.createElement('Dt');
+                        var newDd = document.createElement('Dd');
+                        newDt.style.backgroundColor = element.color;
+                        newDd.innerHTML = " " + element.price + " {{'booking.uah' | translate}}";
+                        $compile(newDd)($scope);
+                        legendDL.appendChild(newDt);
+                        legendDL.appendChild(newDd);
+                    });
+                    ticketService.clearHallSits();
+                    ticketService.setTickets(data);
+                    ticketService.setHallSits();
+                    setSitsPopover();
+                });
             });
             ticketTimerInterval = $interval(function () {
-                $http.get("../backend/tickets.json").success(function (data) {
+                apiGet("performanceevents/" + $scope.perfomance.id + "/tickets",true).success(function (data) {
                     ticketService.compareTicketChanges(data);
                 });
             }, 5000);
         }
 
     ])
-    .controller('TimerCtrl', ['$scope', '$interval', 'cartService', 'timerService',
-        function ($scope, $interval, cartService, timerService) {
+    .controller('TimerCtrl', ['$scope', '$interval', 'cartService', 'perfomanceService', 'timerService', '$state', '$stateParams', '$modal',
+        function ($scope, $interval, cartService, perfomanceService, timerService, $state, $stateParams, $modal) {
             var timerInterval;
             var endTime;
             var timeForBuy=15;
@@ -88,6 +100,14 @@ angular.module('hall', ['ngFacebook', 'ui.bootstrap'])
                     timerService.setCurrentTimer(endTime);
                     timerInterval = $interval(function () {
                         $scope.timer = timerService.getTime();
+                        if ($scope.timer.total<0) {
+                            $interval.cancel(timerInterval);
+                            $state.go('app.home');
+                            $modal.open({
+                                templateUrl: 'views/shared/submit.html',
+                                windowClass: 'modal'
+                            });
+                        }
                     }, 1000);
                 } else if (!cartService.getPlaceToCart().length && timerInterval) {
                     $interval.cancel(timerInterval);
