@@ -33,7 +33,7 @@ theatreServices
     ])
     .factory('apiGet', ['$http', 'api_url', '$stateParams', '$loading', 'userService',
         function ($http, api_url, $stateParams, $loading, userService) {
-            return function (url,disableSpinner) {
+            return function (url, disableSpinner) {
                 var conf = {
                     method: 'GET',
                     url: api_url + url,
@@ -44,7 +44,7 @@ theatreServices
                         'API-Key-Token': userService.getApiToken() || ''
                     }
                 };
-              if (!disableSpinner) $loading.start('spiner');
+                if (!disableSpinner) $loading.start('spiner');
                 return $http(conf)
                     .success(function (response) {
                         $loading.finish('spiner');
@@ -114,7 +114,7 @@ theatreServices
         }
     })
 
-    .factory('cartService', ['apiGet', 'ticketService', 'perfomanceService', function (apiGet,ticketService,perfomanceService) {
+    .factory('cartService', ['apiGet', 'ticketService', 'perfomanceService', function (apiGet, ticketService, perfomanceService) {
         var order = [];
         var totalSum = 0;
         return {
@@ -139,7 +139,7 @@ theatreServices
                 order.splice(0, order.length);
                 totalSum = 0;
                 //todo api PATCH /tickets/{id}/free
-                apiGet("performanceevents/" + perfomanceService.getPerfomance().id + "/tickets",true).success(function (data) {
+                apiGet("performanceevents/" + perfomanceService.getPerfomance().id + "/tickets", true).success(function (data) {
                     ticketService.setTickets(data);
                     ticketService.compareTicketChanges(data);
                 });
@@ -221,14 +221,15 @@ theatreServices
         function () {
             var currectTicketSet;
             var activeTicketSet = [];
-            var legend=[];
+            var legend = [];
 
             function setSit(selectPlace, element, color) {
                 selectPlace.setAttribute('ticket-uuid', element.id);
+                
                 if (element.status !== "offline") {
                     selectPlace.className = '';
                     selectPlace.className += 'place ';
-                    element.className += 'place-'+element.status;
+                    element.className += 'place-' + element.status;
                     selectPlace.setAttribute('data-price', element.price);
                     selectPlace.setAttribute('ticket-perfomance-id', element.performance_event_id);
                     selectPlace.setAttribute('ticket-series-number', element.series_number);
@@ -246,16 +247,19 @@ theatreServices
 
             function findSitInDOM(venue, row, place) {
                 var selectPlace = document.querySelector('.' + venue);
-                if(!selectPlace) {
-                    selectPlace=document.querySelector('[data-section="' + venue + '"]');
-                }
+
+                if (!selectPlace) {
+                    selectPlace = document.querySelector('[data-section="' + venue + '"]');
+                };
+
                 if (selectPlace) {
                     selectPlace.querySelectorAll('[data-row="' + row + '"]').forEach(function (element) {
                         if (element.querySelector('[data-place="' + place + '"]')) {
                             selectPlace = element.querySelector('[data-place="' + place + '"]');
                         }
                     });
-                }
+                };
+
                 if (selectPlace && selectPlace.tagName === 'UL') {
                     selectPlace = selectPlace.querySelector('[data-place="' + place + '"]');
                 }
@@ -263,7 +267,7 @@ theatreServices
             };
 
             function formatOnlineSits(ticketsArray) {
-                var activeTicketsArray=[];
+                var activeTicketsArray = [];
 
                 ticketsArray.forEach(function (element) {
 
@@ -274,13 +278,13 @@ theatreServices
                 activeTicketsArray.forEach(function (element) {
 
                     for (var i = 0; i < legend.length; i++) {
-                        var sits=legend[i].rows.split('-');
+                        var sits = legend[i].rows.split('-');
 
                         if (legend[i].venueSector_id.id == element.seat.venue_sector_id) {
                             element.venue_sector = legend[i].venueSector_id.slug;
-                            var elem=$(findSitInDOM(element.venue_sector,element.seat.row,element.seat.place)).parents("*[data-row]").attr("data-row");
+                            var elem = $(findSitInDOM(element.venue_sector, element.seat.row, element.seat.place)).parents("*[data-row]").attr("data-row");
 
-                            if (elem>=parseInt(sits[0])&&elem<=parseInt(sits[1])) {
+                            if (elem >= parseInt(sits[0]) && elem <= parseInt(sits[1])) {
                                 element.color = legend[i].color;
                                 break;
                             };
@@ -288,14 +292,13 @@ theatreServices
                     }
                 });
                 return activeTicketsArray;
-
             };
 
 
             return {
                 setTickets: function (tickets) {
                     activeTicketSet = [];
-                    activeTicketSet=formatOnlineSits(tickets);
+                    activeTicketSet = formatOnlineSits(tickets);
                 },
                 clearHallSits: function clearHall() {
                     var sits = document.getElementsByClassName('place');
@@ -312,20 +315,21 @@ theatreServices
                         var color = element.color;
                         var row = element.seat.row;
                         var place = element.seat.place;
-                        var selectPlace=findSitInDOM(venue_sector,row,place);
+                        var selectPlace = findSitInDOM(venue_sector, row, place);
 
                         if (selectPlace && selectPlace.tagName === 'LI') setSit(selectPlace, element, color);
                     })
                 },
                 compareTicketChanges: function (tickets) {
 
-                    currectTicketSet=formatOnlineSits(tickets);
+                    currectTicketSet = formatOnlineSits(tickets);
 
-                    for (var i=0;i<currectTicketSet.length;i++) {
-                        if (currectTicketSet[i].status!==activeTicketSet[i].status) {
-                            activeTicketSet[i].status=currectTicketSet[i].status;
+                    for (var i = 0; i < currectTicketSet.length; i++) {
+
+                        if (currectTicketSet[i].status !== activeTicketSet[i].status) {
+                            activeTicketSet[i].status = currectTicketSet[i].status;
                         }
-                     }
+                    }
                     this.setHallSits();
                 },
                 setLegend: function (newLegend) {
