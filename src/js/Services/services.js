@@ -114,7 +114,7 @@ theatreServices
         }
     })
 
-    .factory('cartService', function () {
+    .factory('cartService', ['apiGet', 'ticketService', 'perfomanceService', function (apiGet,ticketService,perfomanceService) {
         var order = [];
         var totalSum = 0;
         return {
@@ -138,10 +138,15 @@ theatreServices
             clearCart: function () {
                 order.splice(0, order.length);
                 totalSum = 0;
+                //todo api PATCH /tickets/{id}/free
+                apiGet("performanceevents/" + perfomanceService.getPerfomance().id + "/tickets",true).success(function (data) {
+                    ticketService.setTickets(data);
+                    ticketService.compareTicketChanges(data);
+                });
             }
         }
 
-    })
+    }])
 
     .factory('perfomanceService', function () {
         var selectedPerfomance = {};
@@ -216,57 +221,81 @@ theatreServices
         function () {
             var currectTicketSet;
             var activeTicketSet = [];
-            var legend;
+            var legend=[];
 
             function setSit(selectPlace, element, color) {
                 selectPlace.setAttribute('ticket-uuid', element.id);
                 if (element.status !== "offline") {
                     selectPlace.className = '';
                     selectPlace.className += 'place ';
-                    selectPlace.className += element.status;
+                    element.className += 'place-'+element.status;
                     selectPlace.setAttribute('data-price', element.price);
                     selectPlace.setAttribute('ticket-perfomance-id', element.performance_event_id);
                     selectPlace.setAttribute('ticket-series-number', element.series_number);
                     selectPlace.setAttribute('ticket-uuid', element.id);
-                    if (element.status == 'free') selectPlace.style.backgroundColor = color
-                    else selectPlace.style.backgroundColor = '#a9a9a9';
+
+                    if (element.status == 'free') {
+                        selectPlace.style.backgroundColor = color;
+                    } else if (element.status == 'bought') {
+                        selectPlace.style.backgroundColor = '#a9a9a9'; //Todo check if reserved
+                    } else {
+                        selectPlace.style.backgroundColor = '#d3d3d3';
+                    };
                 }
             };
 
-            //function findSitInDOM (venue,row,place)
             function findSitInDOM(venue, row, place) {
                 var selectPlace = document.querySelector('.' + venue);
-                selectPlace.querySelectorAll('[data-row="' + row + '"]').forEach(function (element) {
-                    if (element.querySelector('[data-place="' + place + '"]')) {
-                        selectPlace = element.querySelector('[data-place="' + place + '"]');
-                    }
-                });
+                if(!selectPlace) {
+                    selectPlace=document.querySelector('[data-section="' + venue + '"]');
+                }
+                if (selectPlace) {
+                    selectPlace.querySelectorAll('[data-row="' + row + '"]').forEach(function (element) {
+                        if (element.querySelector('[data-place="' + place + '"]')) {
+                            selectPlace = element.querySelector('[data-place="' + place + '"]');
+                        }
+                    });
+                }
                 if (selectPlace && selectPlace.tagName === 'UL') {
                     selectPlace = selectPlace.querySelector('[data-place="' + place + '"]');
                 }
                 return selectPlace;
             };
 
+            function formatOnlineSits(ticketsArray) {
+                var activeTicketsArray=[];
+
+                ticketsArray.forEach(function (element) {
+
+                    if (element.status !== "offline") {
+                        activeTicketsArray.push(element)
+                    };
+                });
+                activeTicketsArray.forEach(function (element) {
+
+                    for (var i = 0; i < legend.length; i++) {
+                        var sits=legend[i].rows.split('-');
+
+                        if (legend[i].venueSector_id.id == element.seat.venue_sector_id) {
+                            element.venue_sector = legend[i].venueSector_id.slug;
+                            var elem=$(findSitInDOM(element.venue_sector,element.seat.row,element.seat.place)).parents("*[data-row]").attr("data-row");
+
+                            if (elem>=parseInt(sits[0])&&elem<=parseInt(sits[1])) {
+                                element.color = legend[i].color;
+                                break;
+                            };
+                        }
+                    }
+                });
+                return activeTicketsArray;
+
+            };
+
 
             return {
                 setTickets: function (tickets) {
-                    currectTicketSet = tickets;
                     activeTicketSet = [];
-                    currectTicketSet.forEach(function (element) {
-                        if (element.status !== "offline") {
-                            activeTicketSet.push(element)
-                        }
-                        ;
-                    });
-                    activeTicketSet.forEach(function (element) {
-                        for (var i = 0; i < legend.length; i++) {
-                            if (legend[i].venueSector_id.id == element.seat.venue_sector_id) {
-                                element.venue_sector = legend[i].venueSector_id.slug;
-                                element.color = legend[i].color;
-                                break;
-                            }
-                        }
-                    });
+                    activeTicketSet=formatOnlineSits(tickets);
                 },
                 clearHallSits: function clearHall() {
                     var sits = document.getElementsByClassName('place');
@@ -283,29 +312,21 @@ theatreServices
                         var color = element.color;
                         var row = element.seat.row;
                         var place = element.seat.place;
-
                         var selectPlace=findSitInDOM(venue_sector,row,place);
+
                         if (selectPlace && selectPlace.tagName === 'LI') setSit(selectPlace, element, color);
-//there
-
-
                     })
                 },
                 compareTicketChanges: function (tickets) {
-                    /*for (var i=0;i<tickets.length;i++) {
 
-                     } */
-                    /* for (var i=0;i<currectTicketSet.length;i++) {
-                     if (currectTicketSet[i].status!==tickets[i].status) {
-                     currectTicketSet[i].status=tickets[i].status;
-                     var venue_sector = tickets[i].seat.venue_sector.title;
-                     var selectPlace=document.querySelector('.'+venue_sector);
-                     var row=tickets[i].seat.row;
-                     var place=tickets[i].seat.place;
-                     selectPlace=selectPlace.querySelector('[data-row="'+row+'"], [data-place="'+place+'"]');
-                     setSit(selectPlace,tickets[i]);
+                    currectTicketSet=formatOnlineSits(tickets);
+
+                    for (var i=0;i<currectTicketSet.length;i++) {
+                        if (currectTicketSet[i].status!==activeTicketSet[i].status) {
+                            activeTicketSet[i].status=currectTicketSet[i].status;
+                        }
                      }
-                     }*/
+                    this.setHallSits();
                 },
                 setLegend: function (newLegend) {
                     legend = newLegend;

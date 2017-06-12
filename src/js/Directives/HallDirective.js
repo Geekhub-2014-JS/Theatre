@@ -24,7 +24,10 @@ angular.module('hallDirectives', [])
                             if (nodeParent.hasAttribute('data-section')) sitsData.section = nodeParent.getAttribute('data-section');
                         }
 
-                        scope.addToCart(sitsData)
+                        scope.addToCart(sitsData);
+                        console.log(event.target);
+                        event.target.className +='booked';
+                        event.target.style.backgroundColor = '#a9a9a9';
                     }
                 });
             }
