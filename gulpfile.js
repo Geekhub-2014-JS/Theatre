@@ -66,7 +66,7 @@ gulp.task('vendors-js', function() {
 
 gulp.task('angular-app-js', function() {
     gulp.src(['src/js/*.js',
-        'src/js/Animations/*.js',
+        'src/js/GlobalFunctions/*.js',
         'src/js/Controllers/*.js',
         'src/js/Directives/*.js',
         'src/js/Filters/*.js',

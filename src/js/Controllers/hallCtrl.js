@@ -47,8 +47,6 @@ angular.module('hall', ['ngFacebook', 'ui.bootstrap'])
                 });
             });
 
-            //  ToDo apiGet("perfomanseevents/"+perfomanceService.getPerfomance().id+"/tickets").success(function (data) {
-
             apiGet("performanceevents/"+ $scope.perfomance.id + "/tickets").success(function (data) {
                 apiGet("performanceevents/" + $scope.perfomance.id + "/pricecategories").success(function (dataLegend) {
                     ticketService.setLegend(dataLegend);

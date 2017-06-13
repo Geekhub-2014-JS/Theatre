@@ -23,7 +23,6 @@ angular.module('cart', ['ui.bootstrap'])
                     scope: $scope
                 }).result.then(function () {
                     cartService.clearCart();
-                    console.log('ok');
                 })
             };
 
