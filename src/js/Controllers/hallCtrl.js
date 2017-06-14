@@ -36,6 +36,7 @@ angular.module('hall', ['ngFacebook', 'ui.bootstrap'])
                     windowClass: 'modal',
                     controller: 'LoginCtrl'
                 }).result.finally(function () {
+                    console.log(userService.getCurrentUser(),userService.getApiToken());
                     apiPost('users/login/social', JSON.stringify({
                         "social_network": userService.getCurrentUser().network,
                         "social_token": userService.getCurrentUser().accessToken

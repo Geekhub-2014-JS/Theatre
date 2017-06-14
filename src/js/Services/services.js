@@ -272,10 +272,10 @@ theatreServices
                             element.venue_sector = legend[i].venueSector_id.slug;
                             var elem = $(findSitInDOM(element.venue_sector, element.seat.row, element.seat.place)).parents("*[data-row]").attr("data-row");
 
-                            if (elem >= parseInt(sits[0]) && elem <= parseInt(sits[1])) {
+                            if ((elem >= parseInt(sits[0]) && elem <= parseInt(sits[1])&&sits[1])||(elem >= parseInt(sits[0])&&!sits[1])) {
                                 element.color = legend[i].color;
                                 break;
-                            }
+                            };
                         }
                     }
                 });
@@ -304,7 +304,6 @@ theatreServices
                         var row = element.seat.row;
                         var place = element.seat.place;
                         var selectPlace = findSitInDOM(venue_sector, row, place);
-
                         if (selectPlace && selectPlace.tagName === 'LI') setSit(selectPlace, element, color);
                     })
                 },

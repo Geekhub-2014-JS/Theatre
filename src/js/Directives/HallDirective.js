@@ -25,7 +25,6 @@ angular.module('hallDirectives', [])
                         }
 
                         scope.addToCart(sitsData);
-                        console.log(event.target);
                         event.target.className +='booked';
                         event.target.style.backgroundColor = '#a9a9a9';
                     }
