@@ -2,9 +2,8 @@
  * Created by Yana on 16.02.2015.
  */
 angular.module('singlePerf',['ui.bootstrap'])
-    .controller('SinglePerformanceCtrl', ['$scope', '$q', 'apiGet', '$stateParams', 'dateConvert', '$rootScope','$state','perfomanceService',
-        function ($scope, $q, apiGet, $stateParams, dateConvert, $rootScope, $state, perfomanceService) {
-
+    .controller('SinglePerformanceCtrl', ['$scope', '$q', 'apiGet', '$stateParams', 'dateConvert', '$rootScope','$state','perfomanceService', 'timerService', 'cartService', 'userService',
+        function ($scope, $q, apiGet, $stateParams, dateConvert, $rootScope, $state, perfomanceService, timerService, cartService, userService) {
             apiGet('performances/' + $stateParams.slug)
                 .success(function (data) {
                     $scope.performance = data;
@@ -40,7 +39,11 @@ angular.module('singlePerf',['ui.bootstrap'])
 
             $scope.selectPerfomance=function ($index) {
                 perfomanceService.addPerfomance($scope.performanceEvents[$index]);
+                timerService.setCurrentTimer(0);
+                cartService.clearCart();
+                userService.clearUser();
                 $state.go('app.hall');
+
             }
         }
     ])

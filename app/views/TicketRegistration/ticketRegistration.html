@@ -28,7 +28,7 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="orders in orders track by $index">
-                    <td>{{orders.section}}</td>
+                    <td>{{orders.title}}</td>
                     <td>{{orders.row}}</td>
                     <td>{{orders.sit}}</td>
                     <td>{{orders.cost}}</td>
@@ -52,6 +52,7 @@
                     <input type="text" placeholder="E-mail" name="email" ng-value="customer.email" ng-model="customer.email">
                 </form>
                 <button ng-if="isCartEmpty()&&customer.first_name&&customer.last_name&&customer.email" class="pay-btn">{{'booking.pay' | translate}}</button>
+                <button class="pay-btn" ng-click="edit()">{{'booking.edit' | translate}}</button>
             </footer>
 
         </div>
