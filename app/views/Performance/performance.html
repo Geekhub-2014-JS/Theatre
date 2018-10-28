@@ -9,7 +9,7 @@
         </ul>
 
         <h2 class="page-title">{{performance.title}}</h2>
-        
+
         <section>
            <img class="play-img" ng-src="{{performance.mainPicture.performance_big.url}}" alt="{{performance.title}}"/>
             <ul class="menu-programm">
@@ -19,11 +19,11 @@
                         <span class="number">{{date.day}}</span>
                         <span class="month">{{date.month | translate}}</span>
                     </div>
-                    <div class="block-tickets">
-                        <button type="button" class="btn-success" ng-click="selectPerfomance($index)">
-                            <span >{{'booking.ticketButton' | translate}}</span>
-                        </button>
-                    </div>
+                    <!--<div class="block-tickets">-->
+                        <!--<button type="button" class="btn-success" ng-click="selectPerfomance($index)">-->
+                            <!--<span >{{'booking.ticketButton' | translate}}</span>-->
+                        <!--</button>-->
+                    <!--</div>-->
                     <div class="block-description">
                         <h3>{{performance.title}}</h3>
                         <p>{{date.time}}</p>
@@ -32,7 +32,7 @@
                     <span>{{performanceEvents[$index].venue.title}}</span>
 
                 </li>
-           </ul>                     
+           </ul>
             <div class="media-block slide" >
                 <div ng-controller="ImageCarouselCtrl">
                     <carousel interval="myInterval">
