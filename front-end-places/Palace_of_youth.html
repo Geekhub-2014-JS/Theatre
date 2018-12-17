@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--internet explorer-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Palace of youth</title>
+    <!--Exist vendor styles-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../app/css/vendors-css.min.css">
+    <link rel="stylesheet" type="text/css" href="../app/css/app.min.css">
+    <!--New styles for places-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-theatre">
+    <div class="container-fluid">
+        <h1 class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="app.home" ui-sref-opts="{reload: true}" href="/uk/">
+                <img src="../app/img/logo.png" alt="{'menu.logo' | translate}">
+            </a>
+        </h1>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-nav-hall">
+                <li ui-sref-active="active" class="active"><a ui-sref="app.home" href="/uk/"><span class="ng-binding">Головна</span></a></li>
+                <li ui-sref-active="active"><a ui-sref="app.poster" ui-sref-opts="{reload: true}" href="/uk/poster"><span class="ng-binding">Афіша</span></a></li>
+                <li ui-sref-active="active"><a ui-sref="app.repertoire" href="/uk/repertoire"><span class="ng-binding">Репертуар</span></a></li>
+                <li ui-sref-active="active"><a ui-sref="app.news" href="/uk/news"><span class="ng-binding">Новини</span></a></li>
+                <li ui-sref-active="active"><a ui-sref="app.about" href="/uk/about"><span class="ng-binding">Про театр</span></a></li>
+                <li ui-sref-active="active"><a ui-sref="app.persons" href="/uk/persons"><span class="ng-binding">Персоналії</span></a></li>
+                <li ui-sref-active="active"><a ui-sref="app.contacts" href="/uk/contacts"><span class="ng-binding">Контакти</span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main class="container-fluid hall-philharmonic hall">
+    <section id="content">
+        <h1 class="title-hall">Черкаський міський Палац молоді</h1>
+        <dl class="legend">
+            <dt class="place-bought"></dt>  <dd> Bикуплені місця</dd><!--Квадрат светло-серого цвета - Выкупленные места-->
+            <dt class="place-reserved"></dt><dd> Заброньовані місця</dd><!--Квадрат тёмно-серого цвета - Забронированные места-->
+            <dt class="place-price1"></dt>  <dd> 300 грн</dd><!--Квадрат синего цвета - места по цене 300 грн.-->
+            <dt class="place-price2"></dt>  <dd> 200 грн</dd><!--Квадрат розового цвета - места по цене 200 грн.-->
+            <dt class="place-price3"></dt>  <dd> 90 грн</dd><!--Квадрат зелёного цвета - места по цене от 90 грн.-->
+        </dl>
+        <h2 class="title title-kulyka">СЦЕНА</h2>
+        <section class="parterre" data-section="parterre">
+            <ul class="section-front">
+                <li data-row="0"><!--ряд де всі місця за запрошенням-->
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">1</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">2</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">3</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">4</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">5</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">6</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">7</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">8</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">9</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">10</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">11</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">12</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">13</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">14</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">15</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">16</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">17</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">18</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">19</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">20</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">21</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">22</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">23</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">24</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">25</li>
+                    </ul>
+                </li>
+                <li data-row="1">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">1</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">2</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">3</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">4</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">5</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">6</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">7</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">8</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">9</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">10</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">11</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">12</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">13</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">14</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">15</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">16</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">17</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">18</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">19</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">20</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">21</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">22</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">23</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">24</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">25</li>
+                    </ul>
+                </li>
+                <li data-row="2">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">1</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">2</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">3</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">4</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">5</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">6</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">7</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">8</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">9</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">10</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">11</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">12</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">13</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">14</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">15</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">16</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">17</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">18</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">19</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">20</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">21</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">22</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">23</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">24</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">25</li>
+                    </ul>
+                </li>
+                <li data-row="3">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">1</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">2</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">3</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">4</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">5</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">6</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">7</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">8</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">9</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">10</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">11</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">12</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">13</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">14</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">15</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">16</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">17</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">18</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">19</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">20</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">21</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">22</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">23</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">24</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">25</li>
+                    </ul>
+                </li>
+                <li data-row="4">
+                    <ul class="hall-places ">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">1</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">2</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">3</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">4</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">5</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">6</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">7</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">8</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">9</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">10</li>
+                        <li class="back-offset place" data-toggle="popover" data-price="" data-sold="" data-place="11">11</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">12</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">13</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">14</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">15</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">16</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">17</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">18</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">19</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">20</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">21</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">22</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="section-middle">
+                <li data-row="5">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">1</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">2</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">3</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">4</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">5</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">6</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">7</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">8</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">9</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">10</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">11</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">12</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">13</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">14</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">15</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">16</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">17</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">18</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">19</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">20</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">21</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">22</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">23</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">24</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">25</li>
+                    </ul>
+                </li>
+                <li data-row="6">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">1</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">2</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">3</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">4</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">5</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">6</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">7</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">8</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">9</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">10</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">11</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">12</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">13</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">14</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">15</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">16</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">17</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">18</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">19</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">20</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">21</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">22</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">23</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">24</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">25</li>
+                    </ul>
+                </li>
+                <li data-row="7">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">1</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">2</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">3</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">4</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">5</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">6</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">7</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">8</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">9</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">10</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">11</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">12</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">13</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">14</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">15</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">16</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">17</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">18</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">19</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">20</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">21</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">22</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">23</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">24</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">25</li>
+                    </ul>
+                </li>
+                <li data-row="8">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">1</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">2</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">3</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">4</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">5</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">6</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">7</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">8</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">9</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">10</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">11</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">12</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">13</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">14</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">15</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">16</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">17</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">18</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">19</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">20</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">21</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">22</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">23</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">24</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">25</li>
+                    </ul>
+                </li>
+                <li data-row="9">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">1</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">2</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">3</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">4</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">5</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">6</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">7</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">8</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">9</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">10</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">11</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">12</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">13</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">14</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">15</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">16</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">17</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">18</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">19</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">20</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">21</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">22</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">23</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">24</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">25</li>
+                    </ul>
+                </li>
+                <li data-row="10">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">1</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">2</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">3</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">4</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">5</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">6</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">7</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">8</li>
+                        <li class="big-offset place" data-toggle="popover" data-price="" data-sold="" data-place="9">9</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">10</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">11</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">12</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">13</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">14</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">15</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">16</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">17</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">18</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="section-back-parterre">
+                <li data-row="11">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">1</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">2</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">3</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">4</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">5</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">6</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">7</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">8</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">9</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">10</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">11</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">12</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">13</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">14</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">15</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">16</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">17</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">18</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">19</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">20</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">21</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">22</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">23</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">24</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">25</li>
+                    </ul>
+                </li>
+                <li data-row="12">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">1</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">2</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">3</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">4</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">5</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">6</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">7</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">8</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">9</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">10</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">11</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">12</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">13</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">14</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">15</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">16</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">17</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">18</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">19</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">20</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">21</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">22</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">23</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">24</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">25</li>
+                    </ul>
+                </li>
+                <li data-row="13">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">1</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">2</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">3</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">4</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">5</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">6</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">7</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">8</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">9</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">10</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">11</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">12</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">13</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">14</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">15</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">16</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">17</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">18</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">19</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">20</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">21</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">22</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">23</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">24</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">25</li>
+                    </ul>
+                </li>
+                <li data-row="14">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">1</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">2</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">3</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">4</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">5</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">6</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">7</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">8</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">9</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">10</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">11</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">12</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">13</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">14</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">15</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">16</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">17</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">18</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">19</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">20</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">21</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">22</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">23</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">24</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">25</li>
+                    </ul>
+                </li>
+                <li data-row="15">
+                    <ul class="hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">1</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">2</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">3</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">4</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">5</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">6</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">7</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">8</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">9</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">10</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">11</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">12</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">13</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">14</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">15</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">16</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">17</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">18</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">19</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">20</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">21</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">22</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">23</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">24</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">25</li>
+                    </ul>
+                </li>
+                <li data-row="16">
+                    <ul class="last-row hall-places">
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="1">1</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="2">2</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="3">3</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="4">4</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="5">5</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="6">6</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="7">7</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="8">8</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="9">9</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="10">10</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="11">11</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="12">12</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="13">13</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="14">14</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="15">15</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="16">16</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="17">17</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="18">18</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="19">19</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="20">20</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="21">21</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="22">22</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="23">23</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="24">24</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">25</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">26</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">27</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">28</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">29</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">30</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">31</li>
+                        <li class="place" data-toggle="popover" data-price="" data-sold="" data-place="25">32</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+
+        </section>
+        <aside>
+            <div class="booking">
+                <header>
+                    <h2 class="title-booking">Ваші квитки</h2>
+                    <span class="title-show">Назва вистави</span>
+                    <span class="title-hall-place">Черкаський міський Палац молоді</span>
+                </header>
+                <ul class="bought-place-info">
+                    <li class="booking-place">
+                        <dl>
+                            <dt>Ряд</dt><dd>1</dd>
+                            <dt>Місце</dt><dd>2</dd>
+                            <dt>Ціна</dt><dd>200 грн</dd>
+                        </dl>
+                        <button class="btn btn-link btn-close-place"><span class="glyphicon glyphicon-remove"></span></button>
+                    </li>
+                    <li class="booking-place">
+                        <dl>
+                            <dt>Ряд</dt><dd>1</dd>
+                            <dt>Місце</dt><dd>2</dd>
+                            <dt>Ціна</dt><dd>200 грн</dd>
+                        </dl>
+                        <button class="btn btn-link btn-close-place"><span class="glyphicon glyphicon-remove"></span></button>
+                    </li>
+                    <li class="booking-place">
+                        <dl>
+                            <dt>Ряд</dt><dd>1</dd>
+                            <dt>Місце</dt><dd>2</dd>
+                            <dt>Ціна</dt><dd>200 грн</dd>
+                        </dl>
+                        <button class="btn btn-link btn-close-place"><span class="glyphicon glyphicon-remove"></span></button>
+                    </li>
+                </ul>
+                <footer>
+                    <dl>
+                        <dt>Всього:</dt><dd>600грн</dd>
+                    </dl>
+                    <button class="pay-btn">Оплатити</button>
+                </footer>
+            </div>
+        </aside>
+</main>
+<footer>
+    <nav class="navbar navbar-theatre-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-footer-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-footer-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li ui-sref-active="active" class="active"><a ui-sref="app.home" href="/uk/"><span class="ng-binding">Головна</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.poster" ui-sref-opts="{reload: true}" href="/uk/poster"><span class="ng-binding">Афіша</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.repertoire" href="/uk/repertoire"><span class="ng-binding">Репертуар</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.news" href="/uk/news"><span class="ng-binding">Новини</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.about" href="/uk/about"><span class="ng-binding">Про театр</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.persons" href="/uk/persons"><span class="ng-binding">Персоналії</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.contacts" href="/uk/contacts"><span class="ng-binding">Контакти</span></a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right navbar-footer-hall">
+                    <li><a href="http://vk.com/club32121977"><i class="fa fa-vk"></i></a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+        <a class="up up-hall" href="javascript:scroll(0,0)"></a>
+
+    </nav>
+    <small class="copy copy-hall">
+        &copy; Copyright 2017
+        Powered by <a href="http://geekhub.ck.ua/">Geekhub</a>
+    </small>
+</footer>
+
+
+<!--<script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>/-->
+<script src="../app/js/vendors-js.min.js"></script>
+
+<!--my JS-->
+<script>
+    $(function () {
+        $('[data-toggle="popover"]').popover({
+            trigger: 'hover',
+            placement: 'top',
+            content: function () {
+                var el = $(this);
+
+                return el.parents("*[data-section]").attr("data-section")+", "+el.parents("*[data-row]").attr("data-row") +", "+ el.attr('data-place')
+            }
+        });
+    })
+</script>
+
+</body>
+</html>

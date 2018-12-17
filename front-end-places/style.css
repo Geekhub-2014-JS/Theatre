@@ -1,0 +1,726 @@
+.wrapp {
+  width: auto;
+}
+.navbar-theatre {
+  background-image: -moz-linear-gradient(left, #ec532a 0%, #c4242e 100%);
+  /* FF3.6+ */
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, #ec532a), color-stop(100%, #c4242e));
+  /* Chrome,Safari4+ */
+  background-image: -webkit-linear-gradient(left, #ec532a 0%, #c4242e 100%);
+  /* Chrome10+,Safari5.1+ */
+  background-image: -o-linear-gradient(left, #ec532a 0%, #c4242e 100%);
+  /* Opera 11.10+ */
+  background-image: -ms-linear-gradient(left, #ec532a 0%, #c4242e 100%);
+  /* IE10+ */
+  background-image: linear-gradient(to right, #ec532a 0%, #c4242e 100%);
+  /* W3C */
+}
+.navbar-theatre .nav li a {
+  color: #FFFFFF;
+}
+.navbar-theatre .nav li a:hover {
+  background: #ffffff;
+}
+.navbar-theatre .nav li a:hover span {
+  color: #292929;
+}
+.navbar-theatre,
+.navbar-theatre-inverse {
+  border-radius: 0;
+  border: none;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+.navbar-theatre .navbar-header,
+.navbar-theatre-inverse .navbar-header {
+  margin: 3px 10px;
+}
+.navbar-theatre .navbar-brand,
+.navbar-theatre-inverse .navbar-brand {
+  height: 70px;
+  padding: 0;
+}
+.navbar-theatre .navbar-toggle,
+.navbar-theatre-inverse .navbar-toggle {
+  margin-top: 20px;
+}
+.navbar-theatre .navbar-toggle span,
+.navbar-theatre-inverse .navbar-toggle span {
+  border: 1px solid #000000;
+}
+.navbar-theatre .nav li a,
+.navbar-theatre-inverse .nav li a {
+  font: 12px robotolight;
+  padding: 30.5px 11px;
+}
+.navbar-nav-hall {
+  padding-left: 30%;
+}
+.navbar-theatre-inverse {
+  background-color: #FFFFFF;
+}
+.navbar-theatre-inverse .nav li a {
+  color: #292929;
+}
+.navbar-theatre-inverse .nav li a:hover {
+  background: transparent;
+}
+.navbar-theatre-inverse .nav li a:hover span {
+  color: #ff0000;
+}
+.booking-registration ol {
+  list-style: none;
+  counter-reset: li;
+}
+.booking-registration li:before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+}
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+ul li {
+  list-style-type: none;
+  cursor: pointer;
+}
+.title-hall {
+  text-align: center;
+  font-size: 35px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+}
+.title {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 25px;
+  margin-bottom: 35px;
+  display: inline-block;
+}
+.title-kulyka {
+  width: 600px;
+  border-bottom: 1px solid #ffffff;
+  border-radius: 25px;
+}
+.place {
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid #000000;
+  width: 23px;
+  height: 23px;
+  display: inline-block;
+  color: #000000;
+  background: #ffcdcd;
+  margin: 1px;
+}
+.legend {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.legend dt {
+  border-radius: 3px;
+  border: 1px solid #000000;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  margin-left: 25px;
+}
+.booking {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 3px solid #761c19;
+  width: 100%;
+  background-color: #ffcdcd;
+}
+.booking .title-booking {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 15px;
+}
+.booking dl {
+  margin: 7px 15px;
+}
+.booking dl dt,
+.booking dl dd {
+  display: inline-block;
+  margin-left: 5px;
+}
+.booking .booking-place {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.booking .pay-btn {
+  background-color: #761c19;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  border: none;
+}
+.booking .pay-btn:hover {
+  background: transparent;
+  border: 1px solid #761c19;
+  color: #761c19;
+  padding: 4px 10px;
+}
+.booking .bought-place-info {
+  height: 150px;
+  overflow-y: scroll;
+}
+.booking .bought-place-info .btn-close-place {
+  color: #ff0000;
+}
+.booking .bought-place-info,
+.booking footer {
+  color: #761c19;
+  padding-bottom: 20px;
+  border-top: 1px solid #761c19;
+}
+.booking header {
+  border-bottom: 1px solid #761c19;
+  padding-bottom: 15px;
+}
+.booking header .title-show {
+  color: #000000;
+  font-size: 20px;
+  margin: 10px;
+  display: block;
+}
+.booking header .title-hall-place {
+  margin: 15px;
+  color: #000000;
+  font-size: 15px;
+}
+.booking header h2 {
+  border: 1px solid #761c19;
+  background-color: #761c19;
+  color: #ffffff;
+}
+.ticket-info {
+  color: #000000;
+  padding: 40px 20px;
+  text-align: left;
+  font-size: 18px;
+}
+.info-buy-ticket-height {
+  min-height: 80vh;
+}
+footer .navbar-footer-hall {
+  margin-right: 15px;
+}
+footer .up-hall {
+  margin: -79px 0 0 0;
+}
+footer .copy-hall {
+  display: block;
+  margin-bottom: 15px;
+}
+.place-reserved {
+  background-color: #A9A9A9;
+}
+.place-bought {
+  background-color: #D3D3D3;
+}
+.place-price1 {
+  background-color: #0000FF;
+}
+.place-price2 {
+  background-color: #FFC0CB;
+}
+.place-price3 {
+  background-color: #008000;
+}
+.hall-kulyka,
+.hall-philharmonic,
+.hall-universal,
+.hall-druzhba,
+.hall-universal-registration {
+  background: url("images/bg2.jpg") top / cover no-repeat;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.offset-one:before {
+  content: "\2002";
+  display: inline-block;
+  margin: 1px;
+  height: 23px;
+  width: 23px;
+}
+.offset-two:before {
+  content: "\2002";
+  display: inline-block;
+  margin: 1px;
+  height: 23px;
+  width: 23px;
+}
+.hall-places {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.hall-places-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.hall-places-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.parter {
+  margin: 0 auto 70px;
+}
+.hall {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 0;
+  padding-right: 0;
+}
+.title-philharmonic,
+.title-universal {
+  width: 800px;
+  border-bottom: 1px solid #ffffff;
+  border-radius: 25px;
+}
+.section-middle,
+.section-back {
+  margin-top: 40px;
+}
+.section-back {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.left-hall {
+  margin-right: 68px;
+}
+.right-hall {
+  margin-left: 68px;
+}
+.img-balcony {
+  border: 1px solid #000000;
+  border-radius: 20px;
+  background-color: antiquewhite;
+  min-height: 290px;
+  width: 79%;
+  margin-top: 35px;
+}
+.img-balcony .title-balcony {
+  font-size: 30px;
+  margin-top: 25px;
+  color: #000000;
+}
+.balcony-front {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+.back-offset {
+  margin-right: 77.5px;
+}
+.loggia-left li,
+.loggia-right li {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.loggia-left li {
+  transform: rotate(80deg);
+}
+.loggia-right li {
+  transform: rotate(-80deg);
+}
+.offset-one-place {
+  margin-right: 20px;
+}
+.offset-two-place {
+  margin-right: 40px;
+}
+.offset-four {
+  margin-left: 80px;
+}
+.big-offset {
+  margin-right: 175px;
+}
+.title-sector {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.balcony-front-left {
+  transform: rotate(45deg);
+  margin-bottom: 100px;
+}
+.balcony-front-left .hall-places {
+  justify-content: flex-end;
+}
+.balcony-front-right {
+  transform: rotate(-45deg);
+  margin-bottom: 100px;
+}
+.balcony-front-right .hall-places {
+  justify-content: flex-start;
+}
+.balcony-front-centre {
+  margin-bottom: 30px;
+}
+.hall-druzhba .hall-places {
+  font-size: 13px;
+}
+.hall-druzhba .place {
+  width: 18px;
+  height: 18px;
+}
+.title-sector {
+  color: #ffcdcd;
+}
+.hall-universal-registration {
+  padding-top: 70px;
+}
+.ticket-registration {
+  background-color: #ffcdcd ;
+  width: 60%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.ticket-registration .booking-registration {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 3px solid #761c19;
+  width: 100%;
+  background-color: #ffcdcd;
+}
+.ticket-registration .booking-registration h2 {
+  border: 1px solid #761c19;
+  background-color: #761c19;
+  color: #ffffff;
+}
+.ticket-registration .booking-registration .title-booking {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 15px;
+}
+.ticket-registration .booking-registration .ticket-box {
+  font-size: 18px;
+  width: 100%;
+  margin: 0 auto;
+  color: #761c19;
+}
+.ticket-registration .booking-registration .ticket-box .btn-close-place {
+  color: #ff0000;
+}
+.ticket-registration .booking-registration .ticket-box thead {
+  border-bottom: 1px solid #761c19;
+}
+.ticket-registration .booking-registration .ticket-box thead th {
+  padding: 10px 0;
+  text-align: center;
+}
+.ticket-registration .booking-registration .booking-place {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.ticket-registration .booking-registration .pay-btn {
+  font-size: 22px;
+  background-color: #761c19;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 5px 10px;
+  border: none;
+}
+.ticket-registration .booking-registration .pay-btn:hover {
+  background: transparent;
+  border: 1px solid #761c19;
+  color: #761c19;
+  padding: 4px 10px;
+}
+.ticket-registration .booking-registration .bought-place-info,
+.ticket-registration .booking-registration footer {
+  color: #761c19;
+  padding-bottom: 20px;
+  border-top: 1px solid #761c19;
+}
+.ticket-registration .booking-registration .bought-place-info .text-form,
+.ticket-registration .booking-registration footer .text-form {
+  font-size: 17px;
+  color: #000000;
+  padding-bottom: 15px;
+}
+.ticket-registration .booking-registration .bought-place-info .form-info-client,
+.ticket-registration .booking-registration footer .form-info-client {
+  padding-bottom: 15px;
+}
+.ticket-registration .booking-registration .bought-place-info .form-info-client input,
+.ticket-registration .booking-registration footer .form-info-client input {
+  margin-top: 10px;
+  padding: 10px;
+  color: #000000;
+  border-radius: 10px;
+}
+.ticket-registration .booking-registration .bought-place-info .info-buy,
+.ticket-registration .booking-registration footer .info-buy {
+  font-size: 18px;
+  margin: 20px 0;
+}
+.ticket-registration .booking-registration .bought-place-info .info-buy a,
+.ticket-registration .booking-registration footer .info-buy a {
+  padding-right: 90px;
+  color: #000000;
+  text-decoration: underline;
+}
+.ticket-registration .booking-registration .bought-place-info .info-buy a:hover,
+.ticket-registration .booking-registration footer .info-buy a:hover {
+  color: #761c19;
+  cursor: pointer;
+}
+.ticket-registration .booking-registration .bought-place-info dl,
+.ticket-registration .booking-registration footer dl {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-size: 20px;
+}
+.ticket-registration .booking-registration .bought-place-info dd,
+.ticket-registration .booking-registration footer dd {
+  margin-left: 10px;
+}
+.ticket-registration .booking-registration header {
+  padding-left: 20px;
+  border-bottom: 1px solid #761c19;
+  padding-bottom: 15px;
+}
+.ticket-registration .booking-registration header .img-brand {
+  margin-top: 15px;
+}
+.ticket-registration .booking-registration header .title-show,
+.ticket-registration .booking-registration header .date-event {
+  color: #000000;
+  font-size: 20px;
+  margin: 10px;
+  display: block;
+}
+.ticket-registration .booking-registration header .title-hall-registration {
+  margin: 15px;
+  color: #000000;
+  font-size: 20px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .navbar-theatre .nav li a,
+  .navbar-theatre-inverse .nav li a {
+    font: 12px robotolight;
+    padding: 5px 11px;
+  }
+  .title-philharmonic,
+  .title-universal,
+  .title-kulyka {
+    width: 300px;
+  }
+  .legend dd {
+    font-size: 10px;
+  }
+  .legend dt {
+    width: 15px;
+    height: 15px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .hall {
+    flex-direction: column;
+  }
+  .booking {
+    width: 280px;
+    margin: 30px auto;
+  }
+  .hall-philharmonic .place {
+    width: 9.2px;
+    height: 10px;
+    margin: 0;
+    font-size: 6px;
+  }
+  .hall-kulyka .place {
+    width: 13px;
+    height: 13px;
+    margin: 0;
+    font-size: 8px;
+  }
+  .hall-kulyka .offset-one:before {
+    margin: 0;
+    height: 13px;
+    width: 13px;
+  }
+  .hall-kulyka .offset-two:before {
+    margin: 0;
+    height: 13px;
+    width: 13px;
+  }
+  .hall-kulyka .parter {
+    margin: 0 auto 40px;
+  }
+  .img-balcony {
+    min-height: 160px;
+  }
+  .left-hall {
+    margin-right: 10px;
+  }
+  .right-hall {
+    margin-left: 10px;
+  }
+  .hall-philharmonic .back-offset {
+    margin-right: 30px;
+  }
+  .hall-philharmonic .big-offset {
+    margin-right: 65px;
+  }
+  .title-hall {
+    font-size: 18px;
+  }
+  .ticket-registration {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .ticket-registration .booking-registration footer .info-buy a {
+    padding-right: 20px;
+  }
+  .ticket-registration .booking-registration .ticket-box {
+    font-size: 14px;
+  }
+  .ticket-registration .booking-registration header .img-brand {
+    display: none;
+  }
+}
+@media (min-width: 500px) and (max-width: 767px) {
+  .hall-philharmonic .place {
+    width: 15px;
+    height: 15px;
+    font-size: 10px;
+  }
+  .hall-philharmonic .big-offset {
+    margin-right: 105px;
+  }
+  .hall-philharmonic .back-offset {
+    margin-right: 45px;
+  }
+  .hall-kulyka .place {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    font-size: 12px;
+  }
+  .hall-kulyka .offset-one:before {
+    margin: 0;
+    height: 20px;
+    width: 20px;
+  }
+  .hall-kulyka .offset-two:before {
+    margin: 0;
+    height: 20px;
+    width: 20px;
+  }
+  .hall-kulyka .parter {
+    margin: 0 auto 40px;
+  }
+  .hall {
+    flex-direction: column;
+  }
+  .img-balcony {
+    min-height: 220px;
+  }
+  .legend dd {
+    font-size: 12px;
+    margin-left: 5px;
+  }
+  .legend dt {
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-theatre .nav li a {
+    font: 12px robotolight;
+    padding: 30.5px 7px;
+    color: #FFFFFF;
+  }
+  .navbar-theatre .nav li a:hover {
+    background: #ffffff;
+  }
+  .navbar-theatre .nav li a:hover span {
+    color: #292929;
+  }
+  .booking {
+    width: 280px;
+    margin: 30px auto;
+  }
+  .hall {
+    flex-direction: column;
+  }
+  footer .up-hall {
+    margin: -85px 0 0 0;
+  }
+  .legend dd {
+    font-size: 15px;
+  }
+  .img-balcony {
+    min-height: 250px;
+  }
+  .hall-philharmonic .place {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    font-size: 15px;
+  }
+  .hall-philharmonic .big-offset {
+    margin-right: 140px;
+  }
+  .hall-philharmonic .back-offset {
+    margin-right: 60px;
+  }
+  .navbar-nav-hall {
+    padding-left: 4%;
+  }
+  .ticket-registration {
+    background-color: #ffcdcd;
+    width: 80%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1160px) {
+  .hall {
+    flex-direction: column;
+  }
+  .navbar-nav-hall {
+    padding-left: 10%;
+  }
+  .booking {
+    width: 400px;
+    margin: 30px auto;
+  }
+  .hall-philharmonic .place {
+    width: 20px;
+    height: 20px;
+    font-size: 15px;
+  }
+  .hall-philharmonic .big-offset {
+    margin-right: 155px;
+  }
+  .hall-philharmonic .back-offset {
+    margin-right: 67px;
+  }
+  .booking {
+    width: 280px;
+    margin: 30px auto;
+  }
+}

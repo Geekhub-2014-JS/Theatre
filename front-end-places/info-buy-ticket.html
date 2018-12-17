@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <!--internet explorer-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ticket info</title>
+    <!--Exist vendor styles-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../app/css/vendors-css.min.css">
+    <link rel="stylesheet" type="text/css" href="../app/css/app.min.css">
+    <!--New styles for places-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar navbar-theatre">
+    <div class="container-fluid">
+        <h1 class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" ui-sref="app.home" ui-sref-opts="{reload: true}" href="/uk/">
+                <img src="../app/img/logo.png" alt="{'menu.logo' | translate}">
+            </a>
+        </h1>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-nav-hall">
+                <li ui-sref-active="active" class="active"><a ui-sref="app.home" href="/uk/"><span class="ng-binding">Головна</span></a>
+                </li>
+                <li ui-sref-active="active"><a ui-sref="app.poster" ui-sref-opts="{reload: true}"
+                                               href="/uk/poster"><span class="ng-binding">Афіша</span></a></li>
+                <li ui-sref-active="active"><a ui-sref="app.repertoire" href="/uk/repertoire"><span class="ng-binding">Репертуар</span></a>
+                </li>
+                <li ui-sref-active="active"><a ui-sref="app.news" href="/uk/news"><span class="ng-binding">Новини</span></a>
+                </li>
+                <li ui-sref-active="active"><a ui-sref="app.about" href="/uk/about"><span
+                        class="ng-binding">Про театр</span></a></li>
+                <li ui-sref-active="active"><a ui-sref="app.persons" href="/uk/persons"><span class="ng-binding">Персоналії</span></a>
+                </li>
+                <li ui-sref-active="active"><a ui-sref="app.contacts" href="/uk/contacts"><span class="ng-binding">Контакти</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main class="hall-universal-registration info-buy-ticket-height">
+    <div class="ticket-registration">
+        <div class="booking-registration">
+            <h2 class="title-booking">Як придбати квиток</h2>
+            <p class="ticket-info">
+                Электронный билет – это билет, который Вы приобретаете в сервисе ТЕАТР,
+                оплачиваете банковской картой, электронными деньгами и получаете на e-mail.
+                Вы должны его распечатать и взять с собой на мероприятие.
+                Во время контроля штрих-код билета отсканируют и пригласят
+                Вас занять свое место в зале.Электронный билет удобен тем,
+                что не нужно ждать курьера или забирать в кассе –
+                Вы получаете билет на e-mail и экономите время и деньги.
+            </p>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <nav class="navbar navbar-theatre-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-footer-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-footer-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li ui-sref-active="active" class="active"><a ui-sref="app.home" href="/uk/"><span
+                            class="ng-binding">Головна</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.poster" ui-sref-opts="{reload: true}" href="/uk/poster"><span
+                            class="ng-binding">Афіша</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.repertoire" href="/uk/repertoire"><span
+                            class="ng-binding">Репертуар</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.news" href="/uk/news"><span
+                            class="ng-binding">Новини</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="app.about" href="/uk/about"><span class="ng-binding">Про театр</span></a>
+                    </li>
+                    <li ui-sref-active="active"><a ui-sref="app.persons" href="/uk/persons"><span class="ng-binding">Персоналії</span></a>
+                    </li>
+                    <li ui-sref-active="active"><a ui-sref="app.contacts" href="/uk/contacts"><span class="ng-binding">Контакти</span></a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right navbar-footer-hall">
+                    <li><a href="http://vk.com/club32121977"><i class="fa fa-vk"></i></a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+        <a class="up up-hall" href="javascript:scroll(0,0)"></a>
+
+    </nav>
+    <small class="copy copy-hall">
+        &copy; Copyright 2017
+        Powered by <a href="http://geekhub.ck.ua/">Geekhub</a>
+    </small>
+</footer>
+
+
+<script src="../app/js/vendors-js.min.js"></script>
+
+<script>
+
+</script>
+
+</body>
+</html>
